@@ -1,6 +1,6 @@
 .navbar-container {
   /* @apply !px-0 w-full h-[5.5em] bg-dark-main; */
-  @apply !px-0 w-full h-[5.5em] bg-dark-main;
+  @apply !px-0 w-full h-[5.5em] bg-black;
   @apply sticky top-0 z-50;
 }
 
@@ -12,9 +12,9 @@
 
   z-index: 1000;
   transition: linear;
-  transition-delay: 0.15s;
-  transition-duration: 0.15s;
-  transition-delay: 0.15s;
+  transition-delay: 0.25s;
+  transition-duration: 0.25s;
+  transition-delay: 0.25s;
 }
 
 .navbar {
@@ -43,6 +43,15 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.nav-tg-btn {
+  @apply w-full text-white bg-chr-primary hover:bg-chr-secondary active:bg-chr-secondary focus:bg-chr-secondary lg:p-6;
+  transition: transform 0.3s ease;
+}
+
+.nav-tg-btn:hover {
+  transform: translateY(-5px);
 }
 
 /* @media (min-width: theme("screens.sm")) {

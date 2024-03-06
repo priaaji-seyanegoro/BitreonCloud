@@ -95,7 +95,7 @@ const Navbar: React.FC<Props> = () => {
               className="w-auto mr-2 sm:mr-0"
             >
               <Button
-                className="w-full text-white bg-chr-primary hover:bg-chr-secondary active:bg-chr-secondary focus:bg-chr-secondary lg:p-6"
+                className="nav-tg-btn"
                 // leftIcon={<DollarOutlined style={{ fontSize: "1.5em" }} />}
               >
                 Telegram

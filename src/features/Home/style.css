@@ -13,7 +13,7 @@
 }
 
 .welcome-container {
-  @apply w-full h-full relative;
+  @apply w-full h-[500px] relative;
   /* flex flex-wrap items-center justify-evenly sm:justify-center mx-auto text-lg xs:text-xl lg:text-2xl font-extrabold text-white gap-2 p-2 relative; */
   /* @apply bg-opacity-50 bg-no-repeat bg-top bg-vector; */
 }
@@ -23,30 +23,8 @@
   @apply z-30;
 }
 
-/* .section-container {
-  @apply w-full h-full relative;
-}
-
-.section-wrapper {
-  @apply w-full h-full;
-}
-
-.section-wrapper:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/app-looper.png");
-  background-size: contain;
-  background-position: center;
-  object-position: center;
-  background-repeat: repeat;
-} */
-
 .id-pages {
-  @apply w-4/5 xs:w-auto py-2 px-4 xl:px-6 rounded-3xl pointer-events-none;
+  @apply w-4/5 xs:w-48 py-2 px-4 xl:px-6 rounded-3xl pointer-events-none;
   background: linear-gradient(#000 0 0) padding-box,
     linear-gradient(152.64deg, #247be1 0%, #00ff47 100%) border-box;
   color: white;
@@ -55,7 +33,25 @@
 }
 
 .about-wrapper {
-  @apply w-full h-full flex flex-wrap justify-evenly sm:justify-between mx-auto text-lg xs:text-xl lg:text-2xl font-extrabold text-white gap-2 py-2 relative;
+  @apply w-full h-full flex flex-wrap text-lg xs:text-xl lg:text-2xl font-extrabold text-white gap-2 py-8 relative;
+  /* @apply border border-solid; */
+  @apply rounded-xl;
+  background: linear-gradient(
+    180deg,
+    rgba(141, 141, 185, 0.16) 0%,
+    rgba(8, 8, 12, 0) 100%
+  );
+}
+
+.generate-container {
+  @apply w-11/12 lg:w-2/3 h-[500px] rounded-xl flex flex-col justify-center px-2 relative z-30 mx-auto;
+  clip-path: xywh(0 5px 100% 90% round 15% 0);
+
+  background: linear-gradient(
+    180deg,
+    rgba(141, 141, 185, 0.16) 0%,
+    rgba(8, 8, 12, 0) 100%
+  );
 }
 
 .try-button {
@@ -71,11 +67,56 @@
   background: linear-gradient(152.64deg, #247be1 0%, #00ff47 100%) border-box;
 }
 
-/* .try-button-container {
-  @apply w-auto bg-transparent rounded-xl;
-  background: linear-gradient(152.64deg, #247be1 0%, #00ff47 100%);
+.welcome-bot-button,
+.bot-button {
+  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+  @apply pl-0;
 }
 
-.try-button-wrapper {
-  @apply p-4 text-white bg-join-us;
-} */
+.welcome-bot-button {
+  @apply w-48 rounded-lg text-white bg-chr-primary hover:bg-chr-secondary active:bg-chr-secondary focus:bg-chr-secondary;
+  /* transition: background-color 0.5s ease, border-color 0.5s ease; */
+  transition: transform 0.3s ease;
+}
+
+.bot-button {
+  @apply w-52 md:w-[30%] xl:w-1/4 rounded-lg text-white bg-chr-primary hover:bg-chr-secondary active:bg-chr-secondary focus:bg-chr-secondary;
+}
+
+.welcome-bot-button:hover {
+  transform: scale(1.05);
+}
+
+.bot-button:hover,
+.welcome-bot-button:hover {
+  background: linear-gradient(#111114 0 0) padding-box,
+    linear-gradient(152.64deg, #247be1 0%, #00ff47 100%) border-box;
+  color: white;
+  border: 2px solid transparent;
+  /* transform: scale(1.1); */
+}
+
+.bot-button-icon {
+  @apply !animate-bounceSlow;
+}
+
+/* .welcome-bot-button:hover > span >  */
+.welcome-bot-icon {
+  @apply !animate-bounceSlow;
+  transition: 250;
+}
+
+.whitepaper-button {
+  @apply my-4 bg-chr-primary hover:bg-chr-primary active:bg-chr-primary focus:bg-chr-primary hover:text-white focus:text-white active:text-white;
+  transition: transform 0.3s ease;
+}
+
+.whitepaper-button:hover {
+  @apply pr-6;
+  transform: scale(1.1); /* Increase the size by 10% on hover */
+}
+
+.whitepaper-button:hover > span > .whitepaper-icon {
+  /* @apply ml-2; */
+  transform: translateX(7px);
+}

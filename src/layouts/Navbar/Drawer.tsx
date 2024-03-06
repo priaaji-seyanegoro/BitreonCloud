@@ -101,7 +101,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         />
         <DrawerHeader className={`bg-dark-main h-24 ${poppins.className}`}>
           <Link href="/" className={`logo-container text-white h-full`}>
-            <div className="font-extrabold text-2xl">CHRONICLE AI</div>
+            <div className="font-extrabold text-2xl">Centrocyph AI</div>
           </Link>
         </DrawerHeader>
 

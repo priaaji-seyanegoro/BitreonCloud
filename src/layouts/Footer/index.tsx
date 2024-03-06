@@ -42,16 +42,18 @@ const AppFooter: React.FC<Props> = () => {
                 className="w-full h-20 object-contain object-left"
               />
 
-              <div className="w-full xl:w-4/5 text-left my-4 md:pr-2">
-                Imagining Beyond, Creating Unforgettable.
+              <div className="w-full xl:w-4/5 text-left my-4 md:pr-2 font-semibold">
+                Imagining Beyond, Creating Unforgettable
               </div>
 
-              <Button
-                className="rounded-lg text-white bg-chr-primary hover:bg-chr-secondary active:bg-chr-secondary focus:bg-chr-secondary"
+              {/* <Button
+                size="lg"
+                className="footer-bot-button"
                 // className="mt-4 rounded-lg text-white"
                 // colorScheme="messenger"
                 leftIcon={
                   <AndroidOutlined
+                    className="footer-bot-button-icon "
                     style={{
                       fontSize: "1.25em",
                     }}
@@ -59,7 +61,7 @@ const AppFooter: React.FC<Props> = () => {
                 }
               >
                 Chronicle AI
-              </Button>
+              </Button> */}
               {/* <div className="w-full xl:w-4/5 flex mt-6 gap-3">
                 <Link
                   href={socialsLink.telegram}
@@ -218,7 +220,7 @@ const AppFooter: React.FC<Props> = () => {
         <div className="w-full bg-chr-secondary flex flex-wrap justify-center items-center py-4 md:py-6 z-50 gap-3">
           <div className="text-base md:text-lg font-semibold">
             <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
-            Chronicle AI 2024. All rights reserved.
+            Centrocyph AI 2024. All rights reserved.
           </div>
 
           <div className="flex gap-3">

@@ -8,9 +8,10 @@ import BaseLayout from "@/layouts";
 import "./globals.css";
 
 const app_title =
-  "Chronicle AI - Your go-to for free photo and design editing, powered by AI";
-const app_name = "Chronicle AI";
-const description = "Explore the next frontier of creativity with Chronicle AI";
+  "Centrocyph AI | Your go-to destination for cutting-edge AI-powered generative tools";
+const app_name = "Centrocyph AI";
+const description =
+  "Explore the next frontier of creativity with Centrocyph AI";
 
 export const metadata: Metadata = {
   title: app_title,
