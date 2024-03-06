@@ -392,15 +392,15 @@ const Home: React.FC<Props> = () => {
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/4">
             <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
-              100M
-            </div>
-            <div className={`app-title ${poppins.className}`}>Total Supply</div>
-          </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4">
-            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
               ETHEREUM
             </div>
             <div className={`app-title ${poppins.className}`}>Network</div>
+          </div>
+          <div className="w-full sm:w-1/2 lg:w-1/4">
+            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
+              100M
+            </div>
+            <div className={`app-title ${poppins.className}`}>Supply</div>
           </div>
         </div>
       </div>
