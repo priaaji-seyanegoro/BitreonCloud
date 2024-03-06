@@ -312,6 +312,50 @@ const Home: React.FC<Props> = () => {
         </div>
       </div>
 
+      <div className="h-12 md:h-20" />
+      <div id="tokenomic" className="h-20 sm:h-24 relative z-30" />
+      <div
+        ref={tokensRef}
+        className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4 relative z-30"
+      >
+        <Button
+          className={`id-pages ${poppins.className} ${
+            isTokensVisible && "animate-slideInBottomBasic"
+          }`}
+        >
+          TOKEN
+        </Button>
+        <div className={`xl:text-4xl ${clashDisplay.className} mt-4 mb-2`}>
+          CA: {contractAddress}
+        </div>
+        <div className="w-full md:w-11/12 flex flex-wrap justify-center items-center gap-y-8 mx-auto mt-8">
+          <div className="w-full sm:w-1/2 lg:w-1/4">
+            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
+              Centrocyph AI
+            </div>
+            <div className={`app-title ${poppins.className}`}>Name</div>
+          </div>
+          <div className="w-full sm:w-1/2 lg:w-1/4">
+            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
+              $CAI
+            </div>
+            <div className={`app-title ${poppins.className}`}>Symbol</div>
+          </div>
+          <div className="w-full sm:w-1/2 lg:w-1/4">
+            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
+              ETHEREUM
+            </div>
+            <div className={`app-title ${poppins.className}`}>Network</div>
+          </div>
+          <div className="w-full sm:w-1/2 lg:w-1/4">
+            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
+              100M
+            </div>
+            <div className={`app-title ${poppins.className}`}>Supply</div>
+          </div>
+        </div>
+      </div>
+
       <div className="h-24 md:h-40" />
       <div className="generate-container">
         <div
@@ -361,49 +405,6 @@ const Home: React.FC<Props> = () => {
         </div>
       </div>
 
-      <div className="h-12 md:h-20" />
-      <div id="tokenomic" className="h-20 sm:h-24 relative z-30" />
-      <div
-        ref={tokensRef}
-        className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4 relative z-30"
-      >
-        <Button
-          className={`id-pages ${poppins.className} ${
-            isTokensVisible && "animate-slideInBottomBasic"
-          }`}
-        >
-          TOKEN
-        </Button>
-        <div className={`xl:text-4xl ${clashDisplay.className} mt-4 mb-2`}>
-          CA: {contractAddress}
-        </div>
-        <div className="w-full md:w-11/12 flex flex-wrap justify-center items-center gap-y-8 mx-auto mt-8">
-          <div className="w-full sm:w-1/2 lg:w-1/4">
-            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
-              Centrocyph AI
-            </div>
-            <div className={`app-title ${poppins.className}`}>Name</div>
-          </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4">
-            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
-              $CAI
-            </div>
-            <div className={`app-title ${poppins.className}`}>Symbol</div>
-          </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4">
-            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
-              ETHEREUM
-            </div>
-            <div className={`app-title ${poppins.className}`}>Network</div>
-          </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4">
-            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
-              100M
-            </div>
-            <div className={`app-title ${poppins.className}`}>Supply</div>
-          </div>
-        </div>
-      </div>
       <div className="h-24 md:h-40" />
     </div>
   );

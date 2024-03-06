@@ -43,7 +43,11 @@ module.exports = {
       },
       backgroundImage: () => ({
         "chr-primary": "linear-gradient(152.64deg, #247BE1 0%, #00FF47 100%)",
+        "chr-primary-transparent":
+          "linear-gradient(152.64deg, rgba(36, 123, 225, 0.5) 0%, rgba(0, 255, 71, 0.5) 100%)",
         "chr-secondary": "linear-gradient(152.64deg, #00FF47 0%, #247BE1 100%)",
+        "chr-secondary-transparent":
+          "linear-gradient(152.64deg, rgba(0, 255, 71, 0.5) 0%, rgba(36, 123, 225, 0.5) 100%)",
 
         "about-us":
           "linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.2) 100%)",
