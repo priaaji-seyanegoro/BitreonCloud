@@ -1,0 +1,81 @@
+.homepage-container {
+  /* @apply w-full h-full p-2 px-4 sm:p-4 m-auto; */
+  @apply w-full h-full m-auto;
+  max-width: 1280px;
+}
+
+.app-title {
+  /* @apply text-primary font-bold; */
+  @apply bg-chr-secondary !font-bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-container {
+  @apply w-full h-full relative;
+  /* flex flex-wrap items-center justify-evenly sm:justify-center mx-auto text-lg xs:text-xl lg:text-2xl font-extrabold text-white gap-2 p-2 relative; */
+  /* @apply bg-opacity-50 bg-no-repeat bg-top bg-vector; */
+}
+
+.welcome-wrapper {
+  @apply w-full h-full flex flex-wrap justify-center mx-auto text-lg xs:text-xl lg:text-2xl font-extrabold text-white gap-2 py-2 relative;
+  @apply z-30;
+}
+
+/* .section-container {
+  @apply w-full h-full relative;
+}
+
+.section-wrapper {
+  @apply w-full h-full;
+}
+
+.section-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/app-looper.png");
+  background-size: contain;
+  background-position: center;
+  object-position: center;
+  background-repeat: repeat;
+} */
+
+.id-pages {
+  @apply w-4/5 xs:w-auto py-2 px-4 xl:px-6 rounded-3xl pointer-events-none;
+  background: linear-gradient(#000 0 0) padding-box,
+    linear-gradient(152.64deg, #247be1 0%, #00ff47 100%) border-box;
+  color: white;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+
+.about-wrapper {
+  @apply w-full h-full flex flex-wrap justify-evenly sm:justify-between mx-auto text-lg xs:text-xl lg:text-2xl font-extrabold text-white gap-2 py-2 relative;
+}
+
+.try-button {
+  @apply w-4/5 xs:w-auto py-2 px-4 xl:px-6 rounded-3xl;
+  background: linear-gradient(#111114 0 0) padding-box,
+    linear-gradient(152.64deg, #247be1 0%, #00ff47 100%) border-box;
+  color: white;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+
+.try-button:hover {
+  background: linear-gradient(152.64deg, #247be1 0%, #00ff47 100%) border-box;
+}
+
+/* .try-button-container {
+  @apply w-auto bg-transparent rounded-xl;
+  background: linear-gradient(152.64deg, #247be1 0%, #00ff47 100%);
+}
+
+.try-button-wrapper {
+  @apply p-4 text-white bg-join-us;
+} */
