@@ -206,7 +206,7 @@ const Home: React.FC<Props> = () => {
       <div id="about" className="h-20 sm:h-28 relative z-30" />
       <div className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4">
         <div
-          className={`block lg:hidden app-title text-base my-2 ${
+          className={`block lg:hidden text-primary !font-bold text-base my-2 ${
             poppins.className
           } ${isAboutVisible && "animate-slideInBottomBasic"}`}
         >
@@ -228,7 +228,7 @@ const Home: React.FC<Props> = () => {
             className={`w-full md:w-1/2 lg:w-3/5 h-full px-2 text-center sm:text-left`}
           >
             <div
-              className={`hidden lg:block app-title text-base ${
+              className={`hidden lg:block text-primary !font-bold text-base ${
                 poppins.className
               } ${isAboutVisible && "animate-slideInBottomBasic"}`}
             >
@@ -340,25 +340,33 @@ const Home: React.FC<Props> = () => {
             <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
               Cryptnative AI
             </div>
-            <div className={`app-title ${poppins.className}`}>Name</div>
+            <div className={`text-primary !font-bold ${poppins.className}`}>
+              Name
+            </div>
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/4">
             <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
               $CAI
             </div>
-            <div className={`app-title ${poppins.className}`}>Symbol</div>
+            <div className={`text-primary !font-bold ${poppins.className}`}>
+              Symbol
+            </div>
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/4">
             <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
               ETHEREUM
             </div>
-            <div className={`app-title ${poppins.className}`}>Network</div>
+            <div className={`text-primary !font-bold ${poppins.className}`}>
+              Network
+            </div>
           </div>
           <div className="w-full sm:w-1/2 lg:w-1/4">
             <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
               100M
             </div>
-            <div className={`app-title ${poppins.className}`}>Supply</div>
+            <div className={`text-primary !font-bold ${poppins.className}`}>
+              Supply
+            </div>
           </div>
         </div>
       </div>
