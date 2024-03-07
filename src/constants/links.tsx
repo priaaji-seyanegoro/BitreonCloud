@@ -3,8 +3,8 @@ export const pairAddress = "";
 
 export const socialsLink = {
   whitepaper: "",
-  twitter: "https://x.com/",
-  telegram: "https://t.me/",
+  twitter: "https://x.com/CryptnativeAI",
+  telegram: "https://t.me/cryptnative",
   medium: "https://medium.com/@",
   email: "mailto:support@cryptnative.com",
 };
