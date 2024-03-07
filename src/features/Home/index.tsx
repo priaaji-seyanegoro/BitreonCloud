@@ -103,7 +103,7 @@ const Home: React.FC<Props> = () => {
 
   return (
     <div className="homepage-container">
-      <div id="welcome" className="h-12 sm:h-16 relative z-30" />
+      <div id="welcome" className="h-4 xs:h-8 sm:h-16 relative z-30" />
       <div className="welcome-container">
         <div className="welcome-wrapper">
           <div

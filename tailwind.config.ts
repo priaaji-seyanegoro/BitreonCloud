@@ -200,7 +200,7 @@ module.exports = {
         fadeInBasic: "fadeIn 0.5s ease",
         fadeInBase: "fadeIn 1s ease",
         fadeInLame: "fadeIn 2s ease",
-        fadeInDownBase: "fadeInDown 1s ease",
+        fadeInDownBase: "1s ease 0s 1 normal none running fadeInDown",
         spinSlow: "spin 5s linear infinite",
         lightningBase: "lightning 2s infinite",
         shadowColorChangeMythical: "shadowColorChange 5s infinite",
