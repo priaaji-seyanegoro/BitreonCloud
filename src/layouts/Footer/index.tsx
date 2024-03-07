@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 // import { Button, Divider } from "@chakra-ui/react";
-import { CopyrightOutlined } from "@ant-design/icons";
+import { CopyrightOutlined, MailOutlined } from "@ant-design/icons";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
 
@@ -98,8 +98,8 @@ const AppFooter: React.FC<Props> = () => {
         </div>
         <Divider className="mt-2" /> */}
         <div className="app-footer-wrapper z-30">
-          <div className="w-full flex flex-wrap justify-center sm:justify-start items-center py-2 sm:py-4 z-50 gap-3">
-            <div className="text-base md:text-lg text-center font-semibold order-2 sm:order-1">
+          <div className="w-full lg:w-2/3 flex flex-wrap justify-center lg:justify-start items-center py-2 sm:py-4 z-50 gap-3">
+            <div className="text-base md:text-lg text-center !font-normal order-2 sm:order-1">
               <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
               Cryptnative AI 2024. All rights reserved.
             </div>
@@ -154,6 +154,15 @@ const AppFooter: React.FC<Props> = () => {
               </Link> */}
             </div>
           </div>
+          <Link href={socialsLink.email} className="w-full lg:w-1/5 text-right">
+            <div className="w-full text-sm text-center text-gray-300 hover:text-white !font-bold">
+              <MailOutlined
+                style={{ fontSize: "1em" }}
+                className="mr-1 font-bold"
+              />
+              support@cryptnative.com
+            </div>
+          </Link>
         </div>
       </div>
     </footer>

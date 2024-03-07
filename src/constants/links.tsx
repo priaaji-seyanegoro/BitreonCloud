@@ -6,7 +6,7 @@ export const socialsLink = {
   twitter: "https://x.com/",
   telegram: "https://t.me/",
   medium: "https://medium.com/@",
-  email: "mailto:",
+  email: "mailto:support@cryptnative.com",
 };
 
 export const findUsLink = {
