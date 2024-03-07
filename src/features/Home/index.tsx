@@ -133,7 +133,8 @@ const Home: React.FC<Props> = () => {
                 }`}
               >
                 Shaping Tomorrow's Digital Experience. Seamlessly Blend
-                Creativity and Intelligent Trading in Cryptnative AI
+                Creativity and Intelligent Trading in{" "}
+                <span className="text-secondary font-bold">Cryptnative AI</span>
               </div>
               <div
                 className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${
@@ -237,8 +238,8 @@ const Home: React.FC<Props> = () => {
             <div
               className={`w-full lg:w-4/5 text-2xl lg:text-3xl xl:xl:text-4xl mb-4 pt-2 xl:mt-4 text-left ${clashDisplay.className}`}
             >
-              Crafting Digital Brilliance: Cryptnative AI, Where Creative
-              Expression Meets Seamless Trading Tools
+              Cryptnative AI | Where Creative Expression Meets Seamless Trading
+              Tools
             </div>
 
             <div className="w-full sm:mt-2 lg:w-3/4 text-base text-[#ccc] text-left">
