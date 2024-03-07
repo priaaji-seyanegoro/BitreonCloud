@@ -67,9 +67,13 @@ const Navbar: React.FC<Props> = () => {
   }
 
   return (
-    <div className={clsx("navbar-container", clashDisplay.className)}>
+    <div
+      className={clsx(
+        isScroll ? "navbar-fixed" : "navbar-container",
+        clashDisplay.className
+      )}
+    >
       <div className={clsx(isScroll ? "navbar-scroll" : "navbar")}>
-        {/* <div className="w-1/2 lg:w-1/4 flex items-center relative"> */}
         <div className="w-1/2 lg:w-1/4 flex items-center relative">
           <Link href="/" className={`logo-container text-white`}>
             <Image

@@ -1,7 +1,13 @@
 .navbar-container {
   /* @apply !px-0 w-full h-[5.5em] bg-dark-main; */
-  @apply !px-0 w-full h-[5.5em] bg-black;
-  @apply sticky top-0 z-50;
+  @apply !px-0 w-full h-[5.5em] bg-dark-main relative;
+  /* @apply fixed top-0 z-50; */
+  z-index: 50;
+}
+
+.navbar-fixed {
+  @apply w-full fixed top-0 bg-dark-main;
+  z-index: 1000;
 }
 
 .navbar,
@@ -10,11 +16,9 @@
   @apply flex flex-nowrap justify-between items-center;
   @apply px-2;
 
-  z-index: 1000;
   transition: linear;
-  transition-delay: 0.25s;
-  transition-duration: 0.25s;
-  transition-delay: 0.25s;
+  transition-delay: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .navbar {
@@ -23,7 +27,7 @@
 }
 
 .navbar-scroll {
-  @apply py-2  bg-dark-main z-[9999];
+  @apply py-2  animate-fadeInDownBase;
 }
 
 .navbar-title {

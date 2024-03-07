@@ -95,8 +95,11 @@ module.exports = {
           "100%": { opacity: 0 },
         },
         fadeIn: {
+          "0%": { opacity: 0, transform: "translate3d(0, -100%, 0)" },
+          "100%": { opacity: 1, transform: "none" },
+        },
+        fadeInDown: {
           "0%": { opacity: 0 },
-          // "50%": { opacity: 0.5 },
           "100%": { opacity: 1 },
         },
         shadowColorChange: {
@@ -197,6 +200,7 @@ module.exports = {
         fadeInBasic: "fadeIn 0.5s ease",
         fadeInBase: "fadeIn 1s ease",
         fadeInLame: "fadeIn 2s ease",
+        fadeInDownBase: "fadeInDown 1s ease",
         spinSlow: "spin 5s linear infinite",
         lightningBase: "lightning 2s infinite",
         shadowColorChangeMythical: "shadowColorChange 5s infinite",

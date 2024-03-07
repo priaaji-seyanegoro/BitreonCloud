@@ -197,7 +197,7 @@ const Home: React.FC<Props> = () => {
         </div>
       </div>
 
-      <div id="about" className="h-20 sm:h-24 relative z-30" />
+      <div id="about" className="h-24 sm:h-36 relative z-30" />
       <div className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4">
         <div
           className={`block lg:hidden app-title text-base mb-2 ${
@@ -312,7 +312,7 @@ const Home: React.FC<Props> = () => {
         </div>
       </div>
 
-      <div className="h-12 md:h-20" />
+      <div className="h-24 md:h-40" />
       <div id="tokenomic" className="h-20 sm:h-24 relative z-30" />
       <div
         ref={tokensRef}
