@@ -17,7 +17,7 @@ import { poppins } from "@/utils/font";
 // import AppLogoTransparent from "@/assets/logo-transparent.png";
 import TwitterLogo from "@/assets/logo-x.png";
 import TelegramLogo from "@/assets/logo-telegram.png";
-import MediumLogo from "@/assets/logo-medium.png";
+// import MediumLogo from "@/assets/logo-medium.png";
 // import WebLogo from "@/assets/logo-web.png";
 // import GitbookLogo from "@/assets/logo-gitbook.png";
 // import EmailLogo from "@/assets/logo-email.png";
@@ -98,7 +98,7 @@ const AppFooter: React.FC<Props> = () => {
         <Divider className="mt-2" /> */}
         <div className="app-footer-wrapper z-30">
           <div className="w-full flex flex-wrap justify-center sm:justify-start items-center py-2 sm:py-4 z-50 gap-3">
-            <div className="text-base md:text-lg font-semibold order-2 sm:order-1">
+            <div className="text-base md:text-lg text-center font-semibold order-2 sm:order-1">
               <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
               Cryptnative AI 2024. All rights reserved.
             </div>
@@ -128,7 +128,7 @@ const AppFooter: React.FC<Props> = () => {
                 />
               </Link>
 
-              <Link
+              {/* <Link
                 href={socialsLink.medium}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -138,7 +138,7 @@ const AppFooter: React.FC<Props> = () => {
                   alt="medium"
                   className="w-8 h-8 object-contain"
                 />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

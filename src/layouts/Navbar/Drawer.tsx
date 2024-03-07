@@ -1,22 +1,23 @@
-import { useMemo, useRef } from "react";
-import Link from "next/link";
+import { useMemo } from "react";
+// import Link from "next/link";
 // import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { ArrowRightOutlined } from "@ant-design/icons";
 // import { ConnectWallet } from "@thirdweb-dev/react";
 import {
-  Button,
+  // Button,
   Collapse,
   // Button,
   // Button,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerFooter,
+  // Drawer,
+  // DrawerBody,
+  // DrawerCloseButton,
+  // DrawerContent,
   // DrawerFooter,
   // DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
+  // DrawerFooter,
+  // DrawerHeader,
+  // DrawerOverlay,
   List,
   ListItem,
 } from "@chakra-ui/react";
@@ -32,7 +33,7 @@ import useHash from "@/hooks/useHashname";
 import { poppins } from "@/utils/font";
 
 // import AppTitle from "@/assets/title-app.png";
-import { findUsLink, socialsLink } from "@/constants/links";
+// import { findUsLink, socialsLink } from "@/constants/links";
 
 import "../style.css";
 import "./style.css";
@@ -43,7 +44,7 @@ interface Props {
 }
 
 export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
-  const btnRef = useRef() as any;
+  // const btnRef = useRef() as any;
 
   const pathname = usePathname();
   const hashname = useHash();
@@ -88,7 +89,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
 
   return (
     <Collapse in={isOpen} animateOpacity>
-      <div className="w-full h-full mt-8">
+      <div className={`w-full h-full mt-8 ${poppins.className}`}>
         <List spacing={3}>
           {tabsList.map((item) => {
             const isActive = !!defaultHash
@@ -124,6 +125,9 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
                   )}
                   style={{ transition: "250" }}
                 >
+                  {isActive && (
+                    <ArrowRightOutlined className="mr-4 animate-slideInLeftBasic" />
+                  )}
                   {item.name}
                 </Anchor>
               </ListItem>

@@ -10,6 +10,7 @@ import PageTabs from "../PageTabs";
 import { NavbarDrawer } from "./Drawer";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
+// import { useWidth } from "@/hooks/useWidth";
 
 import { clashDisplay } from "@/utils/font";
 import { findUsLink, socialsLink } from "@/constants/links";
@@ -39,13 +40,14 @@ const Navbar: React.FC<Props> = () => {
   } = useDisclosure();
 
   // const router = useRouter()
-  const [isEqual640] = useMediaQuery("(min-width: 640px)");
+  // const [isEqual640] = useMediaQuery("(min-width: 640px)");
+  const [isEqual1024] = useMediaQuery("(min-width: 1024px)");
 
   useEffect(() => {
-    if (isEqual640) {
+    if (isEqual1024) {
       onCloseDrawer();
     }
-  }, [isEqual640]);
+  }, [isEqual1024]);
 
   useEffect(() => {
     window?.addEventListener("scroll", handleScroll);

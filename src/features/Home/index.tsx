@@ -6,6 +6,7 @@ import { ReactTyped } from "react-typed";
 import Tilt from "react-parallax-tilt";
 import { Button } from "@chakra-ui/react";
 import { ArrowRightOutlined } from "@ant-design/icons";
+import { RobotIcon } from "@/utils/Icon/robot";
 
 import YinLoader from "@/components/Loader/Custom";
 
@@ -22,7 +23,7 @@ import { ecosystemList } from "./constants/ecosystem";
 import LogoApp from "@/assets/logo-app.png";
 import TwitterLogo from "@/assets/logo-x.png";
 import TelegramLogo from "@/assets/logo-telegram.png";
-import MediumLogo from "@/assets/logo-medium.png";
+// import MediumLogo from "@/assets/logo-medium.png";
 // import MapApp from "@/assets/map-app.png";
 // import Dextools from "@/assets/dextools.png";
 // import Dexscreener from "@/assets/dexscreener.png";
@@ -32,7 +33,6 @@ import MediumLogo from "@/assets/logo-medium.png";
 // import Coingecko from "@/assets/coingecko.png";
 
 import "./style.css";
-import { RobotIcon } from "@/utils/Icon/robot";
 
 interface Props {}
 
@@ -121,9 +121,7 @@ const Home: React.FC<Props> = () => {
               >
                 {isWelcomeVisible && (
                   <ReactTyped
-                    strings={[
-                      "Crafting Tomorrow, Today: Cryptnative AI Unleashed",
-                    ]}
+                    strings={["Transforming Digital Creativity and Trading"]}
                     typeSpeed={40}
                   />
                 )}
@@ -134,13 +132,8 @@ const Home: React.FC<Props> = () => {
                   isWelcomeVisible && "animate-fadeInLame"
                 }`}
               >
-                {/* Step into the imaginative realm of Cryptnative AI, where
-                innovation meets expression. */}
-                Embark on a journey where creativity meets innovation, and
-                seamless trading is an art form
-                {/* Unlock a suite of creative photo and design editing tools with
-                Cryptnative AI. Unleash your artistic vision with Cryptnative
-                AI. */}
+                Shaping Tomorrow's Digital Experience. Seamlessly Blend
+                Creativity and Intelligent Trading in Cryptnative AI
               </div>
               <div
                 className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${
@@ -172,7 +165,7 @@ const Home: React.FC<Props> = () => {
                     />
                   </Link>
 
-                  <Link
+                  {/* <Link
                     href={socialsLink.medium}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -182,7 +175,7 @@ const Home: React.FC<Props> = () => {
                       alt="medium"
                       className="w-8 h-8 object-contain"
                     />
-                  </Link>
+                  </Link> */}
                 </div>
 
                 <div className="h-4" />
@@ -244,17 +237,18 @@ const Home: React.FC<Props> = () => {
             <div
               className={`w-full lg:w-4/5 text-2xl lg:text-3xl xl:xl:text-4xl mb-4 pt-2 xl:mt-4 text-left ${clashDisplay.className}`}
             >
-              Your Creative Hub for Digital Transformation: Cryptnative AI
-              Delivers Excellence
+              Crafting Digital Brilliance: Cryptnative AI, Where Creative
+              Expression Meets Seamless Trading Tools
             </div>
 
             <div className="w-full sm:mt-2 lg:w-3/4 text-base text-[#ccc] text-left">
-              Embark on a journey of creative exploration with Cryptnative AI,
-              your go-to destination for cutting-edge AI-powered generative
-              tools. Cryptnative AI revolutionizes your creative process,
-              unlocking a world of limitless possibilities. Whether you're a
-              digital enthusiast or a seasoned creator, join us in redefining
-              the boundaries of visual storytelling
+              The primary mission of Cryptnative AI is to simplify user
+              experiences. We stand as a gateway to digital transformation,
+              providing innovative creative tools and smart trading solutions.
+              Cryptnative AI invites you to explore a world where artistic
+              expression meets cutting-edge technology, creating an unlimited
+              digital experience. With Cryptnative AI, ease and excellence are
+              the primary goals in every step of your digital journey
             </div>
             <Link
               href={socialsLink.whitepaper}
@@ -292,7 +286,7 @@ const Home: React.FC<Props> = () => {
           All features that support your needs
         </div>
 
-        <div className="w-full flex flex-wrap justify-between items-center gap-x-2 gap-y-4 sm:gap-y-8 lg:gap-y-12 mx-auto mt-8 relative z-30">
+        <div className="w-full flex flex-wrap justify-evenly items-center gap-x-2 gap-y-4 sm:gap-y-8 lg:gap-y-12 mx-auto mt-8 relative z-30">
           {ecosystemList.map((item, index) => (
             <div
               className="w-full sm:w-[48%] h-full px-2 py-6 text-center"
@@ -374,7 +368,7 @@ const Home: React.FC<Props> = () => {
           className={`w-full lg:w-3/4 text-center mx-auto text-4xl sm:text-5xl xl:text-6xl font-bold text-white py-2`}
         >
           <ReactTyped
-            strings={["Starts To Generate Your Own"]}
+            strings={["Initiate Your Digital Experience Now!"]}
             typeSpeed={40}
           />
         </div>
@@ -396,6 +390,18 @@ const Home: React.FC<Props> = () => {
 
           <Button className={`try-button ${poppins.className}`}>
             Colorized
+          </Button>
+
+          <Button className={`try-button ${poppins.className}`}>
+            Trading Companion
+          </Button>
+
+          <Button className={`try-button ${poppins.className}`}>
+            Price Prediction
+          </Button>
+
+          <Button className={`try-button ${poppins.className}`}>
+            Trading Tools
           </Button>
         </div>
 

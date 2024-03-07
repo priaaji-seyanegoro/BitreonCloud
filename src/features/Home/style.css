@@ -44,7 +44,7 @@
 }
 
 .generate-container {
-  @apply w-11/12 lg:w-2/3 h-[600px] xs:h-[500px] rounded-xl flex flex-col justify-center px-2 relative z-30 mx-auto;
+  @apply w-11/12 lg:w-2/3 h-[800px] xs:h-[600px] rounded-xl flex flex-col justify-center px-2 relative z-30 mx-auto;
   clip-path: xywh(0 5px 100% 90% round 15% 0);
 
   background: linear-gradient(

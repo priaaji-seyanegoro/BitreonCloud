@@ -7,11 +7,10 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title =
-  "Cryptnative AI | Your go-to destination for cutting-edge AI-powered generative tools";
+const app_title = "Cryptnative AI | Seamless Trades & Infinite Creativity";
 const app_name = "Cryptnative AI";
 const description =
-  "Explore the next frontier of creativity with Cryptnative AI";
+  "Unleash creativity and navigate financial landscapes effortlessly with Cryptnative AI";
 
 export const metadata: Metadata = {
   title: app_title,
