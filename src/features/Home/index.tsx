@@ -23,6 +23,7 @@ import { ecosystemList } from "./constants/ecosystem";
 import LogoApp from "@/assets/logo-app.png";
 import TwitterLogo from "@/assets/logo-x.png";
 import TelegramLogo from "@/assets/logo-telegram.png";
+import GitBookLogo from "@/assets/logo-gitbook.png";
 // import MediumLogo from "@/assets/logo-medium.png";
 // import MapApp from "@/assets/map-app.png";
 // import Dextools from "@/assets/dextools.png";
@@ -150,7 +151,7 @@ const Home: React.FC<Props> = () => {
                     <Image
                       src={TelegramLogo}
                       alt="telegram"
-                      className="w-8 h-8 object-contain"
+                      className="socials-button"
                     />
                   </Link>
 
@@ -162,21 +163,21 @@ const Home: React.FC<Props> = () => {
                     <Image
                       src={TwitterLogo}
                       alt="twitter"
-                      className="w-8 h-8 object-contain"
+                      className="socials-button"
                     />
                   </Link>
 
-                  {/* <Link
-                    href={socialsLink.medium}
+                  <Link
+                    href={socialsLink.whitepaper}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Image
-                      src={MediumLogo}
-                      alt="medium"
-                      className="w-8 h-8 object-contain"
+                      src={GitBookLogo}
+                      alt="whitepaper"
+                      className="socials-button rounded-full"
                     />
-                  </Link> */}
+                  </Link>
                 </div>
 
                 <div className="h-4" />

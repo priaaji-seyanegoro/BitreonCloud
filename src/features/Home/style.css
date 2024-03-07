@@ -120,3 +120,8 @@
   /* @apply ml-2; */
   transform: translateX(7px);
 }
+
+.socials-button {
+  @apply w-8 h-8 object-contain  hover:scale-110;
+  transition: transform 0.3s ease;
+}

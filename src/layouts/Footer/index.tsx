@@ -17,6 +17,7 @@ import { poppins } from "@/utils/font";
 // import AppLogoTransparent from "@/assets/logo-transparent.png";
 import TwitterLogo from "@/assets/logo-x.png";
 import TelegramLogo from "@/assets/logo-telegram.png";
+import GitBookLogo from "@/assets/logo-gitbook.png";
 // import MediumLogo from "@/assets/logo-medium.png";
 // import WebLogo from "@/assets/logo-web.png";
 // import GitbookLogo from "@/assets/logo-gitbook.png";
@@ -112,7 +113,7 @@ const AppFooter: React.FC<Props> = () => {
                 <Image
                   src={TelegramLogo}
                   alt="telegram"
-                  className="w-8 h-8 object-contain"
+                  className="footer-socials-button"
                 />
               </Link>
 
@@ -124,7 +125,19 @@ const AppFooter: React.FC<Props> = () => {
                 <Image
                   src={TwitterLogo}
                   alt="twitter"
-                  className="w-8 h-8 object-contain"
+                  className="footer-socials-button"
+                />
+              </Link>
+
+              <Link
+                href={socialsLink.whitepaper}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={GitBookLogo}
+                  alt="whitepaper"
+                  className="footer-socials-button rounded-full"
                 />
               </Link>
 
