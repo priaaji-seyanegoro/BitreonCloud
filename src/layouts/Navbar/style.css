@@ -6,7 +6,7 @@
 }
 
 .navbar-fixed {
-  @apply w-full fixed top-0 bg-dark-main;
+  @apply w-full h-[5.5em] fixed top-0 bg-dark-main;
   z-index: 1000;
 }
 

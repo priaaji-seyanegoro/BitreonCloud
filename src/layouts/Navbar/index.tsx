@@ -79,7 +79,7 @@ const Navbar: React.FC<Props> = () => {
             <Image
               src={AppBannerNav}
               alt="banner-nav-logo"
-              className="w-full md:w-full h-16 object-contain"
+              className="w-full md:w-full h-14 sm:h-16 object-contain"
             />
           </Link>
         </div>

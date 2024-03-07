@@ -197,7 +197,7 @@ const Home: React.FC<Props> = () => {
         </div>
       </div>
 
-      <div id="about" className="h-24 sm:h-36 relative z-30" />
+      <div id="about" className="h-12 sm:h-20 relative z-30" />
       <div className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4">
         <div
           className={`block lg:hidden app-title text-base mb-2 ${
