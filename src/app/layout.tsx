@@ -8,10 +8,10 @@ import BaseLayout from "@/layouts";
 import "./globals.css";
 
 const app_title =
-  "Centrocyph AI | Your go-to destination for cutting-edge AI-powered generative tools";
-const app_name = "Centrocyph AI";
+  "Cryptnative AI | Your go-to destination for cutting-edge AI-powered generative tools";
+const app_name = "Cryptnative AI";
 const description =
-  "Explore the next frontier of creativity with Centrocyph AI";
+  "Explore the next frontier of creativity with Cryptnative AI";
 
 export const metadata: Metadata = {
   title: app_title,

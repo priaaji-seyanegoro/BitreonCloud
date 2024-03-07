@@ -3,16 +3,16 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
-import { Button, Divider } from "@chakra-ui/react";
-import { AndroidOutlined, CopyrightOutlined } from "@ant-design/icons";
+// import { Button, Divider } from "@chakra-ui/react";
+import { CopyrightOutlined } from "@ant-design/icons";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
 
-import { findUsLink, socialsLink } from "@/constants/links";
+import { socialsLink } from "@/constants/links";
 import { poppins } from "@/utils/font";
 
 // import AppLogo from "@/assets/logo-app.png";
-import AppBannerNav from "@/assets/banner-nav.png";
+// import AppBannerNav from "@/assets/banner-nav.png";
 
 // import AppLogoTransparent from "@/assets/logo-transparent.png";
 import TwitterLogo from "@/assets/logo-x.png";
@@ -96,48 +96,50 @@ const AppFooter: React.FC<Props> = () => {
           </div>
         </div>
         <Divider className="mt-2" /> */}
-        <div className="w-full bg-chr-secondary-transparent flex flex-wrap justify-center items-center py-4 md:py-6 z-50 gap-3">
-          <div className="text-base md:text-lg font-semibold">
-            <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
-            Centrocyph AI 2024. All rights reserved.
-          </div>
+        <div className="app-footer-wrapper z-30">
+          <div className="w-full flex flex-wrap justify-center sm:justify-start items-center py-2 sm:py-4 z-50 gap-3">
+            <div className="text-base md:text-lg font-semibold order-2 sm:order-1">
+              <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
+              Cryptnative AI 2024. All rights reserved.
+            </div>
 
-          <div className="flex gap-3">
-            <Link
-              href={socialsLink.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={TelegramLogo}
-                alt="telegram"
-                className="w-8 h-8 object-contain"
-              />
-            </Link>
+            <div className="flex gap-3 order-1 sm:order-2">
+              <Link
+                href={socialsLink.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={TelegramLogo}
+                  alt="telegram"
+                  className="w-8 h-8 object-contain"
+                />
+              </Link>
 
-            <Link
-              href={socialsLink.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={TwitterLogo}
-                alt="twitter"
-                className="w-8 h-8 object-contain"
-              />
-            </Link>
+              <Link
+                href={socialsLink.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={TwitterLogo}
+                  alt="twitter"
+                  className="w-8 h-8 object-contain"
+                />
+              </Link>
 
-            <Link
-              href={socialsLink.medium}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={MediumLogo}
-                alt="medium"
-                className="w-8 h-8 object-contain"
-              />
-            </Link>
+              <Link
+                href={socialsLink.medium}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={MediumLogo}
+                  alt="medium"
+                  className="w-8 h-8 object-contain"
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

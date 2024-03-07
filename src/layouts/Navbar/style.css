@@ -1,6 +1,6 @@
 .navbar-container {
   /* @apply !px-0 w-full h-[5.5em] bg-dark-main; */
-  @apply !px-0 w-full h-[5.5em] bg-dark-main relative;
+  @apply !px-0 w-full bg-dark-main absolute py-3;
   /* @apply fixed top-0 z-50; */
   z-index: 50;
 }
@@ -13,8 +13,8 @@
 .navbar,
 .navbar-scroll {
   @apply max-w-screen-xl w-full h-full m-auto;
-  @apply flex flex-nowrap justify-between items-center;
-  @apply px-2;
+  @apply flex flex-wrap justify-between items-center;
+  @apply px-4;
 
   transition: linear;
   transition-delay: 0.2s;
@@ -58,11 +58,10 @@
   transform: translateY(-5px);
 }
 
-/* @media (min-width: theme("screens.sm")) {
-  .logo-container {
-    margin-right: 0.75rem;
-  }
-} */
+.nav-menu-btn {
+  @apply bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent text-white;
+  transition: 0.3s ease-in-out;
+}
 
 @media (min-width: theme("screens.md")) {
   .logo-container {

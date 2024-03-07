@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 // import { ConnectWallet } from "@thirdweb-dev/react";
 import {
   Button,
+  Collapse,
   // Button,
   // Button,
   Drawer,
@@ -86,87 +87,135 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
   }
 
   return (
-    <Drawer
-      // size={""}
-      isOpen={isOpen}
-      placement="right"
-      onClose={onClose}
-      finalFocusRef={btnRef}
-    >
-      <DrawerOverlay />
-      <DrawerContent>
-        <DrawerCloseButton
-          className="mt-2 font-extrabold text-red-500"
-          style={{ fontSize: 20 }}
-        />
-        <DrawerHeader className={`bg-dark-main h-24 ${poppins.className}`}>
-          <Link href="/" className={`logo-container text-white h-full`}>
-            <div className="font-extrabold text-2xl">Centrocyph AI</div>
-          </Link>
-        </DrawerHeader>
+    <Collapse in={isOpen} animateOpacity>
+      <div className="w-full h-full mt-8">
+        <List spacing={3}>
+          {tabsList.map((item) => {
+            const isActive = !!defaultHash
+              ? hashname === item.pathname
+              : !defaultHash && pathname === item.pathname;
 
-        <DrawerBody className={`bg-dark-main ${poppins.className}`}>
-          <List spacing={3}>
-            {tabsList.map((item) => {
-              const isActive = !!defaultHash
-                ? hashname === item.pathname
-                : !defaultHash && pathname === item.pathname;
+            // if (item.pathname === "/whitepaper") {
+            //   return (
+            //     <ListItem key={item.name} onClick={onClose}>
+            //       <Link
+            //         key={item.name}
+            //         href={item.href}
+            //         target="_blank"
+            //         rel="noopener noreferrer"
+            //         className="nav-anchor"
+            //       >
+            //         {item.name}
+            //       </Link>
+            //     </ListItem>
+            //   );
+            // }
 
-              // if (item.pathname === "/whitepaper") {
-              //   return (
-              //     <ListItem key={item.name} onClick={onClose}>
-              //       <Link
-              //         key={item.name}
-              //         href={item.href}
-              //         target="_blank"
-              //         rel="noopener noreferrer"
-              //         className="nav-anchor"
-              //       >
-              //         {item.name}
-              //       </Link>
-              //     </ListItem>
-              //   );
-              // }
-
-              return (
-                <ListItem key={item.name} onClick={onClose}>
-                  <Anchor
-                    href={item.href}
-                    className={clsx(
-                      "font-bold",
-                      // "text-white p-2 hover:text-secondary font-bold",
-                      // "text-sm md:text-base text-black dark:text-white p-2 hover:bg-dark-hover font-bold",
-                      // isActive ? "#bf00ff" : "text-white"
-                      isActive ? "nav-anchor-active" : "nav-anchor"
-                    )}
-                    style={{ transition: "250" }}
-                  >
-                    {item.name}
-                  </Anchor>
-                </ListItem>
-              );
-            })}
-          </List>
-        </DrawerBody>
-
-        <DrawerFooter className="bg-dark-main flex justify-center">
-          <Link
-            href={socialsLink.telegram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full"
-          >
-            <Button
-              size={"lg"}
-              className="w-full text-white bg-chr-primary hover:bg-chr-secondary active:bg-chr-secondary focus:bg-chr-secondary"
-              // colorScheme="messenger"
-              // leftIcon={<DollarOutlined style={{ fontSize: "1.5em" }} />}
-            >
-              Telegram
-            </Button>
-          </Link>
-        </DrawerFooter>
-      </DrawerContent>
-    </Drawer>
+            return (
+              <ListItem key={item.name} onClick={onClose}>
+                <Anchor
+                  href={item.href}
+                  className={clsx(
+                    "font-bold",
+                    // "text-white p-2 hover:text-secondary font-bold",
+                    // "text-sm md:text-base text-black dark:text-white p-2 hover:bg-dark-hover font-bold",
+                    // isActive ? "#bf00ff" : "text-white"
+                    isActive ? "nav-anchor-active" : "nav-anchor"
+                  )}
+                  style={{ transition: "250" }}
+                >
+                  {item.name}
+                </Anchor>
+              </ListItem>
+            );
+          })}
+        </List>
+      </div>
+    </Collapse>
   );
+
+  // return (
+  //   <Drawer
+  //     // size={""}
+  //     isOpen={isOpen}
+  //     placement="right"
+  //     onClose={onClose}
+  //     finalFocusRef={btnRef}
+  //   >
+  //     <DrawerOverlay />
+  //     <DrawerContent>
+  //       <DrawerCloseButton
+  //         className="mt-2 font-extrabold text-red-500"
+  //         style={{ fontSize: 20 }}
+  //       />
+  //       <DrawerHeader className={`bg-dark-main h-24 ${poppins.className}`}>
+  //         <Link href="/" className={`logo-container text-white h-full`}>
+  //           <div className="font-extrabold text-2xl">Cryptnative AI</div>
+  //         </Link>
+  //       </DrawerHeader>
+
+  //       <DrawerBody className={`bg-dark-main ${poppins.className}`}>
+  //         <List spacing={3}>
+  //           {tabsList.map((item) => {
+  //             const isActive = !!defaultHash
+  //               ? hashname === item.pathname
+  //               : !defaultHash && pathname === item.pathname;
+
+  //             // if (item.pathname === "/whitepaper") {
+  //             //   return (
+  //             //     <ListItem key={item.name} onClick={onClose}>
+  //             //       <Link
+  //             //         key={item.name}
+  //             //         href={item.href}
+  //             //         target="_blank"
+  //             //         rel="noopener noreferrer"
+  //             //         className="nav-anchor"
+  //             //       >
+  //             //         {item.name}
+  //             //       </Link>
+  //             //     </ListItem>
+  //             //   );
+  //             // }
+
+  //             return (
+  //               <ListItem key={item.name} onClick={onClose}>
+  //                 <Anchor
+  //                   href={item.href}
+  //                   className={clsx(
+  //                     "font-bold",
+  //                     // "text-white p-2 hover:text-secondary font-bold",
+  //                     // "text-sm md:text-base text-black dark:text-white p-2 hover:bg-dark-hover font-bold",
+  //                     // isActive ? "#bf00ff" : "text-white"
+  //                     isActive ? "nav-anchor-active" : "nav-anchor"
+  //                   )}
+  //                   style={{ transition: "250" }}
+  //                 >
+  //                   {item.name}
+  //                 </Anchor>
+  //               </ListItem>
+  //             );
+  //           })}
+  //         </List>
+  //       </DrawerBody>
+
+  //       <DrawerFooter className="bg-dark-main flex justify-center">
+  //         <Link
+  //           href={socialsLink.telegram}
+  //           target="_blank"
+  //           rel="noopener noreferrer"
+  //           className="w-full"
+  //         >
+  //           <Button
+  //             size={"lg"}
+  //             className="w-full text-white bg-chr-primary hover:bg-chr-secondary active:bg-chr-secondary focus:bg-chr-secondary"
+  //             // colorScheme="messenger"
+  //             // leftIcon={<DollarOutlined style={{ fontSize: "1.5em" }} />}
+  //           >
+  //             Telegram
+  //           </Button>
+  //         </Link>
+  //       </DrawerFooter>
+  //     </DrawerContent>
+  //   </Drawer>
+  // );
 };

@@ -193,6 +193,7 @@ module.exports = {
         slideInTopFast: "slideInFromTop 0.5s ease-out",
         slideInRightFast: "slideInFromRight 0.5s ease",
         slideInLeftFast: "slideInFromLeft 0.5s ease",
+        slideInBottomFast: "slideInFromBottom 0.5s ease",
         slideInBottomInstant: "slideInFromBottom 0.25s ease",
         lightSpeedInLeftFast: "lightSpeedInLeft 0.5s ease-out",
         lightSpeedInLeftBase: "lightSpeedInLeft 1s ease-out",

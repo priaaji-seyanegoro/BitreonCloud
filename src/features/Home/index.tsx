@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ReactTyped } from "react-typed";
 import Tilt from "react-parallax-tilt";
 import { Button } from "@chakra-ui/react";
-import { AndroidOutlined, ArrowRightOutlined } from "@ant-design/icons";
+import { ArrowRightOutlined } from "@ant-design/icons";
 
 import YinLoader from "@/components/Loader/Custom";
 
@@ -32,6 +32,7 @@ import MediumLogo from "@/assets/logo-medium.png";
 // import Coingecko from "@/assets/coingecko.png";
 
 import "./style.css";
+import { RobotIcon } from "@/utils/Icon/robot";
 
 interface Props {}
 
@@ -103,7 +104,11 @@ const Home: React.FC<Props> = () => {
 
   return (
     <div className="homepage-container">
-      <div id="welcome" className="h-4 xs:h-8 sm:h-16 relative z-30" />
+      {/* <div id="welcome" className="h-4 xs:h-8 sm:h-16 relative z-30" /> */}
+      <div
+        id="welcome"
+        className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
+      />
       <div className="welcome-container">
         <div className="welcome-wrapper">
           <div
@@ -116,7 +121,9 @@ const Home: React.FC<Props> = () => {
               >
                 {isWelcomeVisible && (
                   <ReactTyped
-                    strings={["Imagining Beyond, Creating Unforgettable"]}
+                    strings={[
+                      "Crafting Tomorrow, Today: Cryptnative AI Unleashed",
+                    ]}
                     typeSpeed={40}
                   />
                 )}
@@ -127,8 +134,13 @@ const Home: React.FC<Props> = () => {
                   isWelcomeVisible && "animate-fadeInLame"
                 }`}
               >
-                Unlock a suite of creative photo and design editing tools with
-                Centrocyph AI. Unleash your artistic vision with Centrocyph AI.
+                {/* Step into the imaginative realm of Cryptnative AI, where
+                innovation meets expression. */}
+                Embark on a journey where creativity meets innovation, and
+                seamless trading is an art form
+                {/* Unlock a suite of creative photo and design editing tools with
+                Cryptnative AI. Unleash your artistic vision with Cryptnative
+                AI. */}
               </div>
               <div
                 className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${
@@ -180,7 +192,7 @@ const Home: React.FC<Props> = () => {
                     size="lg"
                     className="welcome-bot-button"
                     leftIcon={
-                      <AndroidOutlined
+                      <RobotIcon
                         className="welcome-bot-icon"
                         style={{
                           fontSize: "1.25em",
@@ -188,7 +200,7 @@ const Home: React.FC<Props> = () => {
                       />
                     }
                   >
-                    Centrocyph AI
+                    Cryptnative AI
                   </Button>
                 </Link>
               </div>
@@ -197,10 +209,10 @@ const Home: React.FC<Props> = () => {
         </div>
       </div>
 
-      <div id="about" className="h-12 sm:h-20 relative z-30" />
+      <div id="about" className="h-20 sm:h-28 relative z-30" />
       <div className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4">
         <div
-          className={`block lg:hidden app-title text-base mb-2 ${
+          className={`block lg:hidden app-title text-base my-2 ${
             poppins.className
           } ${isAboutVisible && "animate-slideInBottomBasic"}`}
         >
@@ -232,14 +244,14 @@ const Home: React.FC<Props> = () => {
             <div
               className={`w-full lg:w-4/5 text-2xl lg:text-3xl xl:xl:text-4xl mb-4 pt-2 xl:mt-4 text-left ${clashDisplay.className}`}
             >
-              Your Creative Hub for Digital Transformation: Centrocyph AI
+              Your Creative Hub for Digital Transformation: Cryptnative AI
               Delivers Excellence
             </div>
 
             <div className="w-full sm:mt-2 lg:w-3/4 text-base text-[#ccc] text-left">
-              Embark on a journey of creative exploration with Centrocyph AI,
+              Embark on a journey of creative exploration with Cryptnative AI,
               your go-to destination for cutting-edge AI-powered generative
-              tools. Centrocyph AI revolutionizes your creative process,
+              tools. Cryptnative AI revolutionizes your creative process,
               unlocking a world of limitless possibilities. Whether you're a
               digital enthusiast or a seasoned creator, join us in redefining
               the boundaries of visual storytelling
@@ -261,7 +273,7 @@ const Home: React.FC<Props> = () => {
       </div>
 
       <div className="h-12 md:h-20" />
-      <div id="feature" className="h-20 sm:h-24 relative z-30" />
+      <div id="feature" className="h-24 sm:h-28 relative z-30" />
       <div
         ref={featuresRef}
         className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4 relative z-30"
@@ -274,7 +286,7 @@ const Home: React.FC<Props> = () => {
           FEATURES
         </Button>
         <div className={`text-5xl mt-7 mb-2 ${clashDisplay.className}`}>
-          Centrocyph AI
+          Cryptnative AI
         </div>
         <div className={`text-2xl text-slate-200 ${poppins.className}`}>
           All features that support your needs
@@ -313,7 +325,7 @@ const Home: React.FC<Props> = () => {
       </div>
 
       <div className="h-24 md:h-40" />
-      <div id="tokenomic" className="h-20 sm:h-24 relative z-30" />
+      <div id="tokenomic" className="h-24 sm:h-28 relative z-30" />
       <div
         ref={tokensRef}
         className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4 relative z-30"
@@ -331,7 +343,7 @@ const Home: React.FC<Props> = () => {
         <div className="w-full md:w-11/12 flex flex-wrap justify-center items-center gap-y-8 mx-auto mt-8">
           <div className="w-full sm:w-1/2 lg:w-1/4">
             <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
-              Centrocyph AI
+              Cryptnative AI
             </div>
             <div className={`app-title ${poppins.className}`}>Name</div>
           </div>
@@ -392,7 +404,7 @@ const Home: React.FC<Props> = () => {
             size="lg"
             className="bot-button"
             leftIcon={
-              <AndroidOutlined
+              <RobotIcon
                 className="bot-button-icon"
                 style={{
                   fontSize: "1.25em",
@@ -400,7 +412,7 @@ const Home: React.FC<Props> = () => {
               />
             }
           >
-            Centrocyph AI
+            Cryptnative AI
           </Button>
         </div>
       </div>

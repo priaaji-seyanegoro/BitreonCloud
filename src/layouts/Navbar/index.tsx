@@ -3,9 +3,8 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button, useDisclosure, useMediaQuery } from "@chakra-ui/react";
-import { ConnectWallet } from "@thirdweb-dev/react";
 import clsx from "clsx";
-import { MenuOutlined } from "@ant-design/icons";
+import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
 
 import PageTabs from "../PageTabs";
 import { NavbarDrawer } from "./Drawer";
@@ -34,7 +33,8 @@ const Navbar: React.FC<Props> = () => {
   } = useDisclosure();
   const {
     isOpen: isOpenDrawer,
-    onOpen: onOpenDrawer,
+    // onOpen: onOpenDrawer,
+    onToggle: onToggleDrawer,
     onClose: onCloseDrawer,
   } = useDisclosure();
 
@@ -79,7 +79,7 @@ const Navbar: React.FC<Props> = () => {
             <Image
               src={AppBannerNav}
               alt="banner-nav-logo"
-              className="w-full md:w-full h-14 sm:h-16 object-contain"
+              className="w-full md:w-full h-14 sm:h-16 object-contain object-left"
             />
           </Link>
         </div>
@@ -136,13 +136,24 @@ const Navbar: React.FC<Props> = () => {
 
           <div className="w-auto text-end sm:ml-4 lg:hidden">
             <Button
-              onClick={onOpenDrawer}
-              className="bg-chr-primary hover:bg-chr-primary active:bg-chr-primary focus:bg-chr-primary text-white"
+              onClick={onToggleDrawer}
+              className={`nav-menu-btn ${
+                isOpenDrawer
+                  ? "animate-slideInRightFast"
+                  : "animate-slideInBottomBasic"
+              }`}
             >
-              <MenuOutlined
-                className="font-extrabold text-white"
-                style={{ fontSize: "1.5em" }}
-              />
+              {isOpenDrawer ? (
+                <CloseOutlined
+                  className="font-extrabold text-red-500"
+                  style={{ fontSize: "1.5em" }}
+                />
+              ) : (
+                <MenuOutlined
+                  className="font-extrabold text-secondary"
+                  style={{ fontSize: "1.5em" }}
+                />
+              )}
             </Button>
           </div>
         </div>
@@ -205,8 +216,8 @@ const Navbar: React.FC<Props> = () => {
             </Button>
           )}
         </div> */}
+        <NavbarDrawer isOpen={isOpenDrawer} onClose={onCloseDrawer} />
       </div>
-      <NavbarDrawer isOpen={isOpenDrawer} onClose={onCloseDrawer} />
     </div>
   );
 };
