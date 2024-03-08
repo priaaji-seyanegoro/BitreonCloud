@@ -14,7 +14,7 @@
 .navbar-scroll {
   @apply max-w-screen-xl w-full h-full m-auto;
   @apply flex flex-wrap justify-between items-center;
-  @apply px-4;
+  @apply px-2 xs:px-4;
 
   transition: linear;
   transition-delay: 0.2s;

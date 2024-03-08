@@ -2,7 +2,7 @@ export const contractAddress = "";
 export const pairAddress = "";
 
 export const socialsLink = {
-  whitepaper: "",
+  whitepaper: "https://cryptnative-ai.gitbook.io/cryptnative-ai",
   twitter: "https://x.com/CryptnativeAI",
   telegram: "https://t.me/cryptnative",
   medium: "https://medium.com/@",

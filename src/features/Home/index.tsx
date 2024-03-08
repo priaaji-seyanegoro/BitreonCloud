@@ -23,7 +23,7 @@ import { ecosystemList } from "./constants/ecosystem";
 import LogoApp from "@/assets/logo-app.png";
 import TwitterLogo from "@/assets/logo-x.png";
 import TelegramLogo from "@/assets/logo-telegram.png";
-// import GitBookLogo from "@/assets/logo-gitbook.png";
+import GitBookLogo from "@/assets/logo-gitbook.png";
 // import MediumLogo from "@/assets/logo-medium.png";
 // import MapApp from "@/assets/map-app.png";
 // import Dextools from "@/assets/dextools.png";
@@ -167,7 +167,7 @@ const Home: React.FC<Props> = () => {
                     />
                   </Link>
 
-                  {/* <Link
+                  <Link
                     href={socialsLink.whitepaper}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -177,7 +177,7 @@ const Home: React.FC<Props> = () => {
                       alt="whitepaper"
                       className="socials-button rounded-full"
                     />
-                  </Link> */}
+                  </Link>
                 </div>
 
                 <div className="h-4" />
@@ -256,7 +256,7 @@ const Home: React.FC<Props> = () => {
               digital experience. With Cryptnative AI, ease and excellence are
               the primary goals in every step of your digital journey
             </div>
-            {/* <Link
+            <Link
               href={socialsLink.whitepaper}
               rel="noopener noreferrer"
               target="_blank"
@@ -267,7 +267,7 @@ const Home: React.FC<Props> = () => {
               >
                 Whitepaper
               </Button>
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>
