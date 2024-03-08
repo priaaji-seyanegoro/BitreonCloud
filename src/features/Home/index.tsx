@@ -338,7 +338,7 @@ const Home: React.FC<Props> = () => {
           TOKEN
         </Button>
         <div className={`xl:text-4xl ${clashDisplay.className} mt-4 mb-2`}>
-          CA: {contractAddress}
+          {contractAddress}
         </div>
         <div className="w-full md:w-11/12 flex flex-wrap justify-center items-center gap-y-8 mx-auto mt-8">
           <div className="w-full sm:w-1/2 lg:w-1/4">
