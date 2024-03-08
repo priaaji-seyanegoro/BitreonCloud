@@ -1,5 +1,5 @@
 export const contractAddress = "0x38714f784f4122ef98c15dd868f5472adf518336";
-export const pairAddress = "";
+export const pairAddress = "0x38714F784f4122ef98c15DD868F5472aDF518336";
 
 export const socialsLink = {
   whitepaper: "https://cryptnative-ai.gitbook.io/cryptnative-ai",
