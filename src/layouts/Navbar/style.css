@@ -1,12 +1,13 @@
 .navbar-container {
   /* @apply !px-0 w-full h-[5.5em] bg-dark-main; */
-  @apply !px-0 w-full bg-dark-main absolute py-3;
+  @apply !px-0 w-full absolute py-3;
   /* @apply fixed top-0 z-50; */
   z-index: 50;
 }
 
 .navbar-fixed {
-  @apply w-full fixed top-0 bg-dark-main py-3;
+  @apply w-full fixed top-0 py-3;
+  backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
@@ -27,7 +28,7 @@
 }
 
 .navbar-scroll {
-  @apply py-2  animate-fadeInDownBase;
+  @apply py-2 animate-fadeInDownBase;
 }
 
 .navbar-title {
@@ -50,7 +51,7 @@
 }
 
 .nav-tg-btn {
-  @apply w-full text-white bg-chr-primary hover:bg-chr-secondary active:bg-chr-secondary focus:bg-chr-secondary lg:p-6;
+  @apply w-full text-black bg-white hover:text-white lg:p-6;
   transition: transform 0.3s ease;
 }
 

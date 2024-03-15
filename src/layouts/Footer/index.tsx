@@ -25,83 +25,20 @@ import GitBookLogo from "@/assets/logo-gitbook.png";
 
 import "./style.css";
 
-interface Props {}
+interface Props { }
 
 const AppFooter: React.FC<Props> = () => {
   if (!useIsMounted) {
     return null;
   }
   return (
-    <footer className={clsx("app-footer", poppins.className)}>
+    <footer>
       <div className="app-footer-container">
-        {/* <div className="app-footer-wrapper z-30">
-          <div className="w-full md:w-3/5 flex flex-wrap justify-evenly text-gray-400 max-w-xl order-1 sm:order-2 mx-auto">
-            <div className="w-full xs:w-1/2 sm:w-[32%] md:w-auto mt-4 xs:mt-0">
-              <div className="text-2xl md:text-xl lg:text-2xl font-bold text-secondary">
-                Support
-              </div>
-              <div className="flex flex-col mt-2 font-semibold">
-                <Link
-                  href="/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-auto hover:!text-white mb-2"
-                >
-                  Bot
-                </Link>
-
-                <Link
-                  href={socialsLink.whitepaper}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-auto hover:!text-white mb-2"
-                >
-                  Whitepaper
-                </Link>
-
-                <Link
-                  href={findUsLink.dextools}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-auto hover:!text-white"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-
-            <div className="w-full xs:w-1/2 sm:w-[32%] md:w-auto my-4 sm:my-0">
-              <div className="text-2xl md:text-xl lg:text-2xl font-bold text-secondary">
-                Other
-              </div>
-              <div className="flex flex-col mt-2 font-semibold">
-                <Link
-                  href={findUsLink.uniswap}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-auto hover:!text-white mb-2"
-                >
-                  Buy
-                </Link>
-
-                <Link
-                  href={findUsLink.dextools}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-auto hover:!text-white"
-                >
-                  Chart
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Divider className="mt-2" /> */}
         <div className="app-footer-wrapper z-30">
           <div className="w-full lg:w-2/3 flex flex-wrap justify-center lg:justify-start items-center py-2 sm:py-4 z-50 gap-3">
             <div className="text-base md:text-lg text-center !font-normal order-2 sm:order-1">
               <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
-              Cryptnative AI 2024. All rights reserved.
+              Anansie AI 2024. All rights reserved.
             </div>
 
             <div className="flex gap-3 order-1 sm:order-2">
@@ -160,7 +97,7 @@ const AppFooter: React.FC<Props> = () => {
                 style={{ fontSize: "1em" }}
                 className="mr-1 font-bold"
               />
-              support@cryptnative.com
+              support@anansieAI.com
             </div>
           </Link>
         </div>

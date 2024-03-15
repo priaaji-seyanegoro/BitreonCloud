@@ -14,6 +14,7 @@
   /* @apply w-full h-full min-h-screen bg-black mb-16 sm:mb-0 text-white; */
   @apply w-full h-full min-h-screen bg-black mb-0 text-white;
   /* @apply w-full h-full min-h-screen mb-0 text-white; */
+
 }
 
 /* .nav-anchor {
@@ -42,7 +43,7 @@
 }
 
 .nav-anchor-active {
-  @apply text-secondary font-semibold;
+  @apply text-purple-600 font-semibold;
   /* @apply bg-lime-zest font-bold;
   background-clip: text;
   -webkit-background-clip: text;

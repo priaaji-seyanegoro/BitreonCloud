@@ -47,7 +47,7 @@
 
 .app-footer-container {
   @apply w-full h-full;
-  @apply bg-chr-secondary-transparent;
+  @apply bg-black;
   /* flex flex-wrap items-center justify-evenly sm:justify-center mx-auto text-lg xs:text-xl lg:text-2xl font-extrabold text-white gap-2 p-2 relative; */
   /* @apply bg-opacity-50 bg-no-repeat bg-top bg-vector; */
 }
@@ -72,6 +72,6 @@
 }
 
 .footer-socials-button {
-  @apply w-8 h-8 object-contain  hover:scale-110;
+  @apply w-8 h-8 object-contain hover:scale-110;
   transition: transform 0.3s ease;
 }

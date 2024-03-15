@@ -7,10 +7,10 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "Cryptnative AI | Seamless Trades & Infinite Creativity";
-const app_name = "Cryptnative AI";
+const app_title = "Anansie AI | Seamless Trades & Infinite Creativity";
+const app_name = "Anansie AI";
 const description =
-  "Unleash creativity and navigate financial landscapes effortlessly with Cryptnative AI";
+  "Unleash creativity and navigate financial landscapes effortlessly with Anansie AI";
 
 export const metadata: Metadata = {
   title: app_title,

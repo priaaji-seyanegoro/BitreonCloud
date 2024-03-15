@@ -4,38 +4,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactTyped } from "react-typed";
 import Tilt from "react-parallax-tilt";
-import { Button } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, Heading, Stack, VStack } from "@chakra-ui/react";
 import { ArrowRightOutlined } from "@ant-design/icons";
-import { RobotIcon } from "@/utils/Icon/robot";
+import { PlayIcon } from "@/utils/Icon/play";
 
 import YinLoader from "@/components/Loader/Custom";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
 
 import { contractAddress, findUsLink, socialsLink } from "@/constants/links";
-import { poppins, clashDisplay } from "@/utils/font";
-import { ecosystemList } from "./constants/ecosystem";
-// import { roadmapList } from "./constants/roadmap";
-
-// import { FeatureArrow } from "@/utils/Icon/arrow";
-
-// import HeroApp from "@/assets/hero-app.png";
-import LogoApp from "@/assets/logo-app.png";
-import TwitterLogo from "@/assets/logo-x.png";
-import TelegramLogo from "@/assets/logo-telegram.png";
-import GitBookLogo from "@/assets/logo-gitbook.png";
-// import MediumLogo from "@/assets/logo-medium.png";
-// import MapApp from "@/assets/map-app.png";
-// import Dextools from "@/assets/dextools.png";
-// import Dexscreener from "@/assets/dexscreener.png";
-// import Uniswap from "@/assets/uniswap.png";
-// import Etherscan from "@/assets/etherscan.png";
-// import Solidproof from "@/assets/solidproof.png";
-// import Coingecko from "@/assets/coingecko.png";
+import { poppins, clashDisplay, inter, interBold } from "@/utils/font";
+import AnansiAboutLogo from "@/assets/anansie-about.png"
+import HTMLLogo from "@/assets/html.png"
+import HTMLTailwindAssistance from "@/assets/htmlTailwindAssistance.png"
+import ReactTailwindAssistance from "@/assets/ReactTailwind.png"
+import ReactBootstrapAssistance from "@/assets/ReactBootstrap.png"
+import TailwindLogo from "@/assets/TailwindCSS.png"
+import ReactLogo from "@/assets/React.png"
+import BootstarpLogo from "@/assets/Bootstrap.png"
+import HowItWorksLogo from '@/assets/HowItWorksLogo.svg'
+import FrameLogo from "@/assets/FRAMED.png"
 
 import "./style.css";
+import PricingBox from "@/components/PricingBox";
+import { prices } from "@/constants/prices";
 
-interface Props {}
+interface Props { }
 
 const Home: React.FC<Props> = () => {
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
@@ -110,75 +104,29 @@ const Home: React.FC<Props> = () => {
         id="welcome"
         className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
       />
-      <div className="welcome-container">
+      <div className="welcome-container mt-20">
         <div className="welcome-wrapper">
           <div
             ref={welcomeRef}
-            className={`w-full h-full px-2 2xl:px-4 mt-10 sm:mt-0 ${poppins.className}`}
+            className={`w-full h-full px-2 2xl:px-4 mt- sm:mt-0 ${inter.className}`}
           >
             <div ref={welcomeRef} className={`w-full sm:px-8 lg:px-14`}>
               <div
-                className={`w-full lg:w-4/5 text-center mx-auto text-4xl lg:text-5xl 2xl:text-6xl font-extrabold text-white py-2 ${clashDisplay.className}`}
+                className={`w-full lg:w-4/5 text-center mx-auto text-4xl lg:text-6xl 2xl:text-6xl font-bold text-white py-2 leading-10  ${interBold.className} ${isWelcomeVisible && "animate-fadeInLame"}`}
               >
-                {isWelcomeVisible && (
-                  <ReactTyped
-                    strings={["Transforming Digital Creativity and Trading"]}
-                    typeSpeed={40}
-                  />
-                )}
+                Generate Your Design To <br /> Code Right Now !
               </div>
 
               <div
-                className={`w-full lg:w-4/5 xl:w-2/3 text-center mx-auto text-md xs:text-lg lg:text-xl text-slate-400 py-2 lg:px-8 ${
-                  isWelcomeVisible && "animate-fadeInLame"
-                }`}
+                className={`w-full lg:w-4/5 xl:w-2/4 text-center mx-auto text-sm xs:text-md lg:text-lg text-white py-2 lg:px-8 ${isWelcomeVisible && "animate-fadeInLame"
+                  }`}
               >
-                Shaping Tomorrow's Digital Experience. Seamlessly Blend
-                Creativity and Intelligent Trading in{" "}
-                <span className="text-secondary font-bold">Cryptnative AI</span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illo qui, esse animi aliquam ipsa voluptates quibusdam velit harum fuga enim minus
               </div>
               <div
-                className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${
-                  isWelcomeVisible && "animate-fadeInLame"
-                }`}
+                className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${isWelcomeVisible && "animate-fadeInLame"
+                  }`}
               >
-                <div className="w-full flex justify-center gap-3">
-                  <Link
-                    href={socialsLink.telegram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={TelegramLogo}
-                      alt="telegram"
-                      className="socials-button"
-                    />
-                  </Link>
-
-                  <Link
-                    href={socialsLink.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={TwitterLogo}
-                      alt="twitter"
-                      className="socials-button"
-                    />
-                  </Link>
-
-                  <Link
-                    href={socialsLink.whitepaper}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={GitBookLogo}
-                      alt="whitepaper"
-                      className="socials-button rounded-full"
-                    />
-                  </Link>
-                </div>
 
                 <div className="h-4" />
 
@@ -189,9 +137,26 @@ const Home: React.FC<Props> = () => {
                 >
                   <Button
                     size="lg"
-                    className="welcome-bot-button"
+                    rounded="full"
+                    mr="10px"
+                    bg="white"
+                    color="black"
+                  >
+                    Quick Try
+                  </Button>
+                </Link>
+                <Link
+                  href={socialsLink.bot}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="lg"
+                    rounded="full"
+                    variant="outline"
+                    background="transparent"
                     leftIcon={
-                      <RobotIcon
+                      <PlayIcon
                         className="welcome-bot-icon"
                         style={{
                           fontSize: "1.25em",
@@ -199,247 +164,300 @@ const Home: React.FC<Props> = () => {
                       />
                     }
                   >
-                    Cryptnative AI
+                    View Demo
                   </Button>
                 </Link>
               </div>
             </div>
           </div>
         </div>
+
+
       </div>
 
-      <div id="about" className="h-20 sm:h-28 relative z-30" />
-      <div className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4">
-        <div
-          className={`block lg:hidden text-primary !font-bold text-base my-2 ${
-            poppins.className
-          } ${isAboutVisible && "animate-slideInBottomBasic"}`}
-        >
-          ABOUT
-        </div>
-        <div className="about-wrapper z-30">
-          <div className="w-full xs:w-2/3 sm:w-1/2 md:w-2/5 lg:w-1/3 xl:w-[30%] h-full flex lg:justify-center lg:items-center mb-4 md:mb-0 mx-auto">
-            <Tilt>
-              <Image
-                src={LogoApp}
-                alt="logo-app"
-                className="w-full h-full m-auto object-center object-contain"
-              />
-            </Tilt>
-          </div>
+      <div className="h-24 md:h-40" />
+      {/* tools logo  */}
+      <Box display="flex" flexWrap="wrap" justifyContent="center" gap={40}>
+        <Image
+          src={HTMLLogo}
+          alt="telegram"
+          className="socials-button"
+        />
 
-          <div
-            ref={aboutRef}
-            className={`w-full md:w-1/2 lg:w-3/5 h-full px-2 text-center sm:text-left`}
+
+
+        <Image
+          src={TailwindLogo}
+          alt="twitter"
+          className="socials-button"
+        />
+
+
+
+        <Image
+          src={ReactLogo}
+          alt="whitepaper"
+          className="socials-button rounded-full"
+        />
+
+        <Image
+          src={BootstarpLogo}
+          alt="whitepaper"
+          className="socials-button rounded-full"
+        />
+      </Box>
+
+      <div id="about" className="h-24 sm:h-28 relative z-30" />
+      <Flex
+        ref={aboutRef}
+        className="container-two"
+        direction={{ base: "column", md: "row" }}
+        textAlign={{ base: "center", md: "left" }}
+        align="center"
+        justify="space-between"
+        px={{ base: "0", sm: "0", md: "160px" }}
+        mt={150}
+        gap={3}
+      >
+        <Box className="section_two_left" w="100%" >
+          <Box
+            position="relative"
+            borderRadius="12px"
+            overflow="hidden"
+            boxSize={"400px"}
+            m="auto"
           >
-            <div
-              className={`hidden lg:block text-primary !font-bold text-base ${
-                poppins.className
-              } ${isAboutVisible && "animate-slideInBottomBasic"}`}
-            >
-              ABOUT
-            </div>
-
-            <div
-              className={`w-full lg:w-4/5 text-2xl lg:text-3xl xl:xl:text-4xl mb-4 pt-2 xl:mt-4 text-left ${clashDisplay.className}`}
-            >
-              Cryptnative AI | Where Creative Expression Meets Seamless Trading
-              Tools
-            </div>
-
-            <div className="w-full sm:mt-2 lg:w-3/4 text-base text-[#ccc] text-left">
-              The primary mission of Cryptnative AI is to simplify user
-              experiences. We stand as a gateway to digital transformation,
-              providing innovative creative tools and smart trading solutions.
-              Cryptnative AI invites you to explore a world where artistic
-              expression meets cutting-edge technology, creating an unlimited
-              digital experience. With Cryptnative AI, ease and excellence are
-              the primary goals in every step of your digital journey
-            </div>
-            <Link
-              href={socialsLink.whitepaper}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <Button
-                className="whitepaper-button"
-                rightIcon={<ArrowRightOutlined className="whitepaper-icon" />}
-              >
-                Whitepaper
-              </Button>
-            </Link>
+            {/* Image */}
+            <Image
+              className="w-full h-full m-auto object-center object-contain"
+              src={AnansiAboutLogo}
+              alt="podcast logo"
+            />
+          </Box>
+        </Box>
+        <Box className="section_two_right" w="100%" px={10}>
+          <div
+            className={`w-full lg:w-4/5 text-3xl lg:text-3xl xl:xl:text-6xl mb-4 pt-2 xl:mt-4 text-left ${interBold.className
+              }`}
+          >
+            About <br />
+            Anansie AI
           </div>
-        </div>
-      </div>
+          <div className={`w-full text-[#ccc] text-justify ${inter.className
+            }`}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam alias quam l
+            abore excepturi ab distinctio saepe asperiores esse, sed similique quisquam
+            placeat sapiente, facilis ad eaque fugit eveniet porro dolor.
+          </div>
+        </Box>
+      </Flex>
 
+      {/* HOW IT WORKS  */}
       <div className="h-12 md:h-20" />
       <div id="feature" className="h-24 sm:h-28 relative z-30" />
       <div
         ref={featuresRef}
         className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4 relative z-30"
       >
-        <Button
-          className={`id-pages ${poppins.className} ${
-            isFeaturesVisible && "animate-slideInBottomBasic"
-          }`}
-        >
-          FEATURES
-        </Button>
-        <div className={`text-5xl mt-7 mb-2 ${clashDisplay.className}`}>
-          Cryptnative AI
-        </div>
-        <div className={`text-2xl text-slate-200 ${poppins.className}`}>
-          All features that support your needs
+
+        <div className={`text-5xl mt-7 mb-2 ${interBold.className}`}>
+          How It Works
         </div>
 
         <div className="w-full flex flex-wrap justify-evenly items-center gap-x-2 gap-y-4 sm:gap-y-8 lg:gap-y-12 mx-auto mt-8 relative z-30">
-          {ecosystemList.map((item, index) => (
-            <div
-              className="w-full sm:w-[48%] h-full px-2 py-6 text-center"
-              key={index + 1}
-            >
-              <div className="w-24 h-24 mx-auto mb-2">
-                <Tilt>
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.imageAlt}
-                    className="w-full h-full object-contain"
-                  />
-                </Tilt>
-              </div>
-
-              <div
-                className={`text-xl text-primary py-4 ${clashDisplay.className}`}
-              >
-                {item.title}
-              </div>
-
-              <div
-                className={`w-full lg:w-1/2 text-xs md:text-sm text-slate-300 m-auto ${clashDisplay.className}`}
-              >
-                {item.description}
-              </div>
-            </div>
-          ))}
+          <Image
+            src={HowItWorksLogo}
+            alt="logo-app"
+            className="w-[900px] h-[900px]- m-auto object-center object-contain"
+          />
         </div>
       </div>
+
+      <div className="h-12 md:h-20" />
+      <Box display="flex" flexWrap="wrap" justifyContent="center" gap={10} paddingX={10}>
+        <div className={`${interBold.className} text-3xl xl:text-4xl text-left`}>
+          Our Feature You Can Get
+        </div>
+
+        <div className="w-full sm:w-1/2 lg:w-1/4">
+          <div className={`${inter.className} text-sm text-left text-justify`}>
+            We offer a variety of interesting features that you can help increase yor
+            productivity at work and manage your projrct easly
+          </div>
+        </div>
+
+        <Link
+          href={socialsLink.bot}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            size="lg"
+            rounded="full"
+            mr="10px"
+            bg="white"
+            color="black"
+          >
+            Get Started
+          </Button>
+        </Link>
+      </Box>
+      {/* technology  */}
+      <div className="h-12 md:h-20" />
+      <Box display="flex" flexWrap="wrap" justifyContent="center" gap={28} paddingX={10}>
+        <div className={`${interBold.className} text-sm text-cente`}>
+          <Image
+            className="w-full h-full m-auto object-center object-contain"
+            src={HTMLTailwindAssistance}
+            alt="podcast logo"
+          />
+          HTML TailwindCSS Assistant
+        </div>
+
+        <div className={`${interBold.className} text-sm text-cente`}>
+          <Image
+            className="w-full h-full m-auto object-center object-contain"
+            src={ReactTailwindAssistance}
+            alt="podcast logo"
+          />
+          React TailwindCSS Assistant
+        </div>
+
+        <div className={`${interBold.className} text-sm text-cente`}>
+          <Image
+            className="w-full h-full m-auto object-center object-contain"
+            src={ReactBootstrapAssistance}
+            alt="podcast logo"
+          />
+          React Bootstrap Assistant
+        </div>
+      </Box>
+
 
       <div className="h-24 md:h-40" />
       <div id="tokenomic" className="h-24 sm:h-28 relative z-30" />
-      <div
+      <Flex
         ref={tokensRef}
-        className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4 relative z-30"
+        className="container-two"
+        direction={{ base: "column", md: "row" }}
+        textAlign={{ base: "center", md: "left" }}
+        align="center"
+        justify="space-between"
+        px={{ base: "0", sm: "0", md: "160px" }}
+        mt={150}
+        gap={3}
       >
-        <Button
-          className={`id-pages ${poppins.className} ${
-            isTokensVisible && "animate-slideInBottomBasic"
-          }`}
-        >
-          TOKEN
-        </Button>
-        <div className={`xl:text-4xl ${clashDisplay.className} mt-4 mb-2`}>
-          {contractAddress}
-        </div>
-        <div className="w-full md:w-11/12 flex flex-wrap justify-center items-center gap-y-8 mx-auto mt-8">
-          <div className="w-full sm:w-1/2 lg:w-1/4">
-            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
-              Cryptnative AI
-            </div>
-            <div className={`text-primary !font-bold ${poppins.className}`}>
-              Name
-            </div>
+        <Box className="section_two_left" w="100%" >
+          <Box
+            position="relative"
+            borderRadius="12px"
+            overflow="hidden"
+            boxSize={"400px"}
+            m="auto"
+          >
+            {/* Image */}
+            <Image
+              className="w-full h-full m-auto object-center object-contain"
+              src={FrameLogo}
+              alt="podcast logo"
+            />
+          </Box>
+        </Box>
+        <Box className="section_two_right" w="100%" px={10}>
+          <div
+            className={`w-full lg:w-4/5 text-2xl lg:text-3xl xl:xl:text-4xl mb-4 pt-2 xl:mt-4 text-left ${interBold.className}`}
+          >
+            TOKENOMICS
           </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4">
-            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
-              $CNAI
-            </div>
-            <div className={`text-primary !font-bold ${poppins.className}`}>
-              Symbol
-            </div>
+
+          <div className="w-full sm:mt-2 lg:w-3/4 text-base text-[#ccc] text-left">
+            0x38714f784f4122ef98c15dd868f5472adf518336
           </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4">
-            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
-              ETHEREUM
-            </div>
-            <div className={`text-primary !font-bold ${poppins.className}`}>
-              Network
-            </div>
+          <div className="w-full sm:mt-2 lg:w-3/4 text-base text-[#ccc] text-left">
+            <Link href={socialsLink.bot} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="welcome-bot-button mr-7 mb-7">
+                Anansie AI
+              </Button>
+            </Link>
+
+            <Link href={socialsLink.bot} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="welcome-bot-button mr-7 mb-7">
+                $CNAI
+              </Button>
+            </Link>
+            <Link href={socialsLink.bot} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="welcome-bot-button mr-7 mb-7">
+                ETHERIUM
+              </Button>
+            </Link>
+            <Link href={socialsLink.bot} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="welcome-bot-button mb-7">
+                100M
+              </Button>
+            </Link>
           </div>
-          <div className="w-full sm:w-1/2 lg:w-1/4">
-            <div className={`${clashDisplay.className} text-3xl xl:text-4xl`}>
-              100M
-            </div>
-            <div className={`text-primary !font-bold ${poppins.className}`}>
-              Supply
-            </div>
-          </div>
-        </div>
-      </div>
+        </Box>
+      </Flex>
 
       <div className="h-24 md:h-40" />
-      <div className="generate-container">
-        <div
-          className={`w-full lg:w-3/4 text-center mx-auto text-4xl sm:text-5xl xl:text-6xl font-bold text-white py-2`}
+      <Flex
+        ref={tokensRef}
+        direction="column"
+        alignItems="center"
+        justifyContent="center"
+        minH="100vh"
+        w="full"
+      >
+        <Stack
+          spacing={5}
+          marginY={5}
+          justifyContent="flex-start"
+          alignItems="center"
+          maxWidth="1200px"
+          w="full"
+          paddingX={[5, 0]}
+          className={` ${inter.className}`}
         >
-          <ReactTyped
-            strings={["Initiate Your Digital Experience Now!"]}
-            typeSpeed={40}
-          />
-        </div>
-
-        <div
-          className={`w-full flex flex-wrap justify-center gap-4 text-white my-10`}
-        >
-          <Button className={`try-button ${poppins.className}`}>
-            Cartoons
-          </Button>
-
-          <Button className={`try-button ${poppins.className}`}>
-            Meme Generator
-          </Button>
-
-          <Button className={`try-button ${poppins.className}`}>
-            Remove Background
-          </Button>
-
-          <Button className={`try-button ${poppins.className}`}>
-            Colorized
-          </Button>
-
-          <Button className={`try-button ${poppins.className}`}>
-            Trading Companion
-          </Button>
-
-          <Button className={`try-button ${poppins.className}`}>
-            Price Prediction
-          </Button>
-
-          <Button className={`try-button ${poppins.className}`}>
-            Trading Tools
-          </Button>
-        </div>
-
-        <Link href={socialsLink.bot} target="_blank" rel="noopener noreferrer">
-          <div className="w-full text-center mx-auto">
-            <Button
-              size="lg"
-              className="bot-button"
-              leftIcon={
-                <RobotIcon
-                  className="bot-button-icon"
-                  style={{
-                    fontSize: "1.25em",
-                  }}
-                />
-              }
-            >
-              Cryptnative AI
-            </Button>
-          </div>
-        </Link>
-      </div>
-
-      <div className="h-24 md:h-40" />
+          <VStack alignItems="center" w="full">
+            <Heading className={` ${interBold.className}`} textAlign="center">Choose Plan <br /> That's Right For You</Heading>
+            <Box className={` ${interBold.className}`} m={5} color="slategray" fontWeight="bold" textAlign="center">
+              Choose plan that works best for you, feel free to contact us
+            </Box>
+          </VStack>
+          <Stack
+            spacing={0}
+            isInline
+            border="1px solid"
+            borderColor="#58468C"
+            borderRadius="4px"
+            justifyContent="center"
+            alignItems="stretch"
+            display="flex"
+            width="fit-content"
+            backgroundColor="white"
+            mb={3}
+            textColor="black"
+          >
+            <Box backgroundColor="#58468C" color="white" p=".3rem 1rem">
+              Monthly
+            </Box>
+            <Box p=".3rem 1rem">Annually</Box>
+          </Stack>
+          <Grid
+            w="full"
+            gap={5}
+            justifyContent="center"
+            templateColumns={{
+              base: "inherit",
+              md: "repeat( auto-fit, 250px )"
+            }}
+          >
+            {prices.map((price) => (
+              <PricingBox key={price.name} {...price} />
+            ))}
+          </Grid>
+        </Stack>
+      </Flex>
     </div>
   );
 };
