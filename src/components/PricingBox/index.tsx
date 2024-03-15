@@ -14,20 +14,28 @@ import {
 import { CheckCircleFilled } from "@ant-design/icons";
 import PropTypes from "prop-types";
 
-const PricingBox = ({ popular, name, price, info = "", features = [] }: { popular: boolean; name: string; price: number; info?: string; features?: string[] }) => {
+interface Props {
+    popular?: boolean;
+    name: string;
+    features: any[];
+    info: string;
+    price?: string
+}
+
+const PricingBox = (props: Props) => {
     return (
         <Stack
             color="black"
             spacing={2}
             border="3px solid"
-            borderColor={popular ? "#58468C" : "gray.300"}
+            borderColor={props.popular ? "#58468C" : "gray.300"}
             borderRadius="0.7rem"
             p={4}
             h="350px"
             backgroundColor="white"
             position="relative"
         >
-            {popular && (
+            {props.popular && (
                 <Box
                     position="absolute"
                     top="0"
@@ -42,10 +50,10 @@ const PricingBox = ({ popular, name, price, info = "", features = [] }: { popula
                     POPULAR
                 </Box>
             )}
-            <Text textTransform="uppercase">{name}</Text>
+            <Text textTransform="uppercase">{props.name}</Text>
             <HStack>
-                <Heading>{price ?? "Free"}</Heading>
-                {price && (
+                <Heading>{props.price ?? "Free"}</Heading>
+                {props.price && (
                     <Box as="span" color="gray.600" fontSize="sm">
                         / mo
                     </Box>
@@ -53,7 +61,7 @@ const PricingBox = ({ popular, name, price, info = "", features = [] }: { popula
             </HStack>
             <Divider borderColor="blackAlpha.500" />
             <List flex="1">
-                {features.map((feat) => (
+                {props.features.map((feat) => (
                     <ListItem key={Math.random()}>
                         <ListIcon as={CheckCircleFilled} color="gray.400" />
                         {feat}
@@ -68,15 +76,15 @@ const PricingBox = ({ popular, name, price, info = "", features = [] }: { popula
                     borderRadius={0}
                     display="flex"
                     justifyContent="space-between"
-                    backgroundColor={popular ? "#58468C" : "gray.400"}
+                    backgroundColor={props.popular ? "#58468C" : "gray.400"}
                     _hover={{
-                        backgroundColor: popular ? "teal.500" : "gray.300"
+                        backgroundColor: props.popular ? "teal.500" : "gray.300"
                     }}
                     color="white"
                 >
                     Buy
                 </Button>
-                <Text fontSize="xs">{info}</Text>
+                <Text fontSize="xs">{props.info}</Text>
             </Box>
         </Stack>
     );
