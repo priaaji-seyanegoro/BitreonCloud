@@ -25,12 +25,7 @@ const BaseLayout: React.FC<Props> = ({ children }) => {
       <Navbar />
       <main className={clsx("base-main-container", clashDisplay.className)}>
         {/* {isMounted && (
-          <Image
-            src={AppBackground}
-            alt="roadmap"
-            priority
-            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
-          />
+      55m
         )} */}
         {children}
       </main>

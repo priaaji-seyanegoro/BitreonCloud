@@ -24,6 +24,9 @@ import ReactLogo from "@/assets/React.png"
 import BootstarpLogo from "@/assets/Bootstrap.png"
 import HowItWorksLogo from '@/assets/HowItWorksLogo.svg'
 import FrameLogo from "@/assets/FRAMED.png"
+import BackgroundWelcome from "@/assets/background1.png"
+import BackgroundAbout from "@/assets/backgorund2.png"
+import BackgroundTechnology from "@/assets/background3.png"
 
 import "./style.css";
 import PricingBox from "@/components/PricingBox";
@@ -99,6 +102,12 @@ const Home: React.FC<Props> = () => {
 
   return (
     <div className="homepage-container">
+      <Image
+        src={BackgroundWelcome}
+        alt="roadmap"
+        priority
+        className=" absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
+      />
       {/* <div id="welcome" className="h-4 xs:h-8 sm:h-16 relative z-30" /> */}
       <div
         id="welcome"
@@ -177,7 +186,7 @@ const Home: React.FC<Props> = () => {
 
       <div className="h-24 md:h-40" />
       {/* tools logo  */}
-      <Box display="flex" flexWrap="wrap" justifyContent="center" gap={40}>
+      <Box className="lg:mt-40" display="flex" flexWrap="wrap" justifyContent="center" gap={40}>
         <Image
           src={HTMLLogo}
           alt="telegram"
@@ -208,6 +217,12 @@ const Home: React.FC<Props> = () => {
       </Box>
 
       <div id="about" className="h-24 sm:h-28 relative z-30" />
+      <Image
+        src={BackgroundAbout}
+        alt="roadmap"
+        priority
+        className=" absolute top-[23%] left-0 bg-cover bg-center bg-no-repeat"
+      />
       <Flex
         ref={aboutRef}
         className="container-two"
@@ -218,6 +233,7 @@ const Home: React.FC<Props> = () => {
         px={{ base: "0", sm: "0", md: "160px" }}
         mt={150}
         gap={3}
+        zIndex={30}
       >
         <Box className="section_two_left" w="100%" >
           <Box
@@ -235,7 +251,7 @@ const Home: React.FC<Props> = () => {
             />
           </Box>
         </Box>
-        <Box className="section_two_right" w="100%" px={10}>
+        <Box className="section_two_right" w="100%" px={10} zIndex={30}>
           <div
             className={`w-full lg:w-4/5 text-3xl lg:text-3xl xl:xl:text-6xl mb-4 pt-2 xl:mt-4 text-left ${interBold.className
               }`}
@@ -254,7 +270,7 @@ const Home: React.FC<Props> = () => {
 
       {/* HOW IT WORKS  */}
       <div className="h-12 md:h-20" />
-      <div id="feature" className="h-24 sm:h-28 relative z-30" />
+      <div id="feature" className="h-24 sm:h-28 relative mt-24 z-30" />
       <div
         ref={featuresRef}
         className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4 relative z-30"
@@ -274,12 +290,18 @@ const Home: React.FC<Props> = () => {
       </div>
 
       <div className="h-12 md:h-20" />
-      <Box display="flex" flexWrap="wrap" justifyContent="center" gap={10} paddingX={10}>
-        <div className={`${interBold.className} text-3xl xl:text-4xl text-left`}>
+      <Image
+        src={BackgroundTechnology}
+        alt="roadmap"
+        priority
+        className="h-[43%] absolute bottom-0 left-0 bg-cover bg-center bg-no-repeat"
+      />
+      <Box display="flex" flexWrap="wrap" justifyContent="center" gap={10} paddingX={10} >
+        <div className={`${interBold.className} text-3xl xl:text-4xl text-left z-30`}>
           Our Feature You Can Get
         </div>
 
-        <div className="w-full sm:w-1/2 lg:w-1/4">
+        <div className="w-full sm:w-1/2 lg:w-1/4 z-30">
           <div className={`${inter.className} text-sm text-left text-justify`}>
             We offer a variety of interesting features that you can help increase yor
             productivity at work and manage your projrct easly
@@ -305,7 +327,7 @@ const Home: React.FC<Props> = () => {
       {/* technology  */}
       <div className="h-12 md:h-20" />
       <Box display="flex" flexWrap="wrap" justifyContent="center" gap={28} paddingX={10}>
-        <div className={`${interBold.className} text-sm text-cente`}>
+        <div className={`${interBold.className} text-sm text-cente z-30`}>
           <Image
             className="w-full h-full m-auto object-center object-contain"
             src={HTMLTailwindAssistance}
@@ -314,7 +336,7 @@ const Home: React.FC<Props> = () => {
           HTML TailwindCSS Assistant
         </div>
 
-        <div className={`${interBold.className} text-sm text-cente`}>
+        <div className={`${interBold.className} text-sm text-center z-30`}>
           <Image
             className="w-full h-full m-auto object-center object-contain"
             src={ReactTailwindAssistance}
@@ -323,7 +345,7 @@ const Home: React.FC<Props> = () => {
           React TailwindCSS Assistant
         </div>
 
-        <div className={`${interBold.className} text-sm text-cente`}>
+        <div className={`${interBold.className} text-sm text-center z-30`}>
           <Image
             className="w-full h-full m-auto object-center object-contain"
             src={ReactBootstrapAssistance}
@@ -334,7 +356,7 @@ const Home: React.FC<Props> = () => {
       </Box>
 
 
-      <div className="h-24 md:h-40" />
+      <div className="h-12 md:h-20" />
       <div id="tokenomic" className="h-24 sm:h-28 relative z-30" />
       <Flex
         ref={tokensRef}
@@ -363,7 +385,7 @@ const Home: React.FC<Props> = () => {
             />
           </Box>
         </Box>
-        <Box className="section_two_right" w="100%" px={10}>
+        <Box zIndex={30} className="section_two_right" w="100%" px={10}>
           <div
             className={`w-full lg:w-4/5 text-2xl lg:text-3xl xl:xl:text-4xl mb-4 pt-2 xl:mt-4 text-left ${interBold.className}`}
           >
@@ -373,29 +395,29 @@ const Home: React.FC<Props> = () => {
           <div className="w-full sm:mt-2 lg:w-3/4 text-base text-[#ccc] text-left">
             0x38714f784f4122ef98c15dd868f5472adf518336
           </div>
-          <div className="w-full sm:mt-2 lg:w-3/4 text-base text-[#ccc] text-left">
+          <div className="flex flex-wrap justify-center sm:justify-start z-30">
             <Link href={socialsLink.bot} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="welcome-bot-button mr-7 mb-7">
+              <Button size="lg" className="welcome-bot-button mx-2 my-2 sm:mr-7">
                 Anansie AI
               </Button>
             </Link>
-
             <Link href={socialsLink.bot} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="welcome-bot-button mr-7 mb-7">
+              <Button size="lg" className="welcome-bot-button mx-2 my-2 sm:mr-7">
                 $CNAI
               </Button>
             </Link>
             <Link href={socialsLink.bot} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="welcome-bot-button mr-7 mb-7">
+              <Button size="lg" className="welcome-bot-button mx-2 my-2 sm:mr-7">
                 ETHERIUM
               </Button>
             </Link>
             <Link href={socialsLink.bot} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="welcome-bot-button mb-7">
+              <Button size="lg" className="welcome-bot-button mx-2 my-2">
                 100M
               </Button>
             </Link>
           </div>
+
         </Box>
       </Flex>
 
@@ -407,6 +429,7 @@ const Home: React.FC<Props> = () => {
         justifyContent="center"
         minH="100vh"
         w="full"
+        zIndex={30}
       >
         <Stack
           spacing={5}
@@ -417,6 +440,7 @@ const Home: React.FC<Props> = () => {
           w="full"
           paddingX={[5, 0]}
           className={` ${inter.className}`}
+          zIndex={30}
         >
           <VStack alignItems="center" w="full">
             <Heading className={` ${interBold.className}`} textAlign="center">Choose Plan <br /> That's Right For You</Heading>
