@@ -67,7 +67,8 @@
 
 .welcome-bot-button,
 .bot-button {
-  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  /* clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%); */
   @apply pl-0;
 }
 
