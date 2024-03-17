@@ -1,7 +1,7 @@
 .homepage-container {
   /* @apply w-full h-full p-2 px-4 sm:p-4 m-auto; */
   @apply w-full h-full m-auto;
-  max-width: 1280px;
+  max-width: 1440px;
 }
 
 .app-title {
@@ -13,7 +13,7 @@
 }
 
 .welcome-container {
-  @apply w-full h-[500px] relative;
+  @apply w-full h-[400px] sm:h-[500px] relative;
   /* flex flex-wrap items-center justify-evenly sm:justify-center mx-auto text-lg xs:text-xl lg:text-2xl font-extrabold text-white gap-2 p-2 relative; */
   /* @apply bg-opacity-50 bg-no-repeat bg-top bg-vector; */
 }
@@ -45,9 +45,11 @@
   @apply w-11/12 lg:w-2/3 h-[800px] xs:h-[600px] rounded-xl flex flex-col justify-center px-2 relative z-30 mx-auto;
   clip-path: xywh(0 5px 100% 90% round 15% 0);
 
-  background: linear-gradient(180deg,
-      rgba(141, 141, 185, 0.16) 0%,
-      rgba(8, 8, 12, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(141, 141, 185, 0.16) 0%,
+    rgba(8, 8, 12, 0) 100%
+  );
 }
 
 .try-button {
@@ -113,12 +115,12 @@
   /* Increase the size by 10% on hover */
 }
 
-.whitepaper-button:hover>span>.whitepaper-icon {
+.whitepaper-button:hover > span > .whitepaper-icon {
   /* @apply ml-2; */
   transform: translateX(7px);
 }
 
 .socials-button {
-  @apply w-16 h-16 object-contain hover:scale-110;
+  @apply w-12 h-12 object-contain hover:scale-110;
   transition: transform 0.3s ease;
 }

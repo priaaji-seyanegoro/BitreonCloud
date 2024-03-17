@@ -39,7 +39,7 @@ export const PoweredIcon = (props: any) => (
         <path
           d="M547 130L822 130C824.209 130 826 131.791 826 134L826 264"
           stroke="url(#orange-pulse-1)"
-          stroke-width="2"
+          strokeWidth="2"
         ></path>
       </g>
       <g>
@@ -54,8 +54,8 @@ export const PoweredIcon = (props: any) => (
         <path
           d="M349 130L5.00002 130C2.79088 130 1.00001 131.791 1.00001 134L1.00001 264"
           stroke="url(#blue-pulse-1)"
-          stroke-linecap="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeWidth="2"
         ></path>
       </g>
       <g>
@@ -70,8 +70,8 @@ export const PoweredIcon = (props: any) => (
         <path
           d="M547 150L633 150C635.209 150 637 151.791 637 154L637 236C637 238.209 635.209 240 633 240L488 240C485.791 240 484 241.791 484 244L484 264"
           stroke="url(#pink-pulse-2)"
-          stroke-linecap="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeWidth="2"
         ></path>
       </g>
       <g>
@@ -86,8 +86,8 @@ export const PoweredIcon = (props: any) => (
         <path
           d="M388 184L388 194C388 196.209 386.209 198 384 198L77 198C74.7909 198 73 199.791 73 202L73 264"
           stroke="url(#blue-pulse-2)"
-          stroke-linecap="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeWidth="2"
         ></path>
       </g>
       <path
@@ -111,8 +111,8 @@ export const PoweredIcon = (props: any) => (
         <path
           d="M412 263.5L412 184"
           stroke="url(#pink-pulse-1)"
-          stroke-linecap="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeWidth="2"
         ></path>
       </g>
       <g>
@@ -127,7 +127,7 @@ export const PoweredIcon = (props: any) => (
         <path
           d="M508 96L508 88C508 85.7909 509.791 84 512 84L886 84C888.209 84 890 85.7909 890 88L890 264"
           stroke="url(#orange-pulse-2)"
-          stroke-width="2"
+          strokeWidth="2"
         ></path>
       </g>
       <path

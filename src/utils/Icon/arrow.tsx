@@ -12,9 +12,9 @@ export const FeatureArrow = (props: any) => (
       <path
         d="M5.33333 1.99951H22V18.6952M22 1.99951L2 22.0344L22 1.99951Z"
         stroke="#151515"
-        stroke-width="3.33333"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3.33333"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
 
