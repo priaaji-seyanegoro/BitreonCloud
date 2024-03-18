@@ -7,10 +7,10 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "OmniTech | Seamless Trades & Infinite Creativity";
+const app_title = "OmniTech | AI-powered tools for easier software development";
 const app_name = "OmniTech";
 const description =
-  "Unleash creativity and navigate financial landscapes effortlessly with Anansie AI";
+  "Convert designs to code and automate deployment effortlessly";
 
 export const metadata: Metadata = {
   title: app_title,
