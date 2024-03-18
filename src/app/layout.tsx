@@ -7,8 +7,8 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "Anansie AI | Seamless Trades & Infinite Creativity";
-const app_name = "Anansie AI";
+const app_title = "OmniTech | Seamless Trades & Infinite Creativity";
+const app_name = "OmniTech";
 const description =
   "Unleash creativity and navigate financial landscapes effortlessly with Anansie AI";
 

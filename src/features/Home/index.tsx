@@ -67,17 +67,6 @@ const Home: React.FC<Props> = () => {
     }
   }, [isMounted]);
 
-  // useEffect(() => {
-  //   if (isMounted) {
-  //     const observer = new IntersectionObserver((entries) => {
-  //       const entry = entries[0];
-  //       setIsFeaturesVisible(entry.isIntersecting);
-  //     });
-
-  //     observer.observe(featuresRef.current as HTMLDivElement);
-  //   }
-  // }, [isMounted]);
-
   useEffect(() => {
     if (isMounted) {
       const observer = new IntersectionObserver((entries) => {

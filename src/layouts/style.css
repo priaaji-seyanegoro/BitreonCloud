@@ -45,7 +45,7 @@
 }
 
 .nav-anchor-active {
-  @apply text-purple-600 font-semibold;
+  @apply text-white font-semibold;
   /* @apply bg-lime-zest font-bold;
   background-clip: text;
   -webkit-background-clip: text;

@@ -124,7 +124,7 @@ const Navbar: React.FC<Props> = () => {
                 />
               ) : (
                 <MenuOutlined
-                  className="font-extrabold text-secondary"
+                  className="font-extrabold text-white"
                   style={{ fontSize: "1.5em" }}
                 />
               )}

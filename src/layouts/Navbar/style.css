@@ -24,6 +24,7 @@
 
 .navbar {
   @apply relative h-full;
+  backdrop-filter: blur(10px);
   /* @apply border-b border-b-primary; */
 }
 
