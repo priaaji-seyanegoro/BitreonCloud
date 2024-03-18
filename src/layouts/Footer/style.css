@@ -1,7 +1,6 @@
 .app-footer {
   @apply w-full p-0 text-white relative;
-  background: #272363;
-  backdrop-filter: blur(30px);
+  background: black;
 }
 
 .app-footer-wrapper {

@@ -45,9 +45,7 @@ interface Props { }
 
 const Home: React.FC<Props> = () => {
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
-  const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
-  const [isAboutVisible, setIsAboutVisible] = useState(false);
-  const [isTokensVisible, setIsTokensVisible] = useState(false);
+  const [isPricingVisible, setIsPricingVisible] = useState(false);
 
   const welcomeRef = useRef<HTMLDivElement | null>(null);
   const featuresRef = useRef<HTMLDivElement | null>(null);
@@ -73,21 +71,10 @@ const Home: React.FC<Props> = () => {
     if (isMounted) {
       const observer = new IntersectionObserver((entries) => {
         const entry = entries[0];
-        setIsAboutVisible(entry.isIntersecting);
+        setIsPricingVisible(entry.isIntersecting);
       });
 
-      observer.observe(aboutRef.current as HTMLDivElement);
-    }
-  }, [isMounted]);
-
-  useEffect(() => {
-    if (isMounted) {
-      const observer = new IntersectionObserver((entries) => {
-        const entry = entries[0];
-        setIsTokensVisible(entry.isIntersecting);
-      });
-
-      observer.observe(tokensRef.current as HTMLDivElement);
+      observer.observe(pricingRef.current as HTMLDivElement);
     }
   }, [isMounted]);
 
@@ -251,8 +238,7 @@ const Home: React.FC<Props> = () => {
             <div
               className={`w-full lg:w-4/5 text-3xl lg:text-3xl xl:xl:text-6xl mb-4 pt-2 xl:mt-4 text-left ${interBold.className}`}
             >
-              About <br />
-              OmniTech
+              About Omnitech
             </div>
             <div
               className={`w-full text-[#ccc] text-justify ${inter.className}`}
@@ -383,11 +369,13 @@ const Home: React.FC<Props> = () => {
               m="auto"
             >
               {/* Image */}
-              <Image
-                className="w-full h-full m-auto object-center object-contain p-4"
-                src={FrameLogo}
-                alt="podcast logo"
-              />
+              <Tilt>
+                <Image
+                  className="w-full h-full m-auto object-center object-contain p-16"
+                  src={FrameLogo}
+                  alt="podcast logo"
+                />
+              </Tilt>
             </Box>
           </Box>
           <Box zIndex={30} className={`${interBold.className}`} w="100%" px={10}>
@@ -472,7 +460,7 @@ const Home: React.FC<Props> = () => {
           </Box>
         </Flex>
 
-        <div id="pricing" className="h-24 sm:h-20 relative z-30" />
+        <div id="pricing" className="h-24 sm:h-28 relative z-30" />
         <Flex
           ref={pricingRef}
           direction="column"
@@ -481,7 +469,7 @@ const Home: React.FC<Props> = () => {
           minH="100vh"
           w="full"
           zIndex={30}
-          className="w-full max-w-screen-xl relative mx-auto"
+          className={`w-full max-w-screen-xl relative mx-auto ${isPricingVisible && "animate-fadeInLame"}`}
         >
           <Stack
             spacing={5}
@@ -519,21 +507,16 @@ const Home: React.FC<Props> = () => {
               display="flex"
               width="fit-content"
               backgroundColor="white"
-              mb={3}
               textColor="black"
             >
-              <Box backgroundColor="#58468C" color="white" p=".3rem 1rem">
-                Monthly
-              </Box>
-              <Box p=".3rem 1rem">Annually</Box>
             </Stack>
             <Grid
               w="full"
-              gap={5}
+              gap={3}
               justifyContent="center"
               templateColumns={{
                 base: "inherit",
-                md: "repeat( auto-fit, 250px )",
+                md: "repeat( auto-fit, 350px )",
               }}
             >
               {pricesMonthly.map((price) => (

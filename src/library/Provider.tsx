@@ -16,7 +16,7 @@ import {
 
 const THIRDWEB_KEY = process.env.NEXT_PUBLIC_THIRDWEB_KEY;
 
-interface Props extends PropsWithChildren {}
+interface Props extends PropsWithChildren { }
 
 // const { Button, Skeleton } = chakraTheme.components;
 

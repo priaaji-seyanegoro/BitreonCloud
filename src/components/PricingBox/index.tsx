@@ -18,7 +18,7 @@ interface Props {
     popular?: boolean;
     name: string;
     features: any[];
-    info: string;
+    info?: string;
     price?: string
 }
 
@@ -71,17 +71,17 @@ const PricingBox = (props: Props) => {
             <Box>
                 <Button
                     variant="solid"
-                    size="sm"
+                    size="md"
                     width="100%"
                     borderRadius={0}
+                    textAlign="center"
+                    alignContent="center"
                     display="flex"
-                    justifyContent="space-between"
-                    backgroundColor={props.popular ? "#58468C" : "gray.400"}
-                    _hover={{
-                        backgroundColor: props.popular ? "teal.500" : "gray.300"
-                    }}
-                    color="white"
-                >
+                    justifyContent="space-between" rounded="md" bg="gray.400" color="black" _hover={{
+                        background: "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+                        color: "white",
+                        border: "2px solid transparent"
+                    }}>
                     Buy
                 </Button>
                 <Text fontSize="xs">{props.info}</Text>

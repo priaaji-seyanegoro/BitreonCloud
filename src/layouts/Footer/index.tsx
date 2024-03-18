@@ -27,7 +27,8 @@ const AppFooter: React.FC<Props> = () => {
   return (
     <footer>
       <Flex
-        paddingX={{ base: "2rem", md: "5rem" }}
+        paddingX={{ base: "2rem", md: "5rem" }
+        }
         paddingY="2rem"
         justifyContent="space-between"
         flexDirection={{ base: "column", md: "row" }}
