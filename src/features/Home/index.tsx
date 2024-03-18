@@ -12,7 +12,7 @@ import {
   Heading,
   Stack,
   VStack,
-  Text
+  Text,
 } from "@chakra-ui/react";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { PlayIcon } from "@/utils/Icon/play";
@@ -41,7 +41,7 @@ import "./style.css";
 import PricingBox from "@/components/PricingBox";
 import { pricesMonthly } from "@/constants/prices";
 
-interface Props { }
+interface Props {}
 
 const Home: React.FC<Props> = () => {
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
@@ -107,22 +107,26 @@ const Home: React.FC<Props> = () => {
             >
               <div ref={welcomeRef} className={`w-full sm:px-8 lg:px-14`}>
                 <div
-                  className={`w-full lg:w-4/5 text-center mx-auto text-4xl lg:text-6xl 2xl:text-6xl font-bold text-white py-2 leading-10  ${interBold.className
-                    } ${isWelcomeVisible && "animate-fadeInLame"}`}
+                  className={`w-full lg:w-4/5 text-center mx-auto text-4xl lg:text-6xl 2xl:text-6xl font-bold text-white py-2 leading-10  ${
+                    interBold.className
+                  } ${isWelcomeVisible && "animate-fadeInLame"}`}
                 >
                   Generate Your Design To <br /> Code Right Now !
                 </div>
 
                 <div
-                  className={`w-full lg:w-4/5 xl:w-2/4 text-center mx-auto text-sm xs:text-md lg:text-lg text-white py-2 lg:px-8 ${isWelcomeVisible && "animate-fadeInLame"
-                    }`}
+                  className={`w-full lg:w-4/5 xl:w-2/4 text-center mx-auto text-sm xs:text-md lg:text-lg text-white py-2 lg:px-8 ${
+                    isWelcomeVisible && "animate-fadeInLame"
+                  }`}
                 >
-                  Innovative Solutions for all levels of expertise.
-                  Provide code generation with precision and speed, Automate Your Development Process, AI-Assisted Design-to-Code Conversion
+                  Innovative Solutions for all levels of expertise. Provide code
+                  generation with precision and speed, Automate Your Development
+                  Process, AI-Assisted Design-to-Code Conversion
                 </div>
                 <div
-                  className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${isWelcomeVisible && "animate-fadeInLame"
-                    }`}
+                  className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${
+                    isWelcomeVisible && "animate-fadeInLame"
+                  }`}
                 >
                   <div className="h-4" />
 
@@ -138,9 +142,10 @@ const Home: React.FC<Props> = () => {
                       bg="white"
                       color="black"
                       _hover={{
-                        background: "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+                        background:
+                          "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
                         color: "white",
-                        border: "2px solid transparent"
+                        border: "2px solid transparent",
                       }}
                     >
                       Latest News
@@ -166,9 +171,10 @@ const Home: React.FC<Props> = () => {
                         />
                       }
                       _hover={{
-                        background: "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+                        background:
+                          "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
                         color: "white",
-                        border: "2px solid transparent"
+                        border: "2px solid transparent",
                       }}
                     >
                       Quick Try
@@ -191,11 +197,7 @@ const Home: React.FC<Props> = () => {
           alt="whitepaper"
           className="socials-button rounded-full"
         />
-        <Image
-          src={BootstarpLogo}
-          alt="whitepaper"
-          className="rounded-full"
-        />
+        <Image src={BootstarpLogo} alt="whitepaper" className="rounded-full" />
       </div>
 
       <div className="w-full relative">
@@ -241,10 +243,17 @@ const Home: React.FC<Props> = () => {
               About Omnitech
             </div>
             <div
-              className={`w-full text-[#ccc] text-justify ${inter.className}`}
+              className={`w-full !font-semibold text-[#ccc] ${inter.className}`}
             >
-              OmniTech is a leading provider of AI-powered development tools. Our mission is to simplify the software development process and make it accessible to all levels of expertise.
-              Join us as we revolutionize the way developers bring their ideas to life
+              Omnitech is a leading provider of AI-powered development tools.
+              Our mission is to simplify the software development process and
+              make it accessible to all levels of expertise
+            </div>
+            <div
+              className={`w-full !font-semibold text-[#ccc] mt-2 ${inter.className}`}
+            >
+              Join us as we revolutionize the way developers bring their ideas
+              to life
             </div>
           </Box>
         </Flex>
@@ -288,7 +297,9 @@ const Home: React.FC<Props> = () => {
           paddingX={10}
           className="w-full max-w-screen-xl relative mx-auto"
         >
-          <div className={`${interBold.className} text-3xl xl:text-4xl text-sm text-cente z-30`}>
+          <div
+            className={`${interBold.className} text-3xl xl:text-4xl text-cente z-30`}
+          >
             Our Feature You Can Get
           </div>
 
@@ -298,11 +309,18 @@ const Home: React.FC<Props> = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" rounded="full" bg="white" color="black" _hover={{
-                background: "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
-                color: "white",
-                border: "2px solid transparent"
-              }}>
+              <Button
+                size="lg"
+                rounded="full"
+                bg="white"
+                color="black"
+                _hover={{
+                  background:
+                    "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+                  color: "white",
+                  border: "2px solid transparent",
+                }}
+              >
                 Get Started
               </Button>
             </Link>
@@ -319,7 +337,7 @@ const Home: React.FC<Props> = () => {
           paddingX={10}
           className="w-full max-w-screen-xl relative mx-auto"
         >
-          <div className={`${interBold.className} text-sm text-cente z-30`}>
+          <div className={`${interBold.className} text-sm text-center z-30`}>
             <Image
               className="w-full h-full m-auto object-center object-contain"
               src={HTMLTailwindAssistance}
@@ -346,7 +364,6 @@ const Home: React.FC<Props> = () => {
             React Bootstrap Assistant
           </div>
         </Box>
-
 
         <div id="tokenomic" className="h-24 sm:h-20 relative z-30" />
         <Flex
@@ -378,17 +395,22 @@ const Home: React.FC<Props> = () => {
               </Tilt>
             </Box>
           </Box>
-          <Box zIndex={30} className={`${interBold.className}`} w="100%" px={10}>
-            <Box textAlign={{ base: 'center', lg: 'left' }} marginBottom={2}>
-              <Text fontSize='4xl'>TOKENOMICS</Text>
+          <Box
+            zIndex={30}
+            className={`${interBold.className}`}
+            w="100%"
+            px={10}
+          >
+            <Box textAlign={{ base: "center", lg: "left" }} marginBottom={2}>
+              <Text fontSize="4xl">TOKENOMICS</Text>
             </Box>
 
-            <Box textAlign={{ base: 'center', lg: 'left' }} marginBottom={2}>
-              <Text fontSize='sm'>{contractAddress}</Text>
+            <Box textAlign={{ base: "center", lg: "left" }} marginBottom={2}>
+              <Text fontSize="sm">{contractAddress}</Text>
             </Box>
 
             <Flex
-              justifyContent={{ base: 'center', lg: 'space-between' }}
+              justifyContent={{ base: "center", lg: "space-between" }}
               alignItems={{ base: "center", lg: "start" }}
               flexDirection={{ base: "column", md: "row" }}
             >
@@ -404,8 +426,10 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize='sm'>OmniTech</Text>
-                    <Text color="#929BFF" fontSize='sm'>Name</Text>
+                    <Text fontSize="sm">OmniTech</Text>
+                    <Text color="#929BFF" fontSize="sm">
+                      Name
+                    </Text>
                   </Box>
                 </Link>
                 <Link
@@ -419,8 +443,10 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize='sm'>ETHERIUM</Text>
-                    <Text color="#929BFF" fontSize='sm'>Network</Text>
+                    <Text fontSize="sm">ETHERIUM</Text>
+                    <Text color="#929BFF" fontSize="sm">
+                      Network
+                    </Text>
                   </Box>
                 </Link>
               </Box>
@@ -436,8 +462,10 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize='sm'>$OMTC</Text>
-                    <Text color="#929BFF" fontSize='sm'>Symbol</Text>
+                    <Text fontSize="sm">$OMTC</Text>
+                    <Text color="#929BFF" fontSize="sm">
+                      Symbol
+                    </Text>
                   </Box>
                 </Link>
                 <Link
@@ -451,8 +479,10 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize='sm'>100M</Text>
-                    <Text color="#929BFF" fontSize='sm'>Supply</Text>
+                    <Text fontSize="sm">100M</Text>
+                    <Text color="#929BFF" fontSize="sm">
+                      Supply
+                    </Text>
                   </Box>
                 </Link>
               </Box>
@@ -469,7 +499,9 @@ const Home: React.FC<Props> = () => {
           minH="100vh"
           w="full"
           zIndex={30}
-          className={`w-full max-w-screen-xl relative mx-auto ${isPricingVisible && "animate-fadeInLame"}`}
+          className={`w-full max-w-screen-xl relative mx-auto ${
+            isPricingVisible && "animate-fadeInLame"
+          }`}
         >
           <Stack
             spacing={5}
@@ -508,8 +540,7 @@ const Home: React.FC<Props> = () => {
               width="fit-content"
               backgroundColor="white"
               textColor="black"
-            >
-            </Stack>
+            ></Stack>
             <Grid
               w="full"
               gap={3}
