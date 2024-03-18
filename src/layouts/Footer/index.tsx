@@ -114,7 +114,14 @@ const AppFooter: React.FC<Props> = () => {
           OmniTech 2024. All rights reserved.
         </div>
         <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1">
-          Term and Conditions | Privacy and Policy
+          <Link href="/">
+            Term and Conditions
+          </Link>{" "}
+          |{" "}
+          <Link href="/">
+            Privacy and Policy
+          </Link>
+
         </div>
       </Flex>
     </footer >

@@ -3,16 +3,8 @@ export const footerList = [
         title: "Support",
         list: [
             {
-                title: 'Help Center',
-                link: '/'
-            },
-            {
-                title: 'Account Information',
-                link: '/'
-            },
-            {
                 title: 'About',
-                link: '/'
+                link: '/#about'
             },
             {
                 title: 'Contact US',
@@ -21,43 +13,26 @@ export const footerList = [
         ]
     },
     {
-        title: "Help and Solution",
-        list: [
-            {
-                title: 'Talk to support',
-                link: '/'
-            },
-            {
-                title: 'Support docs',
-                link: '/'
-            },
-            {
-                title: 'System Status',
-                link: '/'
-            }
-        ]
-    },
-    {
         title: "Products",
         list: [
             {
-                title: 'System Status',
+                title: 'Generate Image to Programming Code',
                 link: '/'
             },
             {
-                title: 'Update',
+                title: 'HTML TailwindCSS Assistant',
                 link: '/'
             },
             {
-                title: 'Security',
+                title: 'React TailwindCSS Assistant',
                 link: '/'
             },
             {
-                title: 'Beta test',
+                title: 'React Bootstrap Assistant',
                 link: '/'
             },
             {
-                title: 'Pricing Product',
+                title: 'Web Deployer',
                 link: '/'
             }
         ]

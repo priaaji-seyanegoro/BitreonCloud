@@ -2,12 +2,12 @@ export const contractAddress = "0x38714f784f4122ef98c15dd868f5472adf518336";
 export const pairAddress = "-";
 
 export const socialsLink = {
-  whitepaper: "https://cryptnative-ai.gitbook.io/cryptnative-ai",
-  twitter: "https://x.com/CryptnativeAI",
-  telegram: "https://t.me/cryptnative",
-  medium: "https://medium.com/@",
-  email: "mailto:support@cryptnative.com",
-  bot: "https://t.me/cryptnative_bot",
+  whitepaper: "/",
+  twitter: "https://x.com",
+  telegram: "/",
+  medium: "https://medium.com",
+  email: "mailto:support@omnitech.com",
+  bot: "/",
 };
 
 export const findUsLink = {

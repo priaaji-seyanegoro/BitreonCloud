@@ -21,8 +21,8 @@ import YinLoader from "@/components/Loader/Custom";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
 
-import { contractAddress, findUsLink, socialsLink } from "@/constants/links";
-import { poppins, clashDisplay, inter, interBold } from "@/utils/font";
+import { contractAddress, socialsLink } from "@/constants/links";
+import { inter, interBold } from "@/utils/font";
 import AnansiAboutLogo from "@/assets/anansie-about.png";
 import HTMLLogo from "@/assets/html.png";
 import HTMLTailwindAssistance from "@/assets/htmlTailwindAssistance.png";
@@ -130,9 +130,8 @@ const Home: React.FC<Props> = () => {
                   className={`w-full lg:w-4/5 xl:w-2/4 text-center mx-auto text-sm xs:text-md lg:text-lg text-white py-2 lg:px-8 ${isWelcomeVisible && "animate-fadeInLame"
                     }`}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Temporibus illo qui, esse animi aliquam ipsa voluptates
-                  quibusdam velit harum fuga enim minus
+                  Innovative Solutions for all levels of expertise.
+                  Provide code generation with precision and speed, Automate Your Development Process, AI-Assisted Design-to-Code Conversion
                 </div>
                 <div
                   className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${isWelcomeVisible && "animate-fadeInLame"
@@ -151,8 +150,13 @@ const Home: React.FC<Props> = () => {
                       mr="10px"
                       bg="white"
                       color="black"
+                      _hover={{
+                        background: "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+                        color: "white",
+                        border: "2px solid transparent"
+                      }}
                     >
-                      Quick Try
+                      Latest News
                     </Button>
                   </Link>
                   <Link
@@ -174,8 +178,13 @@ const Home: React.FC<Props> = () => {
                           }}
                         />
                       }
+                      _hover={{
+                        background: "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+                        color: "white",
+                        border: "2px solid transparent"
+                      }}
                     >
-                      View Demo
+                      Quick Try
                     </Button>
                   </Link>
                 </div>
@@ -188,8 +197,8 @@ const Home: React.FC<Props> = () => {
       {/* <div className="h-24" /> */}
       {/* tools logo  */}
       <div className="container-tools w-full h-full relative flex flex-wrap justify-center gap-11 sm:gap-44 py-8">
-        <Image src={HTMLLogo} alt="telegram" className="socials-button" />
-        <Image src={TailwindLogo} alt="twitter" className="socials-button" />
+        <Image src={HTMLLogo} alt="telegram" />
+        <Image src={TailwindLogo} alt="twitter" />
         <Image
           src={ReactLogo}
           alt="whitepaper"
@@ -198,7 +207,7 @@ const Home: React.FC<Props> = () => {
         <Image
           src={BootstarpLogo}
           alt="whitepaper"
-          className="socials-button rounded-full"
+          className="rounded-full"
         />
       </div>
 
@@ -248,10 +257,8 @@ const Home: React.FC<Props> = () => {
             <div
               className={`w-full text-[#ccc] text-justify ${inter.className}`}
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam
-              alias quam l abore excepturi ab distinctio saepe asperiores esse,
-              sed similique quisquam placeat sapiente, facilis ad eaque fugit
-              eveniet porro dolor.
+              OmniTech is a leading provider of AI-powered development tools. Our mission is to simplify the software development process and make it accessible to all levels of expertise.
+              Join us as we revolutionize the way developers bring their ideas to life
             </div>
           </Box>
         </Flex>
@@ -286,42 +293,34 @@ const Home: React.FC<Props> = () => {
           priority
           className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
         />
+
         <Box
           display="flex"
           flexWrap="wrap"
           justifyContent="center"
-          gap={10}
+          gap={{ base: "10", lg: "28" }}
           paddingX={10}
-          className={`w-full max-w-screen-xl relative  ${interBold.className} `}
+          className="w-full max-w-screen-xl relative mx-auto"
         >
-          <div
-            className={`${interBold.className} text-3xl xl:text-4xl text-left sm:text-center z-30 sm:mx-auto`}
-          >
+          <div className={`${interBold.className} text-3xl xl:text-4xl text-sm text-cente z-30`}>
             Our Feature You Can Get
           </div>
 
-          <div className="w-full sm:w-1/2 lg:w-1/4 z-30">
-            <div
-              className={`${inter.className} text-sm text-left text-justify`}
+          <div className={`${interBold.className} text-sm text-center z-30`}>
+            <Link
+              href={socialsLink.bot}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              We offer a variety of interesting features that you can help
-              increase yor productivity at work and manage your projrct easly
-            </div>
+              <Button size="lg" rounded="full" bg="white" color="black" _hover={{
+                background: "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+                color: "white",
+                border: "2px solid transparent"
+              }}>
+                Get Started
+              </Button>
+            </Link>
           </div>
-
-          <Link
-            href={socialsLink.bot}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button size="lg" rounded="full" mr="10px" bg="white" color="black" _hover={{
-              background: "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
-              color: "white",
-              border: "2px solid transparent"
-            }}>
-              Get Started
-            </Button>
-          </Link>
         </Box>
 
         {/* technology  */}
@@ -392,7 +391,6 @@ const Home: React.FC<Props> = () => {
             </Box>
           </Box>
           <Box zIndex={30} className={`${interBold.className}`} w="100%" px={10}>
-
             <Box textAlign={{ base: 'center', lg: 'left' }} marginBottom={2}>
               <Text fontSize='4xl'>TOKENOMICS</Text>
             </Box>
