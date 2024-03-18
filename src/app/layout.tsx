@@ -9,8 +9,7 @@ import "./globals.css";
 
 const app_title = "Omnitech | AI-powered tools for easier software development";
 const app_name = "Omnitech";
-const description =
-  "Convert designs to code and automate deployment effortlessly";
+const description = "Convert designs to code and automate deployment effortlessly";
 
 export const metadata: Metadata = {
   title: app_title,
