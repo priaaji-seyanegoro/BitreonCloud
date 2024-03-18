@@ -12,6 +12,7 @@ import {
   Heading,
   Stack,
   VStack,
+  Text
 } from "@chakra-ui/react";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { PlayIcon } from "@/utils/Icon/play";
@@ -99,17 +100,6 @@ const Home: React.FC<Props> = () => {
 
   return (
     <div className="homepage-container">
-      {/* <Image
-        src={BackgroundWelcome}
-        alt="roadmap"
-        priority
-        className=" absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
-      /> */}
-      {/* <div id="welcome" className="h-4 xs:h-8 sm:h-16 relative z-30" /> */}
-      {/* <div
-        id="welcome"
-        className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
-      /> */}
       <div className="w-full relative">
         <div
           id="welcome"
@@ -195,7 +185,7 @@ const Home: React.FC<Props> = () => {
 
       {/* <div className="h-24" /> */}
       {/* tools logo  */}
-      <div className="w-full h-full relative flex flex-wrap justify-center gap-10 py-8">
+      <div className="container-tools w-full h-full relative flex flex-wrap justify-center gap-11 py-8">
         <Image src={HTMLLogo} alt="telegram" className="socials-button" />
         <Image src={TailwindLogo} alt="twitter" className="socials-button" />
         <Image
@@ -300,10 +290,10 @@ const Home: React.FC<Props> = () => {
           justifyContent="center"
           gap={10}
           paddingX={10}
-          className="w-full max-w-screen-xl relative mx-auto"
+          className={`w-full max-w-screen-xl relative mx-auto ${interBold.className} `}
         >
           <div
-            className={`${interBold.className} text-3xl xl:text-4xl text-left z-30`}
+            className={`${interBold.className} text-3xl xl:text-4xl text-left sm:text-center z-30`}
           >
             Our Feature You Can Get
           </div>
@@ -389,69 +379,92 @@ const Home: React.FC<Props> = () => {
             >
               {/* Image */}
               <Image
-                className="w-full h-full m-auto object-center object-contain"
+                className="w-full h-full m-auto object-center object-contain p-4"
                 src={FrameLogo}
                 alt="podcast logo"
               />
             </Box>
           </Box>
-          <Box zIndex={30} className="section_two_right" w="100%" px={10}>
-            <div
-              className={`w-full lg:w-4/5 text-2xl lg:text-3xl xl:xl:text-4xl mb-4 pt-2 xl:mt-4 text-left ${interBold.className}`}
-            >
-              TOKENOMICS
-            </div>
+          <Box zIndex={30} className={`${interBold.className}`} w="100%" px={10}>
 
-            <div className="w-full sm:mt-2 lg:w-3/4 text-base text-[#ccc] text-left">
-              {contractAddress}
-            </div>
-            <div className="flex flex-wrap justify-center sm:justify-start z-30">
-              <Link
-                href={socialsLink.bot}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  className="welcome-bot-button mx-2 my-2 sm:mr-7"
+            <Box textAlign={{ base: 'center', lg: 'left' }} marginBottom={2}>
+              <Text fontSize='4xl'>TOKENOMICS</Text>
+            </Box>
+
+            <Box textAlign={{ base: 'center', lg: 'left' }} marginBottom={2}>
+              <Text fontSize='sm'>{contractAddress}</Text>
+            </Box>
+
+            <Flex
+              justifyContent={{ base: 'center', lg: 'space-between' }}
+              alignItems={{ base: "center", lg: "start" }}
+              flexDirection={{ base: "column", md: "row" }}
+            >
+              <Box textAlign={{ base: "center", lg: "left" }}>
+                <Link
+                  href={socialsLink.bot}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  OmniTech
-                </Button>
-              </Link>
-              <Link
-                href={socialsLink.bot}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  className="welcome-bot-button mx-2 my-2 sm:mr-7"
+                  <Box
+                    boxSize="60px"
+                    className="welcome-bot-button mx-2 my-2 sm:mr-7"
+                    textAlign="center"
+                    padding="2"
+                  >
+                    <Text fontSize='sm'>OmniTech</Text>
+                    <Text color="#929BFF" fontSize='sm'>Name</Text>
+                  </Box>
+                </Link>
+                <Link
+                  href={socialsLink.bot}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  $
-                </Button>
-              </Link>
-              <Link
-                href={socialsLink.bot}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  size="lg"
-                  className="welcome-bot-button mx-2 my-2 sm:mr-7"
+                  <Box
+                    boxSize="60px"
+                    className="welcome-bot-button mx-2 my-2 sm:mr-7"
+                    textAlign="center"
+                    padding="2"
+                  >
+                    <Text fontSize='sm'>ETHERIUM</Text>
+                    <Text color="#929BFF" fontSize='sm'>Network</Text>
+                  </Box>
+                </Link>
+              </Box>
+              <Box textAlign={{ base: "center", lg: "left" }}>
+                <Link
+                  href={socialsLink.bot}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  ETHEREUM
-                </Button>
-              </Link>
-              <Link
-                href={socialsLink.bot}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button size="lg" className="welcome-bot-button mx-2 my-2">
-                  100M
-                </Button>
-              </Link>
-            </div>
+                  <Box
+                    boxSize="60px"
+                    className="welcome-bot-button mx-2 my-2 sm:mr-7"
+                    textAlign="center"
+                    padding="2"
+                  >
+                    <Text fontSize='sm'>$OMTC</Text>
+                    <Text color="#929BFF" fontSize='sm'>Symbol</Text>
+                  </Box>
+                </Link>
+                <Link
+                  href={socialsLink.bot}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Box
+                    boxSize="60px"
+                    className="welcome-bot-button mx-2 my-2 sm:mr-7"
+                    textAlign="center"
+                    padding="2"
+                  >
+                    <Text fontSize='sm'>100M</Text>
+                    <Text color="#929BFF" fontSize='sm'>Supply</Text>
+                  </Box>
+                </Link>
+              </Box>
+            </Flex>
           </Box>
         </Flex>
 

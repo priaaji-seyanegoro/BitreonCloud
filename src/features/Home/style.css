@@ -45,11 +45,9 @@
   @apply w-11/12 lg:w-2/3 h-[800px] xs:h-[600px] rounded-xl flex flex-col justify-center px-2 relative z-30 mx-auto;
   clip-path: xywh(0 5px 100% 90% round 15% 0);
 
-  background: linear-gradient(
-    180deg,
-    rgba(141, 141, 185, 0.16) 0%,
-    rgba(8, 8, 12, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(141, 141, 185, 0.16) 0%,
+      rgba(8, 8, 12, 0) 100%);
 }
 
 .try-button {
@@ -67,8 +65,8 @@
 
 .welcome-bot-button,
 .bot-button {
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  /* clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%); */
+  /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   @apply pl-0;
 }
 
@@ -89,7 +87,7 @@
 .bot-button:hover,
 .welcome-bot-button:hover {
   background: linear-gradient(#111114 0 0) padding-box,
-    linear-gradient(152.64deg, #247be1 0%, #00ff47 100%) border-box;
+    linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box;
   color: white;
   border: 2px solid transparent;
   /* transform: scale(1.1); */
@@ -116,12 +114,38 @@
   /* Increase the size by 10% on hover */
 }
 
-.whitepaper-button:hover > span > .whitepaper-icon {
+.whitepaper-button:hover>span>.whitepaper-icon {
   /* @apply ml-2; */
   transform: translateX(7px);
 }
 
-.socials-button {
+/* .socials-button {
   @apply w-12 h-12 object-contain hover:scale-110;
   transition: transform 0.3s ease;
+} */
+
+.socials-button {
+  @apply w-12 h-12 object-contain;
+  transition: transform 0.3s ease;
+}
+
+/* Animasi saat mouse hover */
+.socials-button:hover {
+  transform: scale(1.1);
+  /* Memperbesar elemen saat hover */
+  animation: rotate 2s linear infinite;
+  /* Animasi putaran */
+}
+
+/* Keyframes untuk animasi putaran */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    /* Putar elemen dari 0 derajat */
+  }
+
+  100% {
+    transform: rotate(360deg);
+    /* Putar elemen hingga 360 derajat */
+  }
 }
