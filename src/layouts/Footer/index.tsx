@@ -9,21 +9,14 @@ import { CopyrightOutlined, MailOutlined } from "@ant-design/icons";
 import { useIsMounted } from "@/hooks/useIsMounted";
 
 import { socialsLink } from "@/constants/links";
-import { poppins } from "@/utils/font";
-
-// import AppLogo from "@/assets/logo-app.png";
-// import AppBannerNav from "@/assets/banner-nav.png";
-
-// import AppLogoTransparent from "@/assets/logo-transparent.png";
+import { footerList } from "@/constants/footerList";
 import TwitterLogo from "@/assets/logo-x.png";
 import TelegramLogo from "@/assets/logo-telegram.png";
 import GitBookLogo from "@/assets/logo-gitbook.png";
-// import MediumLogo from "@/assets/logo-medium.png";
-// import WebLogo from "@/assets/logo-web.png";
-// import GitbookLogo from "@/assets/logo-gitbook.png";
-// import EmailLogo from "@/assets/logo-email.png";
+import AppBannerNav from "@/assets/anansieAI-logo.png";
 
 import "./style.css";
+import { Box, Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 
 interface Props { }
 
@@ -33,76 +26,98 @@ const AppFooter: React.FC<Props> = () => {
   }
   return (
     <footer>
-      <div className="app-footer-container">
-        <div className="app-footer-wrapper z-30">
-          <div className="w-full lg:w-2/3 flex flex-wrap justify-center lg:justify-start items-center py-2 sm:py-4 z-50 gap-3">
-            <div className="text-base md:text-lg text-center !font-normal order-2 sm:order-1">
-              <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
-              Anansie AI 2024. All rights reserved.
-            </div>
-
-            <div className="flex gap-3 order-1 sm:order-2">
-              <Link
-                href={socialsLink.telegram}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={TelegramLogo}
-                  alt="telegram"
-                  className="footer-socials-button"
-                />
-              </Link>
-
-              <Link
-                href={socialsLink.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={TwitterLogo}
-                  alt="twitter"
-                  className="footer-socials-button"
-                />
-              </Link>
-
-              <Link
-                href={socialsLink.whitepaper}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={GitBookLogo}
-                  alt="whitepaper"
-                  className="footer-socials-button rounded-full"
-                />
-              </Link>
-
-              {/* <Link
-                href={socialsLink.medium}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src={MediumLogo}
-                  alt="medium"
-                  className="w-8 h-8 object-contain"
-                />
-              </Link> */}
-            </div>
-          </div>
-          <Link href={socialsLink.email} className="w-full lg:w-1/5 text-right">
-            <div className="w-full text-sm text-center text-gray-300 hover:text-white !font-bold">
-              <MailOutlined
-                style={{ fontSize: "1em" }}
-                className="mr-1 font-bold"
-              />
-              support@anansieAI.com
-            </div>
+      <Flex
+        paddingX={{ base: "2rem", md: "5rem" }}
+        paddingY="2rem"
+        justifyContent="space-between"
+        flexDirection={{ base: "column", md: "row" }}
+      >
+        <Box textAlign={{ base: "center", lg: "left" }}>
+          {/* LOGO  */}
+          <Link href="/" className={`logo-container text-white`}>
+            <Image
+              src={AppBannerNav}
+              alt="banner-nav-logo"
+              className="w-full md:w-full h-14 sm:h-16 object-contain sm:object-center lg:object-left mb-3"
+            />
           </Link>
+          {/* DESC  */}
+          <Text marginBottom="3" color="#A6A6A6" fontSize='md'>Generate your design to code now!</Text>
+          <Box display="flex" gap="3" justifyContent={{ base: 'center', lg: 'left' }}>
+            <Link
+              href={socialsLink.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={TelegramLogo}
+                alt="telegram"
+                className="footer-socials-button"
+              />
+            </Link>
+
+            <Link
+              href={socialsLink.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={TwitterLogo}
+                alt="twitter"
+                className="footer-socials-button"
+              />
+            </Link>
+
+            <Link
+              href={socialsLink.whitepaper}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={GitBookLogo}
+                alt="whitepaper"
+                className="footer-socials-button rounded-full"
+              />
+            </Link>
+          </Box>
+        </Box>
+        <Box>
+          <Flex flexWrap="wrap" justifyContent={{ base: 'center', lg: 'left' }} textAlign={{ base: 'center', lg: 'left' }} marginTop={{ base: '30px', lg: '0' }}>
+            {
+              footerList.map((value, index) => (
+                <Box key={index} ml={{ base: "0", lg: "4" }}>
+                  <Text fontWeight="bold" m={4} ml={{ base: "0", lg: "4" }}>{value.title}</Text>
+                  <Box color="#A6A6A6">
+                    {
+                      value.list.map((value, index) => (
+                        <Link href={value.link} key={index}>
+                          <Text m={4} ml={{ base: "0", lg: "4" }}>{value.title}</Text>
+                        </Link>
+                      ))
+                    }
+                  </Box>
+                </Box>
+              ))
+            }
+          </Flex>
+        </Box>
+      </Flex>
+
+      <Flex
+        paddingX={{ base: "2rem", md: "5rem" }}
+        marginBottom="2rem"
+        justifyContent="space-between"
+        flexDirection={{ base: "column", md: "row" }}
+      >
+        <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1">
+          <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
+          OmniTech 2024. All rights reserved.
         </div>
-      </div>
-    </footer>
+        <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1">
+          Term and Conditions | Privacy and Policy
+        </div>
+      </Flex>
+    </footer >
   );
 };
 

@@ -1,4 +1,4 @@
-export const prices = [
+export const pricesMonthly = [
     {
         name: "start",
         features: new Array(3).fill(null).map((e) => "Lorem iptsum dolor"),

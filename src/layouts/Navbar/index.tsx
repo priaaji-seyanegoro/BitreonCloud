@@ -10,10 +10,9 @@ import PageTabs from "../PageTabs";
 import { NavbarDrawer } from "./Drawer";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
-// import { useWidth } from "@/hooks/useWidth";
 
-import { clashDisplay, interBold } from "@/utils/font";
-import { findUsLink, socialsLink } from "@/constants/links";
+import { interBold } from "@/utils/font";
+import { socialsLink } from "@/constants/links";
 
 import AppBannerNav from "@/assets/anansieAI-logo.png";
 

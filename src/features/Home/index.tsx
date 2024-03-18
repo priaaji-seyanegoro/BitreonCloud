@@ -38,9 +38,9 @@ import BackgroundTechnology from "@/assets/background3.png";
 
 import "./style.css";
 import PricingBox from "@/components/PricingBox";
-import { prices } from "@/constants/prices";
+import { pricesMonthly } from "@/constants/prices";
 
-interface Props {}
+interface Props { }
 
 const Home: React.FC<Props> = () => {
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
@@ -140,26 +140,23 @@ const Home: React.FC<Props> = () => {
             >
               <div ref={welcomeRef} className={`w-full sm:px-8 lg:px-14`}>
                 <div
-                  className={`w-full lg:w-4/5 text-center mx-auto text-4xl lg:text-6xl 2xl:text-6xl font-bold text-white py-2 leading-10  ${
-                    interBold.className
-                  } ${isWelcomeVisible && "animate-fadeInLame"}`}
+                  className={`w-full lg:w-4/5 text-center mx-auto text-4xl lg:text-6xl 2xl:text-6xl font-bold text-white py-2 leading-10  ${interBold.className
+                    } ${isWelcomeVisible && "animate-fadeInLame"}`}
                 >
                   Generate Your Design To <br /> Code Right Now !
                 </div>
 
                 <div
-                  className={`w-full lg:w-4/5 xl:w-2/4 text-center mx-auto text-sm xs:text-md lg:text-lg text-white py-2 lg:px-8 ${
-                    isWelcomeVisible && "animate-fadeInLame"
-                  }`}
+                  className={`w-full lg:w-4/5 xl:w-2/4 text-center mx-auto text-sm xs:text-md lg:text-lg text-white py-2 lg:px-8 ${isWelcomeVisible && "animate-fadeInLame"
+                    }`}
                 >
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Temporibus illo qui, esse animi aliquam ipsa voluptates
                   quibusdam velit harum fuga enim minus
                 </div>
                 <div
-                  className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${
-                    isWelcomeVisible && "animate-fadeInLame"
-                  }`}
+                  className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${isWelcomeVisible && "animate-fadeInLame"
+                    }`}
                 >
                   <div className="h-4" />
 
@@ -227,7 +224,7 @@ const Home: React.FC<Props> = () => {
       <div className="w-full relative">
         <div id="about" className="h-24 sm:h-28 relative z-30" />
         <Image
-          src={BackgroundWelcome}
+          src={BackgroundAbout}
           alt="roadmap"
           priority
           className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
@@ -303,7 +300,7 @@ const Home: React.FC<Props> = () => {
       <div className="w-full relative">
         <div className="h-24 sm:h-28 relative z-30" />
         <Image
-          src={BackgroundWelcome}
+          src={BackgroundTechnology}
           alt="roadmap"
           priority
           className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
@@ -533,7 +530,7 @@ const Home: React.FC<Props> = () => {
                 md: "repeat( auto-fit, 250px )",
               }}
             >
-              {prices.map((price) => (
+              {pricesMonthly.map((price) => (
                 <PricingBox key={price.name} {...price} />
               ))}
             </Grid>
