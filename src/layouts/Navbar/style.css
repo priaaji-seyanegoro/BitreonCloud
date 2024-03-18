@@ -6,8 +6,7 @@
 }
 
 .navbar-fixed {
-  @apply w-full fixed top-0 py-3;
-  backdrop-filter: blur(10px);
+  @apply w-full fixed top-0 py-3 bg-black;
   z-index: 1000;
 }
 
@@ -24,7 +23,6 @@
 
 .navbar {
   @apply relative h-full;
-  backdrop-filter: blur(10px);
   /* @apply border-b border-b-primary; */
 }
 

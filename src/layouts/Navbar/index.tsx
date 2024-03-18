@@ -70,7 +70,7 @@ const Navbar: React.FC<Props> = () => {
   return (
     <div
       className={clsx(
-        isScroll ? "navbar-fixed" : "navbar-container",
+        isScroll || isOpenDrawer ? "navbar-fixed" : "navbar-container",
         interBold.className
       )}
     >
