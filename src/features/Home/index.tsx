@@ -53,6 +53,7 @@ const Home: React.FC<Props> = () => {
   const featuresRef = useRef<HTMLDivElement | null>(null);
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const tokensRef = useRef<HTMLDivElement | null>(null);
+  const pricingRef = useRef<HTMLDivElement | null>(null);
 
   const isMounted = useIsMounted();
   // const [copyContent] = useCopyText();
@@ -164,6 +165,7 @@ const Home: React.FC<Props> = () => {
                       rounded="full"
                       variant="outline"
                       background="transparent"
+                      color="white"
                       leftIcon={
                         <PlayIcon
                           className="welcome-bot-icon"
@@ -185,7 +187,7 @@ const Home: React.FC<Props> = () => {
 
       {/* <div className="h-24" /> */}
       {/* tools logo  */}
-      <div className="container-tools w-full h-full relative flex flex-wrap justify-center gap-11 py-8">
+      <div className="container-tools w-full h-full relative flex flex-wrap justify-center gap-11 sm:gap-44 py-8">
         <Image src={HTMLLogo} alt="telegram" className="socials-button" />
         <Image src={TailwindLogo} alt="twitter" className="socials-button" />
         <Image
@@ -290,10 +292,10 @@ const Home: React.FC<Props> = () => {
           justifyContent="center"
           gap={10}
           paddingX={10}
-          className={`w-full max-w-screen-xl relative mx-auto ${interBold.className} `}
+          className={`w-full max-w-screen-xl relative  ${interBold.className} `}
         >
           <div
-            className={`${interBold.className} text-3xl xl:text-4xl text-left sm:text-center z-30`}
+            className={`${interBold.className} text-3xl xl:text-4xl text-left sm:text-center z-30 sm:mx-auto`}
           >
             Our Feature You Can Get
           </div>
@@ -312,7 +314,11 @@ const Home: React.FC<Props> = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button size="lg" rounded="full" mr="10px" bg="white" color="black">
+            <Button size="lg" rounded="full" mr="10px" bg="white" color="black" _hover={{
+              background: "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+              color: "white",
+              border: "2px solid transparent"
+            }}>
               Get Started
             </Button>
           </Link>
@@ -324,7 +330,7 @@ const Home: React.FC<Props> = () => {
           display="flex"
           flexWrap="wrap"
           justifyContent="center"
-          gap={28}
+          gap={{ base: "10", lg: "28" }}
           paddingX={10}
           className="w-full max-w-screen-xl relative mx-auto"
         >
@@ -356,8 +362,8 @@ const Home: React.FC<Props> = () => {
           </div>
         </Box>
 
-        <div className="h-12 md:h-20" />
-        <div id="tokenomic" className="h-24 sm:h-28 relative z-30" />
+
+        <div id="tokenomic" className="h-24 sm:h-20 relative z-30" />
         <Flex
           ref={tokensRef}
           className="container-two w-full max-w-screen-xl relative mx-auto"
@@ -468,9 +474,9 @@ const Home: React.FC<Props> = () => {
           </Box>
         </Flex>
 
-        <div className="h-24 md:h-40" />
+        <div id="pricing" className="h-24 sm:h-20 relative z-30" />
         <Flex
-          ref={tokensRef}
+          ref={pricingRef}
           direction="column"
           alignItems="center"
           justifyContent="center"
