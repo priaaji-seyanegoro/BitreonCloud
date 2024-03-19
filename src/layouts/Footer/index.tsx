@@ -14,10 +14,9 @@ import TwitterLogo from "@/assets/logo-x.png";
 import TelegramLogo from "@/assets/logo-telegram.png";
 import GitBookLogo from "@/assets/logo-gitbook.png";
 import AppBannerNav from "@/assets/anansieAI-logo.png";
-import { TelegramIcon } from "@/utils/Icon/telegram";
 
 import "./style.css";
-import { Box, Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 
 interface Props { }
 
@@ -86,7 +85,7 @@ const AppFooter: React.FC<Props> = () => {
                   <Image
                     src={GitBookLogo}
                     alt="whitepaper"
-                    className="footer-socials-button rounded-full"
+                    className="footer-socials-button"
                   />
                 </Link>
               </Box>

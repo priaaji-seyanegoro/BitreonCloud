@@ -41,7 +41,7 @@ import "./style.css";
 import PricingBox from "@/components/PricingBox";
 import { pricesMonthly } from "@/constants/prices";
 
-interface Props {}
+interface Props { }
 
 const Home: React.FC<Props> = () => {
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
@@ -107,26 +107,23 @@ const Home: React.FC<Props> = () => {
             >
               <div ref={welcomeRef} className={`w-full sm:px-8 lg:px-14`}>
                 <div
-                  className={`w-full lg:w-4/5 text-center mx-auto text-4xl lg:text-6xl 2xl:text-6xl font-bold text-white py-2 leading-10  ${
-                    interBold.className
-                  } ${isWelcomeVisible && "animate-fadeInLame"}`}
+                  className={`w-full lg:w-4/5 text-center mx-auto text-4xl lg:text-6xl 2xl:text-6xl font-bold text-white py-2 leading-10  ${interBold.className
+                    } ${isWelcomeVisible && "animate-fadeInLame"}`}
                 >
                   Generate Your Design To <br /> Code Right Now !
                 </div>
 
                 <div
-                  className={`w-full lg:w-4/5 xl:w-2/4 text-center mx-auto text-sm xs:text-md lg:text-lg text-white py-2 lg:px-8 ${
-                    isWelcomeVisible && "animate-fadeInLame"
-                  }`}
+                  className={`w-full lg:w-4/5 xl:w-2/4 text-center mx-auto text-sm xs:text-md lg:text-lg text-white py-2 lg:px-8 ${isWelcomeVisible && "animate-fadeInLame"
+                    }`}
                 >
                   Innovative Solutions for all levels of expertise. Provide code
                   generation with precision and speed, Automate Your Development
                   Process, AI-Assisted Design-to-Code Conversion
                 </div>
                 <div
-                  className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${
-                    isWelcomeVisible && "animate-fadeInLame"
-                  }`}
+                  className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${isWelcomeVisible && "animate-fadeInLame"
+                    }`}
                 >
                   <div className="h-4" />
 
@@ -374,7 +371,8 @@ const Home: React.FC<Props> = () => {
           align="center"
           justify="space-between"
           px={{ base: "0", sm: "0", md: "160px" }}
-          mt={150}
+          mt={100}
+          mb={150}
           gap={3}
         >
           <Box className="section_two_left" w="100%">
@@ -426,7 +424,7 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize="sm">OmniTech</Text>
+                    <Text fontSize="sm">Omnitech</Text>
                     <Text color="#929BFF" fontSize="sm">
                       Name
                     </Text>
@@ -443,7 +441,7 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize="sm">ETHERIUM</Text>
+                    <Text fontSize="sm">ETHEREUM</Text>
                     <Text color="#929BFF" fontSize="sm">
                       Network
                     </Text>
@@ -462,7 +460,7 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize="sm">$OMTC</Text>
+                    <Text fontSize="sm">$OMNI</Text>
                     <Text color="#929BFF" fontSize="sm">
                       Symbol
                     </Text>
@@ -490,7 +488,7 @@ const Home: React.FC<Props> = () => {
           </Box>
         </Flex>
 
-        <div id="pricing" className="h-24 sm:h-28 relative z-30" />
+        <div id="pricing" className="h-24 sm:h-30 relative z-30" />
         <Flex
           ref={pricingRef}
           direction="column"
@@ -499,9 +497,8 @@ const Home: React.FC<Props> = () => {
           minH="100vh"
           w="full"
           zIndex={30}
-          className={`w-full max-w-screen-xl relative mx-auto ${
-            isPricingVisible && "animate-fadeInLame"
-          }`}
+          className={`w-full max-w-screen-xl relative mx-auto ${isPricingVisible && "animate-fadeInLame"
+            }`}
         >
           <Stack
             spacing={5}
