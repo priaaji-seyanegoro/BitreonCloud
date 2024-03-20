@@ -41,7 +41,7 @@ import "./style.css";
 import PricingBox from "@/components/PricingBox";
 import { pricesMonthly } from "@/constants/prices";
 
-interface Props { }
+interface Props {}
 
 const Home: React.FC<Props> = () => {
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(false);
@@ -107,23 +107,26 @@ const Home: React.FC<Props> = () => {
             >
               <div ref={welcomeRef} className={`w-full sm:px-8 lg:px-14`}>
                 <div
-                  className={`w-full lg:w-4/5 text-center mx-auto text-4xl lg:text-6xl 2xl:text-6xl font-bold text-white py-2 leading-10  ${interBold.className
-                    } ${isWelcomeVisible && "animate-fadeInLame"}`}
+                  className={`w-full lg:w-4/5 text-center mx-auto text-4xl lg:text-6xl 2xl:text-6xl font-bold text-white py-2 leading-10  ${
+                    interBold.className
+                  } ${isWelcomeVisible && "animate-fadeInLame"}`}
                 >
                   Generate Your Design To <br /> Code Right Now !
                 </div>
 
                 <div
-                  className={`w-full lg:w-4/5 xl:w-2/4 text-center mx-auto text-sm xs:text-md lg:text-lg text-white py-2 lg:px-8 ${isWelcomeVisible && "animate-fadeInLame"
-                    }`}
+                  className={`w-full lg:w-4/5 xl:w-2/4 text-center mx-auto text-sm xs:text-md lg:text-lg text-white py-2 lg:px-8 ${
+                    isWelcomeVisible && "animate-fadeInLame"
+                  }`}
                 >
                   Innovative Solutions for all levels of expertise. Provide code
                   generation with precision and speed, Automate Your Development
                   Process, AI-Assisted Design-to-Code Conversion
                 </div>
                 <div
-                  className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${isWelcomeVisible && "animate-fadeInLame"
-                    }`}
+                  className={`w-full lg:w-4/5 text-center mx-auto xl:text-4xl sm:text-6xl font-extrabold text-white py-2 ${
+                    isWelcomeVisible && "animate-fadeInLame"
+                  }`}
                 >
                   <div className="h-4" />
 
@@ -237,14 +240,14 @@ const Home: React.FC<Props> = () => {
             <div
               className={`w-full lg:w-4/5 text-3xl lg:text-3xl xl:xl:text-6xl mb-4 pt-2 xl:mt-4 text-left ${interBold.className}`}
             >
-              About Omnitech
+              About Omni AI
             </div>
             <div
               className={`w-full !font-semibold text-[#ccc] ${inter.className}`}
             >
-              Omnitech is a leading provider of AI-powered development tools.
-              Our mission is to simplify the software development process and
-              make it accessible to all levels of expertise
+              Omni AI is a leading provider of AI-powered development tools. Our
+              mission is to simplify the software development process and make
+              it accessible to all levels of expertise
             </div>
             <div
               className={`w-full !font-semibold text-[#ccc] mt-2 ${inter.className}`}
@@ -424,7 +427,7 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize="sm">Omnitech</Text>
+                    <Text fontSize="sm">Omni AI</Text>
                     <Text color="#929BFF" fontSize="sm">
                       Name
                     </Text>
@@ -460,7 +463,7 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize="sm">$OMNI</Text>
+                    <Text fontSize="sm">$OMAI</Text>
                     <Text color="#929BFF" fontSize="sm">
                       Symbol
                     </Text>
@@ -497,8 +500,9 @@ const Home: React.FC<Props> = () => {
           minH="100vh"
           w="full"
           zIndex={30}
-          className={`w-full max-w-screen-xl relative mx-auto ${isPricingVisible && "animate-fadeInLame"
-            }`}
+          className={`w-full max-w-screen-xl relative mx-auto ${
+            isPricingVisible && "animate-fadeInLame"
+          }`}
         >
           <Stack
             spacing={5}

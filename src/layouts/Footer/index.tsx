@@ -18,7 +18,7 @@ import AppBannerNav from "@/assets/anansieAI-logo.png";
 import "./style.css";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
-interface Props { }
+interface Props {}
 
 const AppFooter: React.FC<Props> = () => {
   if (!useIsMounted) {
@@ -126,7 +126,7 @@ const AppFooter: React.FC<Props> = () => {
           >
             <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1">
               <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
-              Omnitech 2024. All rights reserved.
+              Omni AI 2024. All rights reserved.
             </div>
             <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1">
               <Link href="/">Term and Conditions</Link> |{" "}
