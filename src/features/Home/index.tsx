@@ -50,7 +50,6 @@ const Home: React.FC<Props> = () => {
   const featuresRef = useRef<HTMLDivElement | null>(null);
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const tokensRef = useRef<HTMLDivElement | null>(null);
-  const pricingRef = useRef<HTMLDivElement | null>(null);
 
   const isMounted = useIsMounted();
   // const [copyContent] = useCopyText();
@@ -66,16 +65,6 @@ const Home: React.FC<Props> = () => {
     }
   }, [isMounted]);
 
-  useEffect(() => {
-    if (isMounted) {
-      const observer = new IntersectionObserver((entries) => {
-        const entry = entries[0];
-        setIsPricingVisible(entry.isIntersecting);
-      });
-
-      observer.observe(pricingRef.current as HTMLDivElement);
-    }
-  }, [isMounted]);
 
   if (!isMounted) {
     return (
@@ -487,8 +476,8 @@ const Home: React.FC<Props> = () => {
           </Box>
         </Flex>
 
-        <div ref={pricingRef} id="pricing" className="h-24 sm:h-30 relative z-30" />
         <Flex
+          id="pricing"
           direction="column"
           alignItems="center"
           justifyContent="center"
