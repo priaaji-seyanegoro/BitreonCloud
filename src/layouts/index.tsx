@@ -22,14 +22,16 @@ const BaseLayout: React.FC<Props> = ({ children }) => {
 
   return (
     <Provider>
-      <Navbar />
+      {isMounted && (
+        <Navbar />
+      )}
       <main className={clsx("base-main-container", clashDisplay.className)}>
-        {/* {isMounted && (
-      55m
-        )} */}
         {children}
       </main>
-      <Footer />
+      {isMounted && (
+        <Footer />
+      )}
+
     </Provider>
   );
 };

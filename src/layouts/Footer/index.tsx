@@ -18,7 +18,7 @@ import AppBannerNav from "@/assets/anansieAI-logo.png";
 import "./style.css";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
-interface Props {}
+interface Props { }
 
 const AppFooter: React.FC<Props> = () => {
   if (!useIsMounted) {
