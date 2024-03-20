@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ReactTyped } from "react-typed";
 import Tilt from "react-parallax-tilt";
 import {
   Box,
@@ -14,7 +13,6 @@ import {
   VStack,
   Text,
 } from "@chakra-ui/react";
-import { ArrowRightOutlined } from "@ant-design/icons";
 import { PlayIcon } from "@/utils/Icon/play";
 
 import YinLoader from "@/components/Loader/Custom";
@@ -37,9 +35,10 @@ import BackgroundWelcome from "@/assets/background1.png";
 import BackgroundAbout from "@/assets/backgorund2.png";
 import BackgroundTechnology from "@/assets/background3.png";
 
-import "./style.css";
 import PricingBox from "@/components/PricingBox";
 import { pricesMonthly } from "@/constants/prices";
+
+import "./style.css";
 
 interface Props {}
 
@@ -131,7 +130,7 @@ const Home: React.FC<Props> = () => {
                   <div className="h-4" />
 
                   <Link
-                    href={socialsLink.bot}
+                    href={socialsLink.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

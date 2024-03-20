@@ -98,20 +98,22 @@ const AppFooter: React.FC<Props> = () => {
                 marginTop={{ base: "30px", lg: "0" }}
               >
                 {footerList.map((value, index) => (
-                  <Box key={index} ml={{ base: "0", lg: "4" }}>
-                    <Text fontWeight="bold" m={4} ml={{ base: "0", lg: "4" }}>
-                      {value.title}
-                    </Text>
-                    <Box color="#A6A6A6">
-                      {value.list.map((value, index) => (
-                        <Link href={value.link} key={index}>
-                          <Text m={4} ml={{ base: "0", lg: "4" }}>
-                            {value.title}
-                          </Text>
-                        </Link>
-                      ))}
+                  <Link key={index} href="/">
+                    <Box ml={{ base: "0", lg: "4" }}>
+                      <Text fontWeight="bold" m={4} ml={{ base: "0", lg: "4" }}>
+                        {value.title}
+                      </Text>
+                      <Box color="#A6A6A6">
+                        {value.list.map((value, index) => (
+                          <Link href={value.link} key={index}>
+                            <Text m={4} ml={{ base: "0", lg: "4" }}>
+                              {value.title}
+                            </Text>
+                          </Link>
+                        ))}
+                      </Box>
                     </Box>
-                  </Box>
+                  </Link>
                 ))}
               </Flex>
             </Box>

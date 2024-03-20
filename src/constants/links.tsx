@@ -6,7 +6,7 @@ export const socialsLink = {
   twitter: "https://x.com",
   telegram: "/",
   medium: "https://medium.com",
-  email: "mailto:support@omnitech.com",
+  email: "mailto:",
   bot: "/",
 };
 

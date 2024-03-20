@@ -1,18 +1,20 @@
+import { findUsLink, socialsLink } from "./links";
+
 export const footerList = [
   {
     title: "Other links",
     list: [
       {
         title: "Buy",
-        link: "/",
+        link: findUsLink.uniswap,
       },
       {
         title: "Chart",
-        link: "/",
+        link: findUsLink.dextools,
       },
       {
         title: "Verify",
-        link: "/",
+        link: findUsLink.etherscan,
       },
     ],
   },
@@ -21,15 +23,15 @@ export const footerList = [
     list: [
       {
         title: "Bot",
-        link: "/",
+        link: socialsLink.bot,
       },
       {
         title: "Whitepaper",
-        link: "/",
+        link: socialsLink.whitepaper,
       },
       {
         title: "Contact Us",
-        link: "/",
+        link: socialsLink.email,
       },
     ],
   },
