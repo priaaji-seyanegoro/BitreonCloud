@@ -572,7 +572,7 @@ const Home: React.FC<Props> = () => {
               alignItems={{ base: "center", lg: "start" }}
               flexDirection={{ base: "column", md: "row" }}
             >
-              <Box textAlign={{ base: "center", lg: "left" }}>
+              <Box display="grid" gridTemplateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={4}>
                 <Link
                   href={socialsLink.bot}
                   target="_blank"
@@ -580,7 +580,7 @@ const Home: React.FC<Props> = () => {
                 >
                   <Box
                     boxSize="60px"
-                    className="welcome-bot-button mx-2 my-2 sm:mr-7"
+                    className="welcome-bot-button my-2 "
                     textAlign="center"
                     padding="2"
                   >
@@ -597,7 +597,7 @@ const Home: React.FC<Props> = () => {
                 >
                   <Box
                     boxSize="60px"
-                    className="welcome-bot-button mx-2 my-2 sm:mr-7"
+                    className="welcome-bot-button my-2 "
                     textAlign="center"
                     padding="2"
                   >
@@ -607,8 +607,6 @@ const Home: React.FC<Props> = () => {
                     </Text>
                   </Box>
                 </Link>
-              </Box>
-              <Box textAlign={{ base: "center", lg: "left" }}>
                 <Link
                   href={socialsLink.bot}
                   target="_blank"
@@ -616,7 +614,7 @@ const Home: React.FC<Props> = () => {
                 >
                   <Box
                     boxSize="60px"
-                    className="welcome-bot-button mx-2 my-2 sm:mr-7"
+                    className="welcome-bot-button my-2 "
                     textAlign="center"
                     padding="2"
                   >
@@ -633,7 +631,7 @@ const Home: React.FC<Props> = () => {
                 >
                   <Box
                     boxSize="60px"
-                    className="welcome-bot-button mx-2 my-2 sm:mr-7"
+                    className="welcome-bot-button  my-2 "
                     textAlign="center"
                     padding="2"
                   >
@@ -644,6 +642,7 @@ const Home: React.FC<Props> = () => {
                   </Box>
                 </Link>
               </Box>
+
             </Flex>
           </Box>
         </Flex>

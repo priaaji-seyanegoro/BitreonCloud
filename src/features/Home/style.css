@@ -45,11 +45,9 @@
   @apply w-11/12 lg:w-2/3 h-[800px] xs:h-[600px] rounded-xl flex flex-col justify-center px-2 relative z-30 mx-auto;
   clip-path: xywh(0 5px 100% 90% round 15% 0);
 
-  background: linear-gradient(
-    180deg,
-    rgba(141, 141, 185, 0.16) 0%,
-    rgba(8, 8, 12, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(141, 141, 185, 0.16) 0%,
+      rgba(8, 8, 12, 0) 100%);
 }
 
 .try-button {
@@ -68,8 +66,8 @@
 .welcome-bot-button,
 .bot-button {
   /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   @apply pl-0;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 25% 100%);
 }
 
 .welcome-bot-button {
@@ -116,7 +114,7 @@
   /* Increase the size by 10% on hover */
 }
 
-.whitepaper-button:hover > span > .whitepaper-icon {
+.whitepaper-button:hover>span>.whitepaper-icon {
   /* @apply ml-2; */
   transform: translateX(7px);
 }
