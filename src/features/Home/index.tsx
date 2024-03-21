@@ -21,7 +21,7 @@ import { useIsMounted } from "@/hooks/useIsMounted";
 
 import { contractAddress, socialsLink } from "@/constants/links";
 import { inter, interBold } from "@/utils/font";
-import AnansiAboutLogo from "@/assets/anansie-about.png";
+import OmnniAbout from "@/assets/omni-about.svg";
 import HTMLLogo from "@/assets/html.png";
 import HTMLTailwindAssistance from "@/assets/htmlTailwindAssistance.png";
 import ReactTailwindAssistance from "@/assets/ReactTailwind.png";
@@ -31,6 +31,9 @@ import ReactLogo from "@/assets/React.png";
 import BootstarpLogo from "@/assets/Bootstrap.png";
 import HowItWorksLogo from "@/assets/HowItWorksLogo.svg";
 import FrameLogo from "@/assets/FRAMED.png";
+import Revenue from "@/assets/revenue.svg";
+import Isometric from "@/assets/isometric.svg";
+import Outline from "@/assets/outline.svg";
 import BackgroundWelcome from "@/assets/background1.png";
 import BackgroundAbout from "@/assets/backgorund2.png";
 import BackgroundTechnology from "@/assets/background3.png";
@@ -50,6 +53,7 @@ const Home: React.FC<Props> = () => {
   const featuresRef = useRef<HTMLDivElement | null>(null);
   const aboutRef = useRef<HTMLDivElement | null>(null);
   const tokensRef = useRef<HTMLDivElement | null>(null);
+  const pricingRef = useRef<HTMLDivElement | null>(null);
 
   const isMounted = useIsMounted();
   // const [copyContent] = useCopyText();
@@ -200,9 +204,10 @@ const Home: React.FC<Props> = () => {
           textAlign={{ base: "center", md: "left" }}
           align="center"
           justify="space-between"
-          px={{ base: "0", sm: "0", md: "160px" }}
-          // mt={150}
-          gap={3}
+          px={0}
+          py={0}
+          mx={{ base: "10" }}
+          gap={0}
           zIndex={30}
         >
           <Box className="section_two_left" w="100%">
@@ -210,32 +215,32 @@ const Home: React.FC<Props> = () => {
               position="relative"
               borderRadius="12px"
               overflow="hidden"
-              boxSize={"400px"}
+              boxSize={{ base: "350px", md: "550px" }}
               m="auto"
             >
               {/* Image */}
               <Image
                 className="w-full h-full m-auto object-center object-contain"
-                src={AnansiAboutLogo}
+                src={OmnniAbout}
                 alt="podcast logo"
               />
             </Box>
           </Box>
-          <Box className="section_two_right" w="100%" px={10} zIndex={30}>
+          <Box className={`section_two_right ${interBold.className}`} w="100%" px={10} zIndex={30}>
+
+            <Box textAlign={{ base: "center", lg: "left" }} width={{ lg: "432px" }} mx={{ base: 'auto', lg: "0" }} marginBottom={2}>
+              <Text fontSize={{ base: "4xl", lg: "6xl" }}>About Omni AI</Text>
+            </Box>
+
+            <Box className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} marginBottom={3} width={{ base: "", lg: "500px" }} p={{ base: "10px" }}>
+              <Text fontSize="md">
+                Omni AI is a leading provider of AI-powered development tools. Our
+                mission is to simplify the software development process and make
+                it accessible to all levels of expertise
+              </Text>
+            </Box>
             <div
-              className={`w-full lg:w-4/5 text-3xl lg:text-3xl xl:xl:text-6xl mb-4 pt-2 xl:mt-4 text-left ${interBold.className}`}
-            >
-              About Omni AI
-            </div>
-            <div
-              className={`w-full !font-semibold text-[#ccc] ${inter.className}`}
-            >
-              Omni AI is a leading provider of AI-powered development tools. Our
-              mission is to simplify the software development process and make
-              it accessible to all levels of expertise
-            </div>
-            <div
-              className={`w-full !font-semibold text-[#ccc] mt-2 ${inter.className}`}
+              className={`w-full !font-semibold  mt-2 ${inter.className}`}
             >
               Join us as we revolutionize the way developers bring their ideas
               to life
@@ -247,12 +252,12 @@ const Home: React.FC<Props> = () => {
 
       {/* HOW IT WORKS  */}
       {/* <div className="h-12 md:h-20" /> */}
-      <div id="feature" className="h-24 sm:h-28 relative z-30" />
+      <div id="feature" className="h-20 relative z-30" />
       <div
         ref={featuresRef}
         className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4 relative z-30"
       >
-        <div className={`text-5xl mt-7 mb-2 ${interBold.className}`}>
+        <div className={`text-5xl  mb-2 ${interBold.className}`}>
           How It Works
         </div>
 
@@ -283,7 +288,7 @@ const Home: React.FC<Props> = () => {
           className="w-full max-w-screen-xl relative mx-auto"
         >
           <div
-            className={`${interBold.className} text-3xl xl:text-4xl text-cente z-30`}
+            className={`${interBold.className} text-2xl xl:text-4xl text-center z-30`}
           >
             Our Feature You Can Get
           </div>
@@ -350,6 +355,174 @@ const Home: React.FC<Props> = () => {
           </div>
         </Box>
 
+        <div id="deployer" className="h-24 sm:h-20 relative z-30" />
+        <Flex
+          className="container-two w-full max-w-screen-xl relative mx-auto"
+          direction={{ base: "column", md: "row-reverse" }}
+          textAlign={{ base: "center", md: "left" }}
+          align="center"
+          justify="space-between"
+          px={0}
+          py={0}
+          mx={{ base: "10" }}
+          gap={0}
+
+        >
+          <Box className="section_two_left" w="100%">
+            <Box
+              position="relative"
+              overflow="hidden"
+              boxSize={{ base: "350px", md: "650px" }}
+              m="auto"
+            >
+              {/* Image */}
+              <Tilt>
+                <Image
+                  className="w-full h-full m-auto object-center object-contain "
+                  src={Isometric}
+                  alt="isometric"
+                />
+              </Tilt>
+            </Box>
+          </Box>
+          <Box
+            zIndex={30}
+            className={`${interBold.className}`}
+            w="100%"
+            bg=" linear-gradient(153.32deg, rgba(255, 255, 255, 0.3) -65.62%, rgba(255, 255, 255, 0.1) 83.28%)"
+            borderRadius="38px"
+            padding="64px"
+            borderColor="red"
+          >
+
+            <Image
+              className="w-96 h-auto object-left object-contain mb-8"
+              src={Outline}
+              alt="outline"
+            />
+            <Box textAlign={"left"} mx={{ base: '0', lg: "0" }} width={{ lg: "432px" }} >
+              <Text fontSize={{ base: "xl", lg: "5xl" }}> Deploy your first app in seconds.</Text>
+            </Box>
+
+
+            <Box textAlign={{ base: "center", lg: "left" }} marginTop={{ base: 3, lg: 14 }}>
+              <Link
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size={{ base: "sm", lg: "lg" }}
+                  rounded="full"
+                  bg="white"
+                  color="black"
+                  _hover={{
+                    background:
+                      "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+                    color: "white",
+                    border: "2px solid transparent",
+                  }}
+                >
+                  Start Deploying
+                </Button>
+              </Link>
+
+              <Link
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  ml={1}
+                  size={{ base: "sm", lg: "lg" }}
+                  rounded="full"
+                  variant="outline"
+                  background="transparent"
+                  borderColor="white"
+                  color="white"
+                  _hover={{
+                    background:
+                      "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+                    color: "white",
+                    border: "2px solid transparent",
+                  }}
+                >
+                  Contact Sales
+                </Button>
+              </Link>
+            </Box>
+          </Box>
+        </Flex>
+
+        <div id="revenue" className="h-24 sm:h-20 relative z-30" />
+        <Flex
+          className="container-two w-full max-w-screen-xl relative mx-auto"
+          direction={{ base: "column", md: "row" }}
+          textAlign={{ base: "center", md: "left" }}
+          align="center"
+          justify="space-between"
+          px={0}
+          py={0}
+          mx={{ base: "10" }}
+          gap={0}
+          bg="linear-gradient(180deg, #161C28 0%, #162D59 100%)"
+          borderRadius="38px"
+        >
+          <Box className="section_two_left" w="100%">
+            <Box
+              position="relative"
+              overflow="hidden"
+              boxSize={{ base: "350px", md: "650px" }}
+              m="auto"
+            >
+              {/* Image */}
+              <Tilt>
+                <Image
+                  className="w-full h-full m-auto object-center object-contain p-6 md:p-16"
+                  src={Revenue}
+                  alt="revenue"
+                />
+              </Tilt>
+            </Box>
+          </Box>
+          <Box
+            zIndex={30}
+            className={`${interBold.className}`}
+            w="100%"
+          >
+            <Box textAlign={{ base: "center", lg: "left" }} width={{ base: "400px", lg: "432px" }} mx={{ base: 'auto', lg: "0" }} marginBottom={2}>
+              <Text fontSize={{ base: "4xl", lg: "6xl" }}>Revenue Sharing</Text>
+            </Box>
+
+            <Box className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} marginBottom={3} width={{ base: "", lg: "432px" }} p={{ base: "10px" }}>
+              <Text fontSize="md">We offer a variety of interesting features that you can help increase yor productivity at work and manage your project easly</Text>
+            </Box>
+
+            <Box textAlign={{ base: "center", lg: "left" }} marginBottom={10}>
+              <Link
+                href={socialsLink.bot}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  rounded="full"
+                  bg="white"
+                  color="black"
+                  _hover={{
+                    background:
+                      "linear-gradient(#111114 0 0) padding-box, linear-gradient(152.64deg, #247be1 0%, #929BFF 100%) border-box",
+                    color: "white",
+                    border: "2px solid transparent",
+                  }}
+                >
+                  Start Deploying
+                </Button>
+              </Link>
+            </Box>
+          </Box>
+        </Flex>
+
         <div id="tokenomic" className="h-24 sm:h-20 relative z-30" />
         <Flex
           ref={tokensRef}
@@ -358,23 +531,22 @@ const Home: React.FC<Props> = () => {
           textAlign={{ base: "center", md: "left" }}
           align="center"
           justify="space-between"
-          px={{ base: "0", sm: "0", md: "160px" }}
-          mt={100}
-          mb={150}
-          gap={3}
+          px={{ base: "0", sm: "0", md: "10px" }}
+          py={{ base: "0", sm: "0", md: "10px" }}
+          mx={{ base: "10", sm: "0", md: "0px" }}
         >
           <Box className="section_two_left" w="100%">
             <Box
               position="relative"
               borderRadius="12px"
               overflow="hidden"
-              boxSize={"400px"}
+              boxSize={{ base: "350px", md: "520px" }}
               m="auto"
             >
               {/* Image */}
               <Tilt>
                 <Image
-                  className="w-full h-full m-auto object-center object-contain p-16"
+                  className="w-full h-full m-auto object-center object-contain p-6 md:p-16"
                   src={FrameLogo}
                   alt="podcast logo"
                 />
@@ -476,8 +648,8 @@ const Home: React.FC<Props> = () => {
           </Box>
         </Flex>
 
+        <div id="pricing" className="h-24 sm:h-30 relative z-30" />
         <Flex
-          id="pricing"
           direction="column"
           alignItems="center"
           justifyContent="center"
@@ -540,6 +712,8 @@ const Home: React.FC<Props> = () => {
             </Grid>
           </Stack>
         </Flex>
+
+        <div className="h-24 sm:h-70 relative z-30" />
       </div>
     </div>
   );
