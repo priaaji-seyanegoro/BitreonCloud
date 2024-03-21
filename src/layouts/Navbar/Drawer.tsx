@@ -1,23 +1,7 @@
 import { useMemo } from "react";
-// import Link from "next/link";
-// import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ArrowRightOutlined } from "@ant-design/icons";
-// import { ConnectWallet } from "@thirdweb-dev/react";
 import {
-  // Button,
   Collapse,
-  // Button,
-  // Button,
-  // Drawer,
-  // DrawerBody,
-  // DrawerCloseButton,
-  // DrawerContent,
-  // DrawerFooter,
-  // DrawerFooter,
-  // DrawerFooter,
-  // DrawerHeader,
-  // DrawerOverlay,
   List,
   ListItem,
 } from "@chakra-ui/react";
@@ -130,9 +114,6 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
                   )}
                   style={{ transition: "250" }}
                 >
-                  {isActive && (
-                    <ArrowRightOutlined className="mr-4 animate-slideInLeftBasic" />
-                  )}
                   {item.name}
                 </Anchor>
               </ListItem>
