@@ -33,6 +33,9 @@ import HowItWorksLogo from "@/assets/HowItWorksLogo.svg";
 import FrameLogo from "@/assets/FRAMED.png";
 import Revenue from "@/assets/revenue.svg";
 import Isometric from "@/assets/isometric.svg";
+import How1 from "@/assets/how1.svg";
+import How2 from "@/assets/how2.svg";
+import How3 from "@/assets/how3.svg";
 import Outline from "@/assets/outline.svg";
 import BackgroundWelcome from "@/assets/background1.png";
 import BackgroundAbout from "@/assets/backgorund2.png";
@@ -257,17 +260,185 @@ const Home: React.FC<Props> = () => {
         ref={featuresRef}
         className="w-full text-center text-lg xs:text-xl lg:text-2xl font-extrabold text-white px-2 py-4 relative z-30"
       >
-        <div className={`text-5xl  mb-2 ${interBold.className}`}>
+        <div className={`text-5xl mb-8 ${interBold.className}`}>
           How It Works
         </div>
 
-        <div className="w-full flex flex-wrap justify-evenly items-center gap-x-2 gap-y-4 sm:gap-y-8 lg:gap-y-12 mx-auto mt-8 relative z-30">
+        {/* <div className="w-full flex flex-wrap justify-evenly items-center gap-x-2 gap-y-4 sm:gap-y-8 lg:gap-y-12 mx-auto mt-8 relative z-30">
           <Image
             src={HowItWorksLogo}
             alt="logo-app"
             className="w-[900px] h-[900px]- m-auto object-center object-contain"
           />
-        </div>
+        </div> */}
+        {/* HOW 1  */}
+        <Flex
+          className="container-two w-full max-w-screen-xl relative mx-auto"
+          direction={{ base: "column", md: "row" }}
+          textAlign={{ base: "center", md: "left" }}
+          align="center"
+          justify="space-between"
+          px={{ base: "0", md: 40 }}
+          pt={{ base: "0", md: 30 }}
+          mx={{ base: "10" }}
+          gap={0}
+        >
+          <Box className="section_two_left" w="100%">
+            <Box
+              position="relative"
+              overflow="hidden"
+              boxSize={{ base: "150px", md: "400px" }}
+              m="auto"
+            >
+              {/* Image */}
+              <Tilt>
+                <Image
+                  className="w-full h-full m-auto object-center object-contain "
+                  src={How1}
+                  alt="how1"
+                />
+              </Tilt>
+            </Box>
+          </Box>
+          <Box
+            zIndex={30}
+            className={`${interBold.className}`}
+            w="100%"
+            padding={{ base: '0', md: '64px' }}
+            my={{ base: "40px" }}
+          >
+            <Button
+              size="lg"
+              rounded="full"
+              bg="#929BFF"
+              color="white"
+              _hover={{
+                background: "#929BFF",
+                color: "white",
+              }}
+            >
+              1. Prepare Your Project
+            </Button>
+            <Box className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} marginBottom={3} width={{ base: "", lg: "500px" }} p={{ base: "10px" }}>
+              <Text textAlign={{ base: "center", md: "justify" }} fontSize="md">
+                Start by preparing your project. Design you want to convert into code, set your preferences, and get everything ready for the transformation process.
+              </Text>
+            </Box>
+
+          </Box>
+        </Flex>
+
+        {/* HOW 2  */}
+        <Flex
+          className="container-two w-full max-w-screen-xl relative mx-auto"
+          direction={{ base: "column", md: "row-reverse" }}
+          textAlign={{ base: "center", md: "left" }}
+          align="center"
+          justify="space-between"
+          px={{ base: "0", md: 40 }}
+          py={0}
+          mx={{ base: "10" }}
+          gap={0}
+        >
+          <Box className="section_two_left" w="100%">
+            <Box
+              position="relative"
+              overflow="hidden"
+              boxSize={{ base: "150px", md: "400px" }}
+              m="auto"
+            >
+              {/* Image */}
+              <Tilt>
+                <Image
+                  className="w-full h-full m-auto object-center object-contain "
+                  src={How2}
+                  alt="how2"
+                />
+              </Tilt>
+            </Box>
+          </Box>
+          <Box
+            zIndex={30}
+            className={`${interBold.className}`}
+            w="100%"
+            padding={{ base: '0', md: '64px' }}
+            my={{ base: "40px" }}
+          >
+            <Button
+              size="lg"
+              rounded="full"
+              bg="#929BFF"
+              color="white"
+              _hover={{
+                background: "#929BFF",
+                color: "white",
+              }}
+            >
+              2. Utilize Coding Assistance
+            </Button>
+            <Box className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} marginBottom={3} width={{ base: "", lg: "500px" }} p={{ base: "10px" }}>
+              <Text textAlign={{ base: "center", md: "justify" }} fontSize="md">
+                Specify the programming language you want to use.   Receive contextual suggestions and detailed information about functions, methods, and other programming languages to help you complete tasks quickly and accurately.
+              </Text>
+            </Box>
+          </Box>
+        </Flex>
+
+        {/* HOW 3  */}
+        <Flex
+          className="container-two w-full max-w-screen-xl relative mx-auto"
+          direction={{ base: "column", md: "row-reverse" }}
+          textAlign={{ base: "center", md: "left" }}
+          align="center"
+          justify="space-between"
+          px={{ base: "0", md: 40 }}
+          py={0}
+          mx={{ base: "10" }}
+          gap={0}
+        >
+          <Box className="section_two_left" w="100%">
+            <Box
+              position="relative"
+              overflow="hidden"
+              boxSize={{ base: "150px", md: "400px" }}
+              m="auto"
+            >
+              {/* Image */}
+              <Tilt>
+                <Image
+                  className="w-full h-full m-auto object-center object-contain "
+                  src={How3}
+                  alt="how3"
+                />
+              </Tilt>
+            </Box>
+          </Box>
+          <Box
+            zIndex={30}
+            className={`${interBold.className}`}
+            w="100%"
+            padding={{ base: '0', md: '64px' }}
+            my={{ base: "40px" }}
+          >
+            <Button
+              size="lg"
+              rounded="full"
+              bg="#929BFF"
+              color="white"
+              _hover={{
+                background: "#929BFF",
+                color: "white",
+              }}
+            >
+              3. Implement via Telegram Bot
+            </Button>
+            <Box className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} marginBottom={3} width={{ base: "", lg: "500px" }} p={{ base: "10px" }}>
+              <Text textAlign={{ base: "center", md: "justify" }} fontSize="md">
+                Once your preparation is ready, the final step is to implement your application via the Telegram bot. By utilizing your bot, you can instantly preview your results with speed and ease, customize, and publish your application to users.
+              </Text>
+            </Box>
+          </Box>
+        </Flex>
       </div>
 
       <div className="w-full relative">
