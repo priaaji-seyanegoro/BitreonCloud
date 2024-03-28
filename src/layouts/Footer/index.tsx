@@ -13,7 +13,7 @@ import { footerList } from "@/constants/footerList";
 import TwitterLogo from "@/assets/logo-x.png";
 import TelegramLogo from "@/assets/logo-telegram.png";
 import GitBookLogo from "@/assets/logo-gitbook.png";
-import AppBannerNav from "@/assets/anansieAI-logo.png";
+import AppBannerNav from "@/assets/omni-logo-text.svg";
 
 import "./style.css";
 import { Box, Flex, Text } from "@chakra-ui/react";
@@ -128,7 +128,7 @@ const AppFooter: React.FC<Props> = () => {
           >
             <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1">
               <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
-              Omni AI 2024. All rights reserved.
+              OMNI 2024. All rights reserved.
             </div>
             <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1">
               <Link href="/">Term and Conditions</Link> |{" "}

@@ -232,12 +232,12 @@ const Home: React.FC<Props> = () => {
           <Box className={`section_two_right ${interBold.className}`} w="100%" px={10} zIndex={30}>
 
             <Box textAlign={{ base: "center", lg: "left" }} width={{ lg: "432px" }} mx={{ base: 'auto', lg: "0" }} marginBottom={2}>
-              <Text fontSize={{ base: "4xl", lg: "6xl" }}>About Omni AI</Text>
+              <Text fontSize={{ base: "4xl", lg: "6xl" }}>About OMNI</Text>
             </Box>
 
             <Box className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} marginBottom={3} width={{ base: "", lg: "500px" }} p={{ base: "10px" }}>
               <Text fontSize="md">
-                Omni AI is a leading provider of AI-powered development tools. Our
+                OMNI is a leading provider of AI-powered development tools. Our
                 mission is to simplify the software development process and make
                 it accessible to all levels of expertise
               </Text>
@@ -387,7 +387,7 @@ const Home: React.FC<Props> = () => {
         {/* HOW 3  */}
         <Flex
           className="container-two w-full max-w-screen-xl relative mx-auto"
-          direction={{ base: "column", md: "row-reverse" }}
+          direction={{ base: "column", md: "row" }}
           textAlign={{ base: "center", md: "left" }}
           align="center"
           justify="space-between"
@@ -755,7 +755,7 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize="sm">Omni AI</Text>
+                    <Text fontSize="sm">OMNI</Text>
                     <Text color="#929BFF" fontSize="sm">
                       Name
                     </Text>

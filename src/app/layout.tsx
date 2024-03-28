@@ -7,8 +7,8 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "Omni AI | AI-powered tools for easier software development";
-const app_name = "Omni AI";
+const app_title = "OMNI | Web Deployer";
+const app_name = "OMNI";
 const description =
   "Convert designs to code and automate deployment effortlessly";
 

@@ -14,7 +14,7 @@ import { useIsMounted } from "@/hooks/useIsMounted";
 import { interBold } from "@/utils/font";
 import { socialsLink } from "@/constants/links";
 
-import AppBannerNav from "@/assets/anansieAI-logo.png";
+import AppBannerNav from "@/assets/omni-logo-text.svg";
 
 import "./style.css";
 
