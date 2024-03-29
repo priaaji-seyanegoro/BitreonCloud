@@ -1,4 +1,4 @@
-export const contractAddress = "-";
+export const contractAddress = "0xe43B5B2493097aAB0BDCBbe6E52490aE77852Ae5";
 export const pairAddress = "-";
 
 export const socialsLink = {
@@ -7,7 +7,7 @@ export const socialsLink = {
   telegram: "https://t.me/omnifoundation/",
   medium: "https://medium.com",
   email: "mailto:",
-  bot: "/",
+  bot: "https://t.me/omni_io_bot",
 };
 
 export const findUsLink = {
