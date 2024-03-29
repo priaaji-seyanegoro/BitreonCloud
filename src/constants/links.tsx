@@ -2,9 +2,9 @@ export const contractAddress = "-";
 export const pairAddress = "-";
 
 export const socialsLink = {
-  whitepaper: "/",
+  whitepaper: "https://docs.omnifoundation.io/",
   twitter: "https://x.com",
-  telegram: "/",
+  telegram: "https://t.me/omnifoundation/",
   medium: "https://medium.com",
   email: "mailto:",
   bot: "/",
