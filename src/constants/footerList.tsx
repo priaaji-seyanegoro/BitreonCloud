@@ -43,15 +43,15 @@ export const footerList = [
         link: "/",
       },
       {
-        title: "HTML TailwindCSS Assistant",
+        title: "HTML TailwindCSS Assistance",
         link: "/",
       },
       {
-        title: "React TailwindCSS Assistant",
+        title: "React TailwindCSS Assistance",
         link: "/",
       },
       {
-        title: "React Bootstrap Assistant",
+        title: "HTML Bootstrap Assistance",
         link: "/",
       },
       {

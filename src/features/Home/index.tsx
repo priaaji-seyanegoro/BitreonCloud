@@ -25,7 +25,7 @@ import OmnniAbout from "@/assets/omni-about.svg";
 import HTMLLogo from "@/assets/html.png";
 import HTMLTailwindAssistance from "@/assets/htmlTailwindAssistance.png";
 import ReactTailwindAssistance from "@/assets/ReactTailwind.png";
-import ReactBootstrapAssistance from "@/assets/ReactBootstrap.png";
+import ReactBootstrapAssistance from "@/assets/html_bootstrap.png";
 import TailwindLogo from "@/assets/TailwindCSS.png";
 import ReactLogo from "@/assets/React.png";
 import BootstarpLogo from "@/assets/Bootstrap.png";
@@ -504,7 +504,7 @@ const Home: React.FC<Props> = () => {
               src={HTMLTailwindAssistance}
               alt="podcast logo"
             />
-            HTML TailwindCSS Assistant
+            HTML TailwindCSS Assistance
           </div>
 
           <div className={`${interBold.className} text-sm text-center z-30`}>
@@ -513,7 +513,7 @@ const Home: React.FC<Props> = () => {
               src={ReactTailwindAssistance}
               alt="podcast logo"
             />
-            React TailwindCSS Assistant
+            React TailwindCSS Assistance
           </div>
 
           <div className={`${interBold.className} text-sm text-center z-30`}>
@@ -522,7 +522,7 @@ const Home: React.FC<Props> = () => {
               src={ReactBootstrapAssistance}
               alt="podcast logo"
             />
-            React Bootstrap Assistant
+            HTML Bootstrap Assistance
           </div>
         </Box>
 
@@ -789,7 +789,7 @@ const Home: React.FC<Props> = () => {
                     textAlign="center"
                     padding="2"
                   >
-                    <Text fontSize="sm">$OMAI</Text>
+                    <Text fontSize="sm">$OMN</Text>
                     <Text color="#929BFF" fontSize="sm">
                       Symbol
                     </Text>
