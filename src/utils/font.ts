@@ -1,4 +1,4 @@
-import { Montserrat, Space_Grotesk, Rubik, Poppins, Inter } from "next/font/google";
+import { Montserrat, Space_Grotesk, Rubik, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
 export const montserrat = Montserrat({
@@ -29,14 +29,14 @@ export const poppins = Poppins({
   preload: true,
 });
 
-export const inter = Inter({
+export const inter = Rubik({
   weight: ["400"],
   subsets: ["latin"],
   display: "swap",
   preload: true,
 });
 
-export const interBold = Inter({
+export const interBold = Rubik({
   weight: ["800"],
   subsets: ["latin"],
   display: "swap",

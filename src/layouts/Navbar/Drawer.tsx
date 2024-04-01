@@ -14,7 +14,7 @@ import { useIsMounted } from "@/hooks/useIsMounted";
 import { getHash } from "@/utils/hash";
 import useHash from "@/hooks/useHashname";
 
-import { poppins } from "@/utils/font";
+import { inter, poppins } from "@/utils/font";
 
 // import AppTitle from "@/assets/title-app.png";
 // import { findUsLink, socialsLink } from "@/constants/links";
@@ -55,20 +55,10 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         name: "Features",
       },
       {
-        href: "#tokenomic",
-        pathname: `#tokenomic`,
-        name: "Tokenomics",
-      },
-      {
-        href: "#pricing",
-        pathname: `#pricing`,
-        name: "Pricing",
-      },
-      // {
-      //   href: "#roadmap",
-      //   pathname: `#roadmap`,
-      //   name: "Roadmap",
-      // },
+        href: "#contact",
+        pathname: `#contact`,
+        name: "Contact Us",
+      }
     ];
   }, []);
 
@@ -78,7 +68,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
 
   return (
     <Collapse in={isOpen} animateOpacity>
-      <div className={`w-full h-full mt-8 ${poppins.className}`}>
+      <div className={`w-full h-full mt-8 ${inter.className}`}>
         <List spacing={3}>
           {tabsList.map((item) => {
             const isActive = !!defaultHash
@@ -106,7 +96,7 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
                 <Anchor
                   href={item.href}
                   className={clsx(
-                    "font-bold",
+                    "font-normal",
                     // "text-white p-2 hover:text-secondary font-bold",
                     // "text-sm md:text-base text-black dark:text-white p-2 hover:bg-dark-hover font-bold",
                     // isActive ? "#bf00ff" : "text-white"

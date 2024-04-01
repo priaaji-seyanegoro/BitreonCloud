@@ -39,25 +39,17 @@ export const footerList = [
     title: "Products",
     list: [
       {
-        title: "Generate Image to Programming Code",
+        title: "Shared CPU",
         link: "/",
       },
       {
-        title: "HTML TailwindCSS Assistance",
+        title: "Dedicated CPU",
         link: "/",
       },
       {
-        title: "React TailwindCSS Assistance",
+        title: "Bare Metal",
         link: "/",
-      },
-      {
-        title: "HTML Bootstrap Assistance",
-        link: "/",
-      },
-      {
-        title: "Web Deployer",
-        link: "/",
-      },
+      }
     ],
   },
 ];

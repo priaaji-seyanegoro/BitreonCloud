@@ -7,8 +7,8 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "OMNI | Web Deployer";
-const app_name = "OMNI";
+const app_title = "DENODE | WEB HOSTING";
+const app_name = "DENODE";
 const description =
   "Convert designs to code and automate deployment effortlessly";
 

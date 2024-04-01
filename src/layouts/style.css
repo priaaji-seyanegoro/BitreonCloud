@@ -37,7 +37,7 @@
 }
 
 .nav-anchor {
-  @apply text-gray-400 hover:text-white font-semibold;
+  @apply text-white hover:text-[#01FFF9];
   /* @apply bg-white hover:bg-lime-zest font-bold text-lg;
   background-clip: text;
   -webkit-background-clip: text;
@@ -45,7 +45,7 @@
 }
 
 .nav-anchor-active {
-  @apply text-white font-semibold;
+  @apply text-[#34C9DE];
   /* @apply bg-lime-zest font-bold;
   background-clip: text;
   -webkit-background-clip: text;

@@ -14,7 +14,7 @@ import { useIsMounted } from "@/hooks/useIsMounted";
 import { interBold } from "@/utils/font";
 import { socialsLink } from "@/constants/links";
 
-import AppBannerNav from "@/assets/omni-logo-text.svg";
+import denodeLogo from "@/assets/logo-denode.svg";
 
 import "./style.css";
 
@@ -76,9 +76,9 @@ const Navbar: React.FC<Props> = () => {
     >
       <div className={clsx(isScroll ? "navbar-scroll" : "navbar")}>
         <div className="w-1/2 lg:w-1/4 flex items-center relative">
-          <Link href="/" className={`logo-container text-white`}>
+          <Link href="/" className={`logo-container`}>
             <Image
-              src={AppBannerNav}
+              src={denodeLogo}
               alt="banner-nav-logo"
               className="w-full md:w-full h-14 sm:h-16 object-contain object-left"
             />
@@ -97,11 +97,11 @@ const Navbar: React.FC<Props> = () => {
               href={socialsLink.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-auto mr-2 sm:mr-0"
             >
               <Button
-                className="nav-tg-btn"
-              // leftIcon={<DollarOutlined style={{ fontSize: "1.5em" }} />}
+                variant={"outline"}
+                rounded="lg"
+                bgColor={"#01FFF9"}
               >
                 Telegram
               </Button>

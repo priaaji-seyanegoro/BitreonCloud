@@ -42,20 +42,10 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
         name: "Features",
       },
       {
-        href: "#tokenomic",
-        pathname: `#tokenomic`,
-        name: "Tokenomics",
-      },
-      {
-        href: "#pricing",
-        pathname: `#pricing`,
-        name: "Pricing",
-      },
-      // {
-      //   href: "#roadmap",
-      //   pathname: `#roadmap`,
-      //   name: "Roadmap",
-      // },
+        href: "#contact",
+        pathname: `#contact`,
+        name: "Contact Us",
+      }
     ];
   }, []);
 
@@ -67,7 +57,7 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
     <div
       className={clsx(
         // "w-64 lg:w-[42.5%] xl:w-2/5 justify-between items-center",
-        "w-1/2 lg:w-[42.5%] xl:w-2/5 2xl:w-[35%] justify-between items-center",
+        "w-1/2 lg:w-[42.5%] xl:w-2/5 2xl:w-[35%] justify-around items-center",
         containterClass
       )}
     >

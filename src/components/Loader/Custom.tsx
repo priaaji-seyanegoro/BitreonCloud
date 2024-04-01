@@ -1,7 +1,7 @@
 import React from "react";
 import { poppins } from "@/utils/font";
 import Image from "next/image";
-import AppBannerNav from "@/assets/logo_omnitech_spinner.png";
+import denodeLogo from "@/assets/logo-denode.svg";
 
 import "./style.css";
 
@@ -15,7 +15,7 @@ const YinLoader: React.FC<Props> = () => {
       <div className="w-full h-28 flex items-center justify-center">
         <div className="logo-loader">
           <Image
-            src={AppBannerNav}
+            src={denodeLogo}
             alt="banner-nav-logo"
             className="w-full md:w-full h-14 sm:h-16 object-contain object-left"
           />

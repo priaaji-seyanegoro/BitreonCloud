@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Provider from "@/library/Provider";
 
 import { clashDisplay } from "@/utils/font";
-import AppBackground from "@/assets/background.png";
+import AppBackground from "@/assets/BodyBackground.png";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
 
@@ -26,6 +26,14 @@ const BaseLayout: React.FC<Props> = ({ children }) => {
         <Navbar />
       )}
       <main className={clsx("base-main-container", clashDisplay.className)}>
+        {isMounted && (
+          <Image
+            src={AppBackground}
+            alt="roadmap"
+            priority
+            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
+          />
+        )}
         {children}
       </main>
       {isMounted && (
