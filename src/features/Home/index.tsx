@@ -18,8 +18,8 @@ import {
   Flex,
   Text
 } from "@chakra-ui/react";
-import WelcomeImage from "@/assets/welcome.gif"
-import AboutImage from "@/assets/about.gif"
+import WelcomeImage from "@/assets/welcome-cvt.gif"
+import AboutImage from "@/assets/about-cvt.gif"
 import ContactUs from "@/assets/contactus.png"
 import Mail from "@/assets/mail.png"
 import CloudComputing from "@/assets/cloud-computing.png"
@@ -304,7 +304,7 @@ const Home: React.FC<Props> = () => {
             <Text textColor={"#34C9DE"} fontSize={{ base: "xl", lg: "2xl" }}>Contact Us </Text>
           </Box>
           <Box marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }}>
-            <Text fontSize={{ base: "xl", lg: "5xl" }}>Get In Touch DENODE Technology</Text>
+            <Text fontSize={{ base: "xl", lg: "5xl" }}>Get In Touch DENODE AI Technology</Text>
           </Box>
           <Box className={`${inter.className}`} marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }} >
             <Text fontSize={{ base: "sm", lg: "md" }}>Our platform showcases the latest in tech trends, from AI and machine learning to cybersecurity, IoT, and beyond.</Text>

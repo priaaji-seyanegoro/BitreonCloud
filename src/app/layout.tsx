@@ -7,10 +7,10 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "DENODE | WEB HOSTING";
-const app_name = "DENODE";
+const app_title = "DENODE AI | Cloud Computing";
+const app_name = "DENODE AI";
 const description =
-  "Convert designs to code and automate deployment effortlessly";
+  "Cloudnet AI plays a pivotal role in connecting conventional cloud computing with the distinctive requirements of the Web3 era, leveraging AI and machine learning to boost both efficiency and security.";
 
 export const metadata: Metadata = {
   title: app_title,
