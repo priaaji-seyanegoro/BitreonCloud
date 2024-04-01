@@ -19,12 +19,15 @@ import {
   Text
 } from "@chakra-ui/react";
 import WelcomeImage from "@/assets/welcome-cvt.gif"
-import AboutImage from "@/assets/about-cvt.gif"
+import AboutImage from "@/assets/about.gif"
 import ContactUs from "@/assets/contactus.png"
+import Diagram from "@/assets/diagram.png"
+import Revenue from "@/assets/revenue.png"
 import Mail from "@/assets/mail.png"
 import CloudComputing from "@/assets/cloud-computing.png"
 import DedicatedCpu from "@/assets/dedicated-cpu.png"
 import BareMetal from "@/assets/bare-metal.png"
+import { url } from "inspector";
 
 interface Props { }
 
@@ -78,12 +81,15 @@ const Home: React.FC<Props> = () => {
             boxSize={{ base: "350px", md: "449px" }}
             m="auto"
           >
-            {/* Image */}
-            <Image
-              className="w-full h-full m-auto object-center object-cover rounded-lg "
-              src={WelcomeImage}
-              alt="WelcomeImage"
-            />
+            <video
+              className="w-full h-full m-auto object-center object-cover rounded-lg"
+              src="/welcome.mp4"
+              autoPlay
+              loop
+              muted
+            >
+              Your browser does not support the video tag.
+            </video>
           </Box>
         </Box>
 
@@ -152,11 +158,15 @@ const Home: React.FC<Props> = () => {
             m="auto"
           >
             {/* Image */}
-            <Image
+            <video
               className="w-full h-full m-auto object-center object-cover rounded-lg"
-              src={AboutImage}
-              alt="AboutImage"
-            />
+              src="/about.mp4"
+              autoPlay
+              loop
+              muted
+            >
+              Your browser does not support the video tag.
+            </video>
           </Box>
         </Box>
 
@@ -255,6 +265,174 @@ const Home: React.FC<Props> = () => {
           </Flex>
         </Box>
 
+
+      </Flex>
+
+      <div
+        id="tokenomics"
+        className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
+      />
+      <Flex
+        className="container-two w-full max-w-screen-xl relative mx-auto"
+        direction={{ base: "column", md: "column" }}
+        textAlign={{ base: "center", md: "left" }}
+        align="left"
+        justify="left"
+        paddingX={{ base: "64px" }}
+      >
+        <Box marginBottom={{ base: "10px", lg: "20px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }}>
+          <Text className={`${interBold.className}`} textColor={"#34C9DE"} fontSize={{ base: "md", lg: "xl" }}>Tokenomics</Text>
+        </Box>
+        <Box marginBottom={{ base: "10px", lg: "20px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} >
+          <Text className={`${interBold.className}`} fontSize={{ base: "xl", lg: "5xl" }}>Tokenomics information</Text>
+        </Box>
+        <Box marginBottom={{ base: "20px", lg: "20px" }} className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "528px" }} >
+          <Text fontSize={{ base: "sm", lg: "sm" }}>To ensure enduring development and sustained expansion, the DCI platform enforces a purchase and sale levy on all $DCI transactions.</Text>
+        </Box>
+
+        <Flex
+          className="container-two w-full max-w-screen-xl relative mx-auto"
+          direction={{ base: "column", md: "row" }}
+          textAlign={{ base: "center", md: "left" }}
+          bg="linear-gradient(153.32deg, rgba(255, 255, 255, 0.3) -65.62%, rgba(255, 255, 255, 0.1) 83.28%)"
+          padding={{ lg: 30 }}
+          align="center"
+          justify="space-between"
+          gap={0}
+          rounded={"lg"}
+
+        >
+          <Box className="section_two_left" w="100%">
+            <Box
+              position="relative"
+              overflow="hidden"
+              boxSize={{ base: "250px", md: "449px" }}
+              m="auto"
+            >
+              {/* Image */}
+              <Image
+                className="w-full h-full m-auto object-center object-contain "
+                src={Diagram}
+                alt="Diagram"
+              />
+            </Box>
+          </Box>
+
+          <Box
+            zIndex={30}
+            className={`${interBold.className}`}
+            w="100%"
+            borderRadius="38px"
+            padding={{ base: "30px", lg: "64px" }}
+            borderColor="red"
+          >
+            <Box marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }}>
+              <Text fontSize={{ base: "xl", lg: "5xl" }}>Taxation</Text>
+            </Box>
+            <Box className={`${inter.className}`} marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }} >
+              <Text fontSize={{ base: "sm", lg: "md" }}>To ensure enduring development and sustained expansion, the DCI platform enforces a purchase and sale levy on all $DCI transactions.</Text>
+            </Box>
+            <Box className={`${inter.className}`} marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }} >
+              <Link
+                href={socialsLink.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={"outline"}
+                  rounded="lg"
+                  bgColor={"#01FFF9"}
+                  size={{ base: "sm" }}
+                  mr={"10px"}
+                >
+                  Explore
+                </Button>
+              </Link>
+              <Link
+                href={socialsLink.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={"outline"}
+                  rounded="lg"
+                  borderColor={"#01FFF9"}
+                  size={{ base: "sm" }}
+                >
+                  Explore
+                </Button>
+              </Link>
+            </Box>
+            <Box className={`${inter.className}`} marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }} >
+              <Text fontSize={{ base: "sm", lg: "md" }}>80% of the levy will be allocated towards marketing initiatives, development efforts, and fostering project expansion. Meanwhile, the remaining 20% will be distributed back to all holders as reflections. This strategy incentivizes holding without the complexities of staking, thereby mitigating potential issues.</Text>
+            </Box>
+          </Box>
+        </Flex>
+
+
+      </Flex>
+
+      <div
+        id="revenue"
+        className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
+      />
+      <Flex
+        className="container-two w-full max-w-screen-xl relative mx-auto"
+        direction={{ base: "column", md: "row" }}
+        textAlign={{ base: "center", md: "left" }}
+        align="center"
+        justify="center"
+        paddingX={{ base: "64px" }}
+      >
+        <Flex
+          className="container-two w-full max-w-screen-xl relative mx-auto"
+          cursor="pointer"
+          w="1114px"
+          h="548px"
+          my={2}
+          rounded="lg"
+          position="relative"
+          backgroundImage="url('/revenue.png')"
+          backgroundSize="cover"
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          justifyContent="center" // Rata tengah horizontal
+          alignItems="center" // Rata tengah vertikal
+        >
+          <Box className={`${interBold.className}`} textAlign="center" >
+            <Text textColor={"#34C9DE"} fontSize={{ base: "xl", lg: "2xl" }}>Revenue Share</Text>
+            <Text fontSize={{ base: "xl", lg: "5xl" }}>Join and share revenue</Text>
+            <Link
+              href={socialsLink.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant={"outline"}
+                rounded="lg"
+                bgColor={"#01FFF9"}
+                size={{ base: "sm", lg: "lg" }}
+                mr={"10px"}
+              >
+                Explore
+              </Button>
+            </Link>
+            <Link
+              href={socialsLink.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant={"outline"}
+                rounded="lg"
+                borderColor={"#01FFF9"}
+                size={{ base: "sm", lg: "lg" }}
+              >
+                Explore
+              </Button>
+            </Link>
+          </Box>
+        </Flex>
 
       </Flex>
 

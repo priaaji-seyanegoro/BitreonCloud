@@ -55,6 +55,11 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         name: "Features",
       },
       {
+        href: "#tokenomics",
+        pathname: `#tokenomics`,
+        name: "Tokenomics",
+      },
+      {
         href: "#contact",
         pathname: `#contact`,
         name: "Contact Us",
