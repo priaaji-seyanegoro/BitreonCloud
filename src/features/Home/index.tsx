@@ -6,7 +6,7 @@ import YinLoader from "@/components/Loader/Custom";
 import { useIsMounted } from "@/hooks/useIsMounted";
 
 import { contractAddress, socialsLink } from "@/constants/links";
-import { inter, interBold } from "@/utils/font";
+import { kanit, kanitBold } from "@/utils/font";
 
 import "./style.css";
 import Image from "next/image";
@@ -18,8 +18,6 @@ import {
   Flex,
   Text
 } from "@chakra-ui/react";
-import WelcomeImage from "@/assets/welcome-cvt.gif"
-import AboutImage from "@/assets/about.gif"
 import ContactUs from "@/assets/contactus.png"
 import Diagram from "@/assets/diagram.png"
 import Revenue from "@/assets/revenue.png"
@@ -28,14 +26,15 @@ import CloudComputing from "@/assets/cloud-computing.png"
 import DedicatedCpu from "@/assets/dedicated-cpu.png"
 import BareMetal from "@/assets/bare-metal.png"
 import { url } from "inspector";
+import welcomeBackground from "@/assets/welcome.gif"
+import clsx from "clsx";
 
 interface Props { }
 
 const Home: React.FC<Props> = () => {
 
-  const isMounted = useIsMounted();
   const [isLoaded, setIsLoaded] = useState(false);
-
+  const isMounted = useIsMounted();
   useEffect(() => {
     if (isMounted) {
       const timeOut = setTimeout(() => {
@@ -47,7 +46,78 @@ const Home: React.FC<Props> = () => {
   }, [isMounted, isLoaded]);
 
 
-  if (!isMounted && !isLoaded) {
+  if (isMounted && isLoaded) {
+    return (
+      <div className={` homepage-container ${kanit.className}`}>
+        <div
+          id="welcome"
+          className="h-[6em] lg:h-[6em] xl:h-[15em] relative z-30"
+        />
+
+        <Image
+          src={welcomeBackground}
+          alt="roadmap"
+          priority
+          className="w-[100%] h-[300px] lg:h-[auto] absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
+        />
+
+        <div className="welcome-container lg:mt-15 max-w-screen-xl mx-auto">
+          <div className="welcome-wrapper">
+            {/* <div
+              className={`w-full h-full ${kanit.className}`}
+            >
+              <Text
+                fontSize="108px"
+                fontWeight="700px"
+                textTransform="uppercase">
+                secure your digital surfing with confidence
+              </Text>
+  
+            </div> */}
+
+            <div
+              className={clsx(
+                ' text-center mx-auto text-sm w-[200px] lg:w-[850px] lg:text-6xl 2xl:text-8xl font-bold text-white py-2 uppercase',
+                kanitBold.className
+              )}
+            >
+              secure <span className="bg-gradient-to-r from-[#fff0] to-[#ffff] bg-clip-text text-transparent">your</span> digital surfing with <span className="bg-gradient-to-r from-[#fff0] to-[#ffff] bg-clip-text text-transparent">confidence</span>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div
+          id="about"
+          className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
+        />
+
+
+
+        <div
+          id="feature"
+          className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
+        />
+
+
+
+        <div
+          id="tokenomics"
+          className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
+        />
+
+
+
+
+        <div
+          className="h-[5.5em] lg:h-[6em] xl:h-[10em] relative z-30"
+        />
+
+      </div>
+    );
+  } else {
     return (
       <div className="homepage-container">
         <YinLoader />
@@ -55,449 +125,7 @@ const Home: React.FC<Props> = () => {
     );
   }
 
-  return (
-    <div className={` homepage-container ${inter.className}`}>
-      <div
-        id="welcome"
-        className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
-      />
-      <Flex
-        className="container-two w-full max-w-screen-xl relative mx-auto"
-        direction={{ base: "column", md: "row-reverse" }}
-        textAlign={{ base: "center", md: "left" }}
-        align="center"
-        justify="space-between"
-        px={0}
-        py={0}
-        mx={{ base: "10" }}
-        gap={0}
 
-      >
-
-        <Box className="section_two_left" w="100%">
-          <Box
-            position="relative"
-            overflow="hidden"
-            boxSize={{ base: "350px", md: "449px" }}
-            m="auto"
-          >
-            <video
-              className="w-full h-full m-auto object-center object-cover rounded-lg"
-              src="/welcome.mp4"
-              autoPlay
-              loop
-              muted
-            >
-              Your browser does not support the video tag.
-            </video>
-          </Box>
-        </Box>
-
-        <Box
-          zIndex={30}
-          className={`${interBold.className}`}
-          w="100%"
-
-          borderRadius="38px"
-          padding="64px"
-          borderColor="red"
-        >
-          <Box marginBottom={{ base: "10px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "432px" }} >
-            <Text textColor={"#34C9DE"} fontSize={{ base: "xl", lg: "2xl" }}>Technology Landing Page</Text>
-          </Box>
-          <Box marginBottom={{ base: "10px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }}>
-            <Text fontSize={{ base: "xl", lg: "5xl" }}>The Development of Cloud Computing</Text>
-          </Box>
-          <Box marginBottom={{ base: "20px", lg: "30px" }} className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }} >
-            <Text fontSize={{ base: "sm", lg: "sm" }}>Cloudnet AI plays a pivotal role in connecting conventional cloud computing with the distinctive requirements of the Web3 era, leveraging AI and machine learning to boost both efficiency and security.</Text>
-          </Box>
-
-          <Flex rounded={"lg"} direction={{ base: "column", lg: "row" }} justifyContent={"center"} alignItems={"center"} height={"63px"} bg="linear-gradient(153.32deg, rgba(255, 255, 255, 0.3) -65.62%, rgba(255, 255, 255, 0.1) 83.28%)" className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} mt={{ base: '0', lg: "10px" }} width={{ lg: "597px" }} >
-            <Text display={"flex"} fontSize={{ base: "10px", lg: "md" }} mr={{ base: "0px", lg: "50px" }}>0xc6221ac4e99066ea5443acd67d6108f874e2533d</Text>
-            <Link
-              href={socialsLink.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant={"outline"}
-                rounded="lg"
-                bgColor={"#01FFF9"}
-                size={{ base: "sm" }}
-              >
-                Explore
-              </Button>
-            </Link>
-          </Flex>
-        </Box>
-      </Flex>
-
-
-      <div
-        id="about"
-        className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
-      />
-
-      <Flex
-        className="container-two w-full max-w-screen-xl relative mx-auto"
-        direction={{ base: "column", md: "row" }}
-        textAlign={{ base: "center", md: "left" }}
-        align="center"
-        justify="space-between"
-        px={0}
-        py={0}
-        mx={{ base: "10" }}
-        gap={0}
-      >
-
-        <Box className="section_two_left" w="100%">
-          <Box
-            position="relative"
-            overflow="hidden"
-            boxSize={{ base: "350px", md: "449px" }}
-            m="auto"
-          >
-            {/* Image */}
-            <video
-              className="w-full h-full m-auto object-center object-cover rounded-lg"
-              src="/about.mp4"
-              autoPlay
-              loop
-              muted
-            >
-              Your browser does not support the video tag.
-            </video>
-          </Box>
-        </Box>
-
-        <Box
-          zIndex={30}
-          className={`${interBold.className}`}
-          w="100%"
-
-          borderRadius="38px"
-          padding="64px"
-          borderColor="red"
-        >
-          <Box marginBottom={{ base: "10px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "432px" }} >
-            <Text textColor={"#34C9DE"} fontSize={{ base: "md", lg: "xl" }}>About Us</Text>
-          </Box>
-          <Box marginBottom={{ base: "10px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }}>
-            <Text fontSize={{ base: "xl", lg: "5xl" }}>DENODE AI Resource Allocation</Text>
-          </Box>
-          <Box className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }} >
-            <Text fontSize={{ base: "sm", lg: "sm" }}>Denone provides a wide range of cloud services tailored to meet your specific requirements. Whether you value cost-effectiveness, user-friendliness, or sheer performance, we offer the perfect solution for you.</Text>
-          </Box>
-        </Box>
-      </Flex>
-
-      <div
-        id="feature"
-        className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
-      />
-
-      <Flex
-        className="container-two w-full max-w-screen-xl relative mx-auto"
-        direction={{ base: "column", md: "column" }}
-        textAlign={{ base: "center", md: "left" }}
-        align="center"
-        justify="center"
-        paddingX={{ base: "64px" }}
-      >
-        <Box marginBottom={{ base: "10px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }}>
-          <Text className={`${interBold.className}`} textColor={"#34C9DE"} fontSize={{ base: "md", lg: "xl" }}>Our Services</Text>
-        </Box>
-        <Box marginBottom={{ base: "10px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} >
-          <Text className={`${interBold.className}`} fontSize={{ base: "xl", lg: "5xl" }}>Accelerating Tech Advancements</Text>
-        </Box>
-        <Box marginBottom={{ base: "20px", lg: "30px" }} className={`${inter.className}`} textAlign={"center"} mx={{ base: '0', lg: "0" }} width={{ lg: "1000px" }} >
-          <Text fontSize={{ base: "sm", lg: "sm" }}>Our platform showcases the latest in tech trends, from AI and machine learning to cybersecurity, IoT, and beyond. Whether you're an enthusiast, a developer, or a business seeking tech solutions, our curated resources and insights empower</Text>
-        </Box>
-
-        <Box
-          display="flex"
-          flexWrap="wrap"
-          justifyContent="space-around"
-          alignItems="center" // Untuk memposisikan elemen secara vertikal di tengah
-          gap={{ base: "10", lg: "28" }}
-          padding={{ lg: 10 }}
-          paddingY={{ base: 10 }}
-          className="max-w-screen-xl relative mx-auto"
-          bg="linear-gradient(153.32deg, rgba(255, 255, 255, 0.3) -65.62%, rgba(255, 255, 255, 0.1) 83.28%)"
-          width={{ lg: "1000px" }}
-          border={"1px solid white"}
-          borderRadius={25}
-        >
-          <Flex display={"flex"} direction={"column"} justifyContent={"center"} alignItems={"center"}>
-            <Box boxSize={"64px"} marginBottom={5} >
-              <Image
-                className="w-full h-full m-auto object-center object-contain"
-                src={CloudComputing}
-                alt="CloudComputing"
-              />
-            </Box>
-            <Text className={`${interBold.className}`} fontSize={{ base: "sm", lg: "lg" }}>Share CPU</Text>
-            <Text className={`${inter.className}`} fontSize={{ base: "sm", lg: "sm" }} width={"221px"} textAlign={"center"}>Join us on this journey to discover how technology</Text>
-          </Flex>
-
-          <Flex display={"flex"} direction={"column"} justifyContent={"center"} alignItems={"center"}>
-            <Box boxSize={"64px"} marginBottom={5} >
-              <Image
-                className="w-full h-full m-auto object-center object-contain"
-                src={DedicatedCpu}
-                alt="DedicatedCpu"
-              />
-            </Box>
-            <Text className={`${interBold.className}`} fontSize={{ base: "sm", lg: "lg" }}>Dedicated CPU</Text>
-            <Text className={`${inter.className}`} fontSize={{ base: "sm", lg: "sm" }} width={"221px"} textAlign={"center"}>Join us on this journey to discover how technology</Text>
-          </Flex>
-
-          <Flex display={"flex"} direction={"column"} justifyContent={"center"} alignItems={"center"}>
-            <Box boxSize={"64px"} marginBottom={5} >
-              <Image
-                className="w-full h-full m-auto object-center object-contain"
-                src={BareMetal}
-                alt="BareMetal"
-              />
-            </Box>
-            <Text className={`${interBold.className}`} fontSize={{ base: "sm", lg: "lg" }}>Bare Metal</Text>
-            <Text className={`${inter.className}`} fontSize={{ base: "sm", lg: "sm" }} width={"221px"} textAlign={"center"}>Join us on this journey to discover how technology</Text>
-          </Flex>
-        </Box>
-
-
-      </Flex>
-
-      <div
-        id="tokenomics"
-        className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
-      />
-      <Flex
-        className="container-two w-full max-w-screen-xl relative mx-auto"
-        direction={{ base: "column", md: "column" }}
-        textAlign={{ base: "center", md: "left" }}
-        align="left"
-        justify="left"
-        paddingX={{ base: "64px" }}
-      >
-        <Box marginBottom={{ base: "10px", lg: "20px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }}>
-          <Text className={`${interBold.className}`} textColor={"#34C9DE"} fontSize={{ base: "md", lg: "xl" }}>Tokenomics</Text>
-        </Box>
-        <Box marginBottom={{ base: "10px", lg: "20px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} >
-          <Text className={`${interBold.className}`} fontSize={{ base: "xl", lg: "5xl" }}>Tokenomics information</Text>
-        </Box>
-        <Box marginBottom={{ base: "20px", lg: "20px" }} className={`${inter.className}`} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "528px" }} >
-          <Text fontSize={{ base: "sm", lg: "sm" }}>To ensure enduring development and sustained expansion, the DCI platform enforces a purchase and sale levy on all $DCI transactions.</Text>
-        </Box>
-
-        <Flex
-          className="container-two w-full max-w-screen-xl relative mx-auto"
-          direction={{ base: "column", md: "row" }}
-          textAlign={{ base: "center", md: "left" }}
-          bg="linear-gradient(153.32deg, rgba(255, 255, 255, 0.3) -65.62%, rgba(255, 255, 255, 0.1) 83.28%)"
-          padding={{ lg: 30 }}
-          align="center"
-          justify="space-between"
-          gap={0}
-          rounded={"lg"}
-
-        >
-          <Box className="section_two_left" w="100%">
-            <Box
-              position="relative"
-              overflow="hidden"
-              boxSize={{ base: "250px", md: "449px" }}
-              m="auto"
-            >
-              {/* Image */}
-              <Image
-                className="w-full h-full m-auto object-center object-contain "
-                src={Diagram}
-                alt="Diagram"
-              />
-            </Box>
-          </Box>
-
-          <Box
-            zIndex={30}
-            className={`${interBold.className}`}
-            w="100%"
-            borderRadius="38px"
-            padding={{ base: "30px", lg: "64px" }}
-            borderColor="red"
-          >
-            <Box marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }}>
-              <Text fontSize={{ base: "xl", lg: "5xl" }}>Taxation</Text>
-            </Box>
-            <Box className={`${inter.className}`} marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }} >
-              <Text fontSize={{ base: "sm", lg: "md" }}>To ensure enduring development and sustained expansion, the DCI platform enforces a purchase and sale levy on all $DCI transactions.</Text>
-            </Box>
-            <Box className={`${inter.className}`} marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }} >
-              <Link
-                href={socialsLink.telegram}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant={"outline"}
-                  rounded="lg"
-                  bgColor={"#01FFF9"}
-                  size={{ base: "sm" }}
-                  mr={"10px"}
-                >
-                  Explore
-                </Button>
-              </Link>
-              <Link
-                href={socialsLink.telegram}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant={"outline"}
-                  rounded="lg"
-                  borderColor={"#01FFF9"}
-                  size={{ base: "sm" }}
-                >
-                  Explore
-                </Button>
-              </Link>
-            </Box>
-            <Box className={`${inter.className}`} marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }} >
-              <Text fontSize={{ base: "sm", lg: "md" }}>80% of the levy will be allocated towards marketing initiatives, development efforts, and fostering project expansion. Meanwhile, the remaining 20% will be distributed back to all holders as reflections. This strategy incentivizes holding without the complexities of staking, thereby mitigating potential issues.</Text>
-            </Box>
-          </Box>
-        </Flex>
-
-
-      </Flex>
-
-      <div
-        id="revenue"
-        className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
-      />
-      <Flex
-        className="container-two w-full max-w-screen-xl relative mx-auto"
-        direction={{ base: "column", md: "row" }}
-        textAlign={{ base: "center", md: "left" }}
-        align="center"
-        justify="center"
-        paddingX={{ base: "64px" }}
-      >
-        <Flex
-          className="container-two w-full max-w-screen-xl relative mx-auto"
-          cursor="pointer"
-          w="1114px"
-          h="548px"
-          my={2}
-          rounded="lg"
-          position="relative"
-          backgroundImage="url('/revenue.png')"
-          backgroundSize="cover"
-          backgroundPosition="center"
-          backgroundRepeat="no-repeat"
-          justifyContent="center" // Rata tengah horizontal
-          alignItems="center" // Rata tengah vertikal
-        >
-          <Box className={`${interBold.className}`} textAlign="center" >
-            <Text textColor={"#34C9DE"} fontSize={{ base: "xl", lg: "2xl" }}>Revenue Share</Text>
-            <Text fontSize={{ base: "xl", lg: "5xl" }}>Join and share revenue</Text>
-            <Link
-              href={socialsLink.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant={"outline"}
-                rounded="lg"
-                bgColor={"#01FFF9"}
-                size={{ base: "sm", lg: "lg" }}
-                mr={"10px"}
-              >
-                Explore
-              </Button>
-            </Link>
-            <Link
-              href={socialsLink.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button
-                variant={"outline"}
-                rounded="lg"
-                borderColor={"#01FFF9"}
-                size={{ base: "sm", lg: "lg" }}
-              >
-                Explore
-              </Button>
-            </Link>
-          </Box>
-        </Flex>
-
-      </Flex>
-
-      <div
-        id="contact"
-        className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
-      />
-
-      <Flex
-        className="container-two w-full max-w-screen-xl relative mx-auto"
-        direction={{ base: "column", md: "row-reverse" }}
-        textAlign={{ base: "center", md: "left" }}
-        align="center"
-        justify="space-between"
-        px={0}
-        py={0}
-        mx={{ base: "10" }}
-        gap={0}
-
-      >
-
-        <Box className="section_two_left" w="100%">
-          <Box
-            position="relative"
-            overflow="hidden"
-            boxSize={{ base: "350px", md: "449px" }}
-            m="auto"
-          >
-            {/* Image */}
-            <Image
-              className="w-full h-full m-auto object-center object-contain "
-              src={ContactUs}
-              alt="ContactUs"
-            />
-          </Box>
-        </Box>
-
-        <Box
-          zIndex={30}
-          className={`${interBold.className}`}
-          w="100%"
-          borderRadius="38px"
-          padding="60px"
-          borderColor="red"
-        >
-          <Box marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "432px" }} >
-            <Text textColor={"#34C9DE"} fontSize={{ base: "xl", lg: "2xl" }}>Contact Us </Text>
-          </Box>
-          <Box marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }}>
-            <Text fontSize={{ base: "xl", lg: "5xl" }}>Get In Touch DENODE AI Technology</Text>
-          </Box>
-          <Box className={`${inter.className}`} marginBottom={{ base: "30px", lg: "30px" }} textAlign={{ base: "center", lg: "left" }} mx={{ base: '0', lg: "0" }} width={{ lg: "597px" }} >
-            <Text fontSize={{ base: "sm", lg: "md" }}>Our platform showcases the latest in tech trends, from AI and machine learning to cybersecurity, IoT, and beyond.</Text>
-          </Box>
-
-
-        </Box>
-      </Flex>
-
-      <div
-        className="h-[5.5em] lg:h-[6em] xl:h-[10em] relative z-30"
-      />
-
-    </div>
-  );
 };
 
 export default Home;

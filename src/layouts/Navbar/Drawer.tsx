@@ -14,7 +14,7 @@ import { useIsMounted } from "@/hooks/useIsMounted";
 import { getHash } from "@/utils/hash";
 import useHash from "@/hooks/useHashname";
 
-import { inter, poppins } from "@/utils/font";
+import { kanit } from "@/utils/font";
 
 // import AppTitle from "@/assets/title-app.png";
 // import { findUsLink, socialsLink } from "@/constants/links";
@@ -50,9 +50,9 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         name: "About",
       },
       {
-        href: "#feature",
-        pathname: `#feature`,
-        name: "Features",
+        href: "#roadmap",
+        pathname: `#roadmap`,
+        name: "Roadmap",
       },
       {
         href: "#tokenomics",
@@ -60,9 +60,9 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
         name: "Tokenomics",
       },
       {
-        href: "#contact",
-        pathname: `#contact`,
-        name: "Contact Us",
+        href: "#faq",
+        pathname: `#faq`,
+        name: "FAQ",
       }
     ];
   }, []);
@@ -73,28 +73,12 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
 
   return (
     <Collapse in={isOpen} animateOpacity>
-      <div className={`w-full h-full mt-8 ${inter.className}`}>
+      <div className={`w-full h-full mt-8 ${kanit.className}`}>
         <List spacing={3}>
           {tabsList.map((item) => {
             const isActive = !!defaultHash
               ? hashname === item.pathname
               : !defaultHash && pathname === item.pathname;
-
-            // if (item.pathname === "/whitepaper") {
-            //   return (
-            //     <ListItem key={item.name} onClick={onClose}>
-            //       <Link
-            //         key={item.name}
-            //         href={item.href}
-            //         target="_blank"
-            //         rel="noopener noreferrer"
-            //         className="nav-anchor"
-            //       >
-            //         {item.name}
-            //       </Link>
-            //     </ListItem>
-            //   );
-            // }
 
             return (
               <ListItem key={item.name} onClick={onClose}>
@@ -102,9 +86,6 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
                   href={item.href}
                   className={clsx(
                     "font-normal",
-                    // "text-white p-2 hover:text-secondary font-bold",
-                    // "text-sm md:text-base text-black dark:text-white p-2 hover:bg-dark-hover font-bold",
-                    // isActive ? "#bf00ff" : "text-white"
                     isActive ? "nav-anchor-active" : "nav-anchor"
                   )}
                   style={{ transition: "250" }}

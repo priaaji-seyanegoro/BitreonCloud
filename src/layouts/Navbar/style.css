@@ -1,13 +1,19 @@
 .navbar-container {
   /* @apply !px-0 w-full h-[5.5em] bg-dark-main; */
-  @apply !px-0 w-full absolute py-3;
-  /* @apply fixed top-0 z-50; */
+  @apply !px-0 w-[90%] lg:mt-[73px] absolute py-5;
+  /* margin-top: 73px; */
+  padding-inline: 50px;
   z-index: 50;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar-fixed {
-  @apply w-full fixed top-0 py-3 bg-black text-white;
+  @apply w-[90%] fixed top-0 py-4 lg:mt-[73px] bg-black text-white;
+  /* margin-top: 73px; */
   z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar,

@@ -7,8 +7,8 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "DENODE AI | Cloud Computing";
-const app_name = "DENODE AI";
+const app_title = "Power Link | SECURE YOUR DIGITAL SURFING WITH CONFIDENCE";
+const app_name = "Power Link";
 const description =
   "Cloudnet AI plays a pivotal role in connecting conventional cloud computing with the distinctive requirements of the Web3 era, leveraging AI and machine learning to boost both efficiency and security.";
 

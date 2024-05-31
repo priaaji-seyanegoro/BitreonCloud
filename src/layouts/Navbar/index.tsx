@@ -11,10 +11,11 @@ import { NavbarDrawer } from "./Drawer";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
 
-import { interBold } from "@/utils/font";
+import { kanitBold } from "@/utils/font";
 import { socialsLink } from "@/constants/links";
 
-import denodeLogo from "@/assets/logo-denode.svg";
+// import denodeLogo from "@/assets/logo-denode.svg";
+import powerLinkLogo from '@/assets/PowerLink-Logo.png'
 
 import "./style.css";
 
@@ -71,16 +72,16 @@ const Navbar: React.FC<Props> = () => {
     <div
       className={clsx(
         isScroll || isOpenDrawer ? "navbar-fixed" : "navbar-container",
-        interBold.className
+        kanitBold.className, 'lg:border lg:border-white lg:rounded-full lg:bg-transparent lg:mx-auto'
       )}
     >
       <div className={clsx(isScroll ? "navbar-scroll" : "navbar")}>
         <div className="w-1/2 lg:w-1/4 flex items-center relative">
           <Link href="/" className={`logo-container`}>
             <Image
-              src={denodeLogo}
+              src={powerLinkLogo}
               alt="banner-nav-logo"
-              className="w-full md:w-full h-14 sm:h-16 object-contain object-left"
+              className="w-full md:w-full h-20 sm:h-16 object-contain object-left"
             />
           </Link>
         </div>
@@ -99,11 +100,13 @@ const Navbar: React.FC<Props> = () => {
               rel="noopener noreferrer"
             >
               <Button
+                className={`${kanitBold.className} w-[174px]`}
                 variant={"outline"}
-                rounded="lg"
-                bgColor={"#01FFF9"}
+                rounded="full"
+                size={"lg"}
+                bgGradient="linear-gradient(97.11deg, #4260FF 37.38%, #0024E1 115.64%)"
               >
-                Telegram
+                Log In
               </Button>
             </Link>
 
