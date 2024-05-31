@@ -26,7 +26,7 @@ import CloudComputing from "@/assets/cloud-computing.png"
 import DedicatedCpu from "@/assets/dedicated-cpu.png"
 import BareMetal from "@/assets/bare-metal.png"
 import { url } from "inspector";
-import welcomeBackground from "@/assets/welcome.gif"
+import welcomeBackground from "@/assets/welcome-animated.gif"
 import clsx from "clsx";
 
 interface Props { }
