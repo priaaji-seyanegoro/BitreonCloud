@@ -33,11 +33,11 @@
 .nav-anchor,
 .nav-anchor-active {
   @apply text-base md:text-lg;
-  /* @apply text-base md:text-lg lg:text-xl xl:text-2xl; */
 }
 
 .nav-anchor {
-  @apply text-white hover:text-[#01FFF9];
+  @apply bg-gradient-to-r from-[#DAF0F0] to-[#3BC6C7] bg-clip-text text-transparent
+  /* @apply text-white hover:text-[#01FFF9]; */
   /* @apply bg-white hover:bg-lime-zest font-bold text-lg;
   background-clip: text;
   -webkit-background-clip: text;
@@ -45,7 +45,8 @@
 }
 
 .nav-anchor-active {
-  @apply text-[#34C9DE];
+  @apply text-white font-bold
+  /* @apply text-[#34C9DE]; */
   /* @apply bg-lime-zest font-bold;
   background-clip: text;
   -webkit-background-clip: text;

@@ -1,7 +1,5 @@
 import React from "react";
-import { poppins } from "@/utils/font";
-import Image from "next/image";
-import denodeLogo from "@/assets/logo-denode.svg";
+import { kanit } from "@/utils/font";
 
 import "./style.css";
 
@@ -10,16 +8,10 @@ interface Props { }
 const YinLoader: React.FC<Props> = () => {
   return (
     <div
-      className={`w-full h-screen flex flex-col justify-center items-center mx-auto overflow-hidden ${poppins.className}`}
+      className={`w-full h-screen flex flex-col justify-center items-center mx-auto overflow-hidden ${kanit.className}`}
     >
       <div className="w-full h-28 flex items-center justify-center">
-        <div className="logo-loader">
-          <Image
-            src={denodeLogo}
-            alt="banner-nav-logo"
-            className="w-full md:w-full h-14 sm:h-16 object-contain object-left"
-          />
-        </div>
+        <div className="loader" />
       </div>
       {/* <h1 className="flex text-white text-xl lg:text-2xl 2xl:text-3xl font-semibold mt-4">
         Loading

@@ -1,5 +1,5 @@
 "use client";
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useEffect, useState } from "react";
 import Image from "next/image";
 import clsx from "clsx";
 
@@ -8,8 +8,8 @@ import Footer from "./Footer";
 
 import Provider from "@/library/Provider";
 
-import { clashDisplay } from "@/utils/font";
-import AppBackground from "@/assets/BodyBackground.png";
+import { kanit } from "@/utils/font";
+import AppBackground from "@/assets/bg-star.png";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
 
@@ -18,14 +18,24 @@ import "./style.css";
 interface Props extends PropsWithChildren { }
 
 const BaseLayout: React.FC<Props> = ({ children }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const isMounted = useIsMounted();
+  useEffect(() => {
+    if (isMounted) {
+      const timeOut = setTimeout(() => {
+        setIsLoaded(true);
+      }, 2000);
+
+      return () => clearTimeout(timeOut);
+    }
+  }, [isMounted, isLoaded]);
 
   return (
     <Provider>
-      {isMounted && (
+      {isMounted && isLoaded && (
         <Navbar />
       )}
-      <main className={clsx("base-main-container", clashDisplay.className)}>
+      <main className={clsx("base-main-container", kanit.className)}>
         {isMounted && (
           <Image
             src={AppBackground}
@@ -36,9 +46,9 @@ const BaseLayout: React.FC<Props> = ({ children }) => {
         )}
         {children}
       </main>
-      {isMounted && (
+      {/* {isMounted && (
         <Footer />
-      )}
+      )} */}
 
     </Provider>
   );

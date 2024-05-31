@@ -37,9 +37,9 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
         name: "About",
       },
       {
-        href: "#feature",
-        pathname: `#feature`,
-        name: "Features",
+        href: "#roadmap",
+        pathname: `#roadmap`,
+        name: "Roadmap",
       },
       {
         href: "#tokenomics",
@@ -47,9 +47,9 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
         name: "Tokenomics",
       },
       {
-        href: "#contact",
-        pathname: `#contact`,
-        name: "Contact Us",
+        href: "#faq",
+        pathname: `#faq`,
+        name: "FAQ",
       }
     ];
   }, []);
@@ -71,21 +71,6 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
           ? hashname === item.pathname
           : !defaultHash && pathname === item.pathname;
 
-        // if (item.pathname === "/whitepaper") {
-        //   return (
-        //     <Link
-        //       key={item.name}
-        //       href={item.href}
-        //       target="_blank"
-        //       rel="noopener noreferrer"
-        //       className="nav-anchor"
-        //     >
-        //       {item.name}
-        //     </Link>
-        //   );
-        // }
-
-        // const isActive = pathname === item.pathname;
         return (
           <Anchor
             key={item.name}
