@@ -28,6 +28,7 @@ import AboutImage3 from '@/assets/about-3-powerlink.png'
 import { investments } from "./constants/investments";
 import TextGradient from "@/components/Text/TextGradient";
 import { CopyOutlined } from "@ant-design/icons";
+import FAQSection from "./sections/FAQSections";
 
 interface Props { }
 
@@ -465,7 +466,32 @@ const Home: React.FC<Props> = () => {
           </Box>
         </Flex>
 
+        <div
+          id="faq"
+          className="h-[8.5em] lg:h-[13em] relative z-30"
+        />
 
+        <Flex
+          id="investment"
+          className="container-two w-full relative mx-auto"
+          cursor="pointer"
+          w="auto"
+          h="auto"
+          justifyContent="center" // Rata tengah horizontal
+          alignItems="center" // Rata tengah vertikal
+          // className="w-full max-w-screen-xl relative mx-auto"
+          direction={{ base: "column" }}
+          textAlign={{ base: "center", md: "left" }}
+          align="center"
+          // bg={"black"}
+          justify="space-between"
+          px={0}
+          py={0}
+          mx={{ base: "10" }}
+          gap={0}
+        >
+          <FAQSection />
+        </Flex>
 
 
         <div
