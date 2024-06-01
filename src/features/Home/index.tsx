@@ -22,7 +22,8 @@ import {
   Flex,
   IconButton,
   Text,
-  useToast
+  useToast,
+  Grid,
 } from "@chakra-ui/react";
 import welcomeBackground from "@/assets/welcome.gif"
 import clsx from "clsx";
@@ -127,7 +128,7 @@ const Home: React.FC<Props> = () => {
               cursor="pointer"
               w="100%"
               h="auto"
-              bg={"black"}
+              bg={"transparent"}
               justifyContent="center" // Rata tengah horizontal
               alignItems="center" // Rata tengah vertikal
               direction={"column"}
@@ -160,13 +161,24 @@ const Home: React.FC<Props> = () => {
                     gap={{ base: 6, lg: 32 }}
                   >
                     {features.map((feature, index) => (
-                      <Box key={index} textAlign="center" px={5} >
-                        <Image
-                          className="w-full object-contain"
-                          src={feature.img}
-                          alt={feature.name}
-                        />
-                      </Box>
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.2 }} // Smooth animation
+                        viewport={{ once: false, amount: 0.8 }}
+                      // style={{ flexBasis: '100%', display: 'flex', justifyContent: 'center' }} // Ensure proper layout for animation
+                      >
+                        <Box key={index} textAlign="center" px={5} >
+                          <Image
+                            className="w-full object-contain"
+                            src={feature.img}
+                            alt={feature.name}
+                          />
+                        </Box>
+                      </motion.div>
+
+
                     ))}
                   </Flex>
                 </Flex>
@@ -178,9 +190,6 @@ const Home: React.FC<Props> = () => {
         </div>
 
 
-
-
-
         <div
           id="about"
           className="h-[10em] lg:h-[20em] relative z-30"
@@ -189,8 +198,8 @@ const Home: React.FC<Props> = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.2 }} // Smooth animation
+          viewport={{ once: false, amount: 0.9 }}
         >
           <Flex
             className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
@@ -256,7 +265,7 @@ const Home: React.FC<Props> = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: false, amount: 0.8 }}
         >
           <Flex
             className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
@@ -319,8 +328,8 @@ const Home: React.FC<Props> = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true, amount: 0.8 }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
+            viewport={{ once: false, amount: 0.8 }}
           >
             <Flex
               className="container-two w-full max-w-screen-xl relative mx-auto "
@@ -369,61 +378,72 @@ const Home: React.FC<Props> = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          viewport={{ once: true, amount: 0.8 }}        >
+          viewport={{ once: false, amount: 0.8 }}        >
           <Flex
             id="investment"
             className="container-two w-full relative mx-auto"
             w="100%"
             h="auto"
-            justifyContent="center" // Rata tengah horizontal
-            alignItems="center" // Rata tengah vertikal
-            direction={{ base: "column", md: "row" }}
-            align="center"
-            justify="space-between"
+            justifyContent="center"
+            alignItems="center"
+            direction="column"
             px={0}
             py={0}
-            mx={{ base: "10" }}
+            mx={{ base: '10' }}
             gap={0}
           >
-
-            <Box className="container-two w-full max-w-screen-xl relative mx-auto px-4">
-              <Text width={{ base: "auto", lg: "500px" }} fontSize="3xl" fontWeight="bold" textAlign={{ base: "center", lg: "left" }} mb={8} color="white" textTransform={"uppercase"}>
+            <Box className="container-two w-full max-w-screen-xl relative mx-auto px={4}">
+              <Text
+                width={{ base: 'auto', lg: '500px' }}
+                fontSize="3xl"
+                fontWeight="bold"
+                textAlign={{ base: 'center', lg: 'left' }}
+                mb={8}
+                color="white"
+                textTransform="uppercase"
+              >
                 We provide investment feature for crypto currency
               </Text>
-              <Flex direction="row" justifyContent="space-between" alignItems="center" flexWrap="wrap" gap={6}>
+              <Grid
+                templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
+                gap={6}
+                px={4}
+              >
                 {investments.map((investment, index) => (
-                  <Box
+                  <motion.div
                     key={index}
-                    flexBasis={{ base: "100%", md: "45%", lg: "22%" }}
-                    bg="#1C1B1B"
-                    p={6}
-                    borderRadius="lg"
-                    boxShadow="lg"
-                    border="1px solid"
-                    borderColor="#152FE8"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.2 }}
+                    viewport={{ once: false, amount: 0.8 }}
                   >
-                    <Box key={index} maxW="72px" mb={"10px"}>
-                      <Image
-                        className="w-full object-contain"
-                        src={investment.img}
-                        alt={investment.title}
-                      />
+                    <Box
+                      bg="#1C1B1B"
+                      p={6}
+                      borderRadius="lg"
+                      boxShadow="lg"
+                      border="1px solid"
+                      borderColor="#152FE8"
+                      maxW="400px"
+                      w="100%"
+                      mx="auto"
+                    >
+                      <Box maxW="72px" mb="10px">
+                        <Image className="w-full object-contain" src={investment.img} alt={investment.title} />
+                      </Box>
+                      <Text align="start" fontSize="xl" fontWeight="bold" mb={2} color="white">
+                        {investment.title}
+                      </Text>
+                      <Text align="start" fontSize="md" color="gray.400">
+                        {investment.desc}
+                      </Text>
                     </Box>
-                    <Text align={"start"} fontSize="xl" fontWeight="bold" mb={2} color="white">
-                      {investment.title}
-                    </Text>
-                    <Text align={"start"} fontSize="md" color="gray.400">
-                      {investment.desc}
-                    </Text>
-                  </Box>
+                  </motion.div>
                 ))}
-              </Flex>
+              </Grid>
             </Box>
           </Flex>
         </motion.div>
-
-
-
 
         <div
           id="tokenomics"
@@ -433,8 +453,8 @@ const Home: React.FC<Props> = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'backOut' }} // Change the easing function here
-          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }} // Change the easing function here
+          viewport={{ once: false, amount: 0.8 }}
         >
           <Flex
             id="investment"
@@ -581,19 +601,39 @@ const Home: React.FC<Props> = () => {
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
           />
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, ease: 'circIn' }} // Change the easing function here
-            viewport={{ once: true, amount: 0.8 }}
-          >
-            <Flex h="800px" align="center" justify="center" direction="column" >
+          <Flex h="800px" align="center" justify="center" direction="column">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: 'easeInOut' }} // Change the easing function here
+              viewport={{ once: false, amount: 0.8 }}
+            >
               <Box className={`${kanit.className}`} textAlign="center" width={{ lg: "1000px" }} paddingX={"12px"}>
-                <Text textTransform={"uppercase"} fontSize={{ base: "4xl", lg: "6xl" }} fontWeight={"bold"}>Get Started</Text>
+                <Text textTransform="uppercase" fontSize={{ base: "4xl", lg: "6xl" }} fontWeight="bold">
+                  Get Started
+                </Text>
               </Box>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.2 }} // Add a delay for staggered animation
+              viewport={{ once: false, amount: 0.8 }}
+            >
               <Box className={`${kanit.className} mt-4`} textAlign="center" width={{ base: "400px", lg: "500px" }} paddingX={"12px"}>
-                <Text textColor={"white"} fontSize={{ base: "md", lg: "lg" }}>{"Join our Сommunity Become part of the Blendr Family. Engage, Innovate and Grow with us."}</Text>
+                <Text textColor="white" fontSize={{ base: "md", lg: "lg" }}>
+                  Join our Сommunity Become part of the Blendr Family. Engage, Innovate and Grow with us.
+                </Text>
               </Box>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.4 }} // Add a delay for staggered animation
+              viewport={{ once: false, amount: 0.8 }}
+            >
               <Flex
                 justifyContent={{ base: "center", lg: "space-between" }}
                 alignItems={{ base: "center", lg: "start" }}
@@ -601,23 +641,14 @@ const Home: React.FC<Props> = () => {
                 margin={{ base: 10 }}
               >
                 <div className="relative inline-flex items-center justify-center p-[2px] bg-gradient-to-r from-blue-500 to-teal-400 rounded-full">
-                  <button
-                    className="relative inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full"
-                  >
+                  <button className="relative inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full">
                     Download Now
                   </button>
                 </div>
               </Flex>
-            </Flex>
-          </motion.div>
-
-
+            </motion.div>
+          </Flex>
         </Box>
-
-
-        {/* <div
-          className="h-[5.5em] lg:h-[100em]  relative z-30"
-        /> */}
 
       </div>
     );

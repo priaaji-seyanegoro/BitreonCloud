@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Flex, Text, useDisclosure, Collapse } from '@chakra-ui/react';
 import { RightOutlined, DownOutlined } from '@ant-design/icons';
+import { motion } from 'framer-motion';
 
 const faqDatas = [
     {
@@ -60,12 +61,20 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 const FAQSection = () => {
     return (
         <Box py={10}>
-            <Text fontSize={{ base: "4xl", lg: "6xl" }} fontWeight="bold" textAlign="center" mb={8} color="white">
+            <Text fontSize={{ base: '4xl', lg: '6xl' }} fontWeight="bold" textAlign="center" mb={8} color="white">
                 FAQ
             </Text>
-            <Box maxW="800px" w={{ lg: "1000px" }} mx="auto" px={4}>
+            <Box maxW="800px" w={{ lg: '1000px' }} mx="auto" px={4}>
                 {faqDatas.map((faq, index) => (
-                    <FAQItem key={index} question={faq.question} answer={faq.answer} />
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, ease: 'easeInOut', delay: index * 0.15 }} // Smoother animation
+                        viewport={{ once: false, amount: 0.8 }}
+                    >
+                        <FAQItem question={faq.question} answer={faq.answer} />
+                    </motion.div>
                 ))}
             </Box>
         </Box>

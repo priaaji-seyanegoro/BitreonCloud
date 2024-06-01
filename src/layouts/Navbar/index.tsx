@@ -105,6 +105,10 @@ const Navbar: React.FC<Props> = () => {
                 rounded="full"
                 size={"lg"}
                 bgGradient="linear-gradient(97.11deg, #4260FF 37.38%, #0024E1 115.64%)"
+                _hover={{
+                  bgGradient: "linear-gradient(97.11deg, #0024E1 37.38%, #4260FF 115.64%)",
+                  boxShadow: "0 0 20px rgba(66, 96, 255, 0.5)",
+                }}
               >
                 Log In
               </Button>
