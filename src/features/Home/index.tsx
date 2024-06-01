@@ -8,6 +8,8 @@ import { useIsMounted } from "@/hooks/useIsMounted";
 import { contractAddress, socialsLink } from "@/constants/links";
 import { kanit, kanitBold } from "@/utils/font";
 import { features } from "./constants/features";
+import BackgroundWaveRoadMap from "@/assets/wave_2.png"
+import BackgroundWaveRoadMap1 from "@/assets/wave_1.png"
 
 import "./style.css";
 import Image from "next/image";
@@ -29,6 +31,7 @@ import { investments } from "./constants/investments";
 import TextGradient from "@/components/Text/TextGradient";
 import { CopyOutlined } from "@ant-design/icons";
 import FAQSection from "./sections/FAQSections";
+import RoadmapStepper from "./sections/RoadmapSections";
 
 interface Props { }
 
@@ -290,7 +293,7 @@ const Home: React.FC<Props> = () => {
           </Box>
         </Flex>
 
-        <div className={`${kanit.className} relative gradient-border mt-5 lg:m-24 p-4 lg:p-7`}>
+        <div className={`${kanit.className} relative gradient-border m-5 lg:m-24 p-4 lg:p-7`}>
           <Flex
             className="container-two w-full max-w-screen-xl relative mx-auto "
             direction={{ base: "column", md: "row" }}
@@ -489,14 +492,64 @@ const Home: React.FC<Props> = () => {
           py={0}
           mx={{ base: "10" }}
           gap={0}
+          zIndex={30}
         >
           <FAQSection />
         </Flex>
 
-
         <div
-          className="h-[5.5em] lg:h-[6em] xl:h-[10em] relative z-30"
+          id="roadmap"
+          className="h-[5.5em] lg:h-[9.5em] relative z-30"
         />
+
+        <Box color="white" position="relative">
+          <Image
+            src={BackgroundWaveRoadMap}
+            alt="roadmap"
+            priority
+            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
+          />
+          <RoadmapStepper />
+
+        </Box>
+
+        <Box color="white" position="relative">
+          <Image
+            src={BackgroundWaveRoadMap1}
+            alt="roadmap"
+            priority
+            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
+          />
+          <Flex h="800px" align="center" justify="center" direction="column" >
+            <Box className={`${kanit.className}`} textAlign="center" width={{ lg: "1000px" }} paddingX={"12px"}>
+              <Text textTransform={"uppercase"} fontSize={{ base: "4xl", lg: "6xl" }} fontWeight={"bold"}>Get Started</Text>
+            </Box>
+            <Box className={`${kanit.className} mt-4`} textAlign="center" width={{ base: "400px", lg: "500px" }} paddingX={"12px"}>
+              <Text textColor={"white"} fontSize={{ base: "md", lg: "lg" }}>{"Join our Сommunity Become part of the Blendr Family. Engage, Innovate and Grow with us."}</Text>
+            </Box>
+            <Flex
+              justifyContent={{ base: "center", lg: "space-between" }}
+              alignItems={{ base: "center", lg: "start" }}
+              flexDirection={{ base: "column", md: "row" }}
+              margin={{ base: 10 }}
+            >
+              <div className="relative inline-flex items-center justify-center p-[2px] bg-gradient-to-r from-blue-500 to-teal-400 rounded-full">
+                <button
+
+                  className="relative inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full"
+                >
+                  Download Now
+                </button>
+              </div>
+            </Flex>
+          </Flex>
+
+        </Box>
+
+
+        {/* <div
+          className="h-[5.5em] lg:h-[100em]  relative z-30"
+        /> */}
 
       </div>
     );

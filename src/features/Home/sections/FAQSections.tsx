@@ -59,11 +59,11 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 
 const FAQSection = () => {
     return (
-        <Box bg="black" py={10}>
-            <Text fontSize="6xl" fontWeight="bold" textAlign="center" mb={8} color="white">
+        <Box py={10}>
+            <Text fontSize={{ base: "4xl", lg: "6xl" }} fontWeight="bold" textAlign="center" mb={8} color="white">
                 FAQ
             </Text>
-            <Box w="1000px" mx="auto" px={4}>
+            <Box maxW="800px" w={{ lg: "1000px" }} mx="auto" px={4}>
                 {faqDatas.map((faq, index) => (
                     <FAQItem key={index} question={faq.question} answer={faq.answer} />
                 ))}
