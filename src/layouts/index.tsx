@@ -46,7 +46,7 @@ const BaseLayout: React.FC<Props> = ({ children }) => {
         )}
         {children}
       </main>
-      {isMounted && (
+      {isMounted && isLoaded && (
         <Footer />
       )}
 
