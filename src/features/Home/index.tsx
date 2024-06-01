@@ -70,7 +70,9 @@ const Home: React.FC<Props> = () => {
         />
 
         <Image
-          src={welcomeBackground}
+          src="/home-bg.gif"
+          width={10}
+          height={10}
           alt="roadmap"
           priority
           className="w-[100%] h-[400px] lg:h-[auto] absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
