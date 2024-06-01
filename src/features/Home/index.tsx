@@ -10,6 +10,7 @@ import { kanit, kanitBold } from "@/utils/font";
 import { features } from "./constants/features";
 import BackgroundWaveRoadMap from "@/assets/wave_2.png"
 import BackgroundWaveRoadMap1 from "@/assets/wave_1.png"
+import { motion } from 'framer-motion';
 
 import "./style.css";
 import Image from "next/image";
@@ -93,14 +94,14 @@ const Home: React.FC<Props> = () => {
 
               <div
                 className={clsx(
-                  'text-center mx-auto w-[180px] lg:w-[650px] text-[5px] lg:text-[15px] text-[#CBCBCB] uppercase leading-tight m-0',
+                  'text-center mx-auto w-[180px] lg:w-[650px] text-[5px] lg:text-[15px] text-[#CBCBCB] uppercase leading-tight m-0 text-xs lg:text-base',
                   kanit.className
                 )}
               >
                 Experience secure and scalable privacy protection with Power Link's advanced VPN, ensuring your data remains confidential and secure.
               </div>
 
-              <div className="text-center mx-auto mt-2 lg:mt-6 ">
+              <div className="text-center mx-auto mt-4 lg:mt-6 ">
                 <Link
                   href={socialsLink.telegram}
                   target="_blank"
@@ -109,7 +110,7 @@ const Home: React.FC<Props> = () => {
                   <Button
                     className={clsx(
                       kanitBold.className,
-                      'w-[70px] lg:w-[174px] text-[8px] lg:text-lg bg-gradient-to-r from-[#4260FF] to-[#0024E1] rounded-full'
+                      'text-white px-10 w-[70px] lg:w-[174px] text-[8px] lg:text-lg bg-gradient-to-r from-[#4260FF] to-[#0024E1] rounded-full'
                     )}
                     variant="outline"
                     size={{ base: "xs", lg: 'lg' }}
@@ -185,141 +186,42 @@ const Home: React.FC<Props> = () => {
           className="h-[10em] lg:h-[20em] relative z-30"
         />
 
-        <Flex
-          className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
-          // flexDirection={{ base: "row-reverse", lg: "row" }}
-          flexDirection={{ base: "column-reverse", lg: "row" }}
-          direction={{ base: "column", md: "row" }}
-          textAlign={{ base: "center", md: "left" }}
-          h="auto"
-          align="center"
-          justify="space-between"
-          px={0}
-          py={0}
-          mx={{ base: "10" }}
-          gap={0}
-
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true, amount: 0.8 }}
         >
-
-          <Box flex="1" p={6}>
-            <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
-              Why PowerLink ?
-            </Text>
-            <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
-              Power Link is revolutionizing digital security and privacy, offering unparalleled protection and performance. Our platform provides users with advanced security protocols, global connectivity, and seamless performance, ensuring that your online activities remain private and secure. With a commitment to privacy and continuous innovation, Power Link is your go-to solution for secure and unrestricted internet access
-            </Text>
-            <Button
-              as="a"
-              href={"/"}
-              target="_blank"
-              rel="noopener noreferrer"
-              // display="flex"
-              // alignItems="cen  ter"
-              color="#667CFF"
-              bg="transparent"
-              p={0}
-              _hover={{ textDecoration: 'underline' }}
-            >
-              <Text mr={2}>Read More</Text>
-            </Button>
-          </Box>
-          <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center">
-            <video
-              className="w-full h-full m-auto object-center object-cover rounded-lg"
-              src="/about-powerlink.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              Your browser does not support the video tag.
-            </video>
-          </Box>
-        </Flex>
-
-        <div
-          className=" h-[1em] lg:h-[5em] relative z-30"
-        />
-
-        <Flex
-          className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
-          direction={{ base: "column-reverse", md: "row-reverse" }}
-          textAlign={{ base: "center", md: "left" }}
-          h="auto"
-          align="center"
-          justify="space-between"
-          px={0}
-          py={0}
-          mx={{ base: "10" }}
-          gap={0}
-
-        >
-
-          <Box flex="1" p={6}>
-            <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
-              We provide investment feature for crypto currency
-            </Text>
-            <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
-              Built on advanced network architecture, Power Link delivers robust and scalable solutions tailored to protect your data. Whether you're browsing the web, communicating securely, or transferring sensitive information, our services offer unparalleled security and privacy.
-            </Text>
-            <Button
-              as="a"
-              href={"/"}
-              target="_blank"
-              rel="noopener noreferrer"
-              // display="flex"
-              // alignItems="cen  ter"
-              color="#667CFF"
-              bg="transparent"
-              p={0}
-              _hover={{ textDecoration: 'underline' }}
-            >
-              <Text mr={2}>Read More</Text>
-            </Button>
-          </Box>
-          <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center" position="relative">
-            <video
-              className="relative rounded-lg"
-              src="/about-2-powerlink.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              Your browser does not support the video tag.
-            </video>
-
-            <Chip text="Omnicos directe" className="absolute top-[28px] lg:top-12 left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-            <Chip text="High Security" className="absolute bottom-24 lg:bottom-[150px] right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-            <Chip text="Plu Simplic" className="absolute bottom-[40px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-          </Box>
-        </Flex>
-
-        <div className={`${kanit.className} relative gradient-border m-5 lg:m-24 p-4 lg:p-7`}>
           <Flex
-            className="container-two w-full max-w-screen-xl relative mx-auto "
+            className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
+            // flexDirection={{ base: "row-reverse", lg: "row" }}
+            flexDirection={{ base: "column-reverse", lg: "row" }}
             direction={{ base: "column", md: "row" }}
             textAlign={{ base: "center", md: "left" }}
             h="auto"
             align="center"
             justify="space-between"
             px={0}
-            py={"40px"}
+            py={0}
             mx={{ base: "10" }}
             gap={0}
+
           >
-            <Box flex="1" px={4}>
+
+            <Box flex="1" p={6}>
               <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
-                We provide investment feature for crypto currency
+                Why PowerLink ?
               </Text>
               <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
-                Our platform offers a secure investment feature for cryptocurrencies, allowing you to grow your digital wealth with ease. Take advantage of our user-friendly interface and extensive range of supported cryptocurrencies to make informed investment decisions. Safeguard your assets and maximize your returns with our reliable and transparent investment options.
+                Power Link is revolutionizing digital security and privacy, offering unparalleled protection and performance. Our platform provides users with advanced security protocols, global connectivity, and seamless performance, ensuring that your online activities remain private and secure. With a commitment to privacy and continuous innovation, Power Link is your go-to solution for secure and unrestricted internet access
               </Text>
               <Button
                 as="a"
                 href={"/"}
                 target="_blank"
                 rel="noopener noreferrer"
+                // display="flex"
+                // alignItems="cen  ter"
                 color="#667CFF"
                 bg="transparent"
                 p={0}
@@ -328,192 +230,349 @@ const Home: React.FC<Props> = () => {
                 <Text mr={2}>Read More</Text>
               </Button>
             </Box>
-            <Box flex="1" px={4} display="flex" justifyContent="center" alignItems="center" maxH="400px" maxW="400px">
-              <Image
-                src={AboutImage3}
-                alt={"Investment Feature"}
-              />
+            <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center">
+              <video
+                className="w-full h-full m-auto object-center object-cover rounded-lg"
+                src="/about-powerlink.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
             </Box>
           </Flex>
+
+
+        </motion.div>
+
+
+        <div
+          className=" h-[1em] lg:h-[5em] relative z-30"
+        />
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <Flex
+            className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
+            direction={{ base: "column-reverse", md: "row-reverse" }}
+            textAlign={{ base: "center", md: "left" }}
+            h="auto"
+            align="center"
+            justify="space-between"
+            px={0}
+            py={0}
+            mx={{ base: "10" }}
+            gap={0}
+
+          >
+
+            <Box flex="1" p={6}>
+              <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
+                We provide investment feature for crypto currency
+              </Text>
+              <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
+                Built on advanced network architecture, Power Link delivers robust and scalable solutions tailored to protect your data. Whether you're browsing the web, communicating securely, or transferring sensitive information, our services offer unparalleled security and privacy.
+              </Text>
+              <Button
+                as="a"
+                href={"/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                // display="flex"
+                // alignItems="cen  ter"
+                color="#667CFF"
+                bg="transparent"
+                p={0}
+                _hover={{ textDecoration: 'underline' }}
+              >
+                <Text mr={2}>Read More</Text>
+              </Button>
+            </Box>
+            <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center" position="relative">
+              <video
+                className="relative rounded-lg"
+                src="/about-2-powerlink.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
+
+              <Chip text="Omnicos directe" className="absolute top-[28px] lg:top-12 left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+              <Chip text="High Security" className="absolute bottom-24 lg:bottom-[150px] right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+              <Chip text="Plu Simplic" className="absolute bottom-[40px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+            </Box>
+          </Flex>
+
+        </motion.div>
+
+
+        <div className={`${kanit.className} relative gradient-border m-5 lg:m-24 p-4 lg:p-7`}>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.8 }}
+          >
+            <Flex
+              className="container-two w-full max-w-screen-xl relative mx-auto "
+              direction={{ base: "column", md: "row" }}
+              textAlign={{ base: "center", md: "left" }}
+              h="auto"
+              align="center"
+              justify="space-between"
+              px={0}
+              py={"40px"}
+              mx={{ base: "10" }}
+              gap={0}
+            >
+              <Box flex="1" px={4}>
+                <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
+                  We provide investment feature for crypto currency
+                </Text>
+                <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
+                  Our platform offers a secure investment feature for cryptocurrencies, allowing you to grow your digital wealth with ease. Take advantage of our user-friendly interface and extensive range of supported cryptocurrencies to make informed investment decisions. Safeguard your assets and maximize your returns with our reliable and transparent investment options.
+                </Text>
+                <Button
+                  as="a"
+                  href={"/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  color="#667CFF"
+                  bg="transparent"
+                  p={0}
+                  _hover={{ textDecoration: 'underline' }}
+                >
+                  <Text mr={2}>Read More</Text>
+                </Button>
+              </Box>
+              <Box flex="1" px={4} display="flex" justifyContent="center" alignItems="center" maxH="400px" maxW="400px">
+                <Image
+                  src={AboutImage3}
+                  alt={"Investment Feature"}
+                />
+              </Box>
+            </Flex>
+          </motion.div>
+
         </div>
 
-        <Flex
-          id="investment"
-          className="container-two w-full relative mx-auto"
-          cursor="pointer"
-          w="100%"
-          h="auto"
-          justifyContent="center" // Rata tengah horizontal
-          alignItems="center" // Rata tengah vertikal
-          direction={{ base: "column", md: "row" }}
-          align="center"
-          justify="space-between"
-          px={0}
-          py={0}
-          mx={{ base: "10" }}
-          gap={0}
-        >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true, amount: 0.8 }}        >
+          <Flex
+            id="investment"
+            className="container-two w-full relative mx-auto"
+            w="100%"
+            h="auto"
+            justifyContent="center" // Rata tengah horizontal
+            alignItems="center" // Rata tengah vertikal
+            direction={{ base: "column", md: "row" }}
+            align="center"
+            justify="space-between"
+            px={0}
+            py={0}
+            mx={{ base: "10" }}
+            gap={0}
+          >
 
-          <Box className="container-two w-full max-w-screen-xl relative mx-auto px-4">
-            <Text width={{ base: "auto", lg: "500px" }} fontSize="3xl" fontWeight="bold" textAlign={{ base: "center", lg: "left" }} mb={8} color="white" textTransform={"uppercase"}>
-              We provide investment feature for crypto currency
-            </Text>
-            <Flex direction="row" justifyContent="space-between" alignItems="center" flexWrap="wrap" gap={6}>
-              {investments.map((investment, index) => (
-                <Box
-                  key={index}
-                  flexBasis={{ base: "100%", md: "45%", lg: "22%" }}
-                  bg="#1C1B1B"
-                  p={6}
-                  borderRadius="lg"
-                  boxShadow="lg"
-                  border="1px solid"
-                  borderColor="#152FE8"
-                >
-                  <Box key={index} maxW="72px" mb={"10px"}>
-                    <Image
-                      className="w-full object-contain"
-                      src={investment.img}
-                      alt={investment.title}
-                    />
+            <Box className="container-two w-full max-w-screen-xl relative mx-auto px-4">
+              <Text width={{ base: "auto", lg: "500px" }} fontSize="3xl" fontWeight="bold" textAlign={{ base: "center", lg: "left" }} mb={8} color="white" textTransform={"uppercase"}>
+                We provide investment feature for crypto currency
+              </Text>
+              <Flex direction="row" justifyContent="space-between" alignItems="center" flexWrap="wrap" gap={6}>
+                {investments.map((investment, index) => (
+                  <Box
+                    key={index}
+                    flexBasis={{ base: "100%", md: "45%", lg: "22%" }}
+                    bg="#1C1B1B"
+                    p={6}
+                    borderRadius="lg"
+                    boxShadow="lg"
+                    border="1px solid"
+                    borderColor="#152FE8"
+                  >
+                    <Box key={index} maxW="72px" mb={"10px"}>
+                      <Image
+                        className="w-full object-contain"
+                        src={investment.img}
+                        alt={investment.title}
+                      />
+                    </Box>
+                    <Text align={"start"} fontSize="xl" fontWeight="bold" mb={2} color="white">
+                      {investment.title}
+                    </Text>
+                    <Text align={"start"} fontSize="md" color="gray.400">
+                      {investment.desc}
+                    </Text>
                   </Box>
-                  <Text align={"start"} fontSize="xl" fontWeight="bold" mb={2} color="white">
-                    {investment.title}
-                  </Text>
-                  <Text align={"start"} fontSize="md" color="gray.400">
-                    {investment.desc}
-                  </Text>
-                </Box>
-              ))}
-            </Flex>
-          </Box>
-        </Flex>
+                ))}
+              </Flex>
+            </Box>
+          </Flex>
+        </motion.div>
+
+
+
 
         <div
           id="tokenomics"
           className="h-[8.5em] lg:h-[13em] relative z-30"
         />
 
-        <Flex
-          id="investment"
-          className="container-two w-full relative mx-auto"
-          cursor="pointer"
-          w="auto"
-          h="auto"
-          justifyContent="center" // Rata tengah horizontal
-          alignItems="center" // Rata tengah vertikal
-          // className="w-full max-w-screen-xl relative mx-auto"
-          direction={{ base: "column" }}
-          textAlign={{ base: "center", md: "left" }}
-          align="center"
-          // bg={"black"}
-          justify="space-between"
-          px={0}
-          py={0}
-
-          gap={0}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'backOut' }} // Change the easing function here
+          viewport={{ once: true, amount: 0.8 }}
         >
+          <Flex
+            id="investment"
+            className="container-two w-full relative mx-auto"
+            w="auto"
+            h="auto"
+            justifyContent="center" // Rata tengah horizontal
+            alignItems="center" // Rata tengah vertikal
+            // className="w-full max-w-screen-xl relative mx-auto"
+            direction={{ base: "column" }}
+            textAlign={{ base: "center", md: "left" }}
+            align="center"
+            // bg={"black"}
+            justify="space-between"
+            px={0}
+            py={0}
 
-          <Text className='mb-12' fontSize={{ base: "4xl", lg: "6xl" }} fontWeight="bold" >TOKENOMIC</Text>
-          <Box className="container-two w-full max-w-screen-xl relative mx-auto" bg={"transparent"} color="white" py={10} px={4}>
-            <Flex justify="center" align="center" mb={16} flexWrap="wrap" gap={20}>
-              <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderRight={{ base: "none", md: "1px solid gray" }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
-                <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
-                  10M
-                </TextGradient>
-                <Text>Token Supply</Text>
-              </Box>
-              <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderRight={{ base: "none", md: "1px solid gray" }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
-                <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
-                  5%
-                </TextGradient>
-                <Text>Buy/Sell Tax</Text>
-              </Box>
-              <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderRight={{ base: "none", md: "1px solid gray" }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
-                <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
-                  3%
-                </TextGradient>
-                <Text>Max Wallet</Text>
-              </Box>
-              <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
-                <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
-                  0%
-                </TextGradient>
-                <Text>Transfer</Text>
-              </Box>
-            </Flex>
-            <Box textAlign="center">
-              <Text mb={2}>Contract address</Text>
-              <Flex
-                justify="center"
-                align="center"
-                border="1px solid gray"
-                borderRadius="full"
-                px={{ base: 4 }}
-                py={2}
-                mx="auto"
-                w="fit-content"
-                overflowX="auto"
-              >
-                <TextGradient fontSize="sm" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
-                  {contractAddress}
-                </TextGradient>
-                <IconButton
-                  ml={2} // Adjust margin for better spacing
-                  icon={<CopyOutlined />}
-                  aria-label="Copy to clipboard"
-                  onClick={copyToClipboard}
-                  size="sm"
-                  colorScheme="transparent"
-                />
+            gap={0}
+          >
+
+            <Text className='mb-12' fontSize={{ base: "4xl", lg: "6xl" }} fontWeight="bold" >TOKENOMIC</Text>
+            <Box className="container-two w-full max-w-screen-xl relative mx-auto" bg={"transparent"} color="white" py={10} px={4}>
+              <Flex justify="center" align="center" mb={16} flexWrap="wrap" gap={20}>
+                <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderRight={{ base: "none", md: "1px solid gray" }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
+                  <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
+                    10M
+                  </TextGradient>
+                  <Text>Token Supply</Text>
+                </Box>
+                <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderRight={{ base: "none", md: "1px solid gray" }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
+                  <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
+                    5%
+                  </TextGradient>
+                  <Text>Buy/Sell Tax</Text>
+                </Box>
+                <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderRight={{ base: "none", md: "1px solid gray" }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
+                  <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
+                    3%
+                  </TextGradient>
+                  <Text>Max Wallet</Text>
+                </Box>
+                <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
+                  <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
+                    0%
+                  </TextGradient>
+                  <Text>Transfer</Text>
+                </Box>
               </Flex>
+              <Box textAlign="center">
+                <Text mb={2}>Contract address</Text>
+                <Flex
+                  justify="center"
+                  align="center"
+                  border="1px solid gray"
+                  borderRadius="full"
+                  px={{ base: 4 }}
+                  py={2}
+                  mx="auto"
+                  w="fit-content"
+                  overflowX="auto"
+                >
+                  <TextGradient fontSize="sm" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
+                    {contractAddress}
+                  </TextGradient>
+                  <IconButton
+                    ml={2} // Adjust margin for better spacing
+                    icon={<CopyOutlined />}
+                    aria-label="Copy to clipboard"
+                    onClick={copyToClipboard}
+                    size="sm"
+                    colorScheme="transparent"
+                  />
+                </Flex>
+              </Box>
             </Box>
-          </Box>
-        </Flex>
+          </Flex>
+        </motion.div>
+
 
         <div
           id="faq"
           className="h-[8.5em] lg:h-[13em] relative z-30"
         />
 
-        <Flex
-          id="investment"
-          className="container-two w-full relative mx-auto"
-          cursor="pointer"
-          w="auto"
-          h="auto"
-          justifyContent="center" // Rata tengah horizontal
-          alignItems="center" // Rata tengah vertikal
-          // className="w-full max-w-screen-xl relative mx-auto"
-          direction={{ base: "column" }}
-          textAlign={{ base: "center", md: "left" }}
-          align="center"
-          // bg={"black"}
-          justify="space-between"
-          px={0}
-          py={0}
-          mx={{ base: "10" }}
-          gap={0}
-          zIndex={30}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'backOut' }} // Change the easing function here
+          viewport={{ once: true, amount: 0.8 }}
         >
-          <FAQSection />
-        </Flex>
+          <Flex
+            id="investment"
+            className="container-two w-full relative mx-auto"
+            w="auto"
+            h="auto"
+            justifyContent="center" // Rata tengah horizontal
+            alignItems="center" // Rata tengah vertikal
+            // className="w-full max-w-screen-xl relative mx-auto"
+            direction={{ base: "column" }}
+            textAlign={{ base: "center", md: "left" }}
+            align="center"
+            // bg={"black"}
+            justify="space-between"
+            px={0}
+            py={0}
+            mx={{ base: "10" }}
+            gap={0}
+            zIndex={30}
+          >
+            <FAQSection />
+          </Flex>
+
+        </motion.div>
+
 
         <div
           id="roadmap"
           className="h-[5.5em] lg:h-[9.5em] relative z-30"
         />
 
-        <Box color="white" position="relative">
-          <Image
-            src={BackgroundWaveRoadMap}
-            alt="roadmap"
-            priority
-            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
-          />
-          <RoadmapStepper />
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.85, ease: 'backOut' }} // Change the easing function here
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <Box color="white" position="relative">
+            <Image
+              src={BackgroundWaveRoadMap}
+              alt="roadmap"
+              priority
+              className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
+            />
+            <RoadmapStepper />
+          </Box>
+        </motion.div>
 
-        </Box>
+
 
         <Box color="white" position="relative">
           <Image
@@ -522,29 +581,36 @@ const Home: React.FC<Props> = () => {
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
           />
-          <Flex h="800px" align="center" justify="center" direction="column" >
-            <Box className={`${kanit.className}`} textAlign="center" width={{ lg: "1000px" }} paddingX={"12px"}>
-              <Text textTransform={"uppercase"} fontSize={{ base: "4xl", lg: "6xl" }} fontWeight={"bold"}>Get Started</Text>
-            </Box>
-            <Box className={`${kanit.className} mt-4`} textAlign="center" width={{ base: "400px", lg: "500px" }} paddingX={"12px"}>
-              <Text textColor={"white"} fontSize={{ base: "md", lg: "lg" }}>{"Join our Сommunity Become part of the Blendr Family. Engage, Innovate and Grow with us."}</Text>
-            </Box>
-            <Flex
-              justifyContent={{ base: "center", lg: "space-between" }}
-              alignItems={{ base: "center", lg: "start" }}
-              flexDirection={{ base: "column", md: "row" }}
-              margin={{ base: 10 }}
-            >
-              <div className="relative inline-flex items-center justify-center p-[2px] bg-gradient-to-r from-blue-500 to-teal-400 rounded-full">
-                <button
-
-                  className="relative inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full"
-                >
-                  Download Now
-                </button>
-              </div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, ease: 'circIn' }} // Change the easing function here
+            viewport={{ once: true, amount: 0.8 }}
+          >
+            <Flex h="800px" align="center" justify="center" direction="column" >
+              <Box className={`${kanit.className}`} textAlign="center" width={{ lg: "1000px" }} paddingX={"12px"}>
+                <Text textTransform={"uppercase"} fontSize={{ base: "4xl", lg: "6xl" }} fontWeight={"bold"}>Get Started</Text>
+              </Box>
+              <Box className={`${kanit.className} mt-4`} textAlign="center" width={{ base: "400px", lg: "500px" }} paddingX={"12px"}>
+                <Text textColor={"white"} fontSize={{ base: "md", lg: "lg" }}>{"Join our Сommunity Become part of the Blendr Family. Engage, Innovate and Grow with us."}</Text>
+              </Box>
+              <Flex
+                justifyContent={{ base: "center", lg: "space-between" }}
+                alignItems={{ base: "center", lg: "start" }}
+                flexDirection={{ base: "column", md: "row" }}
+                margin={{ base: 10 }}
+              >
+                <div className="relative inline-flex items-center justify-center p-[2px] bg-gradient-to-r from-blue-500 to-teal-400 rounded-full">
+                  <button
+                    className="relative inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full"
+                  >
+                    Download Now
+                  </button>
+                </div>
+              </Flex>
             </Flex>
-          </Flex>
+          </motion.div>
+
 
         </Box>
 

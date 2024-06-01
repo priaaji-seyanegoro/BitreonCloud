@@ -61,7 +61,7 @@ const StepperStep: React.FC<StepperStepProps> = ({ step }) => {
             <Text fontSize="md" mt={2}><strong>Features:</strong></Text>
             <Box pl={4} mt={1}>
                 {step.features.map((feature, index) => (
-                    <Text className='text-gray-600' key={index} fontSize="md">• {feature.description}</Text>
+                    <Text className='text-gray-500' key={index} fontSize="md">• {feature.description}</Text>
                 ))}
             </Box>
         </Box>
@@ -83,10 +83,10 @@ const StepperIndicator: React.FC<StepperIndicatorProps> = ({ step }) => {
     return (
 
 
-        <Flex direction="row" align="start">
+        <Flex direction="row" align="center">
 
             {!isMobile && (
-                <Flex direction="column" align="center" mt={10} mr={5}>
+                <Flex direction="column" align="center" mt={10} mr={6}>
                     <Box textAlign="right" mb={8}>
                         {isActive ? (
                             <>
@@ -102,7 +102,7 @@ const StepperIndicator: React.FC<StepperIndicatorProps> = ({ step }) => {
                 </Flex>
             )}
 
-            <Flex direction="column" align="center">
+            <Flex direction="column" align="center" ml={{ md:isActive ? 1 : 0, xs:isActive ? 1 : 0}}>
 
                 <Box
                     w="28px"

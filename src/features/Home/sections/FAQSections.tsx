@@ -35,7 +35,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
-        <Box mb={4} borderRadius="xl" bgGradient="linear(to-r, #3182ce, #38b2ac)" p="1px">
+        <Box mb={8} borderRadius="xl" bgGradient="linear(to-r, #3182ce, #38b2ac)" p="1px">
             <Box
                 bg="black"
                 p={4}

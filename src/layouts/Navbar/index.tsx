@@ -100,7 +100,7 @@ const Navbar: React.FC<Props> = () => {
               rel="noopener noreferrer"
             >
               <Button
-                className={`${kanitBold.className} w-[174px]`}
+                className={`${kanitBold.className} w-[174px] text-white`}
                 variant={"outline"}
                 rounded="full"
                 size={"lg"}

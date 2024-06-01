@@ -46,35 +46,47 @@ export interface Phase {
 export const roadmapData: Phase = {
   steps: [
     {
-      title: "Client-Side Python Program (CLI)",
+      title: "Establishing Foundation and Visibility",
       subtitle: "Initial MVP Setup",
       purpose:
         "Enables GPU owners to register their devices with the central server and listen for incoming tasks.",
       features: [
-        { description: "Detect local GPU resources." },
         {
           description:
-            "Establish WebSocket connections to the central server for real-time communication.",
+            "Token Launch on Uniswap: Define the token utility, tokenomics, and launch strategy to attract investors and establish a strong project foundation.        ",
         },
         {
-          description: "Receive task details and execute tasks using the GPU.",
+          description:
+            "Market Awareness Campaign: Launch marketing efforts to create awareness and attract early adopters.",
+        },
+        {
+          description:
+            "Initial VPN Release: Highlight Power Link’s key features and consider a public demo to showcase capabilities.",
         },
       ],
       active: true,
     },
     {
-      title: "Client-Side Python Program (CLI)",
+      title: "Expanding Capabilities and Market Reach",
       subtitle: "Initial MVP Setup",
       purpose:
         "Enables GPU owners to register their devices with the central server and listen for incoming tasks.",
       features: [
-        { description: "Detect local GPU resources." },
         {
           description:
-            "Establish WebSocket connections to the central server for real-time communication.",
+            "Community Building: Foster a community through forums, social media, and events, encouraging user engagement and feedback.",
         },
         {
-          description: "Receive task details and execute tasks using the GPU.",
+          description:
+            "Mobile App Development: Release Power Link mobile apps for iOS and Android to reach a broader audience.",
+        },
+        {
+          description:
+            "Global Server Expansion: Increase the number of VPN servers globally to improve connection speeds and reliability.",
+        },
+        {
+          description:
+            "Major Exchange Listings: Target major crypto exchanges for listing to enhance token liquidity and project exposure.",
         },
       ],
       active: false,
