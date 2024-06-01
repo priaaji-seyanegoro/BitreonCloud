@@ -145,3 +145,10 @@
     /* Putar elemen hingga 360 derajat */
   }
 }
+
+.gradient-border {
+  border: 3px solid;
+  border-radius: 1.5rem;
+  border-image-source: linear-gradient(180deg, #FFFFFF -171.18%, rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
+}

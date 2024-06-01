@@ -17,11 +17,17 @@ import {
   Box,
   Button,
   Flex,
-  Text
+  IconButton,
+  Text,
+  useToast
 } from "@chakra-ui/react";
 import welcomeBackground from "@/assets/welcome-animated.gif"
 import clsx from "clsx";
 import Chip from "@/components/Chip";
+import AboutImage3 from '@/assets/about-3-powerlink.png'
+import { investments } from "./constants/investments";
+import TextGradient from "@/components/Text/TextGradient";
+import { CopyOutlined } from "@ant-design/icons";
 
 interface Props { }
 
@@ -29,6 +35,7 @@ const Home: React.FC<Props> = () => {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const isMounted = useIsMounted();
+  const toast = useToast();
   useEffect(() => {
     if (isMounted) {
       const timeOut = setTimeout(() => {
@@ -38,6 +45,16 @@ const Home: React.FC<Props> = () => {
       return () => clearTimeout(timeOut);
     }
   }, [isMounted, isLoaded]);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(contractAddress);
+    toast({
+      title: 'Copied to clipboard',
+      status: 'success',
+      duration: 2000,
+      isClosable: true,
+    });
+  };
 
 
   if (isMounted && isLoaded) {
@@ -272,19 +289,181 @@ const Home: React.FC<Props> = () => {
           </Box>
         </Flex>
 
+        <div className={`${kanit.className} relative gradient-border mt-5 lg:m-24 p-4 lg:p-7`}>
+          <Flex
+            className="container-two w-full max-w-screen-xl relative mx-auto "
+            direction={{ base: "column", md: "row" }}
+            textAlign={{ base: "center", md: "left" }}
+            h="auto"
+            align="center"
+            justify="space-between"
+            px={0}
+            py={"40px"}
+            mx={{ base: "10" }}
+            gap={0}
+          >
+            <Box flex="1" px={4}>
+              <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
+                We provide investment feature for crypto currency
+              </Text>
+              <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
+                Our platform offers a secure investment feature for cryptocurrencies, allowing you to grow your digital wealth with ease. Take advantage of our user-friendly interface and extensive range of supported cryptocurrencies to make informed investment decisions. Safeguard your assets and maximize your returns with our reliable and transparent investment options.
+              </Text>
+              <Button
+                as="a"
+                href={"/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                color="#667CFF"
+                bg="transparent"
+                p={0}
+                _hover={{ textDecoration: 'underline' }}
+              >
+                <Text mr={2}>Read More</Text>
+              </Button>
+            </Box>
+            <Box flex="1" px={4} display="flex" justifyContent="center" alignItems="center" maxH="400px" maxW="400px">
+              <Image
+                src={AboutImage3}
+                alt={"Investment Feature"}
+              />
+            </Box>
+          </Flex>
+        </div>
 
+        <Flex
+          id="investment"
+          className="container-two w-full relative mx-auto"
+          cursor="pointer"
+          w="100%"
+          h="auto"
+          justifyContent="center" // Rata tengah horizontal
+          alignItems="center" // Rata tengah vertikal
+          direction={{ base: "column", md: "row" }}
+          align="center"
+          justify="space-between"
+          px={0}
+          py={0}
+          mx={{ base: "10" }}
+          gap={0}
+        >
 
-        <div
-          id="feature"
-          className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
-        />
-
-
+          <Box className="container-two w-full max-w-screen-xl relative mx-auto px-4">
+            <Text width={{ base: "auto", lg: "500px" }} fontSize="3xl" fontWeight="bold" textAlign={{ base: "center", lg: "left" }} mb={8} color="white" textTransform={"uppercase"}>
+              We provide investment feature for crypto currency
+            </Text>
+            <Flex direction="row" justifyContent="space-between" alignItems="center" flexWrap="wrap" gap={6}>
+              {investments.map((investment, index) => (
+                <Box
+                  key={index}
+                  flexBasis={{ base: "100%", md: "45%", lg: "22%" }}
+                  bg="#1C1B1B"
+                  p={6}
+                  borderRadius="lg"
+                  boxShadow="lg"
+                  border="1px solid"
+                  borderColor="#152FE8"
+                >
+                  <Box key={index} maxW="72px" mb={"10px"}>
+                    <Image
+                      className="w-full object-contain"
+                      src={investment.img}
+                      alt={investment.title}
+                    />
+                  </Box>
+                  <Text align={"start"} fontSize="xl" fontWeight="bold" mb={2} color="white">
+                    {investment.title}
+                  </Text>
+                  <Text align={"start"} fontSize="md" color="gray.400">
+                    {investment.desc}
+                  </Text>
+                </Box>
+              ))}
+            </Flex>
+          </Box>
+        </Flex>
 
         <div
           id="tokenomics"
-          className="h-[5.5em] lg:h-[6em] xl:h-[7em] relative z-30"
+          className="h-[8.5em] lg:h-[13em] relative z-30"
         />
+
+        <Flex
+          id="investment"
+          className="container-two w-full relative mx-auto"
+          cursor="pointer"
+          w="auto"
+          h="auto"
+          justifyContent="center" // Rata tengah horizontal
+          alignItems="center" // Rata tengah vertikal
+          // className="w-full max-w-screen-xl relative mx-auto"
+          direction={{ base: "column" }}
+          textAlign={{ base: "center", md: "left" }}
+          align="center"
+          // bg={"black"}
+          justify="space-between"
+          px={0}
+          py={0}
+
+          gap={0}
+        >
+
+          <Text className='mb-12' fontSize={{ base: "4xl", lg: "6xl" }} fontWeight="bold" >TOKENOMIC</Text>
+          <Box className="container-two w-full max-w-screen-xl relative mx-auto" bg={"transparent"} color="white" py={10} px={4}>
+            <Flex justify="center" align="center" mb={16} flexWrap="wrap" gap={20}>
+              <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderRight={{ base: "none", md: "1px solid gray" }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
+                <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
+                  10M
+                </TextGradient>
+                <Text>Token Supply</Text>
+              </Box>
+              <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderRight={{ base: "none", md: "1px solid gray" }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
+                <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
+                  5%
+                </TextGradient>
+                <Text>Buy/Sell Tax</Text>
+              </Box>
+              <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderRight={{ base: "none", md: "1px solid gray" }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
+                <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
+                  3%
+                </TextGradient>
+                <Text>Max Wallet</Text>
+              </Box>
+              <Box px={{ base: 4, md: 8 }} py={{ base: 2, md: 0 }} borderBottom={{ base: "1px solid gray", md: "none" }} mb={{ base: 4, md: 0 }}>
+                <TextGradient fontSize="6xl" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
+                  0%
+                </TextGradient>
+                <Text>Transfer</Text>
+              </Box>
+            </Flex>
+            <Box textAlign="center">
+              <Text mb={2}>Contract address</Text>
+              <Flex
+                justify="center"
+                align="center"
+                border="1px solid gray"
+                borderRadius="full"
+                px={{ base: 4 }}
+                py={2}
+                mx="auto"
+                w="fit-content"
+                overflowX="auto"
+              >
+                <TextGradient fontSize="sm" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
+                  {contractAddress}
+                </TextGradient>
+                <IconButton
+                  ml={2} // Adjust margin for better spacing
+                  icon={<CopyOutlined />}
+                  aria-label="Copy to clipboard"
+                  onClick={copyToClipboard}
+                  size="sm"
+                  colorScheme="transparent"
+                />
+              </Flex>
+            </Box>
+          </Box>
+        </Flex>
 
 
 
