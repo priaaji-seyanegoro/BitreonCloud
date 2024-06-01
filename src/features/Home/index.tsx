@@ -23,7 +23,7 @@ import {
   Text,
   useToast
 } from "@chakra-ui/react";
-import welcomeBackground from "@/assets/welcome-animated.gif"
+import welcomeBackground from "@/assets/welcome.gif"
 import clsx from "clsx";
 import Chip from "@/components/Chip";
 import AboutImage3 from '@/assets/about-3-powerlink.png'
