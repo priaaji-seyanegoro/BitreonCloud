@@ -7,10 +7,10 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "Power Link | SECURE YOUR DIGITAL SURFING WITH CONFIDENCE";
+const app_title = "Power Link | REINVENTING DATA SECURITY AND PRIVACY";
 const app_name = "Power Link";
 const description =
-  "Cloudnet AI plays a pivotal role in connecting conventional cloud computing with the distinctive requirements of the Web3 era, leveraging AI and machine learning to boost both efficiency and security.";
+  "EXPERIENCE SECURE AND SCALABLE PRIVACY PROTECTION WITH POWER LINK'S ADVANCED VPN, ENSURING YOUR DATA REMAINS CONFIDENTIAL AND SECURE.";
 
 export const metadata: Metadata = {
   title: app_title,
