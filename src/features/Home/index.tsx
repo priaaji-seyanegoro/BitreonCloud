@@ -20,18 +20,13 @@ import {
   Box,
   Button,
   Flex,
-  IconButton,
   Text,
   useToast,
   Grid,
 } from "@chakra-ui/react";
-import welcomeBackground from "@/assets/welcome.gif"
 import clsx from "clsx";
 import Chip from "@/components/Chip";
-import AboutImage3 from '@/assets/about-3-powerlink.png'
 import { investments } from "./constants/investments";
-import TextGradient from "@/components/Text/TextGradient";
-import { CopyOutlined } from "@ant-design/icons";
 import FAQSection from "./sections/FAQSections";
 import RoadmapStepper from "./sections/RoadmapSections";
 
@@ -68,7 +63,7 @@ const Home: React.FC<Props> = () => {
       <div className={` homepage-container ${kanit.className}`}>
         <div
           id="welcome"
-          className="h-[7em] lg:h-[6em] xl:h-[15em] relative z-30"
+          className="h-[7em] lg:h-[15em] relative z-30"
         />
 
         <Image
@@ -83,7 +78,6 @@ const Home: React.FC<Props> = () => {
         <div className="welcome-container lg:mt-15 max-w-screen-xl mx-auto">
           <div className="welcome-wrapper">
             <div className={`w-full sm:px-8 lg:px-14`}>
-
               <div
                 className={clsx(
                   'text-center mx-auto  w-[300px] lg:w-[850px] text-3xl lg:text-8xl font-bold text-white uppercase m-0 p-0 mb-2 leading-tight',
@@ -122,77 +116,75 @@ const Home: React.FC<Props> = () => {
               </div>
 
             </div>
+          </div>
+        </div>
 
+        <Flex
+          className="container-two w-full relative mx-auto mt-[30px] lg:mt-56"
+          cursor="pointer"
+          w="100%"
+          h="auto"
+          bg={"transparent"}
+          justifyContent="center" // Rata tengah horizontal
+          alignItems="center" // Rata tengah vertikal
+          direction={"column"}
+        >
+          <Flex
+            className="w-full relative mx-auto mt-[50px] lg:mt-0"
+            direction={{ base: "column", md: "row" }}
+            textAlign={{ base: "center", md: "left" }}
+            align="center"
+            justify="center"
+          >
             <Flex
-              className="container-two w-full relative mx-auto mt-[30px] lg:mt-56"
+              className="w-full mx-auto"
               cursor="pointer"
               w="100%"
               h="auto"
-              bg={"transparent"}
+              rounded="lg"
+              backgroundSize="cover"
+              backgroundPosition="center"
+              backgroundRepeat="no-repeat"
               justifyContent="center" // Rata tengah horizontal
               alignItems="center" // Rata tengah vertikal
-              direction={"column"}
+              direction={"row"}
             >
+
               <Flex
-                className="w-full relative mx-auto mt-[50px] lg:mt-0"
-                direction={{ base: "column", md: "row" }}
-                textAlign={{ base: "center", md: "left" }}
-                align="center"
-                justify="center"
+                justifyContent={{ base: "center", lg: "space-between" }}
+                alignItems="center"
+                flexWrap="wrap"
+                gap={{ base: 6, lg: 32 }}
               >
-                <Flex
-                  className="w-full mx-auto"
-                  cursor="pointer"
-                  w="100%"
-                  h="auto"
-                  rounded="lg"
-                  backgroundSize="cover"
-                  backgroundPosition="center"
-                  backgroundRepeat="no-repeat"
-                  justifyContent="center" // Rata tengah horizontal
-                  alignItems="center" // Rata tengah vertikal
-                  direction={"row"}
-                >
-
-                  <Flex
-                    justifyContent={{ base: "center", lg: "space-between" }}
-                    alignItems="center"
-                    flexWrap="wrap"
-                    gap={{ base: 6, lg: 32 }}
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.2 }} // Smooth animation
+                    viewport={{ once: false, amount: 0.8 }}
+                  // style={{ flexBasis: '100%', display: 'flex', justifyContent: 'center' }} // Ensure proper layout for animation
                   >
-                    {features.map((feature, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.2 }} // Smooth animation
-                        viewport={{ once: false, amount: 0.8 }}
-                      // style={{ flexBasis: '100%', display: 'flex', justifyContent: 'center' }} // Ensure proper layout for animation
-                      >
-                        <Box key={index} textAlign="center" px={5} >
-                          <Image
-                            className="w-full object-contain"
-                            src={feature.img}
-                            alt={feature.name}
-                          />
-                        </Box>
-                      </motion.div>
+                    <Box key={index} textAlign="center" px={5} >
+                      <Image
+                        className="w-full object-contain"
+                        src={feature.img}
+                        alt={feature.name}
+                      />
+                    </Box>
+                  </motion.div>
 
 
-                    ))}
-                  </Flex>
-                </Flex>
-
+                ))}
               </Flex>
             </Flex>
-          </div>
 
-        </div>
+          </Flex>
+        </Flex>
 
 
         <div
-          id="about"
-          className="h-[10em] lg:h-[20em] relative z-30"
+          className="h-[10em] lg:h-[18em] relative z-30"
         />
 
         <motion.div
@@ -256,12 +248,7 @@ const Home: React.FC<Props> = () => {
 
         </motion.div>
 
-
-        <div
-          className=" h-[1em] lg:h-[5em] relative z-30"
-        />
-
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -321,8 +308,12 @@ const Home: React.FC<Props> = () => {
             </Box>
           </Flex>
 
-        </motion.div>
+        </motion.div> */}
 
+        <div
+          id="about"
+          className=" h-[1em] lg:h-[5em] relative z-30"
+        />
 
         <div className={`${kanit.className} relative gradient-border m-5 lg:m-24 p-4 lg:p-7`}>
           <motion.div
@@ -345,10 +336,10 @@ const Home: React.FC<Props> = () => {
             >
               <Box flex="1" px={4}>
                 <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
-                  We provide investment feature for crypto currency
+                  About US
                 </Text>
                 <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
-                  Our platform offers a secure investment feature for cryptocurrencies, allowing you to grow your digital wealth with ease. Take advantage of our user-friendly interface and extensive range of supported cryptocurrencies to make informed investment decisions. Safeguard your assets and maximize your returns with our reliable and transparent investment options.
+                  Built on advanced network architecture, Power Link delivers robust and scalable solutions tailored to protect your data. Whether you're browsing the web, communicating securely, or transferring sensitive information, our services offer unparalleled security and privacy.
                 </Text>
                 <Button
                   as="a"
@@ -363,89 +354,95 @@ const Home: React.FC<Props> = () => {
                   <Text mr={2}>Read More</Text>
                 </Button>
               </Box>
-              <Box flex="1" px={4} display="flex" justifyContent="center" alignItems="center" maxH="400px" maxW="400px">
-                <Image
-                  src={AboutImage3}
-                  alt={"Investment Feature"}
-                />
+              <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center" position="relative">
+                <video
+                  className="relative rounded-lg"
+                  src="/about-2-powerlink.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  Your browser does not support the video tag.
+                </video>
+
+                <Chip text="Omnicos directe" className="absolute top-[15px] lg:top-2 left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                <Chip text="High Security" className="absolute bottom-25 lg:bottom-[150px] right-7 lg:right-9 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                <Chip text="Plu Simplic" className="absolute bottom-[13px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
               </Box>
             </Flex>
           </motion.div>
-
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          viewport={{ once: false, amount: 0.8 }}        >
-          <Flex
-            id="investment"
-            className="container-two w-full relative mx-auto"
-            w="100%"
-            h="auto"
-            justifyContent="center"
-            alignItems="center"
-            direction="column"
-            px={0}
-            py={0}
-            mx={{ base: '10' }}
-            gap={0}
-          >
-            <Box className="container-two w-full max-w-screen-xl relative mx-auto px={4}">
-              <Text
-                width={{ base: 'auto', lg: '500px' }}
-                fontSize="3xl"
-                fontWeight="bold"
-                textAlign={{ base: 'center', lg: 'left' }}
-                mb={8}
-                color="white"
-                textTransform="uppercase"
-              >
-                We provide investment feature for crypto currency
-              </Text>
-              <Grid
-                templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
-                gap={6}
-                px={4}
-              >
-                {investments.map((investment, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.2 }}
-                    viewport={{ once: false, amount: 0.8 }}
-                  >
-                    <Box
-                      bg="#1C1B1B"
-                      p={6}
-                      borderRadius="lg"
-                      boxShadow="lg"
-                      border="1px solid"
-                      borderColor="#152FE8"
-                      maxW="400px"
-                      w="100%"
-                      mx="auto"
-                    >
-                      <Box maxW="72px" mb="10px">
-                        <Image className="w-full object-contain" src={investment.img} alt={investment.title} />
-                      </Box>
-                      <Text align="start" fontSize="xl" fontWeight="bold" mb={2} color="white">
-                        {investment.title}
-                      </Text>
-                      <Text align="start" fontSize="md" color="gray.400">
-                        {investment.desc}
-                      </Text>
-                    </Box>
-                  </motion.div>
-                ))}
-              </Grid>
-            </Box>
-          </Flex>
-        </motion.div>
-
         <div
+          className=" h-[1em] lg:h-[5em] relative z-30"
+        />
+        <Flex
+          id="investment"
+          className="container-two w-full relative mx-auto"
+          w="100%"
+          h="auto"
+          justifyContent="center"
+          alignItems="center"
+          direction="column"
+          px={0}
+          py={0}
+          mx={{ base: '10' }}
+          gap={0}
+        >
+          <Box className="container-two w-full max-w-screen-xl relative mx-auto px={4}">
+            <Text
+              width={{ base: 'auto', lg: '500px' }}
+              fontSize="3xl"
+              fontWeight="bold"
+              textAlign={{ base: 'center', lg: 'left' }}
+              mb={8}
+              color="white"
+              textTransform="uppercase"
+            >
+              We provide feature for crypto currency
+            </Text>
+            <Grid
+              templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
+              gap={6}
+              px={4}
+            >
+              {investments.map((investment, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.2 }}
+                  viewport={{ once: false, amount: 0.8 }}
+                >
+                  <Box
+                    bg="#1C1B1B"
+                    p={6}
+                    borderRadius="lg"
+                    boxShadow="lg"
+                    border="1px solid"
+                    borderColor="#152FE8"
+                    maxW="400px"
+                    w="100%"
+                    mx="auto"
+                  >
+                    <Box maxW="72px" mb="10px">
+                      <Image className="w-full object-contain" src={investment.img} alt={investment.title} />
+                    </Box>
+                    <Text align="start" fontSize="xl" fontWeight="bold" mb={2} color="white">
+                      {investment.title}
+                    </Text>
+                    <Text align="start" fontSize="md" color="gray.400">
+                      {investment.desc}
+                    </Text>
+                  </Box>
+                </motion.div>
+              ))}
+            </Grid>
+          </Box>
+        </Flex>
+
+        {/* <div
           id="tokenomics"
           className="h-[8.5em] lg:h-[13em] relative z-30"
         />
@@ -531,12 +528,27 @@ const Home: React.FC<Props> = () => {
               </Box>
             </Box>
           </Flex>
-        </motion.div>
+        </motion.div> */}
+
+        <div
+          id="roadmap"
+          className="h-[1.5em] lg:h-[9.5em] relative z-30"
+        />
+
+        <Box color="white" position="relative" zIndex={30}>
+          <Image
+            src={BackgroundWaveRoadMap}
+            alt="roadmap"
+            priority
+            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
+          />
+          <RoadmapStepper />
+        </Box>
 
 
         <div
           id="faq"
-          className="h-[8.5em] lg:h-[13em] relative z-30"
+          className="h-[6em] lg:h-[8em] relative z-30"
         />
 
         <motion.div
@@ -568,31 +580,6 @@ const Home: React.FC<Props> = () => {
           </Flex>
 
         </motion.div>
-
-
-        <div
-          id="roadmap"
-          className="h-[5.5em] lg:h-[9.5em] relative z-30"
-        />
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, ease: 'backOut' }} // Change the easing function here
-          viewport={{ once: true, amount: 0.8 }}
-        >
-          <Box color="white" position="relative">
-            <Image
-              src={BackgroundWaveRoadMap}
-              alt="roadmap"
-              priority
-              className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
-            />
-            <RoadmapStepper />
-          </Box>
-        </motion.div>
-
-
 
         <Box color="white" position="relative">
           <Image
@@ -650,7 +637,7 @@ const Home: React.FC<Props> = () => {
           </Flex>
         </Box>
 
-      </div>
+      </div >
     );
   } else {
     return (

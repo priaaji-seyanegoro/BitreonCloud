@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Flex, Text, useBreakpointValue } from '@chakra-ui/react';
 import { roadmapData, Phase, Step } from '../constants/roadmap'; // Adjust the import path as needed
 import TextGradient from '@/components/Text/TextGradient';
+import { motion } from 'framer-motion';
 
 const RoadmapStepper: React.FC = () => {
     return (
@@ -19,7 +20,7 @@ interface PhaseSectionProps {
 
 const PhaseSection: React.FC<PhaseSectionProps> = ({ phase }) => {
     return (
-        <>
+        <div>
             {/* Phase Title and Subtitle */}
 
 
@@ -27,20 +28,28 @@ const PhaseSection: React.FC<PhaseSectionProps> = ({ phase }) => {
             <Flex direction="column" w="full" position="relative" align="center">
                 <Text className='mb-16' fontSize={{ base: "4xl", lg: "6xl" }} fontWeight="bold" >ROADMAP</Text>
                 {phase.steps.map((step, stepIndex) => (
-                    <Flex
+                    <motion.div
                         key={stepIndex}
-                        direction={{ base: "row" }}
-                        align="center"
-                        position="relative"
-                        zIndex={1}
-                        px={{ base: 4, md: 0 }}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: 'easeInOut', delay: stepIndex * 0.2 }}
+                        viewport={{ once: false, amount: 0.8 }}
                     >
-                        <StepperIndicator step={stepIndex + 1} />
-                        <StepperStep step={step} />
-                    </Flex>
+                        <Flex
+                            key={stepIndex}
+                            direction={{ base: "row" }}
+                            align="center"
+                            position="relative"
+                            zIndex={1}
+                            px={{ base: 4, md: 0 }}
+                        >
+                            <StepperIndicator step={stepIndex + 1} />
+                            <StepperStep step={step} />
+                        </Flex>
+                    </motion.div>
                 ))}
             </Flex>
-        </>
+        </div>
     );
 };
 
@@ -102,7 +111,7 @@ const StepperIndicator: React.FC<StepperIndicatorProps> = ({ step }) => {
                 </Flex>
             )}
 
-            <Flex direction="column" align="center" ml={{ md:isActive ? 1 : 0, xs:isActive ? 1 : 0}}>
+            <Flex direction="column" align="center" ml={{ md: isActive ? 1 : 0, xs: isActive ? 1 : 0 }}>
 
                 <Box
                     w="28px"
