@@ -105,7 +105,7 @@ const Home: React.FC<Props> = () => {
             >
               <Box
                 className={clsx(
-                  'w-[320px] lg:w-[850px] text-4xl lg:text-7xl 3xl:text-8xl font-bold text-white uppercase leading-tight',
+                  'w-[320px] lg:w-[850px] text-2xl md:text-4xl lg:text-7xl 3xl:text-8xl font-bold text-white uppercase leading-tight',
                   kanitBold.className
                 )}
               >
@@ -121,7 +121,7 @@ const Home: React.FC<Props> = () => {
             >
               <Box
                 className={clsx(
-                  'w-[320px] sm:w-[500px] md:w-[500px] lg:w-[650px] text-[16px] sm:text-[14px] text-[#CBCBCB] uppercase leading-tight mt-4',
+                  'w-[320px] sm:w-[500px] md:w-[500px] lg:w-[650px] text-[10px] lg:text-[16px] text-[#CBCBCB] uppercase leading-tight mt-4',
                   kanit.className
                 )}
               >
@@ -347,7 +347,7 @@ const Home: React.FC<Props> = () => {
           >
             <Flex
               className="container-two w-full max-w-screen-xl relative mx-auto "
-              direction={{ base: "column", md: "row" }}
+              direction={{ base: "column-reverse", md: "row" }}
               textAlign={{ base: "center", md: "left" }}
               h="auto"
               align="center"
@@ -389,9 +389,9 @@ const Home: React.FC<Props> = () => {
                   Your browser does not support the video tag.
                 </video>
 
-                <Chip text="Omnicos directe" className="absolute top-[28px] lg:top-12 left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-                <Chip text="High Security" className="absolute bottom-24 lg:bottom-[150px] right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-                <Chip text="Plu Simplic" className="absolute bottom-[40px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                <Chip text="Omnicos directe" className="absolute top-[15px] lg:top-2 left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                <Chip text="High Security" className="absolute bottom-20 lg:bottom-[150px] right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                <Chip text="Plu Simplic" className="absolute bottom-[15px] left-9 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
               </Box>
             </Flex>
           </motion.div>
