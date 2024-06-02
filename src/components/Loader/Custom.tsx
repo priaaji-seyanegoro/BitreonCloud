@@ -1,7 +1,8 @@
 import React from "react";
 import { kanit } from "@/utils/font";
-
+import Image from "next/image";
 import "./style.css";
+import loadingGif from "@/assets/loader.gif"
 
 interface Props { }
 
@@ -10,17 +11,19 @@ const YinLoader: React.FC<Props> = () => {
     <div
       className={`w-full h-screen flex flex-col justify-center items-center mx-auto overflow-hidden ${kanit.className}`}
     >
-      <div className="w-full h-28 flex items-center justify-center">
+      {/* <div className="w-full h-28 flex items-center justify-center">
         <div className="loader" />
+      </div> */}
+      <div className="w-full h-28 flex items-center justify-center">
+        <Image
+          src={loadingGif}
+          alt="Loading"
+          className="gif-loader"
+          layout="intrinsic" // Adjust layout if needed
+          width={20} // Adjust width as necessary
+          height={20} // Adjust height as necessary
+        />
       </div>
-      {/* <h1 className="flex text-white text-xl lg:text-2xl 2xl:text-3xl font-semibold mt-4">
-        Loading
-        <div className="loading-pulse">
-          <span>.</span>
-          <span>.</span>
-          <span>.</span>
-        </div>
-      </h1> */}
     </div>
   );
 };

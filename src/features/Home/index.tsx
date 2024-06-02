@@ -20,15 +20,21 @@ import {
   Box,
   Button,
   Flex,
+  IconButton,
   Text,
   useToast,
   Grid,
 } from "@chakra-ui/react";
+import welcomeBackground from "@/assets/welcome.gif"
 import clsx from "clsx";
 import Chip from "@/components/Chip";
+import AboutImage3 from '@/assets/about-3-powerlink.png'
 import { investments } from "./constants/investments";
+import TextGradient from "@/components/Text/TextGradient";
+import { CopyOutlined } from "@ant-design/icons";
 import FAQSection from "./sections/FAQSections";
 import RoadmapStepper from "./sections/RoadmapSections";
+import { base58 } from "ethers/lib/utils";
 
 interface Props { }
 
@@ -63,135 +69,150 @@ const Home: React.FC<Props> = () => {
       <div className={` homepage-container ${kanit.className}`}>
         <div
           id="welcome"
-          className="h-[7em] lg:h-[15em] relative z-30"
+          className="relative z-30"
         />
 
-        <Image
-          src="/home-bg.gif"
-          width={10}
-          height={10}
-          alt="roadmap"
-          priority
-          className="w-[100%] h-[400px] lg:h-[auto] absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
-        />
 
-        <div className="welcome-container lg:mt-15 max-w-screen-xl mx-auto">
-          <div className="welcome-wrapper">
-            <div className={`w-full sm:px-8 lg:px-14`}>
-              <div
+        <Flex
+          className="welcome-container w-full relative mx-auto"
+          cursor="pointer"
+          w="100%"
+          h={{ base: "auto", lg: "100vh" }} // Full screen height on larger screens
+          bg={"transparent"}
+          backgroundImage="url('/home-bg.gif')"
+          backgroundSize="cover"
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          justifyContent="center" // Center horizontally
+          alignItems="center" // Center vertically
+          direction={"column"}
+          zIndex={1} // Ensure it stacks properly with the navbar
+          pt={{ base: "24vh", md: "15vh", lg: "45vh", xl: "45vh", "2xl": "45vh" }} // Dynamic top padding
+          pb={{ base: "20vh", md: "12vh", lg: "25vh", xl: "35vh", "2xl": "35vh" }} // Dynamic bottom padding
+        >
+          <Flex
+            direction="column"
+            alignItems="center"
+            textAlign="center"
+            px={{ base: 4, lg: 0 }}
+            w={{ base: "100%", lg: "auto" }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.2 }} // Add a delay for staggered animation
+              viewport={{ once: false, amount: 0.8 }}
+            >
+              <Box
                 className={clsx(
-                  'text-center mx-auto  w-[300px] lg:w-[850px] text-3xl lg:text-8xl font-bold text-white uppercase m-0 p-0 mb-2 leading-tight',
+                  'w-[320px] lg:w-[850px] text-4xl lg:text-7xl 2xl:text-8xl font-bold text-white uppercase leading-tight',
                   kanitBold.className
                 )}
               >
                 Reinventing Data Security and Privacy
-              </div>
+              </Box>
+            </motion.div>
 
-              <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.4 }} // Add a delay for staggered animation
+              viewport={{ once: false, amount: 0.8 }}
+            >
+              <Box
                 className={clsx(
-                  'text-center mx-auto w-[180px] lg:w-[650px] text-[5px] lg:text-[15px] text-[#CBCBCB] uppercase leading-tight m-0 text-xs lg:text-base',
+                  'w-[320px] sm:w-[500px] md:w-[500px] lg:w-[650px] text-[16px] sm:text-[14px] text-[#CBCBCB] uppercase leading-tight mt-4',
                   kanit.className
                 )}
               >
                 Experience secure and scalable privacy protection with Power Link's advanced VPN, ensuring your data remains confidential and secure.
-              </div>
+              </Box>
+            </motion.div>
 
-              <div className="text-center mx-auto mt-4 lg:mt-6 ">
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.6 }} // Add a delay for staggered animation
+              viewport={{ once: false, amount: 0.8 }}
+            >
+              <div className="mt-8">
                 <Link
                   href={socialsLink.telegram}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Button
-                    className={clsx(
-                      kanitBold.className,
-                      'text-white px-10 w-[70px] lg:w-[174px] text-[8px] lg:text-lg bg-gradient-to-r from-[#4260FF] to-[#0024E1] rounded-full'
-                    )}
-                    variant="outline"
-                    size={{ base: "xs", lg: 'lg' }}
+                    className={`${kanitBold.className} w-[174px] text-white`}
+                    variant={"outline"}
+                    rounded="full"
+                    size={{ base: "md", lg: "lg" }}
+                    bgGradient="linear-gradient(97.11deg, #4260FF 37.38%, #0024E1 115.64%)"
+                    _hover={{
+                      bgGradient: "linear(to-r, #3348FF, #001EB1)", // Add hover effect for better UX
+                    }}
                   >
                     Choose Plan
                   </Button>
                 </Link>
+
               </div>
-
-            </div>
-          </div>
-        </div>
-
-        <Flex
-          className="container-two w-full relative mx-auto mt-[30px] lg:mt-56"
-          cursor="pointer"
-          w="100%"
-          h="auto"
-          bg={"transparent"}
-          justifyContent="center" // Rata tengah horizontal
-          alignItems="center" // Rata tengah vertikal
-          direction={"column"}
-        >
-          <Flex
-            className="w-full relative mx-auto mt-[50px] lg:mt-0"
-            direction={{ base: "column", md: "row" }}
-            textAlign={{ base: "center", md: "left" }}
-            align="center"
-            justify="center"
-          >
-            <Flex
-              className="w-full mx-auto"
-              cursor="pointer"
-              w="100%"
-              h="auto"
-              rounded="lg"
-              backgroundSize="cover"
-              backgroundPosition="center"
-              backgroundRepeat="no-repeat"
-              justifyContent="center" // Rata tengah horizontal
-              alignItems="center" // Rata tengah vertikal
-              direction={"row"}
-            >
-
-              <Flex
-                justifyContent={{ base: "center", lg: "space-between" }}
-                alignItems="center"
-                flexWrap="wrap"
-                gap={{ base: 6, lg: 32 }}
-              >
-                {features.map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.2 }} // Smooth animation
-                    viewport={{ once: false, amount: 0.8 }}
-                  // style={{ flexBasis: '100%', display: 'flex', justifyContent: 'center' }} // Ensure proper layout for animation
-                  >
-                    <Box key={index} textAlign="center" px={5} >
-                      <Image
-                        className="w-full object-contain"
-                        src={feature.img}
-                        alt={feature.name}
-                      />
-                    </Box>
-                  </motion.div>
-
-
-                ))}
-              </Flex>
-            </Flex>
+            </motion.div>
 
           </Flex>
         </Flex>
 
+        <div
+          className="mt-24 relative z-30"
+        />
+
+        <Flex
+          className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
+          cursor="pointer"
+          w="100%"
+          h="auto"
+          justifyContent="center"
+          alignItems="center"
+          flexWrap={"wrap"}
+        >
+          <Flex
+            justifyContent={{ base: "center" }}
+            alignItems="center"
+            flexWrap="wrap"
+            gap={{ base: 12 }}
+          >
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.2 }} // Smooth animation
+                viewport={{ once: false, amount: 0.8 }}
+              // style={{ flexBasis: '100%', display: 'flex', justifyContent: 'center' }} // Ensure proper layout for animation
+              >
+                <Box key={index} textAlign="center" px={5} >
+                  <Image
+                    className="object-contain w-24 h-24 sm:w-32 sm:h-32 md:w-32 md:h-32 lg:w-32 lg:h-32"
+                    src={feature.img}
+                    alt={feature.name}
+                  />
+                </Box>
+              </motion.div>
+
+
+            ))}
+          </Flex>
+        </Flex>
 
         <div
-          className="h-[10em] lg:h-[18em] relative z-30"
+          className="mt-24 relative z-30"
         />
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.2 }} // Smooth animation
-          viewport={{ once: false, amount: 0.9 }}
+          viewport={{ once: false, amount: 0.5 }}
         >
           <Flex
             className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
@@ -204,7 +225,7 @@ const Home: React.FC<Props> = () => {
             justify="space-between"
             px={0}
             py={0}
-            mx={{ base: "10" }}
+            // mx={{ base: "10" }}
             gap={0}
 
           >
@@ -247,6 +268,12 @@ const Home: React.FC<Props> = () => {
 
 
         </motion.div>
+
+
+        <div
+          id="about"
+          className=" h-[1em] lg:h-[5em] relative z-30"
+        />
 
         {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -310,10 +337,6 @@ const Home: React.FC<Props> = () => {
 
         </motion.div> */}
 
-        <div
-          id="about"
-          className=" h-[1em] lg:h-[5em] relative z-30"
-        />
 
         <div className={`${kanit.className} relative gradient-border m-5 lg:m-24 p-4 lg:p-7`}>
           <motion.div
@@ -336,7 +359,7 @@ const Home: React.FC<Props> = () => {
             >
               <Box flex="1" px={4}>
                 <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
-                  About US
+                  We provide investment feature for crypto currency
                 </Text>
                 <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
                   Built on advanced network architecture, Power Link delivers robust and scalable solutions tailored to protect your data. Whether you're browsing the web, communicating securely, or transferring sensitive information, our services offer unparalleled security and privacy.
@@ -366,85 +389,89 @@ const Home: React.FC<Props> = () => {
                   Your browser does not support the video tag.
                 </video>
 
-                <Chip text="Omnicos directe" className="absolute top-[15px] lg:top-2 left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-                <Chip text="High Security" className="absolute bottom-25 lg:bottom-[150px] right-7 lg:right-9 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-                <Chip text="Plu Simplic" className="absolute bottom-[13px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                <Chip text="Omnicos directe" className="absolute top-[28px] lg:top-12 left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                <Chip text="High Security" className="absolute bottom-24 lg:bottom-[150px] right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                <Chip text="Plu Simplic" className="absolute bottom-[40px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
               </Box>
             </Flex>
           </motion.div>
+
         </div>
 
-        <div
-          className=" h-[1em] lg:h-[5em] relative z-30"
-        />
-        <Flex
-          id="investment"
-          className="container-two w-full relative mx-auto"
-          w="100%"
-          h="auto"
-          justifyContent="center"
-          alignItems="center"
-          direction="column"
-          px={0}
-          py={0}
-          mx={{ base: '10' }}
-          gap={0}
-        >
-          <Box className="container-two w-full max-w-screen-xl relative mx-auto px={4}">
-            <Text
-              width={{ base: 'auto', lg: '500px' }}
-              fontSize="3xl"
-              fontWeight="bold"
-              textAlign={{ base: 'center', lg: 'left' }}
-              mb={8}
-              color="white"
-              textTransform="uppercase"
-            >
-              We provide feature for crypto currency
-            </Text>
-            <Grid
-              templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
-              gap={6}
-              px={4}
-            >
-              {investments.map((investment, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.2 }}
-                  viewport={{ once: false, amount: 0.8 }}
-                >
-                  <Box
-                    bg="#1C1B1B"
-                    p={6}
-                    borderRadius="lg"
-                    boxShadow="lg"
-                    border="1px solid"
-                    borderColor="#152FE8"
-                    maxW="400px"
-                    w="100%"
-                    mx="auto"
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          viewport={{ once: false, amount: 0.5 }}        >
+          <Flex
+            id="investment"
+            className="container-two w-full relative mx-auto"
+            w="100%"
+            h="auto"
+            justifyContent="center"
+            alignItems="center"
+            direction="column"
+            px={0}
+            py={0}
+            mx={{ base: '10' }}
+            gap={0}
+          >
+            <Box className="container-two w-full max-w-screen-xl relative mx-auto px={4}">
+              <Text
+                width={{ base: 'auto', lg: '500px' }}
+                fontSize="3xl"
+                fontWeight="bold"
+                textAlign={{ base: 'center', lg: 'left' }}
+                mb={8}
+                color="white"
+                textTransform="uppercase"
+              >
+                We provide investment feature for crypto currency
+              </Text>
+              <Grid
+                templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
+                gap={6}
+                px={4}
+              >
+                {investments.map((investment, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.2 }}
+                    viewport={{ once: false, amount: 0.8 }}
                   >
-                    <Box maxW="72px" mb="10px">
-                      <Image className="w-full object-contain" src={investment.img} alt={investment.title} />
+                    <Box
+                      bg="#1C1B1B"
+                      p={6}
+                      borderRadius="lg"
+                      boxShadow="lg"
+                      border="1px solid"
+                      borderColor="#152FE8"
+                      maxW="400px"
+                      w="100%"
+                      mx="auto"
+                    >
+                      <Box maxW="72px" mb="10px">
+                        <Image className="w-full object-contain" src={investment.img} alt={investment.title} />
+                      </Box>
+                      <Text align="start" fontSize="xl" fontWeight="bold" mb={2} color="white">
+                        {investment.title}
+                      </Text>
+                      <Text align="start" fontSize="md" color="gray.400">
+                        {investment.desc}
+                      </Text>
                     </Box>
-                    <Text align="start" fontSize="xl" fontWeight="bold" mb={2} color="white">
-                      {investment.title}
-                    </Text>
-                    <Text align="start" fontSize="md" color="gray.400">
-                      {investment.desc}
-                    </Text>
-                  </Box>
-                </motion.div>
-              ))}
-            </Grid>
-          </Box>
-        </Flex>
+                  </motion.div>
+                ))}
+              </Grid>
+            </Box>
+          </Flex>
+        </motion.div>
 
         {/* <div
           id="tokenomics"
-          className="h-[8.5em] lg:h-[13em] relative z-30"
+          className="mt-12 relative z-30"
         />
 
         <motion.div
@@ -532,10 +559,10 @@ const Home: React.FC<Props> = () => {
 
         <div
           id="roadmap"
-          className="h-[1.5em] lg:h-[9.5em] relative z-30"
+          className="mt-12 relative z-30"
         />
 
-        <Box color="white" position="relative" zIndex={30}>
+        <Box color="white" position="relative">
           <Image
             src={BackgroundWaveRoadMap}
             alt="roadmap"
@@ -548,13 +575,13 @@ const Home: React.FC<Props> = () => {
 
         <div
           id="faq"
-          className="h-[6em] lg:h-[8em] relative z-30"
+          className="mt-12 relative z-30"
         />
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'backOut' }} // Change the easing function here
+          transition={{ duration: 0.5, ease: 'backOut' }} // Change the easing function here
           viewport={{ once: true, amount: 0.8 }}
         >
           <Flex
@@ -637,7 +664,7 @@ const Home: React.FC<Props> = () => {
           </Flex>
         </Box>
 
-      </div >
+      </div>
     );
   } else {
     return (

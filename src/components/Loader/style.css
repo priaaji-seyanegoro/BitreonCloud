@@ -6,6 +6,14 @@
   aspect-ratio: 1;
 }
 
+.gif-loader {
+  width: 100%;
+  height: 100%;
+  max-width: 100px; /* Adjust as necessary */
+  max-height: 100px; /* Adjust as necessary */
+  object-fit: contain;
+}
+
 .loader:before,
 .loader:after {
   content: "";
