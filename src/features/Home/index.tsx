@@ -105,7 +105,7 @@ const Home: React.FC<Props> = () => {
             >
               <Box
                 className={clsx(
-                  'w-[320px] lg:w-[850px] text-4xl lg:text-7xl 2xl:text-8xl font-bold text-white uppercase leading-tight',
+                  'w-[320px] lg:w-[850px] text-4xl lg:text-7xl 3xl:text-8xl font-bold text-white uppercase leading-tight',
                   kanitBold.className
                 )}
               >
