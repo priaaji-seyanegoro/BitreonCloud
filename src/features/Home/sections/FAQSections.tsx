@@ -41,6 +41,10 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
                 bg="black"
                 p={4}
                 borderRadius="xl"
+                _hover={{
+                    boxShadow: "0 0 20px 5px rgba(49, 130, 206, 0.5), 0 0 20px 5px rgba(56, 178, 172, 0.5)",
+                    transition: "box-shadow 0.3s ease-in-out",
+                }}
             >
                 <Flex align="center" justify="space-between" onClick={onToggle} cursor="pointer">
                     <Text color="white">{question}</Text>

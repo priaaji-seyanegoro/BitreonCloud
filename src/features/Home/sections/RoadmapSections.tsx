@@ -20,7 +20,7 @@ interface PhaseSectionProps {
 
 const PhaseSection: React.FC<PhaseSectionProps> = ({ phase }) => {
     return (
-        <div>
+        <>
             {/* Phase Title and Subtitle */}
 
 
@@ -46,10 +46,12 @@ const PhaseSection: React.FC<PhaseSectionProps> = ({ phase }) => {
                             <StepperIndicator step={stepIndex + 1} />
                             <StepperStep step={step} />
                         </Flex>
+
                     </motion.div>
+
                 ))}
             </Flex>
-        </div>
+        </>
     );
 };
 

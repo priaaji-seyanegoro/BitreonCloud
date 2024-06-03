@@ -81,7 +81,7 @@ const Navbar: React.FC<Props> = () => {
             <Image
               src={powerLinkLogo}
               alt="banner-nav-logo"
-              className="w-full md:w-full h-20 sm:h-16 object-contain object-left"
+              className="w-full md:w-full h-16 object-contain object-left"
             />
           </Link>
         </div>
@@ -106,8 +106,7 @@ const Navbar: React.FC<Props> = () => {
                 size={"lg"}
                 bgGradient="linear-gradient(97.11deg, #4260FF 37.38%, #0024E1 115.64%)"
                 _hover={{
-                  bgGradient: "linear-gradient(97.11deg, #0024E1 37.38%, #4260FF 115.64%)",
-                  boxShadow: "0 0 20px rgba(66, 96, 255, 0.5)",
+                  bgGradient: "linear(to-r, #3348FF, #001EB1)", // Add hover effect for better UX
                 }}
               >
                 Log In

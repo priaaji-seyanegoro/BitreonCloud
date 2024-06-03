@@ -33,3 +33,16 @@ body {
   padding: 0;
   margin: 0;
 }
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.twinkle {
+  animation: twinkle 3s infinite;
+}

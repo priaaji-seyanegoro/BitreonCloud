@@ -5,23 +5,23 @@ import Feature4 from '@/assets/icon_feature_4.png'
 
 export const investments = [
     {
-        title: "Unmatched Security",
-        desc: "Experience top-tier encryption that safeguards your data from prying eyes",
+        title: "Invest Payment Make Easy",
+        desc: "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth.",
         img: Feature1,
     },
     {
-        title: "Total Privacy",
-        desc: "No logging policies and IP masking, protecting your identity and online presence.",
+        title: "Lifetime Free Transaction",
+        desc: "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth.",
         img: Feature2,
     },
     {
-        title: "Hi-Speed Performance",
-        desc: "Enjoy lightning-fast connection speeds that do not compromise security.",
+        title: "Protect the Identity Crypto",
+        desc: "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth.",
         img: Feature3,
     },
     {
-        title: "Global Access",
-        desc: "Connect to a vast network of servers worldwide",
+        title: "Security and Control Over Money",
+        desc: "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth.",
         img: Feature4,
     },
 ];

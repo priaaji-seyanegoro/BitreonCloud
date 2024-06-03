@@ -12,8 +12,8 @@ import BackgroundWaveRoadMap from "@/assets/wave_2.png"
 import BackgroundWaveRoadMap1 from "@/assets/wave_1.png"
 import { motion } from 'framer-motion';
 
-import "./style.css";
-import Image from "next/image";
+// import "./style.css";
+// import Image from "next/image";
 import Link from "next/link";
 
 import {
@@ -25,7 +25,7 @@ import {
   useToast,
   Grid,
 } from "@chakra-ui/react";
-import welcomeBackground from "@/assets/welcome.gif"
+// import welcomeBackground from "@/assets/welcome.gif"
 import clsx from "clsx";
 import Chip from "@/components/Chip";
 import AboutImage3 from '@/assets/about-3-powerlink.png'
@@ -34,7 +34,7 @@ import TextGradient from "@/components/Text/TextGradient";
 import { CopyOutlined } from "@ant-design/icons";
 import FAQSection from "./sections/FAQSections";
 import RoadmapStepper from "./sections/RoadmapSections";
-import { base58 } from "ethers/lib/utils";
+import { Image } from "@chakra-ui/next-js";
 
 interface Props { }
 
@@ -105,7 +105,7 @@ const Home: React.FC<Props> = () => {
             >
               <Box
                 className={clsx(
-                  'w-[320px] lg:w-[850px] text-2xl md:text-4xl lg:text-7xl 3xl:text-8xl font-bold text-white uppercase leading-tight',
+                  'w-[320px] lg:w-[850px] text-4xl lg:text-8xl font-bold text-white uppercase leading-tight',
                   kanitBold.className
                 )}
               >
@@ -121,7 +121,7 @@ const Home: React.FC<Props> = () => {
             >
               <Box
                 className={clsx(
-                  'w-[320px] sm:w-[500px] md:w-[500px] lg:w-[650px] text-[10px] lg:text-[16px] text-[#CBCBCB] uppercase leading-tight mt-4',
+                  'w-[320px] sm:w-[500px] md:w-[500px] lg:w-[650px] text-[16px] sm:text-[14px] text-[#CBCBCB] uppercase leading-tight mt-4',
                   kanit.className
                 )}
               >
@@ -205,6 +205,7 @@ const Home: React.FC<Props> = () => {
         </Flex>
 
         <div
+          id="about"
           className="mt-24 relative z-30"
         />
 
@@ -271,11 +272,10 @@ const Home: React.FC<Props> = () => {
 
 
         <div
-          id="about"
           className=" h-[1em] lg:h-[5em] relative z-30"
         />
 
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -335,7 +335,7 @@ const Home: React.FC<Props> = () => {
             </Box>
           </Flex>
 
-        </motion.div> */}
+        </motion.div>
 
 
         <div className={`${kanit.className} relative gradient-border m-5 lg:m-24 p-4 lg:p-7`}>
@@ -347,7 +347,7 @@ const Home: React.FC<Props> = () => {
           >
             <Flex
               className="container-two w-full max-w-screen-xl relative mx-auto "
-              direction={{ base: "column-reverse", md: "row" }}
+              direction={{ base: "column", md: "row" }}
               textAlign={{ base: "center", md: "left" }}
               h="auto"
               align="center"
@@ -362,7 +362,7 @@ const Home: React.FC<Props> = () => {
                   We provide investment feature for crypto currency
                 </Text>
                 <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
-                  Built on advanced network architecture, Power Link delivers robust and scalable solutions tailored to protect your data. Whether you're browsing the web, communicating securely, or transferring sensitive information, our services offer unparalleled security and privacy.
+                  Our platform offers a secure investment feature for cryptocurrencies, allowing you to grow your digital wealth with ease. Take advantage of our user-friendly interface and extensive range of supported cryptocurrencies to make informed investment decisions. Safeguard your assets and maximize your returns with our reliable and transparent investment options.
                 </Text>
                 <Button
                   as="a"
@@ -377,21 +377,11 @@ const Home: React.FC<Props> = () => {
                   <Text mr={2}>Read More</Text>
                 </Button>
               </Box>
-              <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center" position="relative">
-                <video
-                  className="relative rounded-lg"
-                  src="/about-2-powerlink.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  Your browser does not support the video tag.
-                </video>
-
-                <Chip text="Omnicos directe" className="absolute top-[15px] lg:top-2 left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-                <Chip text="High Security" className="absolute bottom-20 lg:bottom-[150px] right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-                <Chip text="Plu Simplic" className="absolute bottom-[15px] left-9 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+              <Box flex="1" px={4} display="flex" justifyContent="center" alignItems="center" maxH="400px" maxW="400px">
+                <Image
+                  src={AboutImage3}
+                  alt={"Investment Feature"}
+                />
               </Box>
             </Flex>
           </motion.div>
@@ -469,7 +459,7 @@ const Home: React.FC<Props> = () => {
           </Flex>
         </motion.div>
 
-        {/* <div
+        <div
           id="tokenomics"
           className="mt-12 relative z-30"
         />
@@ -555,22 +545,7 @@ const Home: React.FC<Props> = () => {
               </Box>
             </Box>
           </Flex>
-        </motion.div> */}
-
-        <div
-          id="roadmap"
-          className="mt-12 relative z-30"
-        />
-
-        <Box color="white" position="relative">
-          <Image
-            src={BackgroundWaveRoadMap}
-            alt="roadmap"
-            priority
-            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
-          />
-          <RoadmapStepper />
-        </Box>
+        </motion.div>
 
 
         <div
@@ -607,6 +582,23 @@ const Home: React.FC<Props> = () => {
           </Flex>
 
         </motion.div>
+
+
+        <div
+          id="roadmap"
+          className="mt-12 relative z-30"
+        />
+
+        <Box color="white" position="relative">
+          <Image
+            src={BackgroundWaveRoadMap}
+            alt="roadmap"
+            priority
+            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
+          />
+          <RoadmapStepper />
+        </Box>
+
 
         <Box color="white" position="relative">
           <Image
