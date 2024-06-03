@@ -44,12 +44,16 @@ const AppFooter: React.FC<Props> = () => {
           borderColor="gray.600"
         >
           <Flex
-            direction={{ base: 'column', lg: 'row' }}
+            direction={{ base: 'column-reverse', lg: 'row' }}
             justifyContent="space-between"
             alignItems="center"
-            gap={8}
+            gap={12}
           >
-            <Flex direction={{ base: 'column', md: 'row' }} gap={10}>
+            <Flex
+              direction={{ base: 'row' }}
+              gap={10}
+              textAlign={{ base: "center", md: "start" }}
+            >
               <Box>
                 <Text fontSize="lg" fontWeight="bold" mb={4}>Navigation</Text>
                 <Box>

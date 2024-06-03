@@ -37,6 +37,7 @@ export interface Step {
   purpose: string;
   features: Feature[];
   active: boolean;
+  released: boolean;
 }
 
 export interface Phase {
@@ -65,6 +66,7 @@ export const roadmapData: Phase = {
         },
       ],
       active: true,
+      released: true,
     },
     {
       title: "Expanding Capabilities and Market Reach",
@@ -90,6 +92,7 @@ export const roadmapData: Phase = {
         },
       ],
       active: false,
+      released: true,
     },
     {
       title: "Client-Side Python Program (CLI)",
@@ -107,6 +110,25 @@ export const roadmapData: Phase = {
         },
       ],
       active: false,
+      released: false,
+    },
+    {
+      title: "Client-Side Python Program (CLI)",
+      subtitle: "Initial MVP Setup",
+      purpose:
+        "Enables GPU owners to register their devices with the central server and listen for incoming tasks.",
+      features: [
+        { description: "Detect local GPU resources." },
+        {
+          description:
+            "Establish WebSocket connections to the central server for real-time communication.",
+        },
+        {
+          description: "Receive task details and execute tasks using the GPU.",
+        },
+      ],
+      active: false,
+      released: false,
     },
   ],
 };

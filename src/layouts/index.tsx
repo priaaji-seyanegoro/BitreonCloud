@@ -41,7 +41,7 @@ const BaseLayout: React.FC<Props> = ({ children }) => {
             src={AppBackground}
             alt="roadmap"
             priority
-            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat twinkle"
+            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
           />
         )}
         {children}

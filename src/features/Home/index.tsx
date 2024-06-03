@@ -10,6 +10,8 @@ import { kanit, kanitBold } from "@/utils/font";
 import { features } from "./constants/features";
 import BackgroundWaveRoadMap from "@/assets/wave_2.png"
 import BackgroundWaveRoadMap1 from "@/assets/wave_1.png"
+import PowerLinkLogo from "@/assets/PowerLink-Logo.png"
+import PowerLinkText from "@/assets/PowerLink-text.png"
 import { motion } from 'framer-motion';
 
 // import "./style.css";
@@ -249,7 +251,7 @@ const Home: React.FC<Props> = () => {
                 p={0}
                 _hover={{ textDecoration: 'underline' }}
               >
-                <Text mr={2}>Read More</Text>
+                <Text mr={2}>READ MORE</Text>
               </Button>
             </Box>
             <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center">
@@ -347,56 +349,86 @@ const Home: React.FC<Props> = () => {
           transition={{ duration: 0.8, ease: 'easeInOut' }}
           viewport={{ once: false, amount: 0.8 }}
         >
-          <div className={`${kanit.className} relative gradient-border m-5 lg:m-24 p-4 lg:p-7`}>
-            <Flex
-              className="container-two w-full max-w-screen-xl relative mx-auto "
-              direction={{ base: "column", md: "row" }}
-              textAlign={{ base: "center", md: "left" }}
-              h="auto"
-              align="center"
-              justify="space-between"
-              px={0}
-              py={"40px"}
-              mx={{ base: "10" }}
-              gap={0}
+          <div className={`${kanit.className} relative m-5 lg:m-24 p-4 lg:p-7`}>
+            <Box
+              className="container-two w-full max-w-screen-xl relative mx-auto"
+              position="relative"
+              p="2px"
+              bgGradient="linear(to-b, gray, transparent)"
+              borderRadius="lg"
             >
-              <Box flex="1" px={4}>
-                <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
-                  About Us
-                </Text>
-                <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
-                  Built on advanced network architecture, Power Link delivers robust and scalable solutions tailored to protect your data. Whether you're browsing the web, communicating securely, or transferring sensitive information, our services offer unparalleled security and privacy.
-                </Text>
-                <Button
-                  as="a"
-                  href={"/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  color="#667CFF"
-                  bg="transparent"
-                  p={0}
-                  _hover={{ textDecoration: 'underline' }}
-                >
-                  <Text mr={2}>Read More</Text>
-                </Button>
-              </Box>
-              <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center" position="relative">
-                <video
-                  className="relative rounded-lg"
-                  src="/about-2-powerlink.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  Your browser does not support the video tag.
-                </video>
+              <Flex
+                className="container-two w-full max-w-screen-xl relative mx-auto"
+                direction={{ base: "column", md: "row" }}
+                textAlign={{ base: "center", md: "left" }}
+                h="auto"
+                align="center"
+                bg={"black"}
+                justify="space-between"
+                borderRadius="lg"
+                px={0}
+                py={"40px"}
+                mx={{ base: "10" }}
+                gap={0}
+              >
+                <Box flex="1" px={4}>
+                  <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
+                    About Us
+                  </Text>
+                  <Flex
+                    direction={"row"}
+                    align={"center"}
+                  >
+                    <Box>
+                      <Image
+                        className="object-contain w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-16 lg:h-16"
+                        src={PowerLinkLogo}
+                        alt={"Power Link"}
+                      />
+                    </Box>
+                    <Box >
+                      <Image
+                        className="object-contain w-24 h-24 sm:w-32 sm:h-32 md:w-32 md:h-32 lg:w-32 lg:h-32"
+                        src={PowerLinkText}
+                        alt={"Power Link"}
+                      />
+                    </Box>
+                  </Flex>
+                  <Text fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
+                    Built on advanced network architecture, Power Link delivers robust and scalable solutions tailored to protect your data. Whether you're browsing the web, communicating securely, or transferring sensitive information, our services offer unparalleled security and privacy.
+                  </Text>
+                  <Button
+                    as="a"
+                    href={"/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color="#667CFF"
+                    bg="transparent"
+                    p={0}
+                    _hover={{ textDecoration: 'underline' }}
+                  >
+                    <Text mr={2}>READ MORE</Text>
+                  </Button>
+                </Box>
+                <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center" position="relative">
+                  <video
+                    className="relative rounded-lg"
+                    src="/about-2-powerlink.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    Your browser does not support the video tag.
+                  </video>
 
-                <Chip text="Omnicos directe" className="absolute top-[28px] lg:top-12 left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-                <Chip text="High Security" className="absolute bottom-24 lg:bottom-[150px] right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-                <Chip text="Plu Simplic" className="absolute bottom-[40px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-              </Box>
-            </Flex>
+                  <Chip text="Omnicos directe" className="absolute top-[14px] left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                  <Chip text="High Security" className="absolute bottom-42 right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                  <Chip text="Plu Simplic" className="absolute bottom-[10px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                </Box>
+              </Flex>
+            </Box>
+
           </div>
         </motion.div >
 
@@ -658,12 +690,27 @@ const Home: React.FC<Props> = () => {
                 alignItems={{ base: "center", lg: "start" }}
                 flexDirection={{ base: "column", md: "row" }}
                 margin={{ base: 10 }}
+
               >
                 <div className="relative inline-flex items-center justify-center p-[2px] bg-gradient-to-r from-blue-500 to-teal-400 rounded-full">
-                  <button className="relative inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full">
+                  <button
+                    className="relative inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full"
+                    style={{ transition: "box-shadow 0.3s ease-in-out" }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.boxShadow = "0 0 20px 5px rgba(49, 130, 206, 0.5), 0 0 20px 5px rgba(56, 178, 172, 0.5)";
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.boxShadow = "none";
+                    }}
+                  >
                     Download Now
                   </button>
                 </div>
+                {/* <div className="relative inline-flex items-center justify-center p-[2px] bg-gradient-to-r from-blue-500 to-teal-400 rounded-full">
+                  <button className="relative inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full">
+                    Download Now
+                  </button>
+                </div> */}
               </Flex>
             </motion.div>
           </Flex>
