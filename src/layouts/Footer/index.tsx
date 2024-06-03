@@ -26,7 +26,8 @@ const AppFooter: React.FC<Props> = () => {
   const abouts = [
     { name: 'Twitter', url: 'https://x.com/PowerLinkVPN' },
     { name: 'Telegram', url: 'https://t.me/PowerLinkVPN' },
-    { name: 'Support', url: 'mailto:support@powerlinkvpn.com' },
+    { name: 'Documentation', url: '/' }
+    // { name: 'Contact Us', url: 'mailto:support@powerlinkvpn.com' },
   ];
 
   if (!useIsMounted) {
@@ -39,7 +40,7 @@ const AppFooter: React.FC<Props> = () => {
         <Box
           maxW="7xl"
           mx="auto"
-          p={16}
+          p={10}
           borderRadius="xl"
           border="1px"
           borderColor="gray.600"
@@ -56,27 +57,21 @@ const AppFooter: React.FC<Props> = () => {
               textAlign={{ base: "center", md: "start" }}
             >
               <Box>
-                <Text fontSize="lg" fontWeight="bold" mb={4}>Navigation</Text>
-                <Box>
-                  <Link href="#">Home</Link>
-                </Box>
-                <Box>
-                  <Link href="#about">About</Link>
-                </Box>
-                <Box>
-                  <Link href="#roadmap">Roadmap</Link>
-                </Box>
-                <Box>
-                  <Link href="#faq">FAQ</Link>
-                </Box>
-              </Box>
-              <Box>
-                <Text fontSize="lg" fontWeight="bold" mb={4}>Socials</Text>
                 {abouts.map((about, index) => (
                   <Box key={index}>
-                    <Link href={about.url}>{about.name}</Link>
+                    <Link href={about.url}>
+                      <Text fontSize={{ base: 'sm', lg: 'xl' }} fontWeight="bold" mb={4}>{about.name}</Text>
+                    </Link>
                   </Box>
                 ))}
+              </Box>
+              <Box>
+                <Box>
+                  <Link href="mailto:support@powerlinkvpn.com">
+                    <Text fontSize={{ base: 'sm', lg: 'xl' }} fontWeight="bold" mb={4}>Contact Us</Text>
+                  </Link>
+                </Box>
+
               </Box>
             </Flex>
             <Flex

@@ -95,8 +95,8 @@ const Navbar: React.FC<Props> = () => {
         <div className="w-1/2 lg:w-1/4 sm:flex justify-end font-semibold">
           <div className="w-full  hidden sm:flex justify-end">
             <Link
-              href={socialsLink.telegram}
-              target="_blank"
+              href="/"
+              // target="_blank"
               rel="noopener noreferrer"
             >
               <Button
@@ -109,7 +109,7 @@ const Navbar: React.FC<Props> = () => {
                   bgGradient: "linear(to-r, #3348FF, #001EB1)", // Add hover effect for better UX
                 }}
               >
-                Log In
+                $PLINK
               </Button>
             </Link>
 

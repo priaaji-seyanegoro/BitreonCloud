@@ -131,7 +131,7 @@ const Home: React.FC<Props> = () => {
             </motion.div>
 
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.6 }} // Add a delay for staggered animation
@@ -158,7 +158,7 @@ const Home: React.FC<Props> = () => {
                 </Link>
 
               </div>
-            </motion.div>
+            </motion.div> */}
 
           </Flex>
         </Flex>
@@ -238,7 +238,7 @@ const Home: React.FC<Props> = () => {
               <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
                 PowerLink is revolutionizing digital security and privacy, offering unparalleled protection and performance. Our platform provides users with advanced security protocols, global connectivity, and seamless performance, ensuring that your online activities remain private and secure. With a commitment to privacy and continuous innovation, PowerLink is your go-to solution for secure and unrestricted internet access
               </Text>
-              <Button
+              {/* <Button
                 as="a"
                 href={"/"}
                 target="_blank"
@@ -251,7 +251,7 @@ const Home: React.FC<Props> = () => {
                 _hover={{ textDecoration: 'underline' }}
               >
                 <Text mr={2}>READ MORE</Text>
-              </Button>
+              </Button> */}
             </Box>
             <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center">
               <video
@@ -418,9 +418,9 @@ const Home: React.FC<Props> = () => {
                     Your browser does not support the video tag.
                   </video>
 
-                  <Chip text="Omnicos directe" className="absolute top-[14px] left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                  <Chip text="lightning-fast connection" className="absolute top-[14px] left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
                   <Chip text="High Security" className="absolute bottom-42 right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-                  <Chip text="Plu Simplic" className="absolute bottom-[10px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                  <Chip text="Total Privacy" className="absolute bottom-[10px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
                 </Box>
               </Flex>
             </Box>
