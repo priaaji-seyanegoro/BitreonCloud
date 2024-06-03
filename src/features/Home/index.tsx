@@ -127,7 +127,7 @@ const Home: React.FC<Props> = () => {
                   kanit.className
                 )}
               >
-                Experience secure and scalable privacy protection with Power Link's advanced VPN, ensuring your data remains confidential and secure.
+                Experience secure and scalable privacy protection with PowerLink's advanced VPN, ensuring your data remains confidential and secure.
               </Box>
             </motion.div>
 
@@ -237,7 +237,7 @@ const Home: React.FC<Props> = () => {
                 Why PowerLink ?
               </Text>
               <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
-                Power Link is revolutionizing digital security and privacy, offering unparalleled protection and performance. Our platform provides users with advanced security protocols, global connectivity, and seamless performance, ensuring that your online activities remain private and secure. With a commitment to privacy and continuous innovation, Power Link is your go-to solution for secure and unrestricted internet access
+                PowerLink is revolutionizing digital security and privacy, offering unparalleled protection and performance. Our platform provides users with advanced security protocols, global connectivity, and seamless performance, ensuring that your online activities remain private and secure. With a commitment to privacy and continuous innovation, PowerLink is your go-to solution for secure and unrestricted internet access
               </Text>
               <Button
                 as="a"
@@ -371,10 +371,7 @@ const Home: React.FC<Props> = () => {
                 mx={{ base: "10" }}
                 gap={0}
               >
-                <Box flex="1" px={4}>
-                  <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
-                    About Us
-                  </Text>
+                <Box flex="1" px={8}>
                   <Flex
                     direction={"row"}
                     align={"center"}
@@ -395,7 +392,7 @@ const Home: React.FC<Props> = () => {
                     </Box>
                   </Flex>
                   <Text fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
-                    Built on advanced network architecture, Power Link delivers robust and scalable solutions tailored to protect your data. Whether you're browsing the web, communicating securely, or transferring sensitive information, our services offer unparalleled security and privacy.
+                    Built on advanced network architecture, PowerLink delivers robust and scalable solutions tailored to protect your data. Whether you're browsing the web, communicating securely, or transferring sensitive information, our services offer unparalleled security and privacy.
                   </Text>
                   <Button
                     as="a"
@@ -462,7 +459,7 @@ const Home: React.FC<Props> = () => {
                 color="white"
                 textTransform="uppercase"
               >
-                We provide investment feature for crypto currency
+                Key Features of PowerLink
               </Text>
               <Grid
                 templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }}
@@ -674,7 +671,7 @@ const Home: React.FC<Props> = () => {
             >
               <Box className={`${kanit.className} mt-4`} textAlign="center" width={{ base: "400px", lg: "500px" }} paddingX={"12px"}>
                 <Text textColor="white" fontSize={{ base: "md", lg: "lg" }}>
-                  Join our Сommunity Become part of the Blendr Family. Engage, Innovate and Grow with us.
+                  Join our Сommunity Become part of the PowerLink Family. Engage, Innovate and Grow with us.
                 </Text>
               </Box>
             </motion.div>

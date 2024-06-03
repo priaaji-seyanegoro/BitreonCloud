@@ -4,11 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { socialsLink } from "@/constants/links";
-import denodeLogo from "@/assets/logo-denode.svg"
-import TwitterLogo from "@/assets/twitter.png"
-import TelegramLogo from "@/assets/telegram.png"
-import GitbookLogo from "@/assets/gitbook.png"
-import MediumLogo from "@/assets/logo-medium.png"
+// import denodeLogo from "@/assets/logo-denode.svg"
+// import TwitterLogo from "@/assets/twitter.png"
+// import TelegramLogo from "@/assets/telegram.png"
+// import GitbookLogo from "@/assets/gitbook.png"
+// import MediumLogo from "@/assets/logo-medium.png"
+import { CopyrightOutlined } from "@ant-design/icons";
 
 
 
@@ -23,9 +24,9 @@ interface Props { }
 const AppFooter: React.FC<Props> = () => {
 
   const abouts = [
-    { name: 'Blog', url: '#' },
-    { name: 'Events', url: '#' },
-    { name: 'Careers', url: '#' },
+    { name: 'Twitter', url: 'https://x.com/PowerLinkVPN' },
+    { name: 'Telegram', url: 'https://t.me/PowerLinkVPN' },
+    { name: 'Support', url: 'mailto:support@powerlinkvpn.com' },
   ];
 
   if (!useIsMounted) {
@@ -60,20 +61,17 @@ const AppFooter: React.FC<Props> = () => {
                   <Link href="#">Home</Link>
                 </Box>
                 <Box>
-                  <Link href="#">Feature</Link>
+                  <Link href="#about">About</Link>
                 </Box>
                 <Box>
-                  <Link href="#">Investment</Link>
+                  <Link href="#roadmap">Roadmap</Link>
                 </Box>
                 <Box>
-                  <Link href="#">Plan</Link>
-                </Box>
-                <Box>
-                  <Link href="#">Discount</Link>
+                  <Link href="#faq">FAQ</Link>
                 </Box>
               </Box>
               <Box>
-                <Text fontSize="lg" fontWeight="bold" mb={4}>About</Text>
+                <Text fontSize="lg" fontWeight="bold" mb={4}>Socials</Text>
                 {abouts.map((about, index) => (
                   <Box key={index}>
                     <Link href={about.url}>{about.name}</Link>
@@ -93,7 +91,7 @@ const AppFooter: React.FC<Props> = () => {
                   alt={"PowerLink"}
                 />
               </Box>
-              <Flex justifyContent="center" gap={4}>
+              {/* <Flex justifyContent="center" gap={4}>
                 {contacts.map((contact, index) => (
                   <Link key={index} href={contact.url} target="_blank" rel="noopener noreferrer" >
                     <Box px={2} maxW="64px">
@@ -105,7 +103,11 @@ const AppFooter: React.FC<Props> = () => {
                     </Box>
                   </Link>
                 ))}
-              </Flex>
+              </Flex> */}
+              <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1">
+                <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
+                PowerLink 2024. All rights reserved.
+              </div>
             </Flex>
           </Flex>
         </Box>
