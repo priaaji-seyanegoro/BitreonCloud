@@ -32,7 +32,7 @@
 
 .nav-anchor,
 .nav-anchor-active {
-  @apply text-base md:text-lg;
+  @apply text-base md:text-xl;
 }
 
 .nav-anchor {

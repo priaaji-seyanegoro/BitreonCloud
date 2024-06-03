@@ -98,7 +98,12 @@ export const roadmapData: Phase = {
       title: "To Be Announce",
       subtitle: "To Be Announce",
       purpose: "To Be Announce",
-      features: [],
+      features: [
+        {
+          description:
+            "Exciting updates are coming soon! Stay tuned as we prepare to unveil new features and improvements to enhance your investment experience with our platform.",
+        }
+      ],
       active: false,
       released: false,
     },
@@ -106,7 +111,12 @@ export const roadmapData: Phase = {
       title: "To Be Announce",
       subtitle: "To Be Announce",
       purpose: "To Be Announce",
-      features: [],
+      features: [
+        {
+          description:
+            "Our team is working diligently to bring you the latest innovations in cryptocurrency security and usability. More details will be announced shortly. Thank you for your patience and continued support.",
+        }
+      ],
       active: false,
       released: false,
     },

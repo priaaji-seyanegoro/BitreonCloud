@@ -7,7 +7,7 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "PowerLink | REINVENTING DATA SECURITY AND PRIVACY";
+const app_title = "PowerLink";
 const app_name = "PowerLink";
 const description =
   "EXPERIENCE SECURE AND SCALABLE PRIVACY PROTECTION WITH POWER LINK'S ADVANCED VPN, ENSURING YOUR DATA REMAINS CONFIDENTIAL AND SECURE.";
