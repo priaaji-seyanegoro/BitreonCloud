@@ -95,38 +95,10 @@ export const roadmapData: Phase = {
       released: true,
     },
     {
-      title: "Client-Side Python Program (CLI)",
-      subtitle: "Initial MVP Setup",
-      purpose:
-        "Enables GPU owners to register their devices with the central server and listen for incoming tasks.",
-      features: [
-        { description: "Detect local GPU resources." },
-        {
-          description:
-            "Establish WebSocket connections to the central server for real-time communication.",
-        },
-        {
-          description: "Receive task details and execute tasks using the GPU.",
-        },
-      ],
-      active: false,
-      released: false,
-    },
-    {
-      title: "Client-Side Python Program (CLI)",
-      subtitle: "Initial MVP Setup",
-      purpose:
-        "Enables GPU owners to register their devices with the central server and listen for incoming tasks.",
-      features: [
-        { description: "Detect local GPU resources." },
-        {
-          description:
-            "Establish WebSocket connections to the central server for real-time communication.",
-        },
-        {
-          description: "Receive task details and execute tasks using the GPU.",
-        },
-      ],
+      title: "To Be Announce",
+      subtitle: "To Be Announce",
+      purpose: "To Be Announce",
+      features: [],
       active: false,
       released: false,
     },

@@ -74,7 +74,6 @@ const Home: React.FC<Props> = () => {
           className="relative z-30"
         />
 
-
         <Flex
           className="welcome-container w-full relative mx-auto"
           cursor="pointer"
