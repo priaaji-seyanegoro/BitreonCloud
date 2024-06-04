@@ -72,7 +72,7 @@ const StepperStep: React.FC<StepperStepProps> = ({ step }) => {
             {/* <Text className='text-gray-500' fontSize="md" mt={2}><strong>Purpose:</strong> {step.purpose}</Text> */}
             {step.features && step.features.length > 0 && (
                 <>
-                    <Text fontSize="md" mt={2}><strong>Features:</strong></Text>
+                    {/* <Text fontSize="md" mt={2}><strong>Features:</strong></Text> */}
                     <Box pl={4} mt={1}>
                         {step.features.map((feature, index) => (
                             <Text className='text-gray-500' key={index} fontSize="md">• {feature.description}</Text>
@@ -96,15 +96,15 @@ const StepperIndicator: React.FC<StepperIndicatorProps> = ({ step }) => {
     const isMobile = useBreakpointValue({ base: true, md: false });
 
     return (
-        <Flex className={`relative ${isActive ? "left-2" : ""}`} direction="row" align="center" minW={{ base: "100%", md: "200px" }} display={{ base: 'none', md: 'flex' }}>
+        <Flex className={`relative ${isActive ? "left-0" : ""}`} direction="row" align="center" minW={{ base: "100%", md: "200px" }} display={{ base: 'none', md: 'flex' }}>
             <Flex direction="column" align="center" mr={6}>
-                <Box textAlign="right" mb={8}>
+                <Box textAlign="right" mb={8} w="165px">
                     {isActive ? (
                         <>
                             <TextGradient fontSize="xl" fontWeight="bold" gradient="linear(to-r, #d8b4fe, #818cf8, #38bdf8, #34d399)">
                                 {`Phase ${step}`}
                             </TextGradient>
-                            <Text fontSize="xl">{subtitle}</Text>
+                            {/* <Text fontSize="xl">{subtitle}</Text> */}
                         </>
                     ) : (
                         <Box w="165px" />

@@ -80,10 +80,6 @@ const Home: React.FC<Props> = () => {
           w="100%"
           h={{ base: "auto", lg: "100vh" }} // Full screen height on larger screens
           bg={"transparent"}
-          backgroundImage="url('/home-bg.gif')"
-          backgroundSize="cover"
-          backgroundPosition="center"
-          backgroundRepeat="no-repeat"
           justifyContent="center" // Center horizontally
           alignItems="center" // Center vertically
           direction={"column"}
@@ -91,6 +87,24 @@ const Home: React.FC<Props> = () => {
           pt={{ base: "24vh", md: "15vh", lg: "45vh", xl: "45vh", "2xl": "45vh" }} // Dynamic top padding
           pb={{ base: "20vh", md: "12vh", lg: "25vh", xl: "35vh", "2xl": "35vh" }} // Dynamic bottom padding
         >
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: -1, // Ensure the video stays behind content
+            }}
+          >
+            <source src="/final.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <Flex
             direction="column"
             alignItems="center"
@@ -418,7 +432,7 @@ const Home: React.FC<Props> = () => {
                     Your browser does not support the video tag.
                   </video>
 
-                  <Chip text="lightning-fast connection" className="absolute top-[14px] left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                  <Chip text="Lightning-Fast Connection" className="absolute top-[14px] left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
                   <Chip text="High Security" className="absolute bottom-42 right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
                   <Chip text="Total Privacy" className="absolute bottom-[10px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
                 </Box>
