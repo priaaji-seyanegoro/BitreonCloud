@@ -682,9 +682,9 @@ const Home: React.FC<Props> = () => {
               transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.2 }} // Add a delay for staggered animation
               viewport={{ once: false, amount: 0.8 }}
             >
-              <Box className={`${kanit.className} mt-4`} textAlign="center" width={{ base: "400px", lg: "500px" }} paddingX={"12px"}>
+              <Box className={`${kanit.className} mt-4`} textAlign="center" width={{ base: "400px", lg: "500px" }} paddingX={"12px"} zIndex={30}>
                 <Text textColor="white" fontSize={{ base: "md", lg: "lg" }}>
-                  Join our Сommunity Become part of the PowerLink Family. Engage, Innovate and Grow with us.
+                  Join the Power Link Community. Connect, Secure, and Grow with Us.
                 </Text>
               </Box>
             </motion.div>

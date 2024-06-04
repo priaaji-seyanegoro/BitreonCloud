@@ -46,34 +46,11 @@ const AppFooter: React.FC<Props> = () => {
           borderColor="gray.600"
         >
           <Flex
-            direction={{ base: 'column-reverse', lg: 'row' }}
+            direction={{ base: 'column', lg: 'row-reverse' }}
             justifyContent="space-between"
             alignItems="center"
             gap={12}
           >
-            <Flex
-              direction={{ base: 'row' }}
-              gap={10}
-              textAlign={{ base: "center", md: "start" }}
-            >
-              <Box>
-                {abouts.map((about, index) => (
-                  <Box key={index}>
-                    <Link href={about.url}>
-                      <Text fontSize={{ base: 'sm', lg: 'xl' }} fontWeight="bold" mb={4}>{about.name}</Text>
-                    </Link>
-                  </Box>
-                ))}
-              </Box>
-              <Box>
-                <Box>
-                  <Link href="mailto:support@powerlinkvpn.com">
-                    <Text fontSize={{ base: 'sm', lg: 'xl' }} fontWeight="bold" mb={4}>Contact Us</Text>
-                  </Link>
-                </Box>
-
-              </Box>
-            </Flex>
             <Flex
               direction="column"
               alignItems="center"
@@ -99,11 +76,39 @@ const AppFooter: React.FC<Props> = () => {
                   </Link>
                 ))}
               </Flex> */}
-              <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1">
+              <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1 hidden lg:block">
                 <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
                 PowerLink 2024. All rights reserved.
               </div>
             </Flex>
+            <Flex
+              direction={{ base: 'row' }}
+              gap={10}
+              textAlign={{ base: "center", md: "start" }}
+            >
+              <Box>
+                {abouts.map((about, index) => (
+                  <Box key={index}>
+                    <Link href={about.url}>
+                      <Text fontSize={{ base: 'sm', lg: 'xl' }} fontWeight="bold" mb={4}>{about.name}</Text>
+                    </Link>
+                  </Box>
+                ))}
+              </Box>
+              <Box>
+                <Box>
+                  <Link href="mailto:support@powerlinkvpn.com">
+                    <Text fontSize={{ base: 'sm', lg: 'xl' }} fontWeight="bold" mb={4}>Contact Us</Text>
+                  </Link>
+                </Box>
+              </Box>
+            </Flex>
+
+
+            <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1 block lg:hidden">
+              <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
+              PowerLink 2024. All rights reserved.
+            </div>
           </Flex>
         </Box>
       </Box>
