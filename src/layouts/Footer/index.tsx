@@ -26,7 +26,7 @@ const AppFooter: React.FC<Props> = () => {
   const abouts = [
     { name: 'Twitter', url: 'https://x.com/PowerLinkVPN' },
     { name: 'Telegram', url: 'https://t.me/PowerLinkVPN' },
-    { name: 'Documentation', url: '/' }
+    { name: 'Documentation', url: 'https://docs.powerlinkvpn.com/' }
     // { name: 'Contact Us', url: 'mailto:support@powerlinkvpn.com' },
   ];
 
@@ -76,7 +76,7 @@ const AppFooter: React.FC<Props> = () => {
                   </Link>
                 ))}
               </Flex> */}
-              <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1 hidden lg:block">
+              <div className="text-base md:text-md text-center text-slate-500 !font-normal order-2 sm:order-1 hidden lg:block">
                 <CopyrightOutlined className="mx-1" style={{ fontSize: "1em" }} />{" "}
                 PowerLink 2024. All rights reserved.
               </div>
@@ -89,7 +89,7 @@ const AppFooter: React.FC<Props> = () => {
               <Box>
                 {abouts.map((about, index) => (
                   <Box key={index}>
-                    <Link href={about.url}>
+                    <Link href={about.url} target="_blank" rel="noopener noreferrer">
                       <Text fontSize={{ base: 'sm', lg: 'xl' }} fontWeight="bold" mb={4}>{about.name}</Text>
                     </Link>
                   </Box>
@@ -97,7 +97,7 @@ const AppFooter: React.FC<Props> = () => {
               </Box>
               <Box>
                 <Box>
-                  <Link href="mailto:support@powerlinkvpn.com">
+                  <Link href="mailto:support@powerlinkvpn.com" target="_blank" rel="noopener noreferrer">
                     <Text fontSize={{ base: 'sm', lg: 'xl' }} fontWeight="bold" mb={4}>Contact Us</Text>
                   </Link>
                 </Box>
