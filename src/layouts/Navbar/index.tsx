@@ -112,10 +112,27 @@ const Navbar: React.FC<Props> = () => {
                 $PLINK
               </Button>
             </Link>
-
           </div>
 
           <div className="w-auto text-end sm:ml-4 lg:hidden">
+            <Link
+              href={socialsLink.bot}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                className={`${kanitBold.className} md:hidden  text-white`}
+                variant={"outline"}
+                rounded="full"
+                size={"lg"}
+                bgGradient="linear-gradient(97.11deg, #4260FF 37.38%, #0024E1 115.64%)"
+                _hover={{
+                  bgGradient: "linear(to-r, #3348FF, #001EB1)", // Add hover effect for better UX
+                }}
+              >
+                $PLINK
+              </Button>
+            </Link>
             <Button
               onClick={onToggleDrawer}
               className={`nav-menu-btn ${isOpenDrawer
