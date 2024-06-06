@@ -409,7 +409,7 @@ const Home: React.FC<Props> = () => {
                   </Text>
                   <Button
                     as="a"
-                    href={"/"}
+                    href={"https://docs.powerlinkvpn.com/"}
                     target="_blank"
                     rel="noopener noreferrer"
                     color="#667CFF"
