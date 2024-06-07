@@ -10,7 +10,7 @@ import "./globals.css";
 const app_title = "PowerLink";
 const app_name = "PowerLink";
 const description =
-  "EXPERIENCE SECURE AND SCALABLE PRIVACY PROTECTION WITH POWER LINK'S ADVANCED VPN, ENSURING YOUR DATA REMAINS CONFIDENTIAL AND SECURE.";
+  "Experience secure and scalable privacy protection with PowerLink's advanced VPN, ensuring your data remains confidential and secure.";
 
 export const metadata: Metadata = {
   title: app_title,
