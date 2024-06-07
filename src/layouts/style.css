@@ -52,3 +52,29 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
+
+
+/* Kustomisasi scrollbar dengan warna gradasi */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Warna lintasan scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(97.11deg, #4260FF 37.38%, #0024E1 115.64%);
+  /* Warna gradasi thumb scrollbar */
+  border-radius: 10px;
+  /* Membuat thumb menjadi bulat */
+  border: 3px solid #f1f1f1;
+  /* Border di sekitar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(97.11deg, #4260FF 37.38%, #0024E1 115.64%);
+  /* Warna gradasi thumb saat di-hover */
+}
