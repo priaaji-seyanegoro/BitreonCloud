@@ -61,7 +61,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: black;
   /* Warna lintasan scrollbar */
 }
 
@@ -70,7 +70,7 @@
   /* Warna gradasi thumb scrollbar */
   border-radius: 10px;
   /* Membuat thumb menjadi bulat */
-  border: 3px solid #f1f1f1;
+  border: 1px solid black;
   /* Border di sekitar thumb */
 }
 
