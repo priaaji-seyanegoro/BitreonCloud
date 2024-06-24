@@ -15,7 +15,8 @@ import { kanitBold } from "@/utils/font";
 import { socialsLink } from "@/constants/links";
 
 // import denodeLogo from "@/assets/logo-denode.svg";
-import powerLinkLogo from '@/assets/PowerLink-Logo.png'
+// import powerLinkLogo from '@/assets/PowerLink-Logo.png'
+import BitreonCloudLogo from '@/assets/bitreon_cloud_logo.png'
 
 import "./style.css";
 
@@ -72,14 +73,14 @@ const Navbar: React.FC<Props> = () => {
     <div
       className={clsx(
         isScroll || isOpenDrawer ? "navbar-fixed" : "navbar-container",
-        kanitBold.className, 'lg:border lg:border-white lg:rounded-full lg:bg-transparent lg:mx-auto'
+        kanitBold.className
       )}
     >
       <div className={clsx(isScroll ? "navbar-scroll" : "navbar")}>
         <div className="w-1/2 lg:w-1/4 flex items-center relative">
           <Link href="/" className={`logo-container`}>
             <Image
-              src={powerLinkLogo}
+              src={BitreonCloudLogo}
               alt="banner-nav-logo"
               className="w-full md:w-full h-16 object-contain object-left"
             />
@@ -100,17 +101,22 @@ const Navbar: React.FC<Props> = () => {
               rel="noopener noreferrer"
             >
               <Button
-                className={`${kanitBold.className} w-[174px] text-white`}
+                className={`${kanitBold.className} w-[174px] h-[50px] text-white relative`}
                 variant={"outline"}
-                rounded="full"
                 size={"lg"}
-                bgGradient="linear-gradient(97.11deg, #4260FF 37.38%, #0024E1 115.64%)"
+                style={{
+                  color: 'white',
+                  background: 'linear-gradient(145deg, #FFA726, #FB8C00)',
+                  clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%, 10px 50%)',
+                  boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.3)',
+                }}
                 _hover={{
-                  bgGradient: "linear(to-r, #3348FF, #001EB1)", // Add hover effect for better UX
+                  background: 'linear-gradient(145deg, #FB8C00, #FFA726)',
                 }}
               >
                 $PLINK
               </Button>
+
             </Link>
           </div>
 

@@ -7,10 +7,10 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "PowerLink";
-const app_name = "PowerLink";
+const app_title = "Bitreon Cloud";
+const app_name = "Bitreon Cloud";
 const description =
-  "Experience secure and scalable privacy protection with PowerLink's advanced VPN, ensuring your data remains confidential and secure.";
+  "Experience secure and scalable privacy protection with Bitreon Cloud advanced VPN, ensuring your data remains confidential and secure.";
 
 export const metadata: Metadata = {
   title: app_title,

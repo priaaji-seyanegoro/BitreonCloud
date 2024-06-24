@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Provider from "@/library/Provider";
 
 import { kanit } from "@/utils/font";
-// import AppBackground from "@/assets/bg-star.png";
+import AppBackground from "@/assets/bg-star.png";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
 
@@ -36,14 +36,14 @@ const BaseLayout: React.FC<Props> = ({ children }) => {
         <Navbar />
       )}
       <main className={clsx("base-main-container", kanit.className)}>
-        {/* {isMounted && (
+        {isMounted && (
           <Image
             src={AppBackground}
             alt="roadmap"
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
           />
-        )} */}
+        )}
         {children}
       </main>
       {isMounted && isLoaded && (
