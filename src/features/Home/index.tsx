@@ -87,7 +87,7 @@ const Home: React.FC<Props> = () => {
           pt={{ base: "24vh", md: "15vh", lg: "45vh", xl: "45vh", "2xl": "45vh" }} // Dynamic top padding
           pb={{ base: "20vh", md: "12vh", lg: "25vh", xl: "35vh", "2xl": "35vh" }} // Dynamic bottom padding
         >
-          <video
+          {/* <video
             autoPlay
             loop
             muted
@@ -104,7 +104,7 @@ const Home: React.FC<Props> = () => {
           >
             <source src="/final.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
           <Flex
             direction="column"
             alignItems="center"
@@ -268,7 +268,7 @@ const Home: React.FC<Props> = () => {
               </Button> */}
             </Box>
             <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center">
-              <video
+              {/* <video
                 className="w-full h-full m-auto object-center object-cover rounded-lg"
                 src="/about-powerlink.mp4"
                 autoPlay
@@ -277,7 +277,7 @@ const Home: React.FC<Props> = () => {
                 playsInline
               >
                 Your browser does not support the video tag.
-              </video>
+              </video> */}
             </Box>
           </Flex>
 
@@ -421,7 +421,7 @@ const Home: React.FC<Props> = () => {
                   </Button>
                 </Box>
                 <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center" position="relative">
-                  <video
+                  {/* <video
                     className="relative rounded-lg"
                     src="/about-2-powerlink.mp4"
                     autoPlay
@@ -430,11 +430,11 @@ const Home: React.FC<Props> = () => {
                     playsInline
                   >
                     Your browser does not support the video tag.
-                  </video>
+                  </video> */}
 
-                  <Chip text="Lightning-Fast Connection" className="absolute top-[14px] left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                  {/* <Chip text="Lightning-Fast Connection" className="absolute top-[14px] left-25 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
                   <Chip text="High Security" className="absolute bottom-42 right-7 lg:right-12 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
-                  <Chip text="Total Privacy" className="absolute bottom-[10px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" />
+                  <Chip text="Total Privacy" className="absolute bottom-[10px] left-24 border-gradient-to-r from-blue-500 to-teal-400 text-[8px] lg:text-lg" /> */}
                 </Box>
               </Flex>
             </Box>
