@@ -19,6 +19,7 @@ import { socialsLink } from "@/constants/links";
 import BitreonCloudLogo from '@/assets/bitreon_cloud_logo.png'
 
 import "./style.css";
+import { BitreonButton } from "@/components/Buttons";
 
 interface Props { }
 
@@ -100,22 +101,7 @@ const Navbar: React.FC<Props> = () => {
               // target="_blank"
               rel="noopener noreferrer"
             >
-              <Button
-                className={`${kanitBold.className} w-[174px] h-[50px] text-white relative`}
-                variant={"outline"}
-                size={"lg"}
-                style={{
-                  color: 'white',
-                  background: 'linear-gradient(145deg, #FFA726, #FB8C00)',
-                  clipPath: 'polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%, 10px 50%)',
-                  boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.3)',
-                }}
-                _hover={{
-                  background: 'linear-gradient(145deg, #FB8C00, #FFA726)',
-                }}
-              >
-                $PLINK
-              </Button>
+              <BitreonButton text="$PLINK" onClick={() => { }} />
 
             </Link>
           </div>
@@ -126,18 +112,7 @@ const Navbar: React.FC<Props> = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button
-                className={`${kanitBold.className} md:hidden  text-white`}
-                variant={"outline"}
-                rounded="full"
-                size={"lg"}
-                bgGradient="linear-gradient(97.11deg, #4260FF 37.38%, #0024E1 115.64%)"
-                _hover={{
-                  bgGradient: "linear(to-r, #3348FF, #001EB1)", // Add hover effect for better UX
-                }}
-              >
-                $PLINK
-              </Button>
+              <BitreonButton text="$PLINK" onClick={() => { }} />
             </Link>
             <Button
               onClick={onToggleDrawer}

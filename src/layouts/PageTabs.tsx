@@ -42,14 +42,14 @@ const PageTabs: React.FC<Props> = ({ containterClass }) => {
       //   name: "Tokenomics",
       // },
       {
+        href: "#launch",
+        pathname: `#launch`,
+        name: "Launch",
+      },
+      {
         href: "#roadmap",
         pathname: `#roadmap`,
         name: "Roadmap",
-      },
-      {
-        href: "#faq",
-        pathname: `#faq`,
-        name: "FAQ",
       },
 
     ];

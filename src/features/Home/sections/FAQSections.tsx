@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Flex, Text, useDisclosure, Collapse } from '@chakra-ui/react';
-import { RightOutlined, DownOutlined } from '@ant-design/icons';
+import { RightOutlined, DownOutlined, DownSquareFilled, UpCircleFilled, DownCircleFilled } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 
 const faqDatas = [
@@ -36,27 +36,48 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
-        <Box mb={8} borderRadius="xl" bgGradient="linear(to-r, #3182ce, #38b2ac)" p="1px">
+        <Box mb={8}>
             <Box
-                bg="black"
+                bg={"#24273C"}
                 p={4}
-                borderRadius="xl"
+                style={{
+                    clipPath: `polygon(0 0, ${isOpen ? "92%" : "92%"} 0, 100% ${isOpen ? "30%" : "40%"}, 100% 100%, 0 100%)`,
+                }}
                 _hover={{
                     boxShadow: "0 0 20px 5px rgba(49, 130, 206, 0.5), 0 0 20px 5px rgba(56, 178, 172, 0.5)",
                     transition: "box-shadow 0.3s ease-in-out",
                 }}
             >
-                <Flex align="center" justify="space-between" onClick={onToggle} cursor="pointer">
-                    <Text color="white">{question}</Text>
-                    <Box as="span" color="white">
-                        {isOpen ? <DownOutlined /> : <RightOutlined />}
-                    </Box>
-                </Flex>
-                <Collapse in={isOpen} animateOpacity>
-                    <Box mt={4} pl={8} color="whiteAlpha.800">
-                        {answer}
-                    </Box>
-                </Collapse>
+                <Box
+                    bg="#24273C"
+                    p={4}
+                    style={{
+                        clipPath: `polygon(0 0, ${isOpen ? "92%" : "92%"} 0, 100% ${isOpen ? "30%" : "40%"}, 100% 100%, 0 100%)`,
+                        height: '100%', // Ensure the inner box stretches to fit the outer box
+                    }}
+                >
+                    <Flex
+                        direction={"row"}
+                        align={"center"}
+                        justify={"space-between"}
+                    >
+
+                        <Flex w={"70%"} direction={"column"} align="start" justify="space-between" onClick={onToggle} cursor="pointer">
+                            <Text color="white" fontWeight={"bold"}>{question}</Text>
+                            <Collapse in={isOpen} animateOpacity>
+                                <Box mt={4} color="whiteAlpha.800">
+                                    {answer}
+                                </Box>
+                            </Collapse>
+
+                        </Flex>
+                        <Box as="span" color="#FD8B1A">
+                            {isOpen ? <UpCircleFilled /> : <DownCircleFilled />}
+                        </Box>
+                    </Flex>
+
+
+                </Box>
             </Box>
         </Box>
     );
@@ -65,7 +86,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 const FAQSection = () => {
     return (
         <Box py={10}>
-            <Text fontSize={{ base: '4xl', lg: '6xl' }} fontWeight="bold" textAlign="center" mb={8} color="white">
+            <Text fontSize={{ base: '4xl', lg: '6xl' }} fontWeight="bold" textAlign="center" mb={12} color="white">
                 FAQ
             </Text>
             <Box maxW="800px" w={{ lg: '1000px' }} mx="auto" px={4}>

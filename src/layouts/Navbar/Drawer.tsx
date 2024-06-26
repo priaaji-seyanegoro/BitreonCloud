@@ -55,15 +55,15 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
       //   name: "Tokenomics",
       // },
       {
+        href: "#launch",
+        pathname: `#launch`,
+        name: "Launch",
+      },
+      {
         href: "#roadmap",
         pathname: `#roadmap`,
         name: "Roadmap",
       },
-      {
-        href: "#faq",
-        pathname: `#faq`,
-        name: "FAQ",
-      }
     ];
   }, []);
 

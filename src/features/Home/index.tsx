@@ -10,9 +10,12 @@ import { kanit, kanitBold } from "@/utils/font";
 import { features } from "./constants/features";
 import BackgroundWaveRoadMap from "@/assets/wave_2.png"
 import BackgroundWaveRoadMap1 from "@/assets/wave_1.png"
+import BackgroundHome from "@/assets/bg_home.png"
+import BackgroundFaq from "@/assets/bg_faq.png"
 import PowerLinkLogo from "@/assets/PowerLink-Logo.png"
 import PowerLinkText from "@/assets/PowerLink-text.png"
 import { motion } from 'framer-motion';
+import BitreonCloudLogo from '@/assets/bitreon_cloud_logo.png'
 
 // import "./style.css";
 // import Image from "next/image";
@@ -37,6 +40,8 @@ import { CopyOutlined } from "@ant-design/icons";
 import FAQSection from "./sections/FAQSections";
 import RoadmapStepper from "./sections/RoadmapSections";
 import { Image } from "@chakra-ui/next-js";
+import { BitreonButton } from "@/components/Buttons";
+import { BitreonCard } from "@/components/Cards";
 
 interface Props { }
 
@@ -74,112 +79,68 @@ const Home: React.FC<Props> = () => {
           className="relative z-30"
         />
 
-        <Flex
-          className="welcome-container w-full relative mx-auto"
-          cursor="pointer"
-          w="100%"
-          h={{ base: "auto", lg: "100vh" }} // Full screen height on larger screens
-          bg={"transparent"}
-          justifyContent="center" // Center horizontally
-          alignItems="center" // Center vertically
-          direction={"column"}
-          zIndex={1} // Ensure it stacks properly with the navbar
-          pt={{ base: "24vh", md: "15vh", lg: "45vh", xl: "45vh", "2xl": "45vh" }} // Dynamic top padding
-          pb={{ base: "20vh", md: "12vh", lg: "25vh", xl: "35vh", "2xl": "35vh" }} // Dynamic bottom padding
-        >
-          {/* <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              zIndex: -1, // Ensure the video stays behind content
-            }}
-          >
-            <source src="/final.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> */}
-          <Flex
-            direction="column"
-            alignItems="center"
-            textAlign="center"
-            px={{ base: 4, lg: 0 }}
-            w={{ base: "100%", lg: "auto" }}
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.2 }} // Add a delay for staggered animation
-              viewport={{ once: false, amount: 0.8 }}
+        <Box position={"relative"}>
+          <Image
+            src={BackgroundHome}
+            alt="ornament"
+            priority
+            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover opacity-80"
+          />
+          <div className={`${kanit.className} relative mx-24 lg:mx-24`}>
+            <Flex
+              // className="welcome-container w-full relative mx-auto"
+              className="container-two w-full max-w-screen-xl relative mx-auto"
+              cursor="pointer"
+              w="100%"
+              h={{ base: "auto", lg: "100vh" }} // Full screen height on larger screens
+              bg={"transparent"}
+              justifyContent="center" // Center horizontally
+              alignItems="center" // Center vertically
+              flexDirection={{ base: "column-reverse", lg: "row" }}
+              direction={{ base: "column", md: "row" }}
+              textAlign={{ base: "center", md: "left" }}
+              zIndex={1} // Ensure it stacks properly with the navbar
+              pt={{ base: "10vh", sm: "15vh", md: "12vh", lg: "20vh", xl: "30vh", "2xl": "45vh" }} // Dynamic top padding
+              pb={{ base: "20vh", md: "12vh", lg: "25vh", xl: "35vh", "2xl": "35vh" }} // Dynamic bottom padding
             >
-              <Box
-                className={clsx(
-                  'w-[320px] lg:w-[850px] text-4xl lg:text-8xl font-bold text-white uppercase leading-tight',
-                  kanitBold.className
-                )}
+              <Flex
+                className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
+                // flexDirection={{ base: "row-reverse", lg: "row" }}
+                flexDirection={{ base: "column-reverse", md: "row" }}
+                direction={{ base: "column", md: "row" }}
+                textAlign={{ base: "center", md: "left" }}
               >
-                Reinventing Data Security and Privacy
-              </Box>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.4 }} // Add a delay for staggered animation
-              viewport={{ once: false, amount: 0.8 }}
-            >
-              <Box
-                className={clsx(
-                  'w-[320px] sm:w-[500px] md:w-[500px] lg:w-[650px] text-[16px] sm:text-[14px] text-[#CBCBCB] uppercase leading-tight mt-4',
-                  kanit.className
-                )}
-              >
-                Experience secure and scalable privacy protection with PowerLink's advanced VPN, ensuring your data remains confidential and secure.
-              </Box>
-            </motion.div>
+                <Box flex="1">
+                  <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
+                    Website AI Shaping The Future Of Website Development
+                  </Text>
+                  <Text className="font-extralight text-gray-400" my={6} fontSize={{ base: "sm", lg: "md" }}>
+                    Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.
+                  </Text>
+                  <BitreonButton text="Get Meeta" onClick={() => { }} />
+                </Box>
+                <Box flex="1" display="flex" justifyContent="center" alignItems="center">
+                  <Box className="w-full h-auto" maxWidth={{ base: "100%", md: "100%" }} textAlign="center">
+                    <Image
+                      className="object-contain"
+                      src={BitreonCloudLogo}
+                      alt={"Bitreon Cloud"}
+                      width={600} // Set width and height as needed
+                      height={400} // Set width and height as needed
+                    />
+                  </Box>
+                </Box>
+              </Flex>
+            </Flex>
+            <div className="h-24" />
+          </div>
+        </Box>
 
 
-            {/* <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, ease: 'easeInOut', delay: 0.6 }} // Add a delay for staggered animation
-              viewport={{ once: false, amount: 0.8 }}
-            >
-              <div className="mt-8">
-                <Link
-                  href={socialsLink.telegram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    className={`${kanitBold.className} w-[174px] text-white`}
-                    variant={"outline"}
-                    rounded="full"
-                    size={{ base: "md", lg: "lg" }}
-                    bgGradient="linear-gradient(97.11deg, #4260FF 37.38%, #0024E1 115.64%)"
-                    _hover={{
-                      bgGradient: "linear(to-r, #3348FF, #001EB1)", // Add hover effect for better UX
-                    }}
-                  >
-                    Choose Plan
-                  </Button>
-                </Link>
-
-              </div>
-            </motion.div> */}
-
-          </Flex>
-        </Flex>
-
-        <div
+        {/* <div
           className="mt-24 relative z-30"
-        />
+        /> */}
 
         <Flex
           className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
@@ -213,8 +174,6 @@ const Home: React.FC<Props> = () => {
                   />
                 </Box>
               </motion.div>
-
-
             ))}
           </Flex>
         </Flex>
@@ -623,39 +582,46 @@ const Home: React.FC<Props> = () => {
           id="faq"
           className="mt-12 relative z-30"
         />
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: 'backOut' }} // Change the easing function here
-          viewport={{ once: true, amount: 0.8 }}
-        >
-          <Flex
-            id="investment"
-            className="container-two w-full relative mx-auto"
-            w="auto"
-            h="auto"
-            justifyContent="center" // Rata tengah horizontal
-            alignItems="center" // Rata tengah vertikal
-            // className="w-full max-w-screen-xl relative mx-auto"
-            direction={{ base: "column" }}
-            textAlign={{ base: "center", md: "left" }}
-            align="center"
-            // bg={"black"}
-            justify="space-between"
-            px={0}
-            py={0}
-            mx={{ base: "10" }}
-            gap={0}
-            zIndex={30}
+        <Box position={"relative"}>
+          <Image
+            src={BackgroundFaq}
+            alt="ornament"
+            priority
+            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover opacity-80"
+          />
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: 'backOut' }} // Change the easing function here
+            viewport={{ once: true, amount: 0.8 }}
           >
-            <FAQSection />
-          </Flex>
+            <Flex
+              id="investment"
+              className="container-two w-full relative mx-auto"
+              w="auto"
+              h="auto"
+              justifyContent="center" // Rata tengah horizontal
+              alignItems="center" // Rata tengah vertikal
+              // className="w-full max-w-screen-xl relative mx-auto"
+              direction={{ base: "column" }}
+              textAlign={{ base: "center", md: "left" }}
+              align="center"
+              // bg={"black"}
+              justify="space-between"
+              px={0}
+              py={24}
+              mx={{ base: "10" }}
+              gap={0}
+              zIndex={30}
+            >
+              <FAQSection />
+            </Flex>
 
-        </motion.div>
+          </motion.div>
+        </Box>
 
 
-        <Box color="white" position="relative">
+        {/* <Box color="white" position="relative">
           <Image
             src={BackgroundWaveRoadMap1}
             alt="roadmap"
@@ -716,15 +682,10 @@ const Home: React.FC<Props> = () => {
                     Download Now
                   </button>
                 </div>
-                {/* <div className="relative inline-flex items-center justify-center p-[2px] bg-gradient-to-r from-blue-500 to-teal-400 rounded-full">
-                  <button className="relative inline-flex items-center justify-center px-6 py-3 bg-black text-white rounded-full">
-                    Download Now
-                  </button>
-                </div> */}
               </Flex>
             </motion.div>
           </Flex>
-        </Box>
+        </Box> */}
 
       </div >
     );
