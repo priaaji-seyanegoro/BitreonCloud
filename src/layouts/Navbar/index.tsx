@@ -107,13 +107,13 @@ const Navbar: React.FC<Props> = () => {
           </div>
 
           <div className="w-auto text-end sm:ml-4 lg:hidden">
-            <Link
+            {/* <Link
               href={socialsLink.bot}
               target="_blank"
               rel="noopener noreferrer"
             >
               <BitreonButton text="$PLINK" onClick={() => { }} />
-            </Link>
+            </Link> */}
             <Button
               onClick={onToggleDrawer}
               className={`nav-menu-btn ${isOpenDrawer

@@ -36,7 +36,8 @@
 }
 
 .nav-anchor {
-  @apply bg-gradient-to-r from-[#DAF0F0] to-[#3BC6C7] bg-clip-text text-transparent
+  @apply text-white
+  /* @apply bg-gradient-to-r from-[#DAF0F0] to-[#0e1858] bg-clip-text text-transparent */
   /* @apply text-white hover:text-[#01FFF9]; */
   /* @apply bg-white hover:bg-lime-zest font-bold text-lg;
   background-clip: text;

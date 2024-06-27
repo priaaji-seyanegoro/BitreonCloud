@@ -1,15 +1,15 @@
-import { Kanit } from "next/font/google";
+import { Aldrich } from "next/font/google";
 
 
-export const kanit = Kanit({
+export const kanit = Aldrich({
   weight: ["400"],
   subsets: ["latin"],
   display: "swap",
   preload: true,
 })
 
-export const kanitBold = Kanit({
-  weight: ["800"],
+export const kanitBold = Aldrich({
+  weight: ["400"],
   subsets: ["latin"],
   display: "swap",
   preload: true,

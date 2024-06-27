@@ -1,6 +1,6 @@
 .navbar-container {
   /* @apply !px-0 w-full h-[5.5em] bg-dark-main; */
-  @apply !px-0 w-full lg:w-[90%] sm:w-full lg:mt-[30px] absolute py-5;
+  @apply !px-0 w-full sm:w-full absolute py-5;
   /* margin-top: 73px; */
   padding-inline: 50px;
   z-index: 50;
@@ -9,11 +9,11 @@
 }
 
 .navbar-fixed {
-  @apply w-full lg:w-[90%] fixed top-0 py-2 lg:mt-[30px] bg-black bg-opacity-50 text-white;
+  @apply w-full fixed top-0 py-2 bg-black text-white;
   /* margin-top: 73px; */
   z-index: 1000;
   left: 50%;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   transform: translateX(-50%);
 }
 
