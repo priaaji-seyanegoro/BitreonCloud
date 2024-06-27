@@ -9,11 +9,11 @@
 }
 
 .navbar-fixed {
-  @apply w-full fixed top-0 py-2 bg-black text-white;
+  @apply w-full fixed top-0 py-2 bg-[#040A24] text-white opacity-75;
   /* margin-top: 73px; */
   z-index: 1000;
   left: 50%;
-  /* backdrop-filter: blur(10px); */
+  backdrop-filter: blur(10px);
   transform: translateX(-50%);
 }
 

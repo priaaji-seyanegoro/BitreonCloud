@@ -37,12 +37,13 @@ const BaseLayout: React.FC<Props> = ({ children }) => {
       )}
       <main className={clsx("base-main-container", kanit.className)}>
         {isMounted && (
-          <Image
-            src={AppBackground}
-            alt="roadmap"
-            priority
-            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
-          />
+          // <Image
+          //   src={AppBackground}
+          //   alt="roadmap"
+          //   priority
+          //   className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat"
+          // />
+          <></>
         )}
         {children}
       </main>
