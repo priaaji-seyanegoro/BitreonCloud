@@ -9,7 +9,7 @@ interface Props { }
 const YinLoader: React.FC<Props> = () => {
   return (
     <div
-      className={`w-full h-screen flex flex-col justify-center items-center mx-auto overflow-hidden ${kanit.className}`}
+      className={`w-full h-screen flex flex-col bg-black justify-center items-center mx-auto overflow-hidden ${kanit.className}`}
     >
       {/* <div className="w-full h-28 flex items-center justify-center">
         <div className="loader" />
