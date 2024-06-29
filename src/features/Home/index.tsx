@@ -101,7 +101,8 @@ const Home: React.FC<Props> = () => {
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover opacity-80"
           />
-          <div className={`${kanit.className} relative mx-24 lg:mx-24`}>
+
+          <div className={`${kanit.className} relative mx-12 lg:mx-24`}>
             <Flex
               // className="welcome-container w-full relative mx-auto"
               className="container-two w-full max-w-screen-xl relative mx-auto"
@@ -115,7 +116,7 @@ const Home: React.FC<Props> = () => {
               direction={{ base: "column", md: "row" }}
               textAlign={{ base: "center", md: "left" }}
               zIndex={1} // Ensure it stacks properly with the navbar
-              pt={{ base: "24vh", md: "15vh", lg: "45vh", xl: "45vh", "2xl": "45vh" }} // Dynamic top padding
+              pt={{ base: "14vh", md: "15vh", lg: "45vh", xl: "45vh", "2xl": "45vh" }} // Dynamic top padding
               pb={{ base: "20vh", md: "12vh", lg: "25vh", xl: "35vh", "2xl": "35vh" }} // Dynamic bottom padding
             >
               <Flex
@@ -125,6 +126,7 @@ const Home: React.FC<Props> = () => {
                 direction={{ base: "column", md: "row" }}
                 textAlign={{ base: "center", md: "left" }}
                 mt={{ base: "40px", lg: "100px" }}
+                gap={12}
               >
 
                 <Box flex="1">
@@ -146,7 +148,7 @@ const Home: React.FC<Props> = () => {
                     viewport={{ once: false, amount: 0.8 }}
                     className="w-full"
                   >
-                    <Text className="font-extralight text-gray-400" my={6} fontSize={{ base: "sm", lg: "md" }}>
+                    <Text className="font-extralight text-gray-400" mt={6} mb={12} fontSize={{ base: "sm", lg: "md" }}>
                       Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.
                     </Text>
                   </motion.div>
@@ -159,9 +161,8 @@ const Home: React.FC<Props> = () => {
                   >
                     <BitreonButton text="Get Meeta" onClick={() => { }} />
                   </motion.div>
-
-
                 </Box>
+
                 <Box flex="1" display="flex" justifyContent="center" alignItems="center">
                   <Box className="w-full h-auto" maxWidth={{ base: "80%", md: "100%" }} textAlign="center">
                     <Floating>
@@ -200,10 +201,12 @@ const Home: React.FC<Props> = () => {
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover opacity-80"
           />
+          <Box className="absolute -top-4 left-0 w-full h-24 bg-gradient-to-b from-[#0C0E1E] to-transparent" />
           <div className={`${kanit.className} relative mx-24 lg:mx-24`}>
             <Flex
               // className="welcome-container w-full relative mx-auto"
-              className="container-two w-full max-w-screen-xl relative mx-auto space-y-24"
+              // className="container-two w-full max-w-screen-xl relative mx-auto space-y-24"
+              className="container-two w-full relative mx-auto space-y-24"
               w="100%"
               h={{ base: "auto", lg: "100vh" }} // Full screen height on larger screens
               bg={"transparent"}
@@ -217,7 +220,7 @@ const Home: React.FC<Props> = () => {
               pb={{ base: "20vh", md: "12vh", lg: "45vh", xl: "45vh", "2xl": "45vh" }} // Dynamic bottom padding
             >
               <Flex
-                className={`${kanit.className} space-y-24 container-two w-full max-w-screen-xl relative mx-auto`}
+                className={`${kanit.className} space-y-12 container-two w-full max-w-screen-xl relative mx-auto`}
                 // flexDirection={{ base: "row-reverse", lg: "row" }}
                 flexDirection={{ base: "column", md: "column" }}
                 direction={{ base: "column", md: "row" }}
@@ -232,7 +235,7 @@ const Home: React.FC<Props> = () => {
                   textAlign={{ base: "center", md: "left" }}
                   align={"center"}
                   alignItems={"center"}
-                  mt={{ base: "40px", lg: "100px" }}
+                  mt={{ base: "0px", lg: "100px" }}
                 >
                   <Box flex="1" display="flex" justifyContent="center" alignItems="center">
                     <Text fontSize={{ base: "md", lg: '3xl' }} fontWeight="bold" textTransform={"uppercase"}>
@@ -245,7 +248,7 @@ const Home: React.FC<Props> = () => {
                     </Text>
                   </Box>
                 </Flex>
-                <div className="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
                   {featuresCardsData.map((card, index) => (
                     <motion.div
                       key={index}
@@ -257,7 +260,7 @@ const Home: React.FC<Props> = () => {
                     >
                       <BitreonFeatureCard
                         key={index}
-                        iconUrl={card.iconUrl.toString()}
+                        iconUrl={card.iconUrl}
                         title={card.title}
                         description={card.description}
                       />
@@ -271,6 +274,7 @@ const Home: React.FC<Props> = () => {
               <Box><BitreonButton text="Get Meeta" onClick={() => { }} /></Box>
             </Flex>
           </div>
+          <Box className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0C0E1E] to-transparent" />
         </Box>
 
         <Box mt={"48px"} className="w-full max-w-screen-xl relative mx-auto" position={"relative"}>
@@ -280,6 +284,7 @@ const Home: React.FC<Props> = () => {
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover"
           />
+          <Box className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#0C0E1E] to-transparent" />
           <div className={`${kanit.className} relative mx-6 lg:mx-24`}>
             <Flex
               // className="welcome-container w-full relative mx-auto"
@@ -312,39 +317,49 @@ const Home: React.FC<Props> = () => {
                   </Text>
                 </Box>
                 <div className="container mx-auto">
-                  <BitreonFrostedGlassCard enableClipPath={false}>
-                    <Flex
-                      className="container-two w-full max-w-screen-md mx-auto"
-                      flexDirection="column"
-                      textAlign="center"
-                    >
-                      <BitreonFrostedGlassCard enableClipPath={false}>
-                        <Flex
-                          className="container-two w-full max-w-screen-md mx-auto"
-                          flexDirection="column"
-                          textAlign="center"
-                          p={6}
-                        >
-                          <Box mb={4}>
-                            <Text fontSize="2xl" fontWeight="bold">Mission</Text>
-                            <Text mt={2} fontSize="md">
-                              Lorem ipsum dolor sit amet consectetur. Fermentum elit ut mauris fermentum est dignissim. Magna pharetra lacus in magnis et. Et dictum vestibulum maecenas pulvinar orci fringilla lobortis amet cursus.
-                            </Text>
-                          </Box>
-                          <Box mt={6}>
-                            <Text fontSize="2xl" fontWeight="bold">Vision</Text>
-                            <Text mt={2} fontSize="md">
-                              Lorem ipsum dolor sit amet consectetur. Adipiscing orci bibendum convallis integer lacus turpis. Leo vitae integer orci sagittis consectetur morbi interdum rhoncus. Pellentesque orci rhoncus neque elit aliquam bibendum lorem aenean sit.
-                            </Text>
-                          </Box>
-                        </Flex>
-                      </BitreonFrostedGlassCard>
-                    </Flex>
-                  </BitreonFrostedGlassCard>
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
+                    viewport={{ once: false, amount: 0.8 }}
+                  >
+                    <BitreonFrostedGlassCard enableClipPath={false}>
+                      <Flex
+                        className="container-two w-full max-w-screen-md mx-auto"
+                        flexDirection="column"
+                        textAlign="center"
+                      >
+                        <BitreonFrostedGlassCard enableClipPath={false}>
+                          <Flex
+                            className="container-two w-full max-w-screen-md mx-auto"
+                            flexDirection="column"
+                            textAlign="center"
+                            p={6}
+                          >
+                            <Box mb={4}>
+                              <Text fontSize="2xl" fontWeight="bold">Mission</Text>
+                              <Text mt={2} fontSize="md">
+                                Lorem ipsum dolor sit amet consectetur. Fermentum elit ut mauris fermentum est dignissim. Magna pharetra lacus in magnis et. Et dictum vestibulum maecenas pulvinar orci fringilla lobortis amet cursus.
+                              </Text>
+                            </Box>
+                            <Box mt={6}>
+                              <Text fontSize="2xl" fontWeight="bold">Vision</Text>
+                              <Text mt={2} fontSize="md">
+                                Lorem ipsum dolor sit amet consectetur. Adipiscing orci bibendum convallis integer lacus turpis. Leo vitae integer orci sagittis consectetur morbi interdum rhoncus. Pellentesque orci rhoncus neque elit aliquam bibendum lorem aenean sit.
+                              </Text>
+                            </Box>
+                          </Flex>
+                        </BitreonFrostedGlassCard>
+                      </Flex>
+                    </BitreonFrostedGlassCard>
+
+                  </motion.div>
+
                 </div>
               </Flex>
             </Flex>
           </div>
+          <Box className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0C0E1E] to-transparent" />
         </Box>
 
         <Box position={"relative"}>
@@ -366,7 +381,7 @@ const Home: React.FC<Props> = () => {
           >
 
             <Box flex="1" display="flex" justifyContent="center" alignItems="center">
-              <Text fontSize={{ base: "4xl", md: '6xl' }} fontWeight="bold" textTransform={"uppercase"}>
+              <Text fontSize={{ base: "3xl", md: '6xl' }} fontWeight="bold" textTransform={"uppercase"}>
                 HOW WE DIFFER
               </Text>
             </Box>
@@ -407,46 +422,116 @@ const Home: React.FC<Props> = () => {
               <Flex
                 w="auto"
                 h="auto"
-                direction={"row"}
+                direction={{ base: "column", md: "row" }}
                 alignItems={"center"}
               >
-                <BitreonCard iconUrl="/src/assets/icon_union.png" title="Lorem Ipsum" />
-                <Image
-                  src={LineBesideNode}
-                  alt="ornament"
-                  priority
-                  className="w-24 h-6 top-0 left-0 bg-cover bg-center bg-no-repeat object-fill"
-                />
-                <BitreonCard iconUrl="" title="Lorem Ipsum" />
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
+                  viewport={{ once: false, amount: 0.8 }}
+                >
+                  <BitreonCard iconUrl="/src/assets/icon_union.png" title="Lorem Ipsum" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.4 }}
+                  viewport={{ once: false, amount: 0.8 }}
+                >
+                  <Image
+                    src={LineBesideNode}
+                    alt="ornament"
+                    priority
+                    className="w-24 h-6 top-0 left-0 bg-cover bg-center bg-no-repeat object-fill hidden md:block"
+                  />
+                  {/* Rotated Image - Visible on small screens */}
+                  <Image
+                    src={LineBesideNode}
+                    alt="ornament"
+                    priority
+                    className="w-24 h-24 top-0 left-0 bg-cover bg-center bg-no-repeat object-contain block md:hidden rotate-90"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.6 }}
+                  viewport={{ once: false, amount: 0.8 }}
+                >
+                  <BitreonCard iconUrl="" title="Lorem Ipsum" />
+                </motion.div>
               </Flex>
 
               <Flex
                 w="auto"
                 h="auto"
-                direction={"row"}
+                direction={{ base: "column", md: "row" }}
                 alignItems={"center"}
-                mt={-12}
-                ml={6}
+                mt={{ base: 0, md: -12 }}
+                ml={{ base: 0, md: 6, }}
               >
-                <Image
-                  src={LineBottomNode}
-                  alt="ornament"
-                  priority
-                  className="w-24 h-auto top-0 left-0 bg-cover bg-center bg-no-repeat object-fill"
-                />
-                <Flex
-                  mt={32}
-                  direction={"row"}
-                  alignItems={"center"}
+                <motion.div
+                  initial={{ opacity: 0, y: -50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.2 }}
+                  viewport={{ once: false, amount: 0.8 }}
                 >
-                  <BitreonCard iconUrl="" title="Lorem Ipsum" />
+                  <Image
+                    src={LineBottomNode}
+                    alt="ornament"
+                    priority
+                    className="w-24 h-auto top-0 left-0 bg-cover bg-center bg-no-repeat hidden object-fill md:block"
+                  />
+                  {/* Rotated Image - Visible on small screens */}
                   <Image
                     src={LineBesideNode}
                     alt="ornament"
                     priority
-                    className="w-24 h-6 top-0 left-0 bg-cover bg-center bg-no-repeat object-fill"
+                    className="w-24 h-24 top-0 left-0 bg-cover bg-center bg-no-repeat object-contain block md:hidden rotate-90"
                   />
-                  <BitreonCard iconUrl="" title="Lorem Ipsum" />
+                </motion.div>
+                <Flex
+                  mt={{ base: 0, md: 32 }}
+                  direction={{ base: "column", md: "row" }}
+                  alignItems={"center"}
+                >
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.4 }}
+                    viewport={{ once: false, amount: 0.8 }}
+                  >
+                    <BitreonCard iconUrl="" title="Lorem Ipsum" />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.6 }}
+                    viewport={{ once: false, amount: 0.8 }}
+                  >
+                    <Image
+                      src={LineBesideNode}
+                      alt="ornament"
+                      priority
+                      className="w-24 h-6 top-0 left-0 bg-cover bg-center bg-no-repeat object-fill hidden md:block"
+                    />
+                    {/* Rotated Image - Visible on small screens */}
+                    <Image
+                      src={LineBesideNode}
+                      alt="ornament"
+                      priority
+                      className="w-24 h-24 top-0 left-0 bg-cover bg-center bg-no-repeat object-contain block md:hidden rotate-90"
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.8 }}
+                    viewport={{ once: false, amount: 0.8 }}
+                  >
+                    <BitreonCard iconUrl="" title="Lorem Ipsum" />
+                  </motion.div>
                 </Flex>
               </Flex>
 
@@ -461,9 +546,9 @@ const Home: React.FC<Props> = () => {
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover opacity-80"
           />
-
+          <Box className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#0C0E1E] to-transparent" />
           <Flex
-            id="differ"
+            id="roadmap"
             className="container-two w-full relative mx-auto space-y-24"
             w="auto"
             h="auto"
@@ -481,7 +566,7 @@ const Home: React.FC<Props> = () => {
             gap={0}
             zIndex={30}
           >
-            <Text className="w-full max-w-screen-xs" align={"center"} fontSize={{ base: "4xl", md: '4xl' }} fontWeight="bold" textTransform={"uppercase"}>
+            <Text className="w-full max-w-screen-xs" align={"center"} fontSize={{ base: "3xl", md: '4xl' }} fontWeight="bold" textTransform={"uppercase"}>
               Roadmap to the
               Bitreon’s  World!
             </Text>
@@ -490,97 +575,184 @@ const Home: React.FC<Props> = () => {
               w="auto"
               h="auto"
               direction={"column"}
+              alignItems={{ base: "center", md: "normal" }}
             >
-              <Flex
-                w="auto"
-                h="auto"
-                direction={"row"}
-                alignItems={"center"}
-                className="space-x-12"
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.4 }}
+                viewport={{ once: false, amount: 0.8 }}
               >
-
-                <BitreonCard iconUrl="" title="Phase 01" />
-
-                <div className="w-0.5 h-24 bg-gray-400" />
-
-                <Text align={"start"} className="font-extralight w-full max-w-[280px] text-gray-400" my={6} fontSize={{ base: "xs" }}>
-                  Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.
-                </Text>
-
-              </Flex>
-
-              <Flex
-                w="auto"
-                h="auto"
-                direction={"row"}
-                alignItems={"center"}
-                mt={-12}
-                ml={6}
-              >
-                <Image
-                  src={LineBottomNode}
-                  alt="ornament"
-                  priority
-                  className="w-24 h-auto top-0 left-0 bg-cover bg-center bg-no-repeat object-fill"
-                />
                 <Flex
-                  mt={32}
-                  direction={"row"}
+                  w="auto"
+                  h="auto"
+                  direction={{ base: "column", md: "row" }}
                   alignItems={"center"}
+                  className="space-x-12"
                 >
-                  <BitreonCard iconUrl="" title="Phase 02" />
+
+                  <BitreonCard iconUrl="" title="Phase 01" />
+
+                  <div className="w-0.5 h-24 bg-gray-400 hidden md:block" />
+
+                  <Text align={"start"} className="font-extralight w-full max-w-[280px] text-gray-400" my={6} fontSize={{ base: "xs" }}>
+                    Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.
+                  </Text>
 
                 </Flex>
-              </Flex>
-              <Flex
-                w="auto"
-                h="auto"
-                direction={"row"}
-                alignItems={"center"}
-                mt={-12}
-                ml={140}
+              </motion.div>
+
+              {/* Rotated Image - Visible on small screens */}
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.8 }}
+                viewport={{ once: false, amount: 0.8 }}
               >
                 <Image
-                  src={LineBottomNode}
+                  src={LineBesideNode}
                   alt="ornament"
                   priority
-                  className="w-24 h-auto top-0 left-0 bg-cover bg-center bg-no-repeat object-fill"
+                  className="w-24 h-24 top-0 left-0 bg-cover bg-center bg-no-repeat object-contain block md:hidden rotate-90"
                 />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.6 }}
+                viewport={{ once: false, amount: 0.8 }}
+              >
                 <Flex
-                  mt={32}
+                  w="auto"
+                  h="auto"
                   direction={"row"}
                   alignItems={"center"}
+                  // ml={6}
+                  mt={{ base: 0, md: -14 }}
+                  ml={{ base: 0, md: 6 }}
                 >
-                  <BitreonCard iconUrl="" title="Phase 03" />
+                  <Image
+                    src={LineBottomNode}
+                    alt="ornament"
+                    priority
+                    className="w-24 h-auto top-0 left-0 bg-cover bg-center bg-no-repeat object-fill hidden md:block"
+                  />
 
+                  <Flex
+                    // mt={32}
+                    mt={{ base: 0, md: 32 }}
+                    direction={"row"}
+                    alignItems={"center"}
+                  >
+                    <BitreonCard iconUrl="" title="Phase 02" />
+
+                  </Flex>
                 </Flex>
-              </Flex>
-              <Flex
-                w="auto"
-                h="auto"
-                direction={"row"}
-                alignItems={"center"}
-                mt={-12}
-                ml={280}
+              </motion.div>
+
+              {/* Rotated Image - Visible on small screens */}
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.8 }}
+                viewport={{ once: false, amount: 0.8 }}
               >
                 <Image
-                  src={LineBottomNode}
+                  src={LineBesideNode}
                   alt="ornament"
                   priority
-                  className="w-24 h-auto top-0 left-0 bg-cover bg-center bg-no-repeat object-fill"
+                  className="w-24 h-24 top-0 left-0 bg-cover bg-center bg-no-repeat object-contain block md:hidden rotate-90"
                 />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.8 }}
+                viewport={{ once: false, amount: 0.8 }}
+              >
                 <Flex
-                  mt={32}
+                  w="auto"
+                  h="auto"
                   direction={"row"}
                   alignItems={"center"}
+                  // mt={-12}
+                  // ml={140}
+                  mt={{ base: 0, md: -12 }}
+                  ml={{ base: 0, md: 140 }}
                 >
-                  <BitreonCard iconUrl="" title="Launching" />
+                  <Image
+                    src={LineBottomNode}
+                    alt="ornament"
+                    priority
+                    className="w-24 h-auto top-0 left-0 bg-cover bg-center bg-no-repeat object-fill hidden md:block"
+                  />
+                  <Flex
+                    // mt={32}
+                    mt={{ base: 0, md: 32 }}
+                    direction={"row"}
+                    alignItems={"center"}
+                  >
+                    <BitreonCard iconUrl="" title="Phase 03" />
 
+                  </Flex>
                 </Flex>
-              </Flex>
+              </motion.div>
+
+              {/* Rotated Image - Visible on small screens */}
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.8 }}
+                viewport={{ once: false, amount: 0.8 }}
+              >
+                <Image
+                  src={LineBesideNode}
+                  alt="ornament"
+                  priority
+                  className="w-24 h-24 top-0 left-0 bg-cover bg-center bg-no-repeat object-contain block md:hidden rotate-90"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.8 }}
+                viewport={{ once: false, amount: 0.8 }}
+              >
+                <Flex
+                  w="auto"
+                  h="auto"
+                  direction={"row"}
+                  alignItems={"center"}
+                  // mt={-12}
+                  // ml={280}
+                  mt={{ base: 0, md: -12 }}
+                  ml={{ base: 0, md: 280 }}
+                >
+                  <Image
+                    src={LineBottomNode}
+                    alt="ornament"
+                    priority
+                    className="w-24 h-auto top-0 left-0 bg-cover bg-center bg-no-repeat object-fill hidden md:block"
+                  />
+                  <Flex
+                    // mt={32}
+                    mt={{ base: 0, md: 32 }}
+                    direction={"row"}
+                    alignItems={"center"}
+                  >
+                    <BitreonCard iconUrl="" title="Launching" />
+
+                  </Flex>
+                </Flex>
+              </motion.div>
+
 
             </Flex>
           </Flex>
+          <Box className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0C0E1E] to-transparent" />
         </Box>
 
         <div
@@ -594,6 +766,7 @@ const Home: React.FC<Props> = () => {
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover opacity-80"
           />
+          <Box className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#0C0E1E] to-transparent" />
           <Flex
             id="investment"
             className="container-two w-full relative mx-auto"
