@@ -16,7 +16,7 @@ import { socialsLink } from "@/constants/links";
 
 // import denodeLogo from "@/assets/logo-denode.svg";
 // import powerLinkLogo from '@/assets/PowerLink-Logo.png'
-import BitreonCloudLogo from '@/assets/bitreon_cloud_logo.png'
+import BitreonCloudLogo from '@/assets/bitreon-text-nav.png'
 
 import "./style.css";
 import { BitreonButton } from "@/components/Buttons";
@@ -101,7 +101,7 @@ const Navbar: React.FC<Props> = () => {
               // target="_blank"
               rel="noopener noreferrer"
             >
-              <BitreonButton text="$PLINK" onClick={() => { }} />
+              <BitreonButton text="$BTR" onClick={() => { }} />
 
             </Link>
           </div>
@@ -112,7 +112,7 @@ const Navbar: React.FC<Props> = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BitreonButton text="$PLINK" onClick={() => { }} />
+              <BitreonButton text="$BTR" onClick={() => { }} />
             </Link> */}
             <Button
               onClick={onToggleDrawer}

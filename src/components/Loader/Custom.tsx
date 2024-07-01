@@ -14,7 +14,7 @@ const YinLoader: React.FC<Props> = () => {
       {/* <div className="w-full h-28 flex items-center justify-center">
         <div className="loader" />
       </div> */}
-      <div className="w-full h-28 flex items-center justify-center">
+      <div className="w-full h-40 flex items-center justify-center">
         <Image
           src={loadingGif}
           alt="Loading"

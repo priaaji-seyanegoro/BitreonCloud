@@ -5,24 +5,24 @@ import { motion } from 'framer-motion';
 
 const faqDatas = [
     {
-        question: "Q1: What makes Power Link different from other VPN services?",
-        answer: "A1: Power Link prioritizes your privacy with advanced encryption, a no-log policy, and a vast global server network, ensuring fast and secure connections."
+        question: "Q1: Lorem ipsum dolor sit amet consectetur?",
+        answer: "A1: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laudantium tempore! Iure quia veniam dolore ut eius consequatur quaerat suscipit et dicta? Beatae fuga odio laboriosam deserunt debitis neque vitae!"
     },
     {
-        question: "Q2: How many devices can I connect with one Power Link account?",
-        answer: "A2: You can connect multiple devices simultaneously under one Power Link account, providing comprehensive protection across all your devices."
+        question: "Q2: Lorem ipsum dolor sit amet consectetur?",
+        answer: "A2: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laudantium tempore! Iure quia veniam dolore ut eius consequatur quaerat suscipit et dicta? Beatae fuga odio laboriosam deserunt debitis neque vitae! "
     },
     {
-        question: "Q3: Does Power Link keep any logs of my online activities?",
-        answer: "A3: No, Power Link adheres to a strict no-log policy, ensuring that your browsing history and personal information are never recorded or shared."
+        question: "Q3: Lorem ipsum dolor sit amet consectetur?",
+        answer: "A3: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laudantium tempore! Iure quia veniam dolore ut eius consequatur quaerat suscipit et dicta? Beatae fuga odio laboriosam deserunt debitis neque vitae! "
     },
     {
-        question: "Q4: How do I install Power Link on my device?",
-        answer: "A4: Simply download the Power Link app from our website, follow the installation instructions, and configure your settings through our user-friendly interface."
+        question: "Q4: Lorem ipsum dolor sit amet consectetur?",
+        answer: "A4: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laudantium tempore! Iure quia veniam dolore ut eius consequatur quaerat suscipit et dicta? Beatae fuga odio laboriosam deserunt debitis neque vitae! "
     },
     {
-        question: "Q5: What should I do if I encounter issues with my VPN connection?",
-        answer: "A5: Our dedicated customer support team is available to assist you 24/7. Contact us through our website or app for prompt assistance."
+        question: "Q5: Lorem ipsum dolor sit amet consectetur?",
+        answer: "A5: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laudantium tempore! Iure quia veniam dolore ut eius consequatur quaerat suscipit et dicta? Beatae fuga odio laboriosam deserunt debitis neque vitae! "
     }
 ];
 
@@ -47,6 +47,8 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
                     boxShadow: "0 0 20px 5px rgba(49, 130, 206, 0.5), 0 0 20px 5px rgba(56, 178, 172, 0.5)",
                     transition: "box-shadow 0.3s ease-in-out",
                 }}
+                onClick={onToggle}
+                cursor="pointer"
             >
                 <Box
                     bg="#24273C"
@@ -62,7 +64,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
                         justify={"space-between"}
                     >
 
-                        <Flex w={"70%"} direction={"column"} align="start" justify="space-between" onClick={onToggle} cursor="pointer">
+                        <Flex w={"70%"} direction={"column"} align="start" justify="space-between">
                             <Text color="white" fontWeight={"bold"}>{question}</Text>
                             <Collapse in={isOpen} animateOpacity>
                                 <Box mt={4} color="whiteAlpha.800">

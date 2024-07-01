@@ -4,11 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { socialsLink } from "@/constants/links";
-// import denodeLogo from "@/assets/logo-denode.svg"
-// import TwitterLogo from "@/assets/twitter.png"
-// import TelegramLogo from "@/assets/telegram.png"
-// import GitbookLogo from "@/assets/gitbook.png"
-// import MediumLogo from "@/assets/logo-medium.png"
 import { CopyrightOutlined } from "@ant-design/icons";
 
 
@@ -39,62 +34,126 @@ const AppFooter: React.FC<Props> = () => {
 
   return (
     <footer className={`${kanit.className} app-footer w-full`}>
-      <Box p={10} color="white">
-        <Box
-          maxW="7xl"
-          mx="auto"
+      <Box py={10} px={20} color="white">
+        <Flex
+          alignItems={"center"}
+          justifyContent="space-between"
+          flexDirection={{ base: "column", md: "row" }}
         >
-          <Flex
-            direction={"column"}
-            justifyContent="space-between"
-            alignItems={{ base: "center", lg: "normal" }}
-            gap={12}
-          >
-            <Flex
-              direction={{ base: "column", lg: "row" }}
-              justifyContent="space-between"
-              gap={12}
+          <div className="text-base md:text-md text-center !font-normal order-2 sm:order-1">
+            <Box
+              textAlign={{ base: "center", lg: "center" }}
+              marginBottom={{ base: "10px" }}
             >
               <Flex
-                direction="column"
-                alignItems={{ base: "center", lg: "start" }}
-                textAlign="start"
+                direction={"column"}
+                justifyContent={{ base: "center", lg: "center" }}
               >
-                <Box mb={4} maxW="64px">
+                <Link href="/" className={`logo-container text-white`}>
                   <Image
-                    className="w-full object-contain"
                     src={BitreonLogo}
-                    alt={"Bitreon Cloud"}
+                    alt="banner-nav-logo"
+                    className="w-full md:w-full h-14 sm:h-16 object-contain sm:object-center lg:object-left mb-2"
                   />
-                </Box>
-                <Text>
-                  Bitreon is the first Multi Industry AI Website
-                </Text>
-                <Text>
-                  Builder powered entirely through Telegram.
-                </Text>
+                </Link>
 
               </Flex>
-              <Flex direction={"row"} gap={6} alignItems={"center"} justify={"center"} >
-                {abouts.map((about, index) => (
-                  <Box key={index}>
-                    <Link href={about.url} target="_blank" rel="noopener noreferrer">
-                      <Image
-                        className="w-full object-contain"
-                        src={about.icon}
-                        alt={"Bitreon Cloud"}
-                      />
-                      {/* <Text fontSize={{ base: 'sm', lg: 'xl' }} fontWeight="bold" mb={4}>{about.name}</Text> */}
-                    </Link>
-                  </Box>
-                ))}
-              </Flex>
-            </Flex>
+            </Box>
+          </div>
+          <div
+            className={` ${kanit.className} text-base md:text-md text-center !font-normal order-2 sm:order-1`}
+          >
+            <Box
+              textAlign={{ base: "center", lg: "center" }}
+              marginBottom={{ base: "10px" }}
+            >
+              <Box
+                display="flex"
+                gap={{ base: 4, lg: 16 }}
+                justifyContent={{ base: "center", lg: "left" }}
+              >
+                <Link href="/" className={`logo-container text-white`}>
+                  <Text
+                    textAlign={"left"}
+                    marginBottom="5"
+                    color="#FAFAFA"
+                    fontSize={{ base: "md", lg: "lg" }}
+                  >
+                    Whitepaper
+                  </Text>
+                </Link>
 
-            <div className="text-gray-500 text-sm md:text-sm text-center !font-normal order-2 sm:order-1 block">
-              @2024 Bitreon Copyright. All right Reserved
-            </div>
-          </Flex>
+                <Link href="/" className={`logo-container text-white`}>
+                  <Text
+                    textAlign={"left"}
+                    marginBottom="5"
+                    color="#FAFAFA"
+                    fontSize={{ base: "lg", lg: "xl" }}
+                  >
+                    Contract
+                  </Text>
+                </Link>
+
+                <Link href="/" className={`logo-container text-white`}>
+                  <Text
+                    textAlign={"left"}
+                    marginBottom="5"
+                    color="#FAFAFA"
+                    fontSize={{ base: "lg", lg: "xl" }}
+                  >
+                    Chart
+                  </Text>
+                </Link>
+              </Box>
+            </Box>
+          </div>
+          <div
+            className={` ${kanit.className} text-base md:text-md text-center !font-normal order-2 sm:order-1`}
+          >
+            <Text
+              textAlign={"left"}
+              marginBottom="5"
+              color="#FAFAFA"
+              fontSize={{ base: "md", lg: "lg" }}
+            >
+              $BTR
+            </Text>
+          </div>
+        </Flex>
+
+        <Box
+          textAlign={{ base: "center", lg: "center" }}
+          marginTop={{ base: "20px", lg: "50px" }}
+        >
+          <Box
+            display="flex"
+            gap="8"
+            justifyContent={{ base: "center", lg: "left" }}
+          >
+            <Link
+              href={socialsLink.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={IconTwitter}
+                alt="telegram"
+                className="footer-socials-button"
+              />
+            </Link>
+
+            <Link
+              href={socialsLink.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={IconTelegram}
+                alt="twitter"
+                className="footer-socials-button"
+              />
+            </Link>
+          </Box>
         </Box>
 
       </Box>

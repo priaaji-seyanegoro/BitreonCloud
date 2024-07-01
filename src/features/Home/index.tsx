@@ -277,14 +277,32 @@ const Home: React.FC<Props> = () => {
           <Box className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0C0E1E] to-transparent" />
         </Box>
 
-        <Box mt={"48px"} className="w-full max-w-screen-xl relative mx-auto" position={"relative"}>
+        {/* <Box mt={"48px"} className="w-full max-w-screen-xl relative mx-auto" position={"relative"}>
           <Image
             src={BackgroundAbout2}
             alt="ornament"
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover"
           />
-          <Box className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#0C0E1E] to-transparent" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              // zIndex: -1, // Ensure the video stays behind content
+            }}
+          >
+            <source src="/section1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <Box className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#030307] to-transparent" />
           <div className={`${kanit.className} relative mx-6 lg:mx-24`}>
             <Flex
               // className="welcome-container w-full relative mx-auto"
@@ -358,11 +376,70 @@ const Home: React.FC<Props> = () => {
                 </div>
               </Flex>
             </Flex>
-          </div>
+          </div >
           <Box className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0C0E1E] to-transparent" />
-        </Box>
+        </Box > */}
 
-        <Box position={"relative"}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: false, amount: 0.8 }}
+        >
+          <Flex
+            className={`${kanit.className} container-two w-full max-w-screen-xl relative mx-auto`}
+            direction={{ base: "column-reverse", md: "row-reverse" }}
+            textAlign={{ base: "center", md: "left" }}
+            h="auto"
+            align="center"
+            justify="space-between"
+            px={0}
+            py={0}
+            mx={{ base: "10" }}
+            gap={0}
+            mt={"80px"}
+
+          >
+
+            <Box flex="1" p={6}>
+              <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              </Text>
+              <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum dolorem eum veniam. Aspernatur debitis necessitatibus, dolorum odit omnis incidunt odio eum tempora accusantium facilis quia perspiciatis nihil qui consequatur quis!
+              </Text>
+              <Button
+                as="a"
+                href={"/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                // display="flex"
+                // alignItems="cen  ter"
+                color="#667CFF"
+                bg="transparent"
+                p={0}
+                _hover={{ textDecoration: 'underline' }}
+              >
+                <Text mr={2}>Read More</Text>
+              </Button>
+            </Box>
+            <Box flex="1" p={6} display="flex" justifyContent="center" alignItems="center" position="relative">
+              <video
+                className="relative rounded-lg"
+                src="/about-bitreon.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
+            </Box>
+          </Flex>
+
+        </motion.div>
+
+        <Box position={"relative"} >
           <Image
             src={BackgroundDiffer}
             alt="ornament"
@@ -386,7 +463,7 @@ const Home: React.FC<Props> = () => {
               </Text>
             </Box>
           </Flex>
-        </Box>
+        </Box >
 
         <Box className="w-full max-w-screen-xl relative mx-auto" position={"relative"}>
           <Image
@@ -546,6 +623,25 @@ const Home: React.FC<Props> = () => {
             priority
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover opacity-80"
           />
+
+          {/* <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              // zIndex: -1, // Ensure the video stays behind content
+            }}
+          >
+            <source src="/section1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video> */}
           <Box className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#0C0E1E] to-transparent" />
           <Flex
             id="roadmap"
@@ -807,7 +903,7 @@ const Home: React.FC<Props> = () => {
           />
         </Box>
 
-      </div>
+      </div >
     );
   } else {
     return (

@@ -9,7 +9,7 @@ const BitreonFrostedGlassCard: React.FC<FrostedGlassCardProps> = ({ children, en
     const clipPathValue = 'polygon(0 0, 88% 0, 100% 35%, 100% 100%, 10% 100%, 0 70%)';
 
     return (
-        <div className="relative p-5 bg-opacity-20 bg-white text-white flex flex-col items-center space-y-4 rounded-none overflow-hidden shadow-lg" style={{
+        <div className="relative p-5 bg-opacity-50 bg-black text-white flex flex-col items-center space-y-4 rounded-none overflow-hidden shadow-lg" style={{
             backdropFilter: 'blur(5px)',
             WebkitBackdropFilter: 'blur(10px)',
             clipPath: enableClipPath ? clipPathValue : 'none',
