@@ -34,7 +34,7 @@ const AppFooter: React.FC<Props> = () => {
 
   return (
     <footer className={`${kanit.className} app-footer w-full`}>
-      <Box py={10} px={20} color="white">
+      <Box py={4} px={20} color="white">
         <Flex
           alignItems={"center"}
           justifyContent="space-between"
@@ -46,7 +46,8 @@ const AppFooter: React.FC<Props> = () => {
               marginBottom={{ base: "10px" }}
             >
               <Flex
-                direction={"column"}
+                flexDirection={{ base: "column", md: "row" }}
+                alignItems={"center"}
                 justifyContent={{ base: "center", lg: "center" }}
               >
                 <Link href="/" className={`logo-container text-white`}>
@@ -56,6 +57,14 @@ const AppFooter: React.FC<Props> = () => {
                     className="w-full md:w-full h-14 sm:h-16 object-contain sm:object-center lg:object-left mb-2"
                   />
                 </Link>
+                <Text
+                  textAlign={"left"}
+                  color="#FAFAFA"
+                  fontSize={"sm"}
+                >
+                  <CopyrightOutlined className="mx-0 lg:mx-1" style={{ fontSize: "1em" }} />{" "}
+                  2024
+                </Text>
 
               </Flex>
             </Box>
@@ -71,6 +80,7 @@ const AppFooter: React.FC<Props> = () => {
                 display="flex"
                 gap={{ base: 4, lg: 16 }}
                 justifyContent={{ base: "center", lg: "left" }}
+                marginTop={{ base: "0", lg: "100px" }}
               >
                 <Link href="/" className={`logo-container text-white`}>
                   <Text
@@ -127,7 +137,7 @@ const AppFooter: React.FC<Props> = () => {
         >
           <Box
             display="flex"
-            gap="8"
+            gap="2"
             justifyContent={{ base: "center", lg: "left" }}
           >
             <Link

@@ -37,19 +37,19 @@ interface CardData {
 
 export const featuresCardsData: CardData[] = [
   {
-    iconUrl: "/src/assets/icon_union.png",
+    iconUrl: "/icon_union.png",
     title: "Lorem",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.",
   },
   {
-    iconUrl: "/src/assets/icon_union.png",
+    iconUrl: "/icon_union.png",
     title: "Lorem",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.",
   },
   {
-    iconUrl: "/src/assets/icon_union.png",
+    iconUrl: "/icon_union.png",
     title: "Lorem",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.",

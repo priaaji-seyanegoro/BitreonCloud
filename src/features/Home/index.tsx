@@ -165,7 +165,7 @@ const Home: React.FC<Props> = () => {
 
                 <Box flex="1" display="flex" justifyContent="center" alignItems="center">
                   <Box className="w-full h-auto" maxWidth={{ base: "80%", md: "100%" }} textAlign="center">
-                    <Floating>
+                    {/* <Floating>
                       <Image
                         className="object-contain"
                         src={BitreonCloudLogo}
@@ -173,7 +173,17 @@ const Home: React.FC<Props> = () => {
                         w={700} // Set width and height as needed
                         h={{ base: 300, lg: 500 }} // Set width and height as needed
                       />
-                    </Floating>
+                    </Floating> */}
+                    <video
+                      className="object-contain w-[700px] h-[300px] lg:h-[500px]"
+                      src="/laoder.webm"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      Your browser does not support the video tag.
+                    </video>
                   </Box>
                 </Box>
               </Flex>
@@ -508,7 +518,7 @@ const Home: React.FC<Props> = () => {
                   transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
                   viewport={{ once: false, amount: 0.8 }}
                 >
-                  <BitreonCard iconUrl="/src/assets/icon_union.png" title="Lorem Ipsum" />
+                  <BitreonCard iconUrl="/icon_union.png" title="Lorem Ipsum" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
@@ -536,7 +546,7 @@ const Home: React.FC<Props> = () => {
                   transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.6 }}
                   viewport={{ once: false, amount: 0.8 }}
                 >
-                  <BitreonCard iconUrl="" title="Lorem Ipsum" />
+                  <BitreonCard iconUrl="/icon_union.png" title="Lorem Ipsum" />
                 </motion.div>
               </Flex>
 
@@ -579,7 +589,7 @@ const Home: React.FC<Props> = () => {
                     transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.4 }}
                     viewport={{ once: false, amount: 0.8 }}
                   >
-                    <BitreonCard iconUrl="" title="Lorem Ipsum" />
+                    <BitreonCard iconUrl="/icon_union.png" title="Lorem Ipsum" />
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -607,7 +617,7 @@ const Home: React.FC<Props> = () => {
                     transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.8 }}
                     viewport={{ once: false, amount: 0.8 }}
                   >
-                    <BitreonCard iconUrl="" title="Lorem Ipsum" />
+                    <BitreonCard iconUrl="/icon_union.png" title="Lorem Ipsum" />
                   </motion.div>
                 </Flex>
               </Flex>
@@ -687,7 +697,7 @@ const Home: React.FC<Props> = () => {
                   className="space-x-12"
                 >
 
-                  <BitreonCard iconUrl="" title="Phase 01" />
+                  <BitreonCard iconUrl="/icon_union.png" title="Phase 01" />
 
                   <div className="w-0.5 h-24 bg-gray-400 hidden md:block" />
 
@@ -741,7 +751,7 @@ const Home: React.FC<Props> = () => {
                     direction={"row"}
                     alignItems={"center"}
                   >
-                    <BitreonCard iconUrl="" title="Phase 02" />
+                    <BitreonCard iconUrl="/icon_union.png" title="Phase 02" />
 
                   </Flex>
                 </Flex>
@@ -790,7 +800,7 @@ const Home: React.FC<Props> = () => {
                     direction={"row"}
                     alignItems={"center"}
                   >
-                    <BitreonCard iconUrl="" title="Phase 03" />
+                    <BitreonCard iconUrl="/icon_union.png" title="Phase 03" />
 
                   </Flex>
                 </Flex>
@@ -839,7 +849,7 @@ const Home: React.FC<Props> = () => {
                     direction={"row"}
                     alignItems={"center"}
                   >
-                    <BitreonCard iconUrl="" title="Launching" />
+                    <BitreonCard iconUrl="/icon_union.png" title="Launching" />
 
                   </Flex>
                 </Flex>
