@@ -11,7 +11,7 @@ import { CopyrightOutlined } from "@ant-design/icons";
 import "./style.css";
 import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import BitreonLogo from "@/assets/bitreon_cloud_logo.png"
-import IconTwitter from "@/assets/icon_twitter.png"
+import IconTwitter from "@/assets/twitter_x.png"
 import IconFacebook from "@/assets/icon_facebook.png"
 import IconTelegram from "@/assets/icon_telegram.png"
 
