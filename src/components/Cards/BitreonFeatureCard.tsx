@@ -9,7 +9,7 @@ interface CardProps {
 
 const BitreonFeatureCard: React.FC<CardProps> = ({ iconUrl, title, description }) => {
     return (
-        <div className="relative p-5 bg-[#080D21] text-white flex flex-col items-center space-y-4 rounded-lg">
+        <div className="relative p-6 bg-[#080D21] text-white flex flex-col items-center space-y-4 rounded-lg">
             <div className="absolute inset-0 border-2 rounded-lg -m-3" style={{
                 borderImage: 'linear-gradient(45deg, #3182ce, #38b2ac) 1',
             }}></div>

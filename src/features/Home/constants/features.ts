@@ -38,20 +38,20 @@ interface CardData {
 export const featuresCardsData: CardData[] = [
   {
     iconUrl: "/icon_union.png",
-    title: "Lorem",
+    title: "Automated Deployment",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.",
+      "Launch your websites effortlessly. Bitreon streamlines the deployment process, freeing up your time and reducing effort.",
   },
   {
     iconUrl: "/icon_union.png",
-    title: "Lorem",
+    title: "Optimized Performance",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.",
+      "Experience fast and reliable deployment, minimizing downtime and maximizing efficiency.",
   },
   {
     iconUrl: "/icon_union.png",
-    title: "Lorem",
+    title: "AI-Powered Deployment",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.",
+      "Effortlessly deploy your websites using AI-driven processes that optimize tasks and enhance efficiency.",
   },
 ];

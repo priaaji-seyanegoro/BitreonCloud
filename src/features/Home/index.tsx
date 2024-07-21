@@ -137,8 +137,8 @@ const Home: React.FC<Props> = () => {
                     viewport={{ once: false, amount: 0.8 }}
                     className="w-full"
                   >
-                    <Text fontSize={{ base: "md", lg: '3xl' }} fontWeight="bold" textTransform={"uppercase"}>
-                      Website AI Shaping The Future Of Website Development
+                    <Text fontSize={{ base: "md", lg: '6xl' }} fontWeight="bold" textTransform={"uppercase"}>
+                      The New Era of Web Deployment
                     </Text>
                   </motion.div>
                   <motion.div
@@ -149,7 +149,7 @@ const Home: React.FC<Props> = () => {
                     className="w-full"
                   >
                     <Text className="font-extralight text-gray-400" mt={6} mb={12} fontSize={{ base: "sm", lg: "md" }}>
-                      Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.
+                      Effortlessly deploy your web projects and focus on creating exceptional digital experiences.
                     </Text>
                   </motion.div>
                   <motion.div
@@ -249,14 +249,14 @@ const Home: React.FC<Props> = () => {
                 >
                   <Box flex="1" display="flex" justifyContent="center" alignItems="center">
                     <Text fontSize={{ base: "md", lg: '3xl' }} fontWeight="bold" textTransform={"uppercase"}>
-                      ELEVATE YOUR AI, RENDERING, AND SIMULATIONS WITH BITREON
+                      Bitreon’s Core Strengths
                     </Text>
                   </Box>
-                  <Box flex="1" display="flex" justifyContent="center" alignItems="center">
+                  {/* <Box flex="1" display="flex" justifyContent="center" alignItems="center">
                     <Text className="font-extralight text-gray-400" my={6} fontSize={{ base: "sm", lg: "md" }}>
-                      Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.
+                      Launch your websites effortlessly. Bitreon streamlines the deployment process, freeing up your time and reducing effort.
                     </Text>
-                  </Box>
+                  </Box> */}
                 </Flex>
                 <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
                   {featuresCardsData.map((card, index) => (
@@ -413,10 +413,10 @@ const Home: React.FC<Props> = () => {
 
             <Box flex="1" p={6}>
               <Text fontSize="3xl" fontWeight="bold" textTransform={"uppercase"}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                Shaping the Future of Web Deployment Technology
               </Text>
               <Text my={4} fontSize={{ base: "sm", lg: "md" }} fontWeight={"1px"}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum dolorem eum veniam. Aspernatur debitis necessitatibus, dolorum odit omnis incidunt odio eum tempora accusantium facilis quia perspiciatis nihil qui consequatur quis!
+                We redefines web deployment by seamlessly integrating advanced technology and intelligent automation.  Our dual ecosystem—comprising a robust Web App and an innovative AI App—forms the foundation of an efficient, secure, and intelligent deployment experience.
               </Text>
               <Button
                 as="a"
@@ -518,7 +518,7 @@ const Home: React.FC<Props> = () => {
                   transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.2 }}
                   viewport={{ once: false, amount: 0.8 }}
                 >
-                  <BitreonCard iconUrl="/icon_union.png" title="Lorem Ipsum" />
+                  <BitreonCard iconUrl="/icon_union.png" title="Dual Ecosystem for Maximum Flexibility" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
@@ -546,7 +546,7 @@ const Home: React.FC<Props> = () => {
                   transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.6 }}
                   viewport={{ once: false, amount: 0.8 }}
                 >
-                  <BitreonCard iconUrl="/icon_union.png" title="Lorem Ipsum" />
+                  <BitreonCard iconUrl="/icon_union.png" title="AI-Driven Optimization" />
                 </motion.div>
               </Flex>
 
@@ -589,7 +589,7 @@ const Home: React.FC<Props> = () => {
                     transition={{ duration: 0.4, ease: 'easeInOut', delay: 0.4 }}
                     viewport={{ once: false, amount: 0.8 }}
                   >
-                    <BitreonCard iconUrl="/icon_union.png" title="Lorem Ipsum" />
+                    <BitreonCard iconUrl="/icon_union.png" title="Robust Security Measures" />
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -617,7 +617,7 @@ const Home: React.FC<Props> = () => {
                     transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.8 }}
                     viewport={{ once: false, amount: 0.8 }}
                   >
-                    <BitreonCard iconUrl="/icon_union.png" title="Lorem Ipsum" />
+                    <BitreonCard iconUrl="/icon_union.png" title="Scalability and Flexibility" />
                   </motion.div>
                 </Flex>
               </Flex>

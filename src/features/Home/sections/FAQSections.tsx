@@ -5,24 +5,28 @@ import { motion } from 'framer-motion';
 
 const faqDatas = [
     {
-        question: "Q1: Lorem ipsum dolor sit amet consectetur?",
-        answer: "A1: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laudantium tempore! Iure quia veniam dolore ut eius consequatur quaerat suscipit et dicta? Beatae fuga odio laboriosam deserunt debitis neque vitae!"
+        question: "Q1: How does Bitreon’s Web App ecosystem work?",
+        answer: "A1: Bitreon’s Web App leverages cutting-edge technology to streamline web deployment. Users can automate workflows, utilize AI for optimization, monitor deployments in real-time, and scale applications effortlessly through a user-friendly interface."
     },
     {
-        question: "Q2: Lorem ipsum dolor sit amet consectetur?",
-        answer: "A2: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laudantium tempore! Iure quia veniam dolore ut eius consequatur quaerat suscipit et dicta? Beatae fuga odio laboriosam deserunt debitis neque vitae! "
+        question: "Q2: What makes Bitreon different from other deployment platforms?",
+        answer: "A2: Bitreon stands out with its dual ecosystem of a powerful Web App and an AI App, AI-driven optimization, robust security measures, global server network, and user-centric design. These features provide a seamless, efficient, and secure deployment experience that is unmatched in the industry."
     },
     {
-        question: "Q3: Lorem ipsum dolor sit amet consectetur?",
-        answer: "A3: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laudantium tempore! Iure quia veniam dolore ut eius consequatur quaerat suscipit et dicta? Beatae fuga odio laboriosam deserunt debitis neque vitae! "
+        question: "Q3: How does AI enhance the deployment process in Bitreon?",
+        answer: "A3: Bitreon uses advanced AI to optimize deployment tasks, predict potential issues, and provide intelligent recommendations. This ensures efficient deployments, enhanced performance, and better decision-making through actionable insights."
     },
     {
-        question: "Q4: Lorem ipsum dolor sit amet consectetur?",
-        answer: "A4: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laudantium tempore! Iure quia veniam dolore ut eius consequatur quaerat suscipit et dicta? Beatae fuga odio laboriosam deserunt debitis neque vitae! "
+        question: "Q4: Is Bitreon secure?",
+        answer: "A4: Yes, security is a top priority for Bitreon. We implement end-to-end encryption, conduct regular security audits, and employ robust security protocols to protect your data and applications throughout the deployment process."
     },
     {
-        question: "Q5: Lorem ipsum dolor sit amet consectetur?",
-        answer: "A5: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, laudantium tempore! Iure quia veniam dolore ut eius consequatur quaerat suscipit et dicta? Beatae fuga odio laboriosam deserunt debitis neque vitae! "
+        question: "Q5: Can I use Bitreon for large-scale projects?",
+        answer: "A5: Absolutely! Bitreon is designed to handle projects of all sizes. Its scalable architecture allows you to seamlessly expand your web applications to meet growing demands without compromising performance."
+    },
+    {
+        question: "Q5: Can I collaborate with my team on Bitreon?",
+        answer: "A5: Yes, Bitreon includes collaboration tools that allow you to work seamlessly with your team. Manage permissions, assign roles, and collaborate on projects efficiently through our platform."
     }
 ];
 

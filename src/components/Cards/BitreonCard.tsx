@@ -7,7 +7,7 @@ interface BitreonCardProps {
 
 const BitreonCard: React.FC<BitreonCardProps> = ({ title, iconUrl }) => {
     return (
-        <div className="h-28 w-60 bg-slate-700 text-white p-5 flex-col items-center space-y-4"
+        <div className="h-30 w-60 bg-slate-700 text-white p-5 flex-col items-center space-y-4"
             style={{
                 clipPath: 'polygon(0 0, 88% 0, 100% 30%, 100% 100%, 0 100%)',
                 // clipPath: 'polygon(0 0, 88% 0, 100% 35%, 100% 100%, 10% 100%, 0 70%)',
