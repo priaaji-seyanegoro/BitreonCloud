@@ -23,11 +23,11 @@ const faqDatas = [
     {
         question: "Q5: Can I use Bitreon for large-scale projects?",
         answer: "A5: Absolutely! Bitreon is designed to handle projects of all sizes. Its scalable architecture allows you to seamlessly expand your web applications to meet growing demands without compromising performance."
-    },
-    {
-        question: "Q5: Can I collaborate with my team on Bitreon?",
-        answer: "A5: Yes, Bitreon includes collaboration tools that allow you to work seamlessly with your team. Manage permissions, assign roles, and collaborate on projects efficiently through our platform."
     }
+    // {
+    //     question: "Q5: Can I collaborate with my team on Bitreon?",
+    //     answer: "A5: Yes, Bitreon includes collaboration tools that allow you to work seamlessly with your team. Manage permissions, assign roles, and collaborate on projects efficiently through our platform."
+    // }
 ];
 
 interface FAQItemProps {
