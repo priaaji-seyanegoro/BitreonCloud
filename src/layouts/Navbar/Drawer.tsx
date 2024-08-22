@@ -40,8 +40,8 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
   const tabsList = useMemo(() => {
     return [
       {
-        href: "/",
-        pathname: `/`,
+        href: "#home",
+        pathname: `#home`,
         name: "Home",
       },
       {
@@ -55,9 +55,9 @@ export const NavbarDrawer: React.FC<Props> = ({ isOpen, onClose }) => {
       //   name: "Tokenomics",
       // },
       {
-        href: "#documentation",
-        pathname: `#documentation`,
-        name: "Documentation",
+        href: "#feature",
+        pathname: `#feature`,
+        name: "Feature",
       },
       {
         href: "#roadmap",

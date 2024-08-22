@@ -12,7 +12,7 @@ import { NavbarDrawer } from "./Drawer";
 import { useIsMounted } from "@/hooks/useIsMounted";
 
 import { kanitBold } from "@/utils/font";
-import { socialsLink } from "@/constants/links";
+import { findUsLink, socialsLink } from "@/constants/links";
 
 // import denodeLogo from "@/assets/logo-denode.svg";
 // import powerLinkLogo from '@/assets/PowerLink-Logo.png'
@@ -97,7 +97,7 @@ const Navbar: React.FC<Props> = () => {
         <div className="w-1/2 lg:w-1/4 sm:flex justify-end font-semibold">
           <div className="w-full  hidden sm:flex justify-end">
             <Link
-              href="/"
+              href={findUsLink.uniswap}
               // target="_blank"
               rel="noopener noreferrer"
             >

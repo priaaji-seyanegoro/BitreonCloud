@@ -2,9 +2,9 @@ export const contractAddress = "-";
 export const pairAddress = "-";
 
 export const socialsLink = {
-  whitepaper: "",
-  twitter: "https://x.com/",
-  telegram: "https://t.me/",
+  whitepaper: "https://docs.bitreon.io/",
+  twitter: "https://t.me/",
+  telegram: "https://x.com/",
   medium: "https://medium.com",
   email: "mailto:",
   bot: "https://t.me/",

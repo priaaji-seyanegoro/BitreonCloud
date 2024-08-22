@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useIsMounted } from "@/hooks/useIsMounted";
-import { socialsLink } from "@/constants/links";
+import { findUsLink, socialsLink } from "@/constants/links";
 import { CopyrightOutlined } from "@ant-design/icons";
 
 
@@ -82,7 +82,7 @@ const AppFooter: React.FC<Props> = () => {
                 justifyContent={{ base: "center", lg: "left" }}
                 marginTop={{ base: "0", lg: "100px" }}
               >
-                <Link href="/" className={`logo-container text-white`}>
+                <Link href={socialsLink.whitepaper} className={`logo-container text-white`}>
                   <Text
                     textAlign={"left"}
                     marginBottom="5"
@@ -93,7 +93,7 @@ const AppFooter: React.FC<Props> = () => {
                   </Text>
                 </Link>
 
-                <Link href="/" className={`logo-container text-white`}>
+                <Link href={findUsLink.etherscan} className={`logo-container text-white`}>
                   <Text
                     textAlign={"left"}
                     marginBottom="5"
@@ -104,7 +104,7 @@ const AppFooter: React.FC<Props> = () => {
                   </Text>
                 </Link>
 
-                <Link href="/" className={`logo-container text-white`}>
+                <Link href={findUsLink.dextools} className={`logo-container text-white`}>
                   <Text
                     textAlign={"left"}
                     marginBottom="5"

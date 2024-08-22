@@ -19,14 +19,8 @@ import BackgroundDiffer from "@/assets/bg_differ.png"
 import BackgroundDiffer2 from "@/assets/bg_differ_2.png"
 import LineBottomNode from "@/assets/line_bottom_node.png"
 import LineBesideNode from "@/assets/line_beside_node.png"
-import IconUnion from "@/assets/icon_union.png"
-import BackgroundAbout3 from "@/assets/bg_about_3.png"
-import BackgroundSection2 from "@/assets/bg_section2.png"
 import BackgroundFaq from "@/assets/bg_faq.png"
-import PowerLinkLogo from "@/assets/PowerLink-Logo.png"
-import PowerLinkText from "@/assets/PowerLink-text.png"
 import { motion } from 'framer-motion';
-import BitreonCloudLogo from '@/assets/bitreon_cloud_logo.png'
 
 // import "./style.css";
 // import Image from "next/image";
@@ -109,7 +103,7 @@ const Home: React.FC<Props> = () => {
     return (
       <div className={` homepage-container ${kanit.className}`}>
         <div
-          id="welcome"
+          id="home"
           className="relative z-30"
         />
 
@@ -178,7 +172,7 @@ const Home: React.FC<Props> = () => {
                     viewport={{ once: false, amount: 0.8 }}
                     className="w-full"
                   >
-                    <BitreonButton text="Get Meeta" onClick={() => { }} />
+                    <BitreonButton text="Get Started" onClick={() => { }} />
                   </motion.div>
                 </Box>
 
@@ -223,6 +217,10 @@ const Home: React.FC<Props> = () => {
             className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover opacity-80"
           />
           <Box className="absolute -top-4 left-0 w-full h-24 bg-gradient-to-b from-[#0C0E1E] to-transparent" />
+          <div
+            id="feature"
+            className="relative z-30"
+          />
           <div className={`${kanit.className} relative mx-24 lg:mx-24`}>
             <Flex
               // className="welcome-container w-full relative mx-auto"
@@ -287,12 +285,16 @@ const Home: React.FC<Props> = () => {
 
                 <Box></Box>
               </Flex>
-              <Box><BitreonButton text="Get Meeta" onClick={() => { }} /></Box>
+              {/* <Box><BitreonButton text="Get Meeta" onClick={() => { }} /></Box> */}
             </Flex>
           </div>
           <Box className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0C0E1E] to-transparent" />
         </Box>
 
+        <div
+          id="about"
+          className="relative z-30"
+        />
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -323,7 +325,7 @@ const Home: React.FC<Props> = () => {
               </Text>
               <Button
                 as="a"
-                href={"/"}
+                href={socialsLink.whitepaper}
                 target="_blank"
                 rel="noopener noreferrer"
                 // display="flex"
