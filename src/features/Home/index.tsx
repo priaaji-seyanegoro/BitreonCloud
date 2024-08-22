@@ -57,6 +57,7 @@ import BitreonFeatureCard from "@/components/Cards/BitreonFeatureCard";
 import BitreonFrostedGlassCard from "@/components/Cards/BitreonFrostedGlassCard";
 import DifferSection from "./sections/DifferSections";
 import Floating from "@/components/Floating/Floating";
+import NumberedList from "@/components/NumberedListItems";
 
 interface Props { }
 
@@ -65,6 +66,24 @@ const Home: React.FC<Props> = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const isMounted = useIsMounted();
   const toast = useToast();
+
+  const phase1 = [
+    "Bitreon Web Deployer Development",
+    "$BTR Token Launch - ERC20",
+    "Bitreon API Development",
+  ];
+  const phase2 = [
+    "Bitreon Web Deployer - Product Trial Run",
+    "Payment Integration",
+    "Smart Contract integration - ERC20 Payment",
+  ];
+  const phase3 = [
+    "Bitreon Campaign & Marketing",
+    "Official AMA Event",
+    "Big-tech Partnership",
+    "Web3 Developer Event"
+  ];
+
   useEffect(() => {
     if (isMounted) {
       const timeOut = setTimeout(() => {
@@ -165,15 +184,7 @@ const Home: React.FC<Props> = () => {
 
                 <Box flex="1" display="flex" justifyContent="center" alignItems="center">
                   <Box className="w-full h-auto" maxWidth={{ base: "80%", md: "100%" }} textAlign="center">
-                    {/* <Floating>
-                      <Image
-                        className="object-contain"
-                        src={BitreonCloudLogo}
-                        alt={"Bitreon Cloud"}
-                        w={700} // Set width and height as needed
-                        h={{ base: 300, lg: 500 }} // Set width and height as needed
-                      />
-                    </Floating> */}
+
                     <video
                       className="object-contain w-[700px] h-[300px] lg:h-[500px]"
                       src="/laoder.webm"
@@ -252,11 +263,6 @@ const Home: React.FC<Props> = () => {
                       Bitreon’s Core Strengths
                     </Text>
                   </Box>
-                  {/* <Box flex="1" display="flex" justifyContent="center" alignItems="center">
-                    <Text className="font-extralight text-gray-400" my={6} fontSize={{ base: "sm", lg: "md" }}>
-                      Launch your websites effortlessly. Bitreon streamlines the deployment process, freeing up your time and reducing effort.
-                    </Text>
-                  </Box> */}
                 </Flex>
                 <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
                   {featuresCardsData.map((card, index) => (
@@ -286,109 +292,6 @@ const Home: React.FC<Props> = () => {
           </div>
           <Box className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0C0E1E] to-transparent" />
         </Box>
-
-        {/* <Box mt={"48px"} className="w-full max-w-screen-xl relative mx-auto" position={"relative"}>
-          <Image
-            src={BackgroundAbout2}
-            alt="ornament"
-            priority
-            className="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat object-cover"
-          />
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              // zIndex: -1, // Ensure the video stays behind content
-            }}
-          >
-            <source src="/section1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <Box className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#030307] to-transparent" />
-          <div className={`${kanit.className} relative mx-6 lg:mx-24`}>
-            <Flex
-              // className="welcome-container w-full relative mx-auto"
-              className="container-two w-full max-w-screen-xl relative mx-auto space-y-24"
-              w="100%"
-              h={{ base: "auto", lg: "100vh" }} // Full screen height on larger screens
-              bg={"transparent"}
-              justifyContent="center" // Center horizontally
-              alignItems="center" // Center vertically
-              flexDirection={"column"}
-              direction={"column"}
-              textAlign={{ base: "center", md: "left" }}
-              zIndex={1} // Ensure it stacks properly with the navbar
-              pt={{ base: "12vh" }} // Dynamic top padding
-              pb={{ base: "24vh" }} // Dynamic bottom padding
-            // pt={{ base: "24vh", md: "15vh", lg: "45vh", xl: "45vh", "2xl": "45vh" }} // Dynamic top padding
-            // pb={{ base: "20vh", md: "12vh", lg: "25vh", xl: "35vh", "2xl": "35vh" }} // Dynamic bottom padding
-            >
-              <Flex
-                className={`${kanit.className} space-y-24 container-two w-full max-w-screen-md relative mx-auto`}
-                // flexDirection={{ base: "row-reverse", lg: "row" }}
-                flexDirection={{ base: "column", md: "column" }}
-                direction={{ base: "column", md: "row" }}
-                textAlign={"center"}
-                mt={{ base: "40px", lg: "100px" }}
-              >
-                <Box flex="0.5" display="flex" justifyContent="center" alignItems="center">
-                  <Text fontSize={{ base: "4xl", lg: '6xl' }} fontWeight="bold" textTransform={"uppercase"}>
-                    ABOUT OUR PROJECTS
-                  </Text>
-                </Box>
-                <div className="container mx-auto">
-                  <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
-                    viewport={{ once: false, amount: 0.8 }}
-                  >
-                    <BitreonFrostedGlassCard enableClipPath={false}>
-                      <Flex
-                        className="container-two w-full max-w-screen-md mx-auto"
-                        flexDirection="column"
-                        textAlign="center"
-                      >
-                        <BitreonFrostedGlassCard enableClipPath={false}>
-                          <Flex
-                            className="container-two w-full max-w-screen-md mx-auto"
-                            flexDirection="column"
-                            textAlign="center"
-                            p={6}
-                          >
-                            <Box mb={4}>
-                              <Text fontSize="2xl" fontWeight="bold">Mission</Text>
-                              <Text mt={2} fontSize="md">
-                                Lorem ipsum dolor sit amet consectetur. Fermentum elit ut mauris fermentum est dignissim. Magna pharetra lacus in magnis et. Et dictum vestibulum maecenas pulvinar orci fringilla lobortis amet cursus.
-                              </Text>
-                            </Box>
-                            <Box mt={6}>
-                              <Text fontSize="2xl" fontWeight="bold">Vision</Text>
-                              <Text mt={2} fontSize="md">
-                                Lorem ipsum dolor sit amet consectetur. Adipiscing orci bibendum convallis integer lacus turpis. Leo vitae integer orci sagittis consectetur morbi interdum rhoncus. Pellentesque orci rhoncus neque elit aliquam bibendum lorem aenean sit.
-                              </Text>
-                            </Box>
-                          </Flex>
-                        </BitreonFrostedGlassCard>
-                      </Flex>
-                    </BitreonFrostedGlassCard>
-
-                  </motion.div>
-
-                </div>
-              </Flex>
-            </Flex>
-          </div >
-          <Box className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0C0E1E] to-transparent" />
-        </Box > */}
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -694,16 +597,18 @@ const Home: React.FC<Props> = () => {
                   h="auto"
                   direction={{ base: "column", md: "row" }}
                   alignItems={"center"}
-                  className="space-x-12"
+                  className="space-x-8"
                 >
 
                   <BitreonCard iconUrl="/icon_union.png" title="Phase 01" />
 
                   <div className="w-0.5 h-24 bg-gray-400 hidden md:block" />
 
-                  <Text align={"start"} className="font-extralight w-full max-w-[280px] text-gray-400" my={6} fontSize={{ base: "xs" }}>
-                    Lorem ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.
-                  </Text>
+                  <NumberedList items={phase1} />
+
+                  {/* <Text align={"start"} className="font-extralight w-full max-w-[280px] text-gray-400" my={6} fontSize={{ base: "xs" }}>
+                    ipsum dolor sit amet consectetur. Ut pellentesque duis mattis id nisi. At elementum tempus aliquet ut donec urna. Aliquet neque ut turpis semper vitae sed integer.
+                  </Text> */}
 
                 </Flex>
               </motion.div>
@@ -747,11 +652,18 @@ const Home: React.FC<Props> = () => {
 
                   <Flex
                     // mt={32}
+                    w="auto"
+                    h="auto"
                     mt={{ base: 0, md: 32 }}
-                    direction={"row"}
+                    direction={{ base: "column", md: "row" }}
                     alignItems={"center"}
+                    className="space-x-8"
                   >
                     <BitreonCard iconUrl="/icon_union.png" title="Phase 02" />
+
+                    <div className="w-0.5 h-24 bg-gray-400 hidden md:block" />
+
+                    <NumberedList items={phase2} />
 
                   </Flex>
                 </Flex>
@@ -796,18 +708,25 @@ const Home: React.FC<Props> = () => {
                   />
                   <Flex
                     // mt={32}
+                    w="auto"
+                    h="auto"
                     mt={{ base: 0, md: 32 }}
-                    direction={"row"}
+                    direction={{ base: "column", md: "row" }}
                     alignItems={"center"}
+                    className="space-x-8"
                   >
                     <BitreonCard iconUrl="/icon_union.png" title="Phase 03" />
+
+                    <div className="w-0.5 h-24 bg-gray-400 hidden md:block" />
+
+                    <NumberedList items={phase3} />
 
                   </Flex>
                 </Flex>
               </motion.div>
 
               {/* Rotated Image - Visible on small screens */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.8 }}
@@ -819,9 +738,9 @@ const Home: React.FC<Props> = () => {
                   priority
                   className="w-24 h-24 top-0 left-0 bg-cover bg-center bg-no-repeat object-contain block md:hidden rotate-90"
                 />
-              </motion.div>
+              </motion.div> */}
 
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.8 }}
@@ -853,7 +772,7 @@ const Home: React.FC<Props> = () => {
 
                   </Flex>
                 </Flex>
-              </motion.div>
+              </motion.div> */}
 
 
             </Flex>
