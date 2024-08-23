@@ -173,7 +173,10 @@ const Home: React.FC<Props> = () => {
                     viewport={{ once: false, amount: 0.8 }}
                     className="w-full"
                   >
-                    <BitreonButton text="Get Started" onClick={() => { }} />
+                    <Link href="https://dapps.bitreon.io/" target="_blank">
+                      <BitreonButton text="Get Started" onClick={() => { }} />
+                    </Link>
+
                   </motion.div>
                 </Box>
 
