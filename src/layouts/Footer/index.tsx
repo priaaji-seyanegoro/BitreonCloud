@@ -141,7 +141,7 @@ const AppFooter: React.FC<Props> = () => {
             justifyContent={{ base: "center", lg: "left" }}
           >
             <Link
-              href={socialsLink.telegram}
+              href={socialsLink.twitter}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -153,7 +153,7 @@ const AppFooter: React.FC<Props> = () => {
             </Link>
 
             <Link
-              href={socialsLink.twitter}
+              href={socialsLink.telegram}
               target="_blank"
               rel="noopener noreferrer"
             >

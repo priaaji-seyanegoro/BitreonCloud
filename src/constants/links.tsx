@@ -3,11 +3,11 @@ export const pairAddress = "-";
 
 export const socialsLink = {
   whitepaper: "https://docs.bitreon.io/",
-  twitter: "https://t.me/",
-  telegram: "https://x.com/",
+  twitter: "https://x.com/BitreonToken",
+  telegram: "https://t.me/bitreontoken",
   medium: "https://medium.com",
   email: "mailto:",
-  bot: "https://t.me/",
+  bot: "-",
 };
 
 export const findUsLink = {
