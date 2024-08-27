@@ -174,7 +174,7 @@ const Home: React.FC<Props> = () => {
                     className="w-full"
                   >
                     <Link href="https://dapps.bitreon.io/" target="_blank">
-                      <BitreonButton text="Get Started" onClick={() => { }} />
+                      <BitreonButton text="Deploy" onClick={() => { }} />
                     </Link>
 
                   </motion.div>
