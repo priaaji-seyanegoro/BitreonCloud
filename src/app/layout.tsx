@@ -10,7 +10,7 @@ import "./globals.css";
 const app_title = "Bitreon Cloud";
 const app_name = "Bitreon Cloud";
 const description =
-  "Experience secure and scalable privacy protection with Bitreon Cloud advanced VPN, ensuring your data remains confidential and secure.";
+  "Shaping the Future of Web Deployment Technology";
 
 export const metadata: Metadata = {
   title: app_title,
