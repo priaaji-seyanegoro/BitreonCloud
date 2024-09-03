@@ -17,7 +17,7 @@ const BitreonFeatureCard: React.FC<CardProps> = ({ iconUrl, title, description }
                 <Image
                     className="object-contain"
                     src={iconUrl}
-                    alt={"Bitreon Cloud"}
+                    alt={"Bitreon"}
                     w={12} // Set width and height as needed
                     h={12} // Set width and height as needed
                 />

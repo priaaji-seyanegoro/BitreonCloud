@@ -7,8 +7,8 @@ import BaseLayout from "@/layouts";
 
 import "./globals.css";
 
-const app_title = "Bitreon Cloud";
-const app_name = "Bitreon Cloud";
+const app_title = "Bitreon";
+const app_name = "Bitreon";
 const description =
   "Shaping the Future of Web Deployment Technology";
 
