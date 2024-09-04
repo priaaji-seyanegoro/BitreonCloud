@@ -6,7 +6,7 @@ export const socialsLink = {
   twitter: "https://x.com/BitreonToken",
   telegram: "https://t.me/bitreontoken",
   medium: "https://medium.com",
-  email: "mailto:",
+  email: "mailto:support@bitreon.io",
   bot: "-",
 };
 

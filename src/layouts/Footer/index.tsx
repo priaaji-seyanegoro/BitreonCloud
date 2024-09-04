@@ -121,13 +121,25 @@ const AppFooter: React.FC<Props> = () => {
             className={` ${kanit.className} text-base md:text-md text-center !font-normal order-2 sm:order-1`}
           >
             <Text
-              textAlign={"left"}
+              textAlign={{ base: 'center', md: 'left' }}
               marginBottom="5"
               color="#FAFAFA"
               fontSize={{ base: "md", lg: "lg" }}
             >
               $BTR
             </Text>
+            <Link href={socialsLink.email}>
+              <Text
+                textAlign={{ base: 'center', md: 'left' }}
+                marginBottom="5"
+                color="#FAFAFA"
+                fontSize={{ base: "md", lg: "md" }}
+                _hover={{ textDecoration: "underline" }}
+              >
+                support@bitreon.io
+              </Text>
+
+            </Link>
           </div>
         </Flex>
 
