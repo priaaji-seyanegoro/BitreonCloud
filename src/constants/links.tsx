@@ -1,5 +1,5 @@
 export const contractAddress = "0xFb0251510C5593494fF9DD481000BcEB6702419d";
-export const pairAddress = "-";
+export const pairAddress = "0xDf43BdAfeEdF958aBa120c73a44AaA694896E9ab";
 
 export const socialsLink = {
   whitepaper: "https://docs.bitreon.io/",
